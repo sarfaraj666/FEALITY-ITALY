@@ -1,0 +1,170 @@
+(() => {
+  'use strict';
+
+  // Existing local collection: P_Interiors_Website/script.js. Only its exact
+  // Modern / Contemporary style labels are used; other styles remain unclassified.
+  // 03 duplicates 02, and 08 duplicates 05. Keep originals untouched.
+  // Names/descriptions are intentionally blank pending confirmed product metadata.
+  const kitchenDesigns = [
+    { id: '01', category: 'Contemporary', width: 1703, height: 924, alt: 'White kitchen with a pale stone island and garden-facing windows' },
+    { id: '02', category: 'Modern', width: 1704, height: 923, alt: 'White cabinetry and a slate-blue kitchen island beneath pendant lights' },
+    { id: '04', category: null, width: 2019, height: 779, alt: 'Veined stone kitchen island with taupe cabinetry and angular pendant lighting' },
+    { id: '05', category: 'Contemporary', width: 2018, height: 779, alt: 'Dark kitchen cabinetry and cooktop with an illuminated tiled backsplash' },
+    { id: '06', category: null, width: 2020, height: 779, alt: 'Dark kitchen and long dining counter with warm lighting and place settings' },
+    { id: '07', category: null, width: 2019, height: 779, alt: 'Wood-toned kitchen island with two cream stools and dark cabinetry' },
+    { id: '09', category: 'Contemporary', width: 1473, height: 1068, alt: 'Dark ribbed kitchen cabinetry with a wood-toned worktop and curved pendant' }
+  ].map(design => {
+    const base = `P_Interiors_Website/assets/quality/kitchen-${design.id}`;
+    return { name: null, description: null, ...design, source: `${base}.webp`,
+      thumbnail: `${base}-960.webp`, srcset: `${base}-480.webp 480w, ${base}-960.webp 960w, ${base}.webp ${design.width}w` };
+  });
+
+  const get = id => document.getElementById(id);
+  const grid = get('kitchen-grid');
+  if (!grid) return;
+  const filters = get('kitchen-filters');
+  const dialog = get('kitchen-lightbox');
+  const fullImage = get('kitchen-full-image');
+  const status = get('kitchen-image-status');
+  const enquiry = get('kitchen-enquire');
+  let visible = kitchenDesigns;
+  let current = 0;
+  let trigger = null;
+  let savedOverflow = '';
+  let request = 0;
+  let swipeStart = null;
+  let enquiryHandler = null;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  }
+
+  function render(category) {
+    visible = kitchenDesigns.filter(design => category === 'All Designs' || design.category === category);
+    filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.textContent === category)));
+    const fragment = document.createDocumentFragment();
+    visible.forEach((design, position) => {
+      const button = element('button', 'kitchen-gallery-card');
+      button.type = 'button';
+      button.setAttribute('aria-label', `View ${design.name || design.alt}`);
+      button.setAttribute('aria-haspopup', 'dialog');
+      const media = element('span', 'kitchen-gallery-media');
+      const img = element('img');
+      Object.assign(img, { src: design.thumbnail, srcset: design.srcset,
+        sizes: '(max-width: 600px) 88vw, (max-width: 900px) 43vw, 29vw',
+        width: design.width, height: design.height, alt: design.alt, loading: 'lazy', decoding: 'async' });
+      media.append(img);
+      const caption = element('span', 'kitchen-gallery-caption');
+      caption.append(element('span', '', design.name || `KITCHEN / ${design.id}`));
+      const arrow = element('span', '', '↗');
+      arrow.setAttribute('aria-hidden', 'true');
+      caption.append(arrow);
+      button.append(media, caption);
+      button.addEventListener('click', () => {
+        trigger = button;
+        savedOverflow = document.body.style.overflow;
+        dialog.showModal();
+        document.body.style.overflow = 'hidden';
+        show(position);
+      });
+      fragment.append(button);
+    });
+    grid.replaceChildren(fragment);
+    get('kitchen-count').textContent = `${visible.length} ${visible.length === 1 ? 'design' : 'designs'}`;
+  }
+
+  async function show(position) {
+    current = (position + visible.length) % visible.length;
+    const design = visible[current];
+    const token = ++request;
+    get('kitchen-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(visible.length).padStart(2, '0')}`;
+    for (const [id, value] of [['kitchen-design-name', design.name], ['kitchen-description', design.description]]) {
+      get(id).textContent = value || '';
+      get(id).hidden = !value;
+    }
+    get('kitchen-previous').disabled = get('kitchen-next').disabled = visible.length < 2;
+    fullImage.classList.add('is-loading');
+    status.textContent = 'Loading image…';
+    const image = new Image();
+    image.src = design.source;
+    try {
+      await Promise.all([image.decode(), new Promise(resolve => setTimeout(resolve, reducedMotion.matches ? 0 : 180))]);
+      if (token !== request || !dialog.open) return;
+      fullImage.src = design.source;
+      fullImage.alt = design.alt;
+      fullImage.width = design.width;
+      fullImage.height = design.height;
+      status.textContent = '';
+      fullImage.classList.remove('is-loading');
+    } catch {
+      if (token === request && dialog.open) status.textContent = 'This image could not be loaded. Please try another image.';
+    }
+  }
+
+  ['All Designs', 'Modern', 'Classic', 'Contemporary'].forEach(category => {
+    if (category !== 'All Designs' && !kitchenDesigns.some(design => design.category === category)) return;
+    const button = element('button', '', category);
+    button.type = 'button';
+    button.setAttribute('aria-controls', 'kitchen-grid');
+    button.addEventListener('click', () => render(category));
+    filters.append(button);
+  });
+  get('kitchen-close').addEventListener('click', () => dialog.close());
+  get('kitchen-previous').addEventListener('click', () => show(current - 1));
+  get('kitchen-next').addEventListener('click', () => show(current + 1));
+  dialog.addEventListener('close', () => {
+    ++request;
+    swipeStart = null;
+    document.body.style.overflow = savedOverflow;
+    trigger?.focus({ preventScroll: true });
+  });
+  // Native modal dialog supplies background inertness and Escape-to-close.
+  dialog.addEventListener('keydown', event => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      event.stopPropagation();
+      show(current + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+    if (event.key === 'Tab') {
+      const buttons = [...dialog.querySelectorAll('button:not(:disabled)')];
+      const first = buttons[0], last = buttons[buttons.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
+  const stage = get('kitchen-stage');
+  stage.addEventListener('touchstart', event => {
+    swipeStart = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+  }, { passive: true });
+  stage.addEventListener('touchend', event => {
+    if (!swipeStart) return;
+    const touch = event.changedTouches[0];
+    const dx = touch.clientX - swipeStart.x, dy = touch.clientY - swipeStart.y;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(current + (dx < 0 ? 1 : -1));
+    swipeStart = null;
+  }, { passive: true });
+  stage.addEventListener('touchcancel', () => { swipeStart = null; }, { passive: true });
+
+  // Future shared modal integration:
+  // FealityKitchenGallery.setEnquiryHandler(design => sharedEnquiry.open(design));
+  // The handler receives the chosen design after this viewer closes and restores focus.
+  window.FealityKitchenGallery = Object.freeze({
+    setEnquiryHandler(handler) {
+      enquiryHandler = typeof handler === 'function' ? handler : null;
+      enquiry.disabled = !enquiryHandler;
+      get('kitchen-enquiry-note').hidden = !!enquiryHandler;
+    }
+  });
+  enquiry.addEventListener('click', () => {
+    if (!enquiryHandler) return;
+    const handler = enquiryHandler, design = { ...visible[current] };
+    dialog.addEventListener('close', () => handler(design), { once: true });
+    dialog.close();
+  });
+  render('All Designs');
+})();
