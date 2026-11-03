@@ -334,7 +334,7 @@ p {
 }
 
 .hero-background {
-  background-image: url('https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw4797c032/HOMEPAGE/Arclinea%20kitchen%20Kora%20luxury%20interior%20with%20marble%20island%20and%20panoramic%20windows_D.jpeg?bgcolor=FFFFFF&sw=1920');
+  background-image: url('assets/images/Kitchen%20photos/web/1-1920.webp');
   background-size: cover;
   background-position: center;
   animation: revealZoom 1.7s ease both
@@ -671,7 +671,7 @@ p {
 }
 
 .statement-image {
-  background: url('https://img.edilportale.com/csmartnews/img/855974_01.jpg') center/cover
+  background: url('assets/images/Kitchen%20photos/web/4-1920.webp') center/cover
 }
 
 .statement-overlay {
@@ -753,7 +753,7 @@ p {
 }
 
 .showroom-image {
-  background: url('https://www.cuinespalafrugell.cat/images/contenidos/1-1.jpeg') center/cover
+  background: url('assets/images/Kitchen%20photos/web/11-1920.webp') center/cover
 }
 
 .showroom-copy {
@@ -1109,7 +1109,7 @@ footer {
   }
 
   .hero-background {
-    background-image: url('https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw3e07267a/HOMEPAGE/Arclinea%20kitchen%20Kora%20luxury%20interior%20with%20marble%20island%20and%20panoramic%20windows%202_M.jpg?bgcolor=FFFFFF&sw=1080');
+    background-image: url('assets/images/Kitchen%20photos/web/1-1920.webp');
     background-position: center
   }
 
@@ -1384,3 +1384,6 @@ footer {
     transition: none !important
   }
 }
+
+/* Preserve full approved collection photographs within existing card dimensions. */
+.collection-card img { object-fit: contain; }

@@ -1,24 +1,4 @@
-const images = {
-  kora: 'https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw4797c032/HOMEPAGE/Arclinea%20kitchen%20Kora%20luxury%20interior%20with%20marble%20island%20and%20panoramic%20windows_D.jpeg?bgcolor=FFFFFF&sw=1920',
-  italia: 'https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw41f84ba2/5_COLLECTION/PDP%20ITALIA%20DUBLE%20ISLAND/Italia%20kitchen%20double%20island%20Arclinea%20handle%20D.jpeg?bgcolor=FFFFFF&sw=1600',
-  wood: 'https://img.edilportale.com/csmartnews/img/855974_01.jpg',
-  proxima: 'https://luminaire.com/cdn/shop/files/Proxima-Kitchen-Antonio-Citterio-Arclinea-4-01.jpg?v=1768586747',
-  artusi: 'https://mats01s1.blob.core.windows.net/cache/6/e/a/e/9/c/6eae9c9c988a29b5b24cfc02580c9e5e6d44bf36.jpeg',
-  space: 'https://www.cuinespalafrugell.cat/images/contenidos/1-1.jpeg',
-  storage: 'https://arclinea.com/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw40cd6d49/9_EXCLUSIVE%20ELEMENTS/DIVISION%20SYSTEM/NEW%20POKCET%20SYSTEM/EE_Division_system_new_pocket_system_15.jpeg',
-  island: 'https://static-land.edilportale.com/787691/uploads/M_1920w_21_787690.jpg'
-};
-const items = [
-  {name:'THEA, BORGOGNA FRAME',image:images.artusi},
-  {name:'KORA',image:images.kora},
-  {name:'LIGNUM ET LAPIS',image:images.wood},
-  {name:'CONVIVIUM',image:images.space},
-  {name:'PROXIMA',image:images.proxima},
-  {name:'ITALIA',image:images.italia},
-  {name:'PRINCIPIA',image:images.storage},
-  {name:'BETA',image:images.island},
-  {name:'THEA',image:images.artusi}
-];
+const items = window.FealityKitchenDesigns.map(design => ({...design, name: `Kitchen Design ${design.id}`, image: design.thumbnail}));
 const categories = ['WORKTOPS AND TABLES','DIVISION SYSTEMS','STORAGE SYSTEMS','CHAIRS AND STOOLS','EQUIPMENT','FUME EXTRACTION','MATERIALS AND FINISHES'];
 const track = document.getElementById('collectionTrack');
 const viewport = document.getElementById('collectionViewport');
@@ -28,7 +8,7 @@ const desktopPrevious = document.getElementById('prevSlide');
 const desktopNext = document.getElementById('nextSlide');
 const mobilePrevious = document.getElementById('mobilePrev');
 const mobileNext = document.getElementById('mobileNext');
-track.innerHTML = items.map((item, position) => `<article class="collection-card"><a href="#showroom" aria-label="Explore ${item.name}"><div class="card-image"><img src="${item.image}" alt="${item.name} kitchen collection" width="1600" height="1000" loading="${position < 4 ? 'eager' : 'lazy'}" decoding="async"></div><div class="collection-caption"><h3>${item.name}</h3><span aria-hidden="true">↗</span></div></a></article>`).join('');
+track.innerHTML = items.map((item, position) => `<article class="collection-card"><a href="#kitchen-gallery" aria-label="Explore ${item.name}"><div class="card-image"><img src="${item.image}" srcset="${item.srcset}" sizes="(max-width:600px) 86vw, (max-width:900px) 43vw, 22vw" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async"></div><div class="collection-caption"><h3>${item.name}</h3><span aria-hidden="true">↗</span></div></a></article>`).join('');
 let index = 0;
 let pageStarts = [];
 function visibleCount() {
@@ -87,9 +67,9 @@ viewport.addEventListener('click', event => {
 }, true);
 
 const heroSlides = [
-  {name:'KORA',title:'KORA, THE CURVE<br>AS A NEW ACCENT<br>FOR THE KITCHEN',image:images.kora,mobile:'https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw3e07267a/HOMEPAGE/Arclinea%20kitchen%20Kora%20luxury%20interior%20with%20marble%20island%20and%20panoramic%20windows%202_M.jpg?bgcolor=FFFFFF&sw=1080'},
-  {name:'ITALIA',title:'ITALIA, A STUDY<br>IN ARCHITECTURAL<br>PRECISION',image:images.italia},
-  {name:'LIGNUM ET LAPIS',title:'LIGNUM ET LAPIS<br>WOOD, STONE<br>AND BALANCE',image:images.wood}
+  {name:'Kitchen Design 01',title:'EXCLUSIVE KITCHENS<br>DESIGNED FOR<br>EVERYDAY LIVING',image:'assets/images/Kitchen%20photos/web/1-1920.webp'},
+  {name:'Kitchen Design 03',title:'CONSIDERED SPACES<br>FOR COOKING<br>AND GATHERING',image:'assets/images/Kitchen%20photos/web/3-1920.webp'},
+  {name:'Kitchen Design 04',title:'EXPLORE THE DETAILS<br>OF YOUR NEXT<br>KITCHEN',image:'assets/images/Kitchen%20photos/web/4-1920.webp'}
 ];
 const hero = document.querySelector('.hero');
 const heroBackground = document.querySelector('.hero-background');

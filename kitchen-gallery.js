@@ -1,23 +1,9 @@
 (() => {
   'use strict';
 
-  // Existing local collection: P_Interiors_Website/script.js. Only its exact
-  // Modern / Contemporary style labels are used; other styles remain unclassified.
-  // 03 duplicates 02, and 08 duplicates 05. Keep originals untouched.
-  // Names/descriptions are intentionally blank pending confirmed product metadata.
-  const kitchenDesigns = [
-    { id: '01', category: 'Contemporary', width: 1703, height: 924, alt: 'White kitchen with a pale stone island and garden-facing windows' },
-    { id: '02', category: 'Modern', width: 1704, height: 923, alt: 'White cabinetry and a slate-blue kitchen island beneath pendant lights' },
-    { id: '04', category: null, width: 2019, height: 779, alt: 'Veined stone kitchen island with taupe cabinetry and angular pendant lighting' },
-    { id: '05', category: 'Contemporary', width: 2018, height: 779, alt: 'Dark kitchen cabinetry and cooktop with an illuminated tiled backsplash' },
-    { id: '06', category: null, width: 2020, height: 779, alt: 'Dark kitchen and long dining counter with warm lighting and place settings' },
-    { id: '07', category: null, width: 2019, height: 779, alt: 'Wood-toned kitchen island with two cream stools and dark cabinetry' },
-    { id: '09', category: 'Contemporary', width: 1473, height: 1068, alt: 'Dark ribbed kitchen cabinetry with a wood-toned worktop and curved pendant' }
-  ].map(design => {
-    const base = `P_Interiors_Website/assets/quality/kitchen-${design.id}`;
-    return { name: null, description: null, ...design, source: `${base}.webp`,
-      thumbnail: `${base}-960.webp`, srcset: `${base}-480.webp 480w, ${base}-960.webp 960w, ${base}.webp ${design.width}w` };
-  });
+  // User-supplied kitchen assets. Add only verified categories, names and descriptions.
+  // Originals are used in the viewer; generated derivatives are gallery-only.
+  const kitchenDesigns = window.FealityKitchenDesigns;
 
   const get = id => document.getElementById(id);
   const grid = get('kitchen-grid');
