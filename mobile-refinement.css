@@ -1,0 +1,65 @@
+/* Mobile refinements only. Desktop keeps its original structure and styling. */
+.mobile-copy { display: none; }
+@media (max-width: 768px) {
+ .desktop-copy { display: none !important; }
+ .mobile-copy { display: block; }
+ .site-header, .site-header.scrolled { height: 84px; padding-inline: 20px; }
+ .site-header .wordmark { position: static; transform: none; width: 140px; height: 84px; order: 0; margin-right: auto; }
+ .site-header .menu-toggle { order: 2; width: 44px; height: 44px; margin-left: 8px; align-items: center; }
+ .site-header .header-right { order: 1; gap: 0; }
+ .site-header .primary-nav, .site-header .language-button { display: none; }
+ .site-header .search-toggle { width: 44px; height: 44px; }
+ .interior-page .site-header { height: 84px; }
+ .interior-page main { padding-top: 84px; }
+ .polished-page #mainContent .home-hero.hero { height: 84svh; min-height: 540px; max-height: 760px; }
+ .polished-page #mainContent :is(.collection-hero.hero, .kitchen-cinematic-hero) { height: 64svh; min-height: 440px; max-height: 620px; }
+ .polished-page #mainContent .hero-content { left: 22px; right: 22px; bottom: 98px; max-width: 440px; }
+ .polished-page #mainContent .hero-content h1 { font-size: clamp(36px, 8.6vw, 54px); line-height: 1.06; margin-bottom: 14px; }
+ .polished-page #mainContent :is(.collection-hero-description, .hero-subtitle) { font-size: 14px; line-height: 1.65; max-width: 32ch; margin-bottom: 18px; }
+ .polished-page #mainContent :is(.hero-category, .hero-content .eyebrow) { font-size: 10px; letter-spacing: .15em; margin-bottom: 12px; }
+ .mobile-hero-cta, .mobile-outline-link { display: inline-flex; min-height: 44px; align-items: center; justify-content: space-between; gap: 28px; padding: 10px 18px; border: 1px solid currentColor; font-size: 12px; }
+ .mobile-hero-cta { color: white; }
+ .polished-page #mainContent :is(.section-spacing, .collection-section) { padding-inline: 20px; }
+ .polished-page #mainContent :is(.collection-section, .home-editorial, .related-collections, .home-pathway) { padding-block: 44px; }
+ .polished-page #mainContent .collection-section + .collection-section { padding-top: 0; }
+ .polished-page #mainContent .collection-section h2 { font-size: clamp(28px, 6vw, 36px); }
+ .polished-page #mainContent .section-header { margin-bottom: 24px; gap: 12px; }
+ .polished-page #mainContent :is(.collection-featured-grid, .models-grid, .collection-full-gallery .kitchen-gallery-grid) { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 12px; }
+ .polished-page #mainContent :is(.kitchen-gallery-caption, .collection-featured .kitchen-gallery-caption, .model-title) { font-size: 15px; line-height: 1.35; gap: 6px; }
+ .polished-page #mainContent .collection-subtitle { font-size: 11px; margin-top: 5px; }
+ .polished-page #mainContent :is(.collection-featured .kitchen-gallery-media, .model-media) { aspect-ratio: 4/3; }
+ .polished-page #mainContent .home-collections-grid { grid-template-columns: 1fr; gap: 32px; }
+ .polished-page #mainContent .home-collection-media { aspect-ratio: 16/10; margin-bottom: 16px; }
+ .polished-page #mainContent .home-collection-card h3 { font-size: 30px; }
+ .polished-page #mainContent .home-editorial { gap: 24px; }
+ #menuPanel { padding-top: max(14px,env(safe-area-inset-top)); }
+ #menuPanel .menu-brand { width: clamp(140px,19dvh,180px); }
+ #menuPanel .menu-content { width: min(100%,440px); }
+ #menuPanel .menu-introduction { font-size: 30px; margin-bottom: 20px; }
+ #menuPanel .main-menu a { font-size: 25px; min-height: 48px; padding-block: 8px; }
+ #menuPanel .menu-secondary a { font-size: 16px; min-height: 44px; padding-inline: 14px; }
+ #menuPanel::after { min-height: 100px; flex-basis: 16dvh; }
+ .interior-page .page-intro { padding: 40px 22px 56px; }
+ .interior-page .page-intro h1 { font-size: 42px; line-height: 1.1; }
+ .interior-page .page-intro p { font-size: 15px; line-height: 1.75; }
+ .page-intro:has(.mobile-about, .mobile-process) > p:not(.eyebrow), .page-intro:has(.mobile-about, .mobile-process) > .page-content-shell { display: none; }
+ .mobile-about img { display: block; width: 100%; height: auto; margin: 28px 0; }
+ .mobile-about h2 { font: 400 34px/1.12 'Cormorant Garamond',Georgia,serif; margin: 12px 0 18px; }
+ .mobile-process ol { list-style: none; counter-reset: steps; padding: 0; margin: 32px 0 0; }
+ .mobile-process li { position: relative; counter-increment: steps; margin-left: 20px; padding: 0 0 32px 36px; border-left: 1px solid var(--line); }
+ .mobile-process li:last-child { border-left-color: transparent; padding-bottom: 0; }
+ .mobile-process li::before { content: counter(steps, decimal-leading-zero); position: absolute; left: -20px; top: 0; width: 38px; height: 38px; display: grid; place-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 50%; font-size: 12px; }
+ .mobile-process h2 { font: 500 19px/1.4 'Inter',sans-serif; margin: 0 0 8px; }
+ .mobile-process li p { margin: 0; }
+ footer { padding-inline: 22px; }
+ footer .footer-main { flex-direction: column; gap: 24px; padding-bottom: 28px; }
+ footer .footer-logo { display: block; width: 160px; }
+ footer .footer-logo img { width: 100%; height: auto; }
+ footer .footer-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%; }
+ footer .footer-columns a { display: flex; align-items: center; min-height: 44px; font-size: 13px; }
+ footer .footer-bottom { flex-direction: column; gap: 14px; align-items: flex-start; line-height: 1.6; font-size: 11px; }
+ footer .footer-bottom a { display: inline-flex; min-height: 44px; align-items: center; }
+ .kitchen-lightbox-top { gap: 12px; }
+ .kitchen-lightbox-top h2 { font-size: 14px; }
+ .kitchen-lightbox button { min-height: 44px; }
+}

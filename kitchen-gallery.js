@@ -1,19 +1,20 @@
 (() => {
   'use strict';
 
-  // User-supplied kitchen assets. Add only verified categories, names and descriptions.
-  // Originals are used in the viewer; generated derivatives are gallery-only.
-  const kitchenDesigns = window.FealityKitchenDesigns;
+  // The existing gallery hooks are shared by all three collection pages.
+  const wardrobeDesigns = window.FealityWardrobeDesigns;
+  const vanityDesigns = window.FealityVanityDesigns;
+  const designs = vanityDesigns || wardrobeDesigns || window.FealityKitchenDesigns;
 
   const get = id => document.getElementById(id);
   const grid = get('kitchen-grid');
-  if (!grid) return;
+  if (!grid || !designs?.length) return;
   const filters = get('kitchen-filters');
   const dialog = get('kitchen-lightbox');
   const fullImage = get('kitchen-full-image');
   const status = get('kitchen-image-status');
   const enquiry = get('kitchen-enquire');
-  let visible = kitchenDesigns;
+  let visible = designs;
   let current = 0;
   let trigger = null;
   let savedOverflow = '';
@@ -29,8 +30,29 @@
     return node;
   }
 
+  function open(position, button) {
+    trigger = button;
+    savedOverflow = document.body.style.overflow;
+    dialog.showModal();
+    document.body.style.overflow = 'hidden';
+    show(position);
+  }
+
+  // Featured and editorial cards open the complete collection, independently of filters.
+  // Delegation also supports cards rendered by the existing Kitchen carousel.
+  document.addEventListener('click', event => {
+    const button = event.target.closest('[data-collection-design], [data-vanity-design]');
+    if (!button || event.defaultPrevented) return;
+    const id = button.dataset.collectionDesign || button.dataset.vanityDesign;
+    const position = designs.findIndex(design => design.id === id);
+    if (position < 0) return;
+    event.preventDefault();
+    render('All Designs');
+    open(position, button);
+  });
+
   function render(category) {
-    visible = kitchenDesigns.filter(design => category === 'All Designs' || design.category === category);
+    visible = designs.filter(design => category === 'All Designs' || design.category === category);
     filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.textContent === category)));
     const fragment = document.createDocumentFragment();
     visible.forEach((design, position) => {
@@ -45,18 +67,12 @@
         width: design.width, height: design.height, alt: design.alt, loading: 'lazy', decoding: 'async' });
       media.append(img);
       const caption = element('span', 'kitchen-gallery-caption');
-      caption.append(element('span', '', design.name || `KITCHEN / ${design.id}`));
+      caption.append(element('span', '', design.name || `Kitchen Design ${design.id}`));
       const arrow = element('span', '', '↗');
       arrow.setAttribute('aria-hidden', 'true');
       caption.append(arrow);
       button.append(media, caption);
-      button.addEventListener('click', () => {
-        trigger = button;
-        savedOverflow = document.body.style.overflow;
-        dialog.showModal();
-        document.body.style.overflow = 'hidden';
-        show(position);
-      });
+      button.addEventListener('click', () => open(position, button));
       fragment.append(button);
     });
     grid.replaceChildren(fragment);
@@ -68,7 +84,7 @@
     const design = visible[current];
     const token = ++request;
     get('kitchen-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(visible.length).padStart(2, '0')}`;
-    for (const [id, value] of [['kitchen-design-name', design.name], ['kitchen-description', design.description]]) {
+    for (const [id, value] of [['kitchen-design-name', design.name || `Kitchen Design ${design.id}`], ['kitchen-description', design.description]]) {
       get(id).textContent = value || '';
       get(id).hidden = !value;
     }
@@ -92,7 +108,7 @@
   }
 
   ['All Designs', 'Modern', 'Classic', 'Contemporary'].forEach(category => {
-    if (category !== 'All Designs' && !kitchenDesigns.some(design => design.category === category)) return;
+    if (category !== 'All Designs' && !designs.some(design => design.category === category)) return;
     const button = element('button', '', category);
     button.type = 'button';
     button.setAttribute('aria-controls', 'kitchen-grid');
@@ -124,22 +140,29 @@
     }
   });
   const stage = get('kitchen-stage');
-  stage.addEventListener('touchstart', event => {
-    swipeStart = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
-  }, { passive: true });
-  stage.addEventListener('touchend', event => {
-    if (!swipeStart) return;
-    const touch = event.changedTouches[0];
-    const dx = touch.clientX - swipeStart.x, dy = touch.clientY - swipeStart.y;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(current + (dx < 0 ? 1 : -1));
+  stage.addEventListener('dragstart', event => event.preventDefault());
+  stage.addEventListener('pointerdown', event => {
+    if (!event.isPrimary) { swipeStart = null; return; }
+    if (event.button !== 0) return;
+    swipeStart = { id: event.pointerId, x: event.clientX, y: event.clientY };
+    stage.setPointerCapture(event.pointerId);
+  });
+  stage.addEventListener('pointerup', event => {
+    if (!swipeStart || swipeStart.id !== event.pointerId) return;
+    const dx = event.clientX - swipeStart.x, dy = event.clientY - swipeStart.y;
     swipeStart = null;
-  }, { passive: true });
-  stage.addEventListener('touchcancel', () => { swipeStart = null; }, { passive: true });
+    if (stage.hasPointerCapture(event.pointerId)) stage.releasePointerCapture(event.pointerId);
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(current + (dx < 0 ? 1 : -1));
+  });
+  for (const type of ['pointercancel', 'lostpointercapture']) {
+    stage.addEventListener(type, () => { swipeStart = null; });
+  }
 
   // Future shared modal integration:
   // FealityKitchenGallery.setEnquiryHandler(design => sharedEnquiry.open(design));
   // The handler receives the chosen design after this viewer closes and restores focus.
-  window.FealityKitchenGallery = Object.freeze({
+  const galleryHook = vanityDesigns ? 'FealityVanityGallery' : wardrobeDesigns ? 'FealityWardrobeGallery' : 'FealityKitchenGallery';
+  window[galleryHook] = Object.freeze({
     setEnquiryHandler(handler) {
       enquiryHandler = typeof handler === 'function' ? handler : null;
       enquiry.disabled = !enquiryHandler;

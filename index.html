@@ -4,74 +4,165 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#e8e5df" />
-  <title>Exclusive Kitchen — FEALITY ITALY</title>
-  <meta name="description" content="Discover the FEALITY ITALY kitchen collection, design elements, and stories." />
-  <meta property="og:title" content="Exclusive Kitchen — FEALITY ITALY" />
-  <meta property="og:description" content="Discover the FEALITY ITALY kitchen collection, design elements, and stories." />
+  <title>FEALITY ITALY — Italian Luxury Interiors</title>
+  <meta name="description" content="Discover FEALITY ITALY — Italian-inspired luxury interiors across three core collections: Kitchen, Wardrobes, and Bathroom Vanity." />
+  <meta property="og:title" content="FEALITY ITALY — Italian Luxury Interiors" />
+  <meta property="og:description" content="Discover FEALITY ITALY — Italian-inspired luxury interiors across three core collections: Kitchen, Wardrobes, and Bathroom Vanity." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5" />
-  <script src="kitchen-data.js?v=1" defer></script>
-  <script src="script.js?v=5" defer></script>
   <link rel="preload" as="image" href="assets/images/Kitchen%20photos/web/1-1920.webp" fetchpriority="high" />
-  <link rel="stylesheet" href="kitchen-gallery.css?v=2" />
-  <script src="kitchen-gallery.js?v=3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="menu.css?v=5" />
+  <link rel="stylesheet" href="collection-pages.css?v=2" />
+  <script src="navigation.js?v=6" defer></script>
+  <link rel="stylesheet" href="collection-motion.css?v=2" />
+  <script src="collection-motion.js?v=2" defer></script>
+  <link rel="stylesheet" href="hero-slider.css?v=3" />
+  <script src="hero-slider.js?v=5" defer></script>
+  <link rel="stylesheet" href="page-polish.css?v=1" />
+  <link rel="stylesheet" href="mobile-refinement.css?v=2" />
 </head>
-<body>
+<body class="polished-page home-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
   <header class="site-header" id="siteHeader">
-    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
-    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Exclusive Kitchen"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a>
-    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
+    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home" aria-current="page"><picture><source media="(min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
+    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
+  <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
   </header>
 
-  <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1">
-    <div class="menu-top"><span id="menuTitle">EXPLORE</span><button id="menuClose" aria-label="Close navigation">CLOSE ×</button></div>
-    <nav class="main-menu" aria-label="Main navigation"><a href="index.html" aria-current="page">Exclusive Kitchen <span>01</span></a><a href="wardrobes.html">Wardrobes <span>02</span></a><a href="vanity.html">Vanity <span>03</span></a><a href="about.html">About Us <span>04</span></a><a href="how-it-works.html">How It Works <span>05</span></a></nav>
-    <div class="menu-bottom"><span>THE ITALIAN DESIGN KITCHEN</span><span>DESIGN FOR LIVING</span></div>
+  <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1" inert>
+    <div class="menu-top"><img class="menu-brand" src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" width="4000" height="2666" /><button id="menuClose" aria-label="Close navigation" type="button"><span aria-hidden="true"></span></button></div>
+    <div class="menu-content"><p class="menu-tagline">ITALIAN LUXURY INTERIORS</p><h2 id="menuTitle" class="menu-introduction"><span>Designed <em>for Living</em></span><span>Crafted <em>with Purpose</em></span></h2>
+    <nav class="main-menu" aria-label="Main navigation"><a href="kitchen.html">Kitchen<span class="menu-arrow" aria-hidden="true">→</span></a><a href="wardrobes.html">Wardrobes<span class="menu-arrow" aria-hidden="true">→</span></a><a href="vanity.html">Vanity<span class="menu-arrow" aria-hidden="true">→</span></a><a href="about.html">About Us<span class="menu-arrow" aria-hidden="true">→</span></a><a href="how-it-works.html">How It Works<span class="menu-arrow" aria-hidden="true">→</span></a></nav><nav class="menu-secondary" aria-label="Information"><a href="faqs.html">FAQs</a><a href="terms-policies.html">Terms &amp; Policies</a></nav></div>
   </div>
-  <div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-labelledby="searchTitle" aria-hidden="true" tabindex="-1"><button id="searchClose" aria-label="Close search">CLOSE ×</button><label id="searchTitle" for="siteSearch">WHAT ARE YOU LOOKING FOR?</label><div class="search-line"><input id="siteSearch" type="search" placeholder="Search collections, elements..." autocomplete="off" /><span aria-hidden="true">↗</span></div><div id="searchResults" class="search-results" aria-live="polite"></div></div>
+
+  <div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-labelledby="searchTitle" aria-hidden="true" tabindex="-1">
+    <button id="searchClose" aria-label="Close search">CLOSE ×</button>
+    <label id="searchTitle" for="siteSearch">WHAT ARE YOU LOOKING FOR?</label>
+    <div class="search-line"><input id="siteSearch" type="search" placeholder="Search collections, elements..." autocomplete="off" /><span aria-hidden="true">↗</span></div>
+    <div id="searchResults" class="search-results" aria-live="polite"></div>
+  </div>
 
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <main id="mainContent">
-    <section class="hero" id="top" aria-label="Featured kitchen designs" aria-roledescription="carousel" tabindex="0">
-      <div class="hero-background"></div><div class="hero-scrim"></div>
-      <div class="hero-content"><p class="eyebrow light">THE ITALIAN DESIGN KITCHEN</p><h1>EXCLUSIVE KITCHENS<br>DESIGNED FOR<br>EVERYDAY LIVING</h1><a class="text-link light-link" href="#collection">DISCOVER MORE <span>↗</span></a></div>
-      <div class="hero-bottom"><div class="hero-pagination" id="heroPagination" role="group" aria-label="Choose featured kitchen"><button type="button" data-hero-slide="0" aria-label="Show Kitchen Design 01" aria-pressed="true"></button><button type="button" data-hero-slide="1" aria-label="Show Kitchen Design 03" aria-pressed="false"></button><button type="button" data-hero-slide="2" aria-label="Show Kitchen Design 04" aria-pressed="false"></button></div><span class="hero-scroll-label">SCROLL TO EXPLORE <b>↓</b></span><div class="hero-controls"><span id="heroCounter" aria-live="polite">01 / 03</span><button type="button" id="heroPrevious" aria-label="Previous featured kitchen">←</button><button type="button" id="heroNext" aria-label="Next featured kitchen">→</button></div></div>
-    </section>
-
-    <section class="intro section-spacing" id="philosophy"><div class="intro-top"><p class="eyebrow">OUR PHILOSOPHY</p><span class="tiny-cross">✳</span></div><div class="intro-grid"><h2>Where cooking<br>becomes living.</h2><div><p>Beautifully considered spaces that bring people together. A balance of architectural precision, innovative solutions and the warmth of everyday life.</p><a href="#elements" class="text-link">EXPLORE OUR WORLD <span>↗</span></a></div></div></section>
-
-    <section class="collection section-spacing" id="collection"><div class="section-header"><div><p class="eyebrow">COLLECTION</p><h2>DISCOVER THE MODELS</h2></div><div class="slider-controls"><span id="slideCounter" aria-live="polite">01 — 04 / 15</span><button id="prevSlide" aria-label="Previous collection">←</button><button id="nextSlide" aria-label="Next collection">→</button></div></div><div class="collection-viewport" id="collectionViewport" aria-label="Kitchen collection carousel"><div class="collection-track" id="collectionTrack"></div></div><div class="collection-pagination" id="collectionPagination" role="group" aria-label="Choose collection page"></div><div class="mobile-controls"><button id="mobilePrev" aria-label="Previous">←</button><button id="mobileNext" aria-label="Next">→</button></div></section>
-
-    <section class="kitchen-gallery section-spacing" id="kitchen-gallery" aria-labelledby="kitchen-gallery-title">
-      <div class="section-header"><div><p class="eyebrow">EXPLORE THE DETAILS</p><h2 id="kitchen-gallery-title">EXCLUSIVE KITCHEN</h2></div></div>
-      <div class="kitchen-gallery-toolbar"><div id="kitchen-filters" role="group" aria-label="Filter kitchen designs"></div><p id="kitchen-count" role="status" aria-live="polite" aria-atomic="true"></p></div>
-      <div class="kitchen-gallery-grid" id="kitchen-grid"></div>
-      <noscript><p>Enable JavaScript to explore the kitchen gallery and full-screen viewer.</p></noscript>
-    </section>
-
-    <dialog class="kitchen-lightbox" id="kitchen-lightbox" aria-labelledby="kitchen-lightbox-title">
-      <div class="kitchen-lightbox-top"><h2 id="kitchen-lightbox-title">Exclusive Kitchen</h2><button type="button" id="kitchen-close" autofocus aria-label="Close kitchen viewer">CLOSE ×</button></div>
-      <div class="kitchen-lightbox-stage" id="kitchen-stage"><img id="kitchen-full-image" alt="" /><p id="kitchen-image-status" role="status"></p></div>
-      <div class="kitchen-lightbox-bottom">
-        <div class="kitchen-lightbox-copy"><h3 id="kitchen-design-name" hidden></h3><p id="kitchen-description" hidden></p></div>
-        <div class="kitchen-lightbox-controls"><button type="button" id="kitchen-previous" aria-label="Previous kitchen image">←</button><span id="kitchen-counter" role="status" aria-live="polite" aria-atomic="true"></span><button type="button" id="kitchen-next" aria-label="Next kitchen image">→</button></div>
-        <div class="kitchen-enquiry"><button type="button" id="kitchen-enquire" disabled aria-describedby="kitchen-enquiry-note">Enquire Now ↗</button><p id="kitchen-enquiry-note">Enquiries are currently unavailable.</p></div>
+    <section class="hero home-hero" id="top" aria-labelledby="homeTitle">
+      <img class="hero-background" src="assets/images/Kitchen%20photos/web/1-960.webp" srcset="assets/images/Kitchen%20photos/web/1-480.webp 480w, assets/images/Kitchen%20photos/web/1-960.webp 960w, assets/images/Kitchen%20photos/web/1-1920.webp 1920w, assets/images/Kitchen%20photos/1.png 1916w" sizes="(max-width: 600px) 1400px, 100vw" width="1916" height="821" alt="FEALITY ITALY Italian Luxury Interiors" fetchpriority="high" />
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">FEALITY ITALY</p>
+        <h1 id="homeTitle">Kitchen</h1>
+        <p class="collection-hero-description">Considered spaces for cooking, gathering and everyday living.</p>
+        <a class="text-link light-link desktop-copy" href="kitchen.html">Explore Kitchen <span aria-hidden="true">↗</span></a><a class="mobile-copy mobile-hero-cta" href="kitchen.html">Explore Kitchen <span aria-hidden="true">→</span></a>
       </div>
-    </dialog>
+    </section>
 
-    <section class="statement"><div class="statement-image"></div><div class="statement-overlay"></div><div class="statement-content"><p class="eyebrow light">TIMELESS DESIGN</p><h2>The art of<br>living together.</h2><a href="#showroom" class="text-link light-link">DISCOVER MORE <span>↗</span></a></div></section>
+    <section class="section-spacing collection-section" id="collections" aria-labelledby="collections-title">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow"><span class="desktop-copy">CORE COLLECTIONS</span><span class="mobile-copy">OUR COLLECTIONS</span></p>
+          <h2 id="collections-title">Three Expressions of Living</h2>
+        </div>
+        <p class="collection-section-note">Kitchen · Wardrobes · Bathroom Vanity</p>
+      </div>
 
-    <section class="elements section-spacing" id="elements"><div class="section-header"><div><p class="eyebrow">EXCLUSIVE ELEMENTS</p><h2>A WORLD OF UNIQUE<br>UNMISTAKABLE PRODUCTS</h2></div><p class="elements-intro">Each detail, material and functional element contributes to making the kitchen a personal and extraordinary space.</p></div><div class="elements-grid"><a href="#showroom" class="element-card"><img src="assets/images/Kitchen%20photos/web/4-960.webp" srcset="assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w" sizes="(max-width:600px) 88vw, 44vw" alt="Veined stone island against warm wood kitchen cabinetry" width="1930" height="815" loading="lazy" decoding="async"><div><h3>WORKTOPS AND TABLES</h3><span>↗</span></div></a><a href="#showroom" class="element-card"><img src="assets/images/Kitchen%20photos/web/8-960.webp" srcset="assets/images/Kitchen%20photos/web/8-480.webp 480w, assets/images/Kitchen%20photos/web/8-960.webp 960w" sizes="(max-width:600px) 88vw, 44vw" alt="Green framed kitchen cabinetry with pale worktops" width="1672" height="941" loading="lazy" decoding="async"><div><h3>DIVISION SYSTEMS</h3><span>↗</span></div></a><a href="#showroom" class="element-card"><img src="assets/images/Kitchen%20photos/web/15-960.webp" srcset="assets/images/Kitchen%20photos/web/15-480.webp 480w, assets/images/Kitchen%20photos/web/15-960.webp 960w" sizes="(max-width:600px) 88vw, 44vw" alt="Dark linear kitchen with illuminated wood shelving" width="1672" height="941" loading="lazy" decoding="async"><div><h3>STORAGE SYSTEMS</h3><span>↗</span></div></a></div><div class="element-list"><span>CHAIRS AND STOOLS</span><span>EQUIPMENT</span><span>FUME EXTRACTION</span><span>MATERIALS AND FINISHES</span></div></section>
+      <div class="home-collections-grid">
+        <article class="home-collection-card">
+          <a href="kitchen.html" aria-label="Explore Kitchen collection">
+            <div class="home-collection-media">
+              <img src="assets/images/Kitchen%20photos/web/1-960.webp" srcset="assets/images/Kitchen%20photos/web/1-480.webp 480w, assets/images/Kitchen%20photos/web/1-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 44vw, 29vw" width="1916" height="821" alt="FEALITY ITALY Kitchen" loading="lazy" decoding="async" />
+            </div>
+            <p class="eyebrow">COLLECTION 01</p>
+            <h3>Kitchen</h3>
+            <p>Considered spaces for cooking, gathering and everyday living. Architectural islands, integrated storage and seamless materials.</p>
+            <span class="home-collection-link">Explore Kitchen <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
 
-    <section class="showroom" id="showroom"><div class="showroom-image"></div><div class="showroom-copy"><p class="eyebrow">FEALITY ITALY</p><h2>ITALIAN DESIGN<br>FOR EVERYDAY<br>LIVING</h2><p>Explore the kitchens and design elements featured throughout the FEALITY ITALY collection.</p></div></section>
+        <article class="home-collection-card">
+          <a href="wardrobes.html" aria-label="Explore Wardrobes collection">
+            <div class="home-collection-media">
+              <img src="assets/wardrobes/web/1-960.webp" srcset="assets/wardrobes/web/1-480.webp 480w, assets/wardrobes/web/1-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 44vw, 29vw" width="1916" height="821" alt="FEALITY ITALY Wardrobes collection" loading="lazy" decoding="async" />
+            </div>
+            <p class="eyebrow">COLLECTION 02</p>
+            <h3>Wardrobes</h3>
+            <p>A considered place for clothing, accessories and the everyday. Glass display, divided compartments and integrated lighting.</p>
+            <span class="home-collection-link">Explore Wardrobes <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
 
-    <section class="journal section-spacing" id="journal"><div class="section-header"><div><p class="eyebrow">JOURNAL</p><h2>STORIES & INSPIRATION</h2></div></div><div class="journal-grid"><article class="journal-main"><img src="assets/images/Kitchen%20photos/web/11-960.webp" srcset="assets/images/Kitchen%20photos/web/11-480.webp 480w, assets/images/Kitchen%20photos/web/11-960.webp 960w" sizes="(max-width:600px) 88vw, 44vw" alt="Pale corner kitchen with open shelving and warm integrated lighting" width="1931" height="814" loading="lazy" decoding="async"><p class="eyebrow">DESIGN STORIES</p><h3>Extraordinary, every day. Spaces of belonging.</h3></article><article class="journal-secondary"><img src="assets/images/Kitchen%20photos/web/9-960.webp" srcset="assets/images/Kitchen%20photos/web/9-480.webp 480w, assets/images/Kitchen%20photos/web/9-960.webp 960w" sizes="(max-width:600px) 88vw, 44vw" alt="Grey kitchen island and dark cabinetry beside snowy landscape windows" width="1916" height="821" loading="lazy" decoding="async"><p class="eyebrow">SHOWROOM</p><h3>Forms of contemporary conviviality.</h3></article></div></section>
+        <article class="home-collection-card">
+          <a href="vanity.html" aria-label="Explore Bathroom Vanity collection">
+            <div class="home-collection-media">
+              <img src="assets/venity/web/1-960.webp" srcset="assets/venity/web/1-480.webp 480w, assets/venity/web/1-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 44vw, 29vw" width="1916" height="821" alt="FEALITY ITALY Bathroom Vanity collection" loading="lazy" decoding="async" />
+            </div>
+            <p class="eyebrow">COLLECTION 03</p>
+            <h3>Bathroom Vanity</h3>
+            <p>Quiet forms, thoughtful storage and space for daily rituals. Stainless-steel cabinetry, sculptural mirrors and wall-hung basins.</p>
+            <span class="home-collection-link">Explore Vanity <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
+      </div>
+    </section>
 
-    <section class="newsletter"><p class="eyebrow">NEWSLETTER</p><h2>KEEP UPDATED<br>WITH OUR WORLD</h2><p class="newsletter-demo-note">DEMO FORM · NO SUBSCRIPTION IS SENT</p><form id="newsletterForm"><label for="emailInput" class="sr-only">Email address</label><input id="emailInput" type="email" placeholder="YOUR EMAIL ADDRESS" autocomplete="email" required /><button type="submit" aria-label="Submit demo email">↗</button></form><p class="form-message" id="formMessage" role="status" aria-live="polite"></p></section>
+    <section class="home-editorial section-spacing" aria-labelledby="editorial-title">
+      <figure><img src="assets/images/Kitchen%20photos/web/4-1920.webp" srcset="assets/images/Kitchen%20photos/web/4-960.webp 960w, assets/images/Kitchen%20photos/web/4-1920.webp 1920w" sizes="(max-width: 800px) 88vw, 60vw" width="1930" height="815" alt="Veined stone kitchen island framed by warm wood cabinetry" loading="lazy" decoding="async" /></figure>
+      <div><p class="eyebrow">THE FEALITY PERSPECTIVE</p><h2>Spaces to live in.<br />Details to linger on.</h2><p>Explore the interplay of proportion, light and storage across our kitchen, wardrobe and vanity collections.</p><a class="text-link" href="about.html">Discover FEALITY ITALY <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section-spacing home-pathway" id="pathway" aria-labelledby="pathway-title">
+      <div class="home-pathway-grid">
+        <div>
+          <p class="eyebrow">CRAFT &amp; PROCESS</p>
+          <h2 id="pathway-title">Where architectural form meets everyday life.</h2>
+        </div>
+        <div class="home-pathway-content">
+          <p>Every FEALITY ITALY collection is developed around architectural balance, durable materials and purposeful utility. Discover how our collections translate into bespoke living environments.</p>
+          <div class="home-pathway-links">
+            <a href="how-it-works.html" class="text-link">DISCOVER OUR PROCESS <span aria-hidden="true">↗</span></a>
+            <a href="about.html" class="text-link">ABOUT THE BRAND <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">NEWSLETTER</p>
+      <h2>KEEP UPDATED<br />WITH OUR WORLD</h2>
+      <p class="newsletter-demo-note">DEMO FORM · NO SUBSCRIPTION IS SENT</p>
+      <form id="newsletterForm">
+        <label for="emailInput" class="sr-only">Email address</label>
+        <input id="emailInput" type="email" placeholder="YOUR EMAIL ADDRESS" autocomplete="email" required />
+        <button type="submit" aria-label="Submit demo email">↗</button>
+      </form>
+      <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+    </section>
   </main>
-  <footer><div class="footer-main"><a href="index.html" class="footer-logo" aria-label="FEALITY ITALY — Exclusive Kitchen"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a><div class="footer-columns"><div><p>EXPLORE</p><a href="index.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></div><div><p>INFORMATION</p><a href="faqs.html">FAQs</a><a href="terms-policies.html">Terms &amp; Policies</a></div></div></div><div class="footer-bottom"><span>© 2026 FEALITY ITALY. All Rights Reserved.</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+
+  <footer>
+    <div class="footer-main">
+      <a href="index.html" class="footer-logo" aria-label="FEALITY ITALY — Home"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a>
+      <div class="footer-columns">
+        <div>
+          <p>EXPLORE</p>
+          <a href="kitchen.html">Kitchen</a>
+          <a href="wardrobes.html">Wardrobes</a>
+          <a href="vanity.html">Vanity</a>
+          <a href="about.html">About Us</a>
+          <a href="how-it-works.html">How It Works</a>
+        </div>
+        <div>
+          <p>INFORMATION</p>
+          <a href="faqs.html">FAQs</a>
+          <a href="terms-policies.html">Terms &amp; Policies</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FEALITY ITALY. All Rights Reserved.</span>
+      <a href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
 </body>
 </html>

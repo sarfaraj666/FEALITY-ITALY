@@ -1,0 +1,35 @@
+.wardrobe-hero img.hero-background {
+  background-image: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wardrobe-section + .wardrobe-section { padding-top: 0; }
+.wardrobe-card { min-width: 0; }
+.wardrobe-media,
+.wardrobe-section .kitchen-gallery-media {
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+}
+.wardrobe-media img,
+.wardrobe-section .kitchen-gallery-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.wardrobe-card h3 {
+  margin: 16px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+@media (hover: hover) {
+  .wardrobe-card:hover img { transform: scale(1.025); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wardrobe-card img { transition: none; }
+  .wardrobe-card:hover img { transform: none; }
+}

@@ -1,0 +1,54 @@
+/* Only hero content; the existing transparent navigation is untouched. */
+.home-page .home-hero.hero {
+  height: 100svh;
+  min-height: 520px;
+  cursor: crosshair;
+  touch-action: pan-y pinch-zoom;
+}
+.home-page .home-hero.is-dragging { user-select: none; }
+.home-page .home-hero a, .home-page .home-hero button { cursor: pointer; }
+.home-page .collection-hero-dots button { min-width: 44px; }
+.has-hero-slider .hero-content { bottom: 108px; }
+.has-hero-slider img.hero-background { transition: opacity .65s ease; }
+.has-hero-slider img.hero-slide-image { animation: none; }
+.collection-hero-controls {
+  position: absolute;
+  z-index: 4;
+  inset: auto 6% 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #fff;
+}
+.collection-hero-dots, .collection-hero-actions { display: flex; align-items: center; gap: 8px; }
+.collection-hero-controls button {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  background: rgba(0, 0, 0, .15);
+  border: 1px solid rgba(255, 255, 255, .6);
+  color: inherit;
+  font: inherit;
+  font-size: 15px;
+}
+.collection-hero-dots { gap: 0; }
+.collection-hero-dots button { border: 0; background: transparent; min-width: 32px; }
+.collection-hero-dots button span { width: 6px; height: 6px; border: 1px solid currentColor; border-radius: 50%; }
+.collection-hero-dots button[aria-pressed="true"] span { background: currentColor; }
+.collection-hero-counter { font-size: 11px; font-variant-numeric: tabular-nums; margin-right: 8px; white-space: nowrap; }
+.collection-hero-controls [data-hero-action="pause"] { font-size: 11px; min-width: 56px; }
+@media (max-width: 600px) {
+  .has-hero-slider .hero-content { bottom: 106px; }
+  .collection-hero-controls { gap: 8px; bottom: 22px; }
+  .collection-hero-actions { gap: 4px; }
+  .collection-hero-counter { margin-right: 2px; font-size: 10px; }
+  .collection-hero-dots button { min-width: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .has-hero-slider img.hero-background { transition: none; animation: none; }
+}
+
+.has-hero-slider { touch-action: pan-y pinch-zoom; }

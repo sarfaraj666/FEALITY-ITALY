@@ -43,3 +43,33 @@
   .kitchen-gallery *, .kitchen-lightbox, .kitchen-lightbox * { animation: none !important; transition: none !important; }
   .kitchen-gallery-card:hover img { transform: none; }
 }
+
+/* Kitchen-only image system: uniform previews, uncropped originals in the viewer. */
+.kitchen-page { --kitchen-media-ratio: 2 / 1; --kitchen-caption-space: 18px; }
+.kitchen-page .collection-card .card-image,
+.kitchen-page .kitchen-gallery-media { aspect-ratio: var(--kitchen-media-ratio); }
+.kitchen-page .collection-card img,
+.kitchen-page .kitchen-gallery-card img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .6s; }
+.kitchen-page .collection-caption,
+.kitchen-page .kitchen-gallery-caption { min-height: 44px; padding-top: var(--kitchen-caption-space); gap: 16px; align-items: center; }
+.kitchen-page .collection-caption h3,
+.kitchen-page .kitchen-gallery-caption { font-size: 13px; font-weight: 500; letter-spacing: .02em; }
+.kitchen-page .collection-caption span,
+.kitchen-page .kitchen-gallery-caption span:last-child { flex-shrink: 0; font-size: 22px; }
+.kitchen-page .kitchen-gallery-grid { gap: 36px 20px; }
+.kitchen-page .journal-grid article img,
+.kitchen-page .journal-secondary img { height: clamp(260px, 32vw, 460px) !important; object-fit: cover; object-position: center; }
+.kitchen-page .hero-background { background-position: center; }
+@media (hover: hover) {
+  .kitchen-page .collection-card:hover img,
+  .kitchen-page .kitchen-gallery-card:hover img { transform: scale(1.045); }
+}
+@media (max-width: 600px) {
+  .kitchen-page .kitchen-gallery-grid { gap: 28px; }
+  .kitchen-page .journal-grid article img { height: auto !important; aspect-ratio: var(--kitchen-media-ratio); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kitchen-page .collection-card img { transition: none; }
+  .kitchen-page .collection-card:hover img,
+  .kitchen-page .kitchen-gallery-card:hover img { transform: none; }
+}

@@ -1,0 +1,19 @@
+.vanity-hero img.hero-background {
+  background-image: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% center;
+}
+.vanity-section + .vanity-section { padding-top: 0; }
+.vanity-showcase .kitchen-gallery-grid { grid-template-columns: minmax(0, 1fr); }
+.vanity-featured .kitchen-gallery-media { aspect-ratio: 16 / 9; }
+.vanity-featured .kitchen-gallery-media img { height: 100%; object-fit: cover; }
+.vanity-portraits .kitchen-gallery-media,
+.vanity-details .kitchen-gallery-media { aspect-ratio: 4 / 5; }
+.vanity-portraits .kitchen-gallery-media img,
+.vanity-details .kitchen-gallery-media img { height: 100%; object-fit: contain; }
+@media (max-width: 600px) {
+  .vanity-hero { height: clamp(340px, 60svh, 540px); min-height: 0; }
+  .vanity-hero img.hero-background { object-position: 61% center; }
+}

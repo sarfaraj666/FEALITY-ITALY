@@ -8,7 +8,7 @@ const desktopPrevious = document.getElementById('prevSlide');
 const desktopNext = document.getElementById('nextSlide');
 const mobilePrevious = document.getElementById('mobilePrev');
 const mobileNext = document.getElementById('mobileNext');
-track.innerHTML = items.map((item, position) => `<article class="collection-card"><a href="#kitchen-gallery" aria-label="Explore ${item.name}"><div class="card-image"><img src="${item.image}" srcset="${item.srcset}" sizes="(max-width:600px) 86vw, (max-width:900px) 43vw, 22vw" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async"></div><div class="collection-caption"><h3>${item.name}</h3><span aria-hidden="true">↗</span></div></a></article>`).join('');
+track.innerHTML = items.map((item, position) => `<article class="collection-card"><a href="#kitchen-gallery" data-collection-design="${item.id}" aria-haspopup="dialog" aria-label="View ${item.name}"><div class="card-image"><img src="${item.image}" srcset="${item.srcset}" sizes="(max-width:600px) 86vw, (max-width:900px) 43vw, 22vw" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async"></div><div class="collection-caption"><h3>${item.name}</h3><span aria-hidden="true">↗</span></div><span class="collection-subtitle">Explore the design</span></a></article>`).join('');
 let index = 0;
 let pageStarts = [];
 function visibleCount() {
@@ -20,6 +20,9 @@ function updateCarousel() {
   const count = visibleCount();
   const maximum = Math.max(0, items.length - count);
   index = Math.max(0, Math.min(index, maximum));
+  track.querySelectorAll('.collection-card a').forEach((link, position) => {
+    link.tabIndex = position >= index && position < index + count ? 0 : -1;
+  });
   const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
   track.style.transform = `translateX(-${index * (card.getBoundingClientRect().width + gap)}px)`;
   slideCounter.textContent = `${String(index + 1).padStart(2, '0')} — ${String(Math.min(items.length, index + count)).padStart(2, '0')} / ${String(items.length).padStart(2, '0')}`;
@@ -67,9 +70,9 @@ viewport.addEventListener('click', event => {
 }, true);
 
 const heroSlides = [
-  {name:'Kitchen Design 01',title:'EXCLUSIVE KITCHENS<br>DESIGNED FOR<br>EVERYDAY LIVING',image:'assets/images/Kitchen%20photos/web/1-1920.webp'},
-  {name:'Kitchen Design 03',title:'CONSIDERED SPACES<br>FOR COOKING<br>AND GATHERING',image:'assets/images/Kitchen%20photos/web/3-1920.webp'},
-  {name:'Kitchen Design 04',title:'EXPLORE THE DETAILS<br>OF YOUR NEXT<br>KITCHEN',image:'assets/images/Kitchen%20photos/web/4-1920.webp'}
+  {name:'Kitchen Design 01',title:'Kitchen',image:'assets/images/Kitchen%20photos/web/1-1920.webp'},
+  {name:'Kitchen Design 03',title:'Kitchen',image:'assets/images/Kitchen%20photos/web/3-1920.webp'},
+  {name:'Kitchen Design 04',title:'Kitchen',image:'assets/images/Kitchen%20photos/web/4-1920.webp'}
 ];
 const hero = document.querySelector('.hero');
 const heroBackground = document.querySelector('.hero-background');

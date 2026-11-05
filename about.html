@@ -9,29 +9,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
-  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="menu.css?v=5" />
+  <link rel="stylesheet" href="collection-pages.css?v=2" />
+  <script src="navigation.js?v=6" defer></script>
+  <link rel="stylesheet" href="mobile-refinement.css?v=2" />
 </head>
 <body class="interior-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
   <header class="site-header" id="siteHeader">
-    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
-    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Exclusive Kitchen"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a>
-    <nav class="primary-nav" aria-label="Main navigation"><a href="index.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html" aria-current="page">About Us</a><a href="how-it-works.html">How It Works</a></nav>
+    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home"><picture><source media="(min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
+    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html" aria-current="page">About Us</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
+  <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
   </header>
-  <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1">
-    <div class="menu-top"><span id="menuTitle">EXPLORE</span><button id="menuClose" aria-label="Close navigation">CLOSE ×</button></div>
-    <nav class="main-menu" aria-label="Main navigation"><a href="index.html">Exclusive Kitchen <span>01</span></a><a href="wardrobes.html">Wardrobes <span>02</span></a><a href="vanity.html">Vanity <span>03</span></a><a href="about.html" aria-current="page">About Us <span>04</span></a><a href="how-it-works.html">How It Works <span>05</span></a></nav>
-    <div class="menu-bottom"><span>FEALITY ITALY</span><span>DESIGN FOR LIVING</span></div>
+  <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1" inert>
+    <div class="menu-top"><img class="menu-brand" src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" width="4000" height="2666" /><button id="menuClose" aria-label="Close navigation" type="button"><span aria-hidden="true"></span></button></div>
+    <div class="menu-content"><p class="menu-tagline">ITALIAN LUXURY INTERIORS</p><h2 id="menuTitle" class="menu-introduction"><span>Designed <em>for Living</em></span><span>Crafted <em>with Purpose</em></span></h2>
+    <nav class="main-menu" aria-label="Main navigation"><a href="kitchen.html">Kitchen<span class="menu-arrow" aria-hidden="true">→</span></a><a href="wardrobes.html">Wardrobes<span class="menu-arrow" aria-hidden="true">→</span></a><a href="vanity.html">Vanity<span class="menu-arrow" aria-hidden="true">→</span></a><a href="about.html" aria-current="page">About Us<span class="menu-arrow" aria-hidden="true">→</span></a><a href="how-it-works.html">How It Works<span class="menu-arrow" aria-hidden="true">→</span></a></nav><nav class="menu-secondary" aria-label="Information"><a href="faqs.html">FAQs</a><a href="terms-policies.html">Terms &amp; Policies</a></nav></div>
   </div>
+  <div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-labelledby="searchTitle" aria-hidden="true" tabindex="-1">
+    <button id="searchClose" aria-label="Close search">CLOSE ×</button>
+    <label id="searchTitle" for="siteSearch">WHAT ARE YOU LOOKING FOR?</label>
+    <div class="search-line"><input id="siteSearch" type="search" placeholder="Search collections, elements..." autocomplete="off" /><span aria-hidden="true">↗</span></div>
+    <div id="searchResults" class="search-results" aria-live="polite"></div>
+  </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <main id="mainContent">
     <section class="page-intro section-spacing" aria-labelledby="pageTitle">
       <p class="eyebrow">FEALITY ITALY</p>
       <h1 id="pageTitle">About Us</h1>
       <p>Learn more about FEALITY ITALY. More information will be added in a future update.</p>
-      <div class="page-content-shell"><p class="eyebrow">ABOUT FEALITY ITALY</p></div>
+      <div class="mobile-copy mobile-about"><img src="assets/images/Kitchen%20photos/web/4-960.webp" width="1930" height="815" alt="FEALITY ITALY kitchen collection with stone island and wood cabinetry" loading="lazy" decoding="async" /><p class="eyebrow">ABOUT US</p><h2>Designed around everyday living.</h2><p>Explore FEALITY ITALY through three interior collections: kitchens, wardrobes and bathroom vanities. Discover spaces shaped by proportion, storage and the details of daily life.</p><a class="mobile-outline-link" href="index.html#collections">Explore our collections <span aria-hidden="true">→</span></a></div><div class="page-content-shell"><p class="eyebrow">ABOUT FEALITY ITALY</p></div>
     </section>
   </main>
-  <footer><div class="footer-main"><a href="index.html" class="footer-logo" aria-label="FEALITY ITALY — Exclusive Kitchen"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a><div class="footer-columns"><div><p>EXPLORE</p><a href="index.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html" aria-current="page">About Us</a><a href="how-it-works.html">How It Works</a></div><div><p>INFORMATION</p><a href="faqs.html">FAQs</a><a href="terms-policies.html">Terms &amp; Policies</a></div></div></div><div class="footer-bottom"><span>© 2026 FEALITY ITALY. All Rights Reserved.</span><a href="index.html#top">BACK TO TOP ↑</a></div></footer>
+  <footer><div class="footer-main"><a href="index.html" class="footer-logo" aria-label="FEALITY ITALY — Home"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a><div class="footer-columns"><div><p>EXPLORE</p><a href="kitchen.html">Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html" aria-current="page">About Us</a><a href="how-it-works.html">How It Works</a></div><div><p>INFORMATION</p><a href="faqs.html">FAQs</a><a href="terms-policies.html">Terms &amp; Policies</a></div></div></div><div class="footer-bottom"><span>© 2026 FEALITY ITALY. All Rights Reserved.</span><a href="#top">BACK TO TOP ↑</a></div></footer>
 </body>
 </html>

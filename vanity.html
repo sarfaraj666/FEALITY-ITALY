@@ -4,34 +4,194 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#e8e5df" />
-  <title>Vanity — FEALITY ITALY</title>
-  <meta name="description" content="Explore FEALITY ITALY vanity designs." />
+  <title>Bathroom Vanity — FEALITY ITALY</title>
+  <meta name="description" content="Explore FEALITY ITALY stainless-steel bathroom vanity cabinetry, basins, and sculptural mirrors." />
+  <meta property="og:title" content="Bathroom Vanity — FEALITY ITALY" />
+  <meta property="og:description" content="Explore FEALITY ITALY stainless-steel bathroom vanity cabinetry, basins, and sculptural mirrors." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
-  <script src="navigation.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/venity/web/1-960.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="menu.css?v=5" />
+  <link rel="stylesheet" href="kitchen-gallery.css?v=4" />
+  <link rel="stylesheet" href="collection-pages.css?v=2" />
+  <script src="vanity-data.js?v=2" defer></script>
+  <script src="kitchen-gallery.js?v=6" defer></script>
+  <script src="navigation.js?v=6" defer></script>
+  <link rel="stylesheet" href="collection-motion.css?v=2" />
+  <script src="collection-motion.js?v=2" defer></script>
+  <link rel="stylesheet" href="hero-slider.css?v=3" />
+  <script src="hero-slider.js?v=4" defer></script>
+  <link rel="stylesheet" href="page-polish.css?v=1" />
+  <link rel="stylesheet" href="mobile-refinement.css?v=2" />
 </head>
-<body class="interior-page">
+<body class="polished-page vanity-page collection-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
   <header class="site-header" id="siteHeader">
-    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
-    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Exclusive Kitchen"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a>
-    <nav class="primary-nav" aria-label="Main navigation"><a href="index.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html" aria-current="page">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></nav>
+    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home"><picture><source media="(min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
+    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html" aria-current="page">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
+  <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
   </header>
-  <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1">
-    <div class="menu-top"><span id="menuTitle">EXPLORE</span><button id="menuClose" aria-label="Close navigation">CLOSE ×</button></div>
-    <nav class="main-menu" aria-label="Main navigation"><a href="index.html">Exclusive Kitchen <span>01</span></a><a href="wardrobes.html">Wardrobes <span>02</span></a><a href="vanity.html" aria-current="page">Vanity <span>03</span></a><a href="about.html">About Us <span>04</span></a><a href="how-it-works.html">How It Works <span>05</span></a></nav>
-    <div class="menu-bottom"><span>FEALITY ITALY</span><span>DESIGN FOR LIVING</span></div>
+
+  <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1" inert>
+    <div class="menu-top"><img class="menu-brand" src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" width="4000" height="2666" /><button id="menuClose" aria-label="Close navigation" type="button"><span aria-hidden="true"></span></button></div>
+    <div class="menu-content"><p class="menu-tagline">ITALIAN LUXURY INTERIORS</p><h2 id="menuTitle" class="menu-introduction"><span>Designed <em>for Living</em></span><span>Crafted <em>with Purpose</em></span></h2>
+    <nav class="main-menu" aria-label="Main navigation"><a href="kitchen.html">Kitchen<span class="menu-arrow" aria-hidden="true">→</span></a><a href="wardrobes.html">Wardrobes<span class="menu-arrow" aria-hidden="true">→</span></a><a href="vanity.html" aria-current="page">Vanity<span class="menu-arrow" aria-hidden="true">→</span></a><a href="about.html">About Us<span class="menu-arrow" aria-hidden="true">→</span></a><a href="how-it-works.html">How It Works<span class="menu-arrow" aria-hidden="true">→</span></a></nav><nav class="menu-secondary" aria-label="Information"><a href="faqs.html">FAQs</a><a href="terms-policies.html">Terms &amp; Policies</a></nav></div>
   </div>
+
+  <div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-labelledby="searchTitle" aria-hidden="true" tabindex="-1">
+    <button id="searchClose" aria-label="Close search">CLOSE ×</button>
+    <label id="searchTitle" for="siteSearch">WHAT ARE YOU LOOKING FOR?</label>
+    <div class="search-line"><input id="siteSearch" type="search" placeholder="Search collections, elements..." autocomplete="off" /><span aria-hidden="true">↗</span></div>
+    <div id="searchResults" class="search-results" aria-live="polite"></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <main id="mainContent">
-    <section class="page-intro section-spacing" aria-labelledby="pageTitle">
-      <p class="eyebrow">FEALITY ITALY</p>
-      <h1 id="pageTitle">Vanity</h1>
-      <p>Explore the FEALITY ITALY vanity collection. More details will be added in a future update.</p>
-      <div class="page-content-shell"><p class="eyebrow">VANITY</p></div>
+    <section class="hero kitchen-cinematic-hero" id="top" aria-label="Vanity Hero Showcase" tabindex="0">
+      <div class="hero-slides" id="heroSlides" aria-live="off">
+        <div class="hero-slide active" data-slide-index="0">
+          <img class="hero-slide-img" src="assets/venity/web/1-960.webp" srcset="assets/venity/web/1-480.webp 480w, assets/venity/web/1-960.webp 960w, assets/venity/web/1-1600.webp 1600w" sizes="(max-width: 600px) 1400px, 100vw" width="1916" height="821" alt="Floating Vanity with Rectangular Mirror" fetchpriority="high" />
+        </div>
+        <div class="hero-slide" data-slide-index="1">
+          <img class="hero-slide-img" src="assets/venity/web/2-960.webp" srcset="assets/venity/web/2-480.webp 480w, assets/venity/web/2-960.webp 960w, assets/venity/web/2-1600.webp 1600w" sizes="(max-width: 600px) 1400px, 100vw" width="1870" height="841" alt="Wide Vanity and Wall Mirror" loading="lazy" decoding="async" />
+        </div>
+        <div class="hero-slide" data-slide-index="2">
+          <img class="hero-slide-img" src="assets/venity/web/3-960.webp" srcset="assets/venity/web/3-480.webp 480w, assets/venity/web/3-960.webp 960w, assets/venity/web/3-1600.webp 1600w" sizes="(max-width: 600px) 1400px, 100vw" width="1870" height="841" alt="Window-Side Floating Vanity" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-category">ITALIAN LUXURY INTERIORS</p>
+        <h1 class="hero-title" id="pageTitle">Vanity</h1>
+        <p class="hero-subtitle">Quiet forms and thoughtful storage<br />for your daily rituals.</p>
+        <a class="hero-cta-btn" href="#featured-vanity">EXPLORE THE COLLECTION <span class="cta-arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="hero-bottom-bar">
+        <div class="hero-slide-indicators" id="heroIndicators" role="tablist" aria-label="Choose featured vanity slide">
+          <button type="button" class="hero-dot active" data-slide="0" aria-label="Show Vanity Slide 1" aria-selected="true" role="tab"></button>
+          <button type="button" class="hero-dot" data-slide="1" aria-label="Show Vanity Slide 2" aria-selected="false" role="tab"></button>
+          <button type="button" class="hero-dot" data-slide="2" aria-label="Show Vanity Slide 3" aria-selected="false" role="tab"></button>
+        </div>
+      </div>
     </section>
+
+    <section class="section-spacing collection-section collection-featured" id="featured-vanity" aria-labelledby="featured-vanity-title">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2 id="featured-vanity-title"><span class="desktop-copy">Discover the Collection</span><span class="mobile-copy">Vanity Collection</span></h2>
+        </div>
+        <a class="text-link" href="#kitchen-gallery">View all designs <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="collection-featured-grid">
+        <button type="button" class="kitchen-gallery-card collection-design" data-collection-design="04" aria-label="View Bathroom Vanity Design 04" aria-haspopup="dialog">
+          <span class="kitchen-gallery-media"><img src="assets/venity/web/4-960.webp" srcset="assets/venity/web/4-480.webp 480w, assets/venity/web/4-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 43vw, 43vw" width="1672" height="941" alt="Floating Drawers and Backlit Mirror" loading="lazy" decoding="async" /></span>
+          <span class="kitchen-gallery-caption"><span>Bathroom Vanity Design 04</span><span aria-hidden="true">↗</span></span>
+          <span class="collection-subtitle">Floating drawers and backlit mirror</span>
+        </button>
+        <button type="button" class="kitchen-gallery-card collection-design" data-collection-design="05" aria-label="View Bathroom Vanity Design 05" aria-haspopup="dialog">
+          <span class="kitchen-gallery-media"><img src="assets/venity/web/5-960.webp" srcset="assets/venity/web/5-480.webp 480w, assets/venity/web/5-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 43vw, 43vw" width="1672" height="941" alt="Cloud Mirror and Double Drawers" loading="lazy" decoding="async" /></span>
+          <span class="kitchen-gallery-caption"><span>Bathroom Vanity Design 05</span><span aria-hidden="true">↗</span></span>
+          <span class="collection-subtitle">Curved mirror and double drawers</span>
+        </button>
+        <button type="button" class="kitchen-gallery-card collection-design" data-collection-design="06" aria-label="View Bathroom Vanity Design 06" aria-haspopup="dialog">
+          <span class="kitchen-gallery-media"><img src="assets/venity/web/6-960.webp" srcset="assets/venity/web/6-480.webp 480w, assets/venity/web/6-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 43vw, 43vw" width="1672" height="941" alt="Organic Mirror and Open Shelving" loading="lazy" decoding="async" /></span>
+          <span class="kitchen-gallery-caption"><span>Bathroom Vanity Design 06</span><span aria-hidden="true">↗</span></span>
+          <span class="collection-subtitle">Sculptural mirror and open shelves</span>
+        </button>
+        <button type="button" class="kitchen-gallery-card collection-design" data-collection-design="07" aria-label="View Bathroom Vanity Design 07" aria-haspopup="dialog">
+          <span class="kitchen-gallery-media"><img src="assets/venity/web/7-960.webp" srcset="assets/venity/web/7-480.webp 480w, assets/venity/web/7-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 43vw, 43vw" width="1672" height="941" alt="Round Mirror and Open Compartments" loading="lazy" decoding="async" /></span>
+          <span class="kitchen-gallery-caption"><span>Bathroom Vanity Design 07</span><span aria-hidden="true">↗</span></span>
+          <span class="collection-subtitle">Round mirror and compartments</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section-spacing collection-section collection-closer" id="vanity-details" aria-labelledby="vanity-details-title">
+      <div class="collection-editorial">
+        <div class="collection-editorial-copy">
+          <p class="eyebrow">BATHROOM VANITY · DETAILS</p>
+          <h2 id="vanity-details-title">A Closer Look</h2>
+          <p>Explore wall storage, basin forms and cabinet interiors, shown in their original proportions.</p>
+          <a class="text-link" href="#kitchen-gallery">View Gallery <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="collection-detail-grid">
+          <button type="button" class="kitchen-gallery-card collection-design" data-collection-design="12" aria-label="View Bathroom Vanity Design 12" aria-haspopup="dialog">
+            <span class="kitchen-gallery-media"><img src="assets/venity/web/12-960.webp" srcset="assets/venity/web/12-480.webp 480w, assets/venity/web/12-960.webp 909w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 43vw, 28vw" width="909" height="1205" alt="Wall Cabinet with Display Shelves" loading="lazy" decoding="async" /></span>
+            <span class="kitchen-gallery-caption"><span>Bathroom Vanity Design 12</span><span aria-hidden="true">↗</span></span>
+            <span class="collection-subtitle">Wall cabinet and display shelves</span>
+          </button>
+          <button type="button" class="kitchen-gallery-card collection-design" data-collection-design="13" aria-label="View Bathroom Vanity Design 13" aria-haspopup="dialog">
+            <span class="kitchen-gallery-media"><img src="assets/venity/web/13-960.webp" srcset="assets/venity/web/13-480.webp 480w, assets/venity/web/13-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 43vw, 28vw" width="1086" height="1448" alt="Round Mirror and Compact Basin" loading="lazy" decoding="async" /></span>
+            <span class="kitchen-gallery-caption"><span>Bathroom Vanity Design 13</span><span aria-hidden="true">↗</span></span>
+            <span class="collection-subtitle">Round mirror and compact basin</span>
+          </button>
+          <button type="button" class="kitchen-gallery-card collection-design" data-collection-design="14" aria-label="View Bathroom Vanity Design 14" aria-haspopup="dialog">
+            <span class="kitchen-gallery-media"><img src="assets/venity/web/14-960.webp" srcset="assets/venity/web/14-480.webp 480w, assets/venity/web/14-960.webp 960w" sizes="(max-width: 600px) 88vw, (max-width: 900px) 43vw, 28vw" width="1448" height="1086" alt="Basin and Open Cabinet Storage" loading="lazy" decoding="async" /></span>
+            <span class="kitchen-gallery-caption"><span>Bathroom Vanity Design 14</span><span aria-hidden="true">↗</span></span>
+            <span class="collection-subtitle">Basin and cabinet storage</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-spacing collection-section collection-full-gallery" id="kitchen-gallery" aria-labelledby="vanity-all">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">THE COMPLETE COLLECTION</p>
+          <h2 id="vanity-all">Explore Every Design</h2>
+        </div>
+        <p class="collection-section-note">14 photographs. Every perspective.</p>
+      </div>
+      <div class="kitchen-gallery-toolbar">
+        <div id="kitchen-filters" role="group" aria-label="Filter bathroom vanity designs"></div>
+        <p id="kitchen-count" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+      <div class="kitchen-gallery-grid" id="kitchen-grid"></div>
+      <noscript><p>Enable JavaScript to explore all 14 photographs and the full-screen viewer.</p></noscript>
+    </section>
+
+    <dialog class="kitchen-lightbox" id="kitchen-lightbox" aria-labelledby="kitchen-lightbox-title">
+      <div class="kitchen-lightbox-top"><h2 id="kitchen-lightbox-title">Bathroom Vanity</h2><button type="button" id="kitchen-close" autofocus aria-label="Close vanity viewer">CLOSE ×</button></div>
+      <div class="kitchen-lightbox-stage" id="kitchen-stage"><img id="kitchen-full-image" alt="" /><p id="kitchen-image-status" role="status"></p></div>
+      <div class="kitchen-lightbox-bottom">
+        <div class="kitchen-lightbox-copy"><h3 id="kitchen-design-name" hidden></h3><p id="kitchen-description" hidden></p></div>
+        <div class="kitchen-lightbox-controls"><button type="button" id="kitchen-previous" aria-label="Previous vanity image">←</button><span id="kitchen-counter" role="status" aria-live="polite" aria-atomic="true"></span><button type="button" id="kitchen-next" aria-label="Next vanity image">→</button></div>
+        <div class="kitchen-enquiry"><button type="button" id="kitchen-enquire" disabled aria-describedby="kitchen-enquiry-note">Enquire Now ↗</button><p id="kitchen-enquiry-note">Enquiries are currently unavailable.</p></div>
+      </div>
+    </dialog>
+<section class="related-collections section-spacing" aria-labelledby="related-title"><p class="eyebrow">CONTINUE EXPLORING</p><h2 id="related-title">One home. Every perspective.</h2><div class="related-grid"><a class="related-card" href="kitchen.html"><img src="assets/images/Kitchen%20photos/web/4-960.webp" alt="Kitchen collection" width="1672" height="941" loading="lazy" decoding="async" /><span class="related-title">Kitchen<span aria-hidden="true">↗</span></span><span class="related-description">A place to gather.</span></a><a class="related-card" href="wardrobes.html"><img src="assets/wardrobes/web/4-960.webp" alt="Wardrobes collection" width="1672" height="941" loading="lazy" decoding="async" /><span class="related-title">Wardrobes<span aria-hidden="true">↗</span></span><span class="related-description">Room for the everyday.</span></a></div><a class="text-link" href="how-it-works.html">Explore our process <span aria-hidden="true">↗</span></a></section>
   </main>
-  <footer><div class="footer-main"><a href="index.html" class="footer-logo" aria-label="FEALITY ITALY — Exclusive Kitchen"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a><div class="footer-columns"><div><p>EXPLORE</p><a href="index.html">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html" aria-current="page">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></div><div><p>INFORMATION</p><a href="faqs.html">FAQs</a><a href="terms-policies.html">Terms &amp; Policies</a></div></div></div><div class="footer-bottom"><span>© 2026 FEALITY ITALY. All Rights Reserved.</span><a href="index.html#top">BACK TO TOP ↑</a></div></footer>
+
+  <footer>
+    <div class="footer-main">
+      <a href="index.html" class="footer-logo" aria-label="FEALITY ITALY — Home"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a>
+      <div class="footer-columns">
+        <div>
+          <p>EXPLORE</p>
+          <a href="kitchen.html">Kitchen</a>
+          <a href="wardrobes.html">Wardrobes</a>
+          <a href="vanity.html" aria-current="page">Vanity</a>
+          <a href="about.html">About Us</a>
+          <a href="how-it-works.html">How It Works</a>
+        </div>
+        <div>
+          <p>INFORMATION</p>
+          <a href="faqs.html">FAQs</a>
+          <a href="terms-policies.html">Terms &amp; Policies</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FEALITY ITALY. All Rights Reserved.</span>
+      <a href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
 </body>
 </html>
