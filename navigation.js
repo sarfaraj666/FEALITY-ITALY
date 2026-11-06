@@ -13,13 +13,14 @@
   const siteSearch = document.getElementById('siteSearch');
   const searchResults = document.getElementById('searchResults');
 
+  if (searchPanel) searchPanel.inert = true;
   let lastFocusedElement = null;
 
   function setPanelState(panel, isOpen) {
     if (!panel) return;
     panel.classList.toggle('open', isOpen);
+    panel.inert = !isOpen;
     panel.setAttribute('aria-hidden', String(!isOpen));
-    if (panel === menuPanel) panel.inert = !isOpen;
     const anyOpen = (menuPanel && menuPanel.classList.contains('open')) || (searchPanel && searchPanel.classList.contains('open'));
     document.body.style.overflow = anyOpen ? 'hidden' : '';
 

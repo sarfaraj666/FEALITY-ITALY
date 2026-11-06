@@ -57,7 +57,8 @@
     visible.forEach((design, position) => {
       const button = element('button', 'kitchen-gallery-card');
       button.type = 'button';
-      button.setAttribute('aria-label', `View ${design.name || design.alt}`);
+      const title = design.name || `Kitchen Design ${design.id}`;
+      button.setAttribute('aria-label', `View ${title}`);
       button.setAttribute('aria-haspopup', 'dialog');
       const media = element('span', 'kitchen-gallery-media');
       const img = element('img');
@@ -66,7 +67,7 @@
         width: design.width, height: design.height, alt: design.alt, loading: 'lazy', decoding: 'async' });
       media.append(img);
       const caption = element('span', 'kitchen-gallery-caption');
-      caption.append(element('span', '', design.name || `Kitchen Design ${design.id}`));
+      caption.append(element('span', '', title));
       const arrow = element('span', '', '↗');
       arrow.setAttribute('aria-hidden', 'true');
       caption.append(arrow);
