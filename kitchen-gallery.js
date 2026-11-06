@@ -21,7 +21,6 @@
   let request = 0;
   let swipeStart = null;
   let enquiryHandler = null;
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function element(tag, className, text) {
     const node = document.createElement(tag);
@@ -94,7 +93,7 @@
     const image = new Image();
     image.src = design.source;
     try {
-      await Promise.all([image.decode(), new Promise(resolve => setTimeout(resolve, reducedMotion.matches ? 0 : 180))]);
+      await image.decode();
       if (token !== request || !dialog.open) return;
       fullImage.src = design.source;
       fullImage.alt = design.alt;
@@ -176,4 +175,7 @@
     dialog.close();
   });
   render('All Designs');
+  const requestedId = new URLSearchParams(location.search).get('design');
+  const requestedIndex = designs.findIndex(design => design.id === requestedId);
+  if (requestedIndex >= 0) open(requestedIndex, grid.children[requestedIndex]);
 })();

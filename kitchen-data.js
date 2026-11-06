@@ -1,6 +1,42 @@
 // Approved local kitchen photographs; edit verified metadata here.
 window.FealityKitchenDesigns = [
   {
+    "id": "05",
+    "category": null,
+    "name": "CURVIERA",
+    "description": null,
+    "width": 1672,
+    "height": 941,
+    "alt": "White kitchen and dining table overlooking a snowy landscape",
+    "source": "assets/images/Kitchen%20photos/5.png",
+    "thumbnail": "assets/images/Kitchen%20photos/web/5-960.webp",
+    "srcset": "assets/images/Kitchen%20photos/web/5-480.webp 480w, assets/images/Kitchen%20photos/web/5-960.webp 960w"
+  },
+  {
+    "id": "09",
+    "category": null,
+    "name": "MORBIDA",
+    "description": null,
+    "width": 1916,
+    "height": 821,
+    "alt": "Grey kitchen island and dark cabinetry beside snowy landscape windows",
+    "source": "assets/images/Kitchen%20photos/9.png",
+    "thumbnail": "assets/images/Kitchen%20photos/web/9-960.webp",
+    "srcset": "assets/images/Kitchen%20photos/web/9-480.webp 480w, assets/images/Kitchen%20photos/web/9-960.webp 960w"
+  },
+  {
+    "id": "04",
+    "category": null,
+    "name": "ONYX",
+    "description": null,
+    "width": 1930,
+    "height": 815,
+    "alt": "Veined stone island against warm wood kitchen cabinetry",
+    "source": "assets/images/Kitchen%20photos/4.png",
+    "thumbnail": "assets/images/Kitchen%20photos/web/4-960.webp",
+    "srcset": "assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w"
+  },
+  {
     "id": "01",
     "category": null,
     "name": null,
@@ -37,30 +73,6 @@ window.FealityKitchenDesigns = [
     "srcset": "assets/images/Kitchen%20photos/web/3-480.webp 480w, assets/images/Kitchen%20photos/web/3-960.webp 960w"
   },
   {
-    "id": "04",
-    "category": null,
-    "name": null,
-    "description": null,
-    "width": 1930,
-    "height": 815,
-    "alt": "Veined stone island against warm wood kitchen cabinetry",
-    "source": "assets/images/Kitchen%20photos/4.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/4-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w"
-  },
-  {
-    "id": "05",
-    "category": null,
-    "name": null,
-    "description": null,
-    "width": 1672,
-    "height": 941,
-    "alt": "White kitchen and dining table overlooking a snowy landscape",
-    "source": "assets/images/Kitchen%20photos/5.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/5-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/5-480.webp 480w, assets/images/Kitchen%20photos/web/5-960.webp 960w"
-  },
-  {
     "id": "06",
     "category": null,
     "name": null,
@@ -95,18 +107,6 @@ window.FealityKitchenDesigns = [
     "source": "assets/images/Kitchen%20photos/8.png",
     "thumbnail": "assets/images/Kitchen%20photos/web/8-960.webp",
     "srcset": "assets/images/Kitchen%20photos/web/8-480.webp 480w, assets/images/Kitchen%20photos/web/8-960.webp 960w"
-  },
-  {
-    "id": "09",
-    "category": null,
-    "name": null,
-    "description": null,
-    "width": 1916,
-    "height": 821,
-    "alt": "Grey kitchen island and dark cabinetry beside snowy landscape windows",
-    "source": "assets/images/Kitchen%20photos/9.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/9-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/9-480.webp 480w, assets/images/Kitchen%20photos/web/9-960.webp 960w"
   },
   {
     "id": "10",

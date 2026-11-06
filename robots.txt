@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /Final/
+Sitemap: https://sarfaraj666.github.io/Final/sitemap.xml

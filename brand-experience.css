@@ -1,0 +1,104 @@
+.brand-experience {
+  --gutter: clamp(22px, 6vw, 112px);
+  --section-space: clamp(48px, 6vw, 96px);
+}
+
+.brand-experience :is(h1, h2, h3) {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.brand-experience h2 { font-size: clamp(36px, 4vw, 64px); }
+.brand-experience h3 { font-size: clamp(25px, 2.2vw, 34px); }
+.brand-experience :is(h2, h3) { margin-block-end: 0; }
+.brand-experience p:not(.eyebrow) { line-height: 1.7; }
+.brand-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  min-height: clamp(470px, 67svh, 800px);
+  padding: clamp(48px, 5vw, 88px) var(--gutter);
+  color: white;
+  background: var(--ink);
+}
+.brand-hero > img, .brand-hero::before {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.brand-hero > img { z-index: -2; object-fit: cover; object-position: 62% center; }
+.brand-hero::before {
+  content: "";
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(0 0 0 / .78), rgb(0 0 0 / .56) 36%, transparent 82%);
+}
+.brand-hero h1 {
+  max-width: 10ch;
+  font-size: clamp(54px, 6.2vw, 100px);
+  margin: 18px 0;
+}
+.brand-hero-copy > p:not(.eyebrow) {
+  max-width: 42ch;
+  font: italic clamp(19px, 1.65vw, 26px)/1.32 'Cormorant Garamond', Georgia, serif;
+}
+.brand-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5em;
+  min-height: 44px;
+  margin-top: 26px;
+  border: 1px solid currentColor;
+  padding: 12px 19px;
+  font-size: 13px;
+}
+.brand-button:hover { background: rgb(0 0 0 / .26); }
+.brand-section { padding: var(--section-space) var(--gutter); border-bottom: 1px solid var(--line); }
+.brand-details { padding-block: clamp(36px, 4vw, 64px); }
+.brand-details h2 { margin-bottom: 28px; font-size: clamp(32px, 2.7vw, 44px); }
+.brand-principles, .brand-cards, .brand-intro, .brand-approach { display: grid; gap: clamp(20px, 3vw, 54px); }
+.brand-principles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.brand-principles > div + div { padding-left: 22px; border-left: 1px solid var(--line); }
+.brand-principles p, .brand-card p { margin-top: 12px; font-size: 14px; }
+#design-experience { scroll-margin-top: 95px; }
+.brand-intro, .brand-approach { grid-template-columns: 1fr 1fr; align-items: center; }
+.brand-intro { margin-bottom: 36px; }
+.brand-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.brand-photo { overflow: hidden; }
+.brand-photo img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+.brand-card h3 { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 18px; }
+.brand-card h3 span { font: 18px 'Inter', sans-serif; }
+.brand-approach p, .brand-enquiry p { max-width: 55ch; margin: 18px 0; }
+.brand-approach ol { margin: 0; padding: 0; list-style: decimal-leading-zero inside; }
+.brand-approach li { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.brand-approach li::marker { color: #535650; font-size: .8em; font-variant-numeric: tabular-nums; }
+.brand-experience .text-link { min-height: 44px; }
+.brand-enquiry { text-align: center; }
+.brand-enquiry p { margin-inline: auto; }
+.brand-enquiry-status { font-size: 14px; }
+
+@media (min-width: 769px) {
+  .brand-hero { padding-top: calc(110px + clamp(24px, 3vw, 48px)); }
+}
+
+@media (max-width: 760px) {
+  .brand-hero { min-height: 62svh; align-items: end; }
+  .brand-hero::before { background: linear-gradient(0deg, rgb(0 0 0 / .83), rgb(0 0 0 / .52) 52%, rgb(0 0 0 / .10)); }
+  .brand-principles, .brand-intro, .brand-cards, .brand-approach { grid-template-columns: minmax(0, 1fr); }
+  .brand-principles > div + div { border: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+  .brand-cards { gap: 32px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-hero-copy { animation: brand-arrive .5s ease-out both; }
+  .brand-photo img { transition: transform .35s ease-out; }
+  .brand-card:is(:hover, :focus-visible) img { transform: scale(1.025); }
+}
+@keyframes brand-arrive {
+  from { opacity: .35; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.brand-details .brand-philosophy { max-width: 66ch; margin: 14px 0 32px; }

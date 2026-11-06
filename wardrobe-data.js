@@ -2,7 +2,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "01",
     "name": "Wardrobe Design 01",
-    "alt": "Wardrobe collection photograph 01",
+    "alt": "Open wardrobe with slatted screens framing hanging rails and storage drawers",
     "width": 1916,
     "height": 821,
     "source": "assets/wardrobes/1.png",
@@ -12,7 +12,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "02",
     "name": "Wardrobe Design 02",
-    "alt": "Wardrobe collection photograph 02",
+    "alt": "Wood-toned wardrobe compartments with shelves and long hanging rails",
     "width": 1916,
     "height": 821,
     "source": "assets/wardrobes/2.png",
@@ -22,7 +22,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "03",
     "name": "Wardrobe Design 03",
-    "alt": "Wardrobe collection photograph 03",
+    "alt": "White wardrobe surrounds an open dressing area",
     "width": 1869,
     "height": 842,
     "source": "assets/wardrobes/3.png",
@@ -32,7 +32,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "04",
     "name": "Wardrobe Design 04",
-    "alt": "Wardrobe collection photograph 04",
+    "alt": "Glass-front compartments with dark blue drawers",
     "width": 1672,
     "height": 941,
     "source": "assets/wardrobes/4.png",
@@ -42,7 +42,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "05",
     "name": "Wardrobe Design 05",
-    "alt": "Wardrobe collection photograph 05",
+    "alt": "Pale fitted wardrobes with a central hanging section",
     "width": 1672,
     "height": 941,
     "source": "assets/wardrobes/5.png",
@@ -52,7 +52,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "06",
     "name": "Wardrobe Design 06",
-    "alt": "Wardrobe collection photograph 06",
+    "alt": "Glass wardrobe doors beside a recessed seat",
     "width": 1672,
     "height": 941,
     "source": "assets/wardrobes/6.png",
@@ -62,7 +62,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "07",
     "name": "Wardrobe Design 07",
-    "alt": "Wardrobe collection photograph 07",
+    "alt": "Dark blue cabinetry with open hanging compartments",
     "width": 1672,
     "height": 941,
     "source": "assets/wardrobes/7.png",
@@ -72,7 +72,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "08",
     "name": "Wardrobe Design 08",
-    "alt": "Wardrobe collection photograph 08",
+    "alt": "Front view of hanging rails and drawers on either side of tall doors",
     "width": 1672,
     "height": 941,
     "source": "assets/wardrobes/8.png",
@@ -82,7 +82,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "09",
     "name": "Wardrobe Design 09",
-    "alt": "Wardrobe collection photograph 09",
+    "alt": "Tall glass-front wardrobe beside a dressing area",
     "width": 1122,
     "height": 1402,
     "source": "assets/wardrobes/9.png",
@@ -92,7 +92,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "10",
     "name": "Wardrobe Design 10",
-    "alt": "Wardrobe collection photograph 10",
+    "alt": "Glass wardrobe and upholstered seat beside full-height windows",
     "width": 1122,
     "height": 1402,
     "source": "assets/wardrobes/10.png",
@@ -102,7 +102,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "11",
     "name": "Wardrobe Design 11",
-    "alt": "Wardrobe collection photograph 11",
+    "alt": "Illuminated wood-toned wardrobe with dark-framed doors",
     "width": 1092,
     "height": 1440,
     "source": "assets/wardrobes/11.png",
@@ -112,7 +112,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "12",
     "name": "Wardrobe Design 12",
-    "alt": "Wardrobe collection photograph 12",
+    "alt": "Close view of an open drawer below a hanging section",
     "width": 1092,
     "height": 1440,
     "source": "assets/wardrobes/12.png",
@@ -122,7 +122,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "13",
     "name": "Wardrobe Design 13",
-    "alt": "Wardrobe collection photograph 13",
+    "alt": "Divided accessory drawer seen from above",
     "width": 1122,
     "height": 1402,
     "source": "assets/wardrobes/13.png",
@@ -132,7 +132,7 @@ window.FealityWardrobeDesigns = [
   {
     "id": "14",
     "name": "Wardrobe Design 14",
-    "alt": "Wardrobe collection photograph 14",
+    "alt": "Pull-out tray with separate watch and accessory compartments",
     "width": 1555,
     "height": 1011,
     "source": "assets/wardrobes/14.png",

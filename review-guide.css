@@ -1,0 +1,31 @@
+.review-guide article {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: clamp(130px, 16vh, 180px) clamp(22px, 6vw, 78px) clamp(60px, 8vw, 110px);
+}
+.review-guide :is(h1,h2) { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; line-height: 1.1; }
+.review-guide h1 { font-size: clamp(44px, 6vw, 80px); margin: 12px 0 18px; }
+.review-guide h2 { font-size: clamp(26px, 3vw, 38px); margin: 0 0 12px; }
+.review-guide p { line-height: 1.75; max-width: 62ch; }
+.review-guide section { margin-top: 34px; }
+.review-guide details { border-bottom: 1px solid var(--line); }
+.review-guide summary { cursor: pointer; padding-block: 17px; line-height: 1.5; font-weight: 500; }
+.review-guide a { text-decoration: underline; text-underline-offset: .2em; }
+.review-guide .journey { list-style: decimal-leading-zero; padding-inline-start: 2.5rem; margin: 32px 0; }
+.journey li { padding: 0 0 22px 1.25rem; border-left: 1px solid var(--line); }
+.journey li::marker { font-variant-numeric: tabular-nums; }
+.review-guide .guide-link { display: inline-flex; align-items: center; min-height: 44px; }
+.policy-note { border-inline-start: 2px solid var(--ink); padding-inline-start: 16px; margin-top: 28px; }
+@media (max-width: 768px) { .review-guide article { padding-top: 40px; } }
+.review-guide .guide-intro {
+  padding: clamp(120px, 17vh, 170px) max(22px, calc((100% - 744px) / 2)) 40px;
+  color: white;
+  background: linear-gradient(90deg, rgb(20 21 21 / .9), rgb(20 21 21 / .7)), url("assets/images/Kitchen%20photos/web/4-960.webp") center 48% / cover;
+}
+.review-guide .guide-intro .eyebrow { color: inherit; }
+.review-guide article { padding-top: 16px; }
+@media (max-width: 768px) { .review-guide .guide-intro { padding: 44px 22px 28px; } }
+#faq-filter { margin-block: 24px; }
+#faq-filter label { display: block; margin-bottom: 8px; font-weight: 500; }
+#faq-query { width: 100%; padding: 12px; border: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; }
+#faq-status { margin-block: 8px; font-size: 14px; }

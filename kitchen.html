@@ -11,16 +11,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="assets/images/Kitchen%20photos/web/1-1920.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/Kitchen%20photos/web/1-1920.webp" fetchpriority="high" imagesrcset="assets/images/Kitchen%20photos/web/1-480.webp 480w, assets/images/Kitchen%20photos/web/1-960.webp 960w, assets/images/Kitchen%20photos/web/1-1920.webp 1920w" imagesizes="(max-width: 600px) 1400px, 100vw" />
   <link rel="stylesheet" href="styles.css?v=8" />
   <link rel="stylesheet" href="menu.css?v=5" />
   <link rel="stylesheet" href="kitchen-gallery.css?v=4" />
   <link rel="stylesheet" href="collection-pages.css?v=3" />
-  <script src="kitchen-data.js?v=2" defer></script>
-  <script src="kitchen-gallery.js?v=6" defer></script>
+  <script src="kitchen-data.js?v=4" defer></script>
+  <script src="kitchen-gallery.js?v=7" defer></script>
   <script src="navigation.js?v=6" defer></script>
   <link rel="stylesheet" href="page-polish.css?v=1" />
   <link rel="stylesheet" href="mobile-refinement.css?v=2" />
+  <link rel="stylesheet" href="kitchen-arrangement.css?v=1" />
+  <link rel="canonical" href="https://sarfaraj666.github.io/Final/kitchen.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sarfaraj666.github.io/Final/kitchen.html" />
+  <script src="design-search.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sarfaraj666.github.io/Final/"}, {"@type": "ListItem", "position": 2, "name": "Kitchen", "item": "https://sarfaraj666.github.io/Final/kitchen.html"}]}</script>
 </head>
 <body class="polished-page kitchen-page collection-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -28,7 +34,7 @@
   <!-- Step 2: Absolute Navbar Preservation (Untouched transparent overlay) -->
   <header class="site-header" id="siteHeader">
     <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home"><picture><source media="(min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
-    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html" aria-current="page">Exclusive Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
+    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html" aria-current="page">Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
   <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
   </header>
 
@@ -52,13 +58,13 @@
     <section class="hero kitchen-cinematic-hero" id="top" aria-label="Kitchen Hero Showcase" tabindex="0">
       <div class="hero-slides" id="heroSlides" aria-live="off">
         <div class="hero-slide active" data-slide-index="0">
-          <img class="hero-slide-img" src="assets/images/Kitchen%20photos/web/1-960.webp" srcset="assets/images/Kitchen%20photos/web/1-480.webp 480w, assets/images/Kitchen%20photos/web/1-960.webp 960w, assets/images/Kitchen%20photos/web/1-1920.webp 1920w, assets/images/Kitchen%20photos/1.png 1916w" sizes="(max-width: 600px) 1400px, 100vw" width="1916" height="821" alt="Warm wood kitchen with a pale island and wide landscape windows" fetchpriority="high" />
+          <img class="hero-slide-img" src="assets/images/Kitchen%20photos/web/1-960.webp" srcset="assets/images/Kitchen%20photos/web/1-480.webp 480w, assets/images/Kitchen%20photos/web/1-960.webp 960w, assets/images/Kitchen%20photos/web/1-1920.webp 1920w" sizes="(max-width: 600px) 1400px, 100vw" width="1916" height="821" alt="Warm wood kitchen with a pale island and wide landscape windows" fetchpriority="high" />
         </div>
         <div class="hero-slide" data-slide-index="1">
-          <img class="hero-slide-img" src="assets/images/Kitchen%20photos/web/3-960.webp" srcset="assets/images/Kitchen%20photos/web/3-480.webp 480w, assets/images/Kitchen%20photos/web/3-960.webp 960w, assets/images/Kitchen%20photos/web/3-1920.webp 1920w, assets/images/Kitchen%20photos/3.png 1932w" sizes="(max-width: 600px) 1400px, 100vw" width="1932" height="814" alt="Pale kitchen island beneath a dark ceiling beside panoramic windows" loading="lazy" decoding="async" />
+          <img class="hero-slide-img" src="assets/images/Kitchen%20photos/web/3-960.webp" srcset="assets/images/Kitchen%20photos/web/3-480.webp 480w, assets/images/Kitchen%20photos/web/3-960.webp 960w, assets/images/Kitchen%20photos/web/3-1920.webp 1920w" sizes="(max-width: 600px) 1400px, 100vw" width="1932" height="814" alt="Pale kitchen island beneath a dark ceiling beside panoramic windows" loading="lazy" decoding="async" />
         </div>
         <div class="hero-slide" data-slide-index="2">
-          <img class="hero-slide-img" src="assets/images/Kitchen%20photos/web/4-960.webp" srcset="assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w, assets/images/Kitchen%20photos/web/4-1920.webp 1920w, assets/images/Kitchen%20photos/4.png 1930w" sizes="(max-width: 600px) 1400px, 100vw" width="1930" height="815" alt="Veined stone island against warm wood kitchen cabinetry" loading="lazy" decoding="async" />
+          <img class="hero-slide-img" src="assets/images/Kitchen%20photos/web/4-960.webp" srcset="assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w, assets/images/Kitchen%20photos/web/4-1920.webp 1920w" sizes="(max-width: 600px) 1400px, 100vw" width="1930" height="815" alt="Veined stone island against warm wood kitchen cabinetry" loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -97,56 +103,21 @@
       </div>
 
       <div class="models-grid">
-        <button type="button" class="model-card" data-collection-design="02" aria-label="View Kitchen Model 02" aria-haspopup="dialog">
-          <span class="model-media">
-            <img src="assets/images/Kitchen%20photos/web/2-960.webp" srcset="assets/images/Kitchen%20photos/web/2-480.webp 480w, assets/images/Kitchen%20photos/web/2-960.webp 960w" sizes="(max-width: 600px) 90vw, (max-width: 900px) 45vw, 22vw" width="1931" height="814" alt="Kitchen Model 02 — Island and garden glazing" loading="lazy" decoding="async" />
-          </span>
-          <span class="model-info">
-            <span class="model-title-row">
-              <span class="model-title">Model 02</span>
-              <span class="model-arrow" aria-hidden="true">→</span>
-            </span>
-            <span class="model-subtitle">Island and Garden Glazing</span>
-          </span>
+        <button type="button" class="model-card" data-collection-design="05" aria-label="View CURVIERA" aria-haspopup="dialog">
+          <span class="model-media"><img src="assets/images/Kitchen%20photos/web/5-960.webp" srcset="assets/images/Kitchen%20photos/web/5-480.webp 480w, assets/images/Kitchen%20photos/web/5-960.webp 960w" sizes="(max-width: 768px) 44vw, 43vw" width="1672" height="941" alt="White kitchen and dining table overlooking a snowy landscape" loading="lazy" decoding="async" /></span>
+          <span class="model-info"><span class="model-title-row"><span class="model-title">CURVIERA</span><span class="model-arrow" aria-hidden="true">→</span></span><span class="model-subtitle">White kitchen and dining table overlooking a snowy landscape</span></span>
         </button>
-
-        <button type="button" class="model-card" data-collection-design="05" aria-label="View Kitchen Model 05" aria-haspopup="dialog">
-          <span class="model-media">
-            <img src="assets/images/Kitchen%20photos/web/5-960.webp" srcset="assets/images/Kitchen%20photos/web/5-480.webp 480w, assets/images/Kitchen%20photos/web/5-960.webp 960w" sizes="(max-width: 600px) 90vw, (max-width: 900px) 45vw, 22vw" width="1672" height="941" alt="Kitchen Model 05 — Open dining and architecture" loading="lazy" decoding="async" />
-          </span>
-          <span class="model-info">
-            <span class="model-title-row">
-              <span class="model-title">Model 05</span>
-              <span class="model-arrow" aria-hidden="true">→</span>
-            </span>
-            <span class="model-subtitle">Panoramic Dining and Architecture</span>
-          </span>
+        <button type="button" class="model-card" data-collection-design="09" aria-label="View MORBIDA" aria-haspopup="dialog">
+          <span class="model-media"><img src="assets/images/Kitchen%20photos/web/9-960.webp" srcset="assets/images/Kitchen%20photos/web/9-480.webp 480w, assets/images/Kitchen%20photos/web/9-960.webp 960w" sizes="(max-width: 768px) 44vw, 43vw" width="1916" height="821" alt="Grey kitchen island and dark cabinetry beside snowy landscape windows" loading="lazy" decoding="async" /></span>
+          <span class="model-info"><span class="model-title-row"><span class="model-title">MORBIDA</span><span class="model-arrow" aria-hidden="true">→</span></span><span class="model-subtitle">Grey kitchen island and dark cabinetry beside snowy landscape windows</span></span>
         </button>
-
-        <button type="button" class="model-card" data-collection-design="06" aria-label="View Kitchen Model 06" aria-haspopup="dialog">
-          <span class="model-media">
-            <img src="assets/images/Kitchen%20photos/web/6-960.webp" srcset="assets/images/Kitchen%20photos/web/6-480.webp 480w, assets/images/Kitchen%20photos/web/6-960.webp 960w" sizes="(max-width: 600px) 90vw, (max-width: 900px) 45vw, 22vw" width="1672" height="941" alt="Kitchen Model 06 — Island and suspended extractor" loading="lazy" decoding="async" />
-          </span>
-          <span class="model-info">
-            <span class="model-title-row">
-              <span class="model-title">Model 06</span>
-              <span class="model-arrow" aria-hidden="true">→</span>
-            </span>
-            <span class="model-subtitle">Linear Island and Suspended Extractor</span>
-          </span>
+        <button type="button" class="model-card" data-collection-design="04" aria-label="View ONYX" aria-haspopup="dialog">
+          <span class="model-media"><img src="assets/images/Kitchen%20photos/web/4-960.webp" srcset="assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w" sizes="(max-width: 768px) 44vw, 43vw" width="1930" height="815" alt="Veined stone island against warm wood kitchen cabinetry" loading="lazy" decoding="async" /></span>
+          <span class="model-info"><span class="model-title-row"><span class="model-title">ONYX</span><span class="model-arrow" aria-hidden="true">→</span></span><span class="model-subtitle">Veined stone island against warm wood kitchen cabinetry</span></span>
         </button>
-
-        <button type="button" class="model-card" data-collection-design="07" aria-label="View Kitchen Model 07" aria-haspopup="dialog">
-          <span class="model-media">
-            <img src="assets/images/Kitchen%20photos/web/7-960.webp" srcset="assets/images/Kitchen%20photos/web/7-480.webp 480w, assets/images/Kitchen%20photos/web/7-960.webp 960w" sizes="(max-width: 600px) 90vw, (max-width: 900px) 45vw, 22vw" width="1672" height="941" alt="Kitchen Model 07 — Monolithic rose cabinetry" loading="lazy" decoding="async" />
-          </span>
-          <span class="model-info">
-            <span class="model-title-row">
-              <span class="model-title">Model 07</span>
-              <span class="model-arrow" aria-hidden="true">→</span>
-            </span>
-            <span class="model-subtitle">Monolithic Form and Architectural Tone</span>
-          </span>
+        <button type="button" class="model-card" data-collection-design="01" aria-label="View Kitchen Design 01" aria-haspopup="dialog">
+          <span class="model-media"><img src="assets/images/Kitchen%20photos/web/1-960.webp" srcset="assets/images/Kitchen%20photos/web/1-480.webp 480w, assets/images/Kitchen%20photos/web/1-960.webp 960w" sizes="(max-width: 768px) 44vw, 43vw" width="1916" height="821" alt="Warm wood kitchen with a pale island and wide landscape windows" loading="lazy" decoding="async" /></span>
+          <span class="model-info"><span class="model-title-row"><span class="model-title">Kitchen Design 01</span><span class="model-arrow" aria-hidden="true">→</span></span><span class="model-subtitle">Warm wood kitchen with a pale island and wide landscape windows</span></span>
         </button>
       </div>
     </section>
@@ -165,7 +136,7 @@
         </div>
 
         <div class="closer-grid">
-          <button type="button" class="closer-card" data-collection-design="04" aria-label="View Kitchen Design 04 Surface Detail" aria-haspopup="dialog">
+          <button type="button" class="closer-card" data-collection-design="04" aria-label="View ONYX Surface Detail" aria-haspopup="dialog">
             <span class="closer-media">
               <img src="assets/images/Kitchen%20photos/web/4-960.webp" srcset="assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w" sizes="(max-width: 600px) 45vw, (max-width: 900px) 23vw, 17vw" width="1930" height="815" alt="Veined stone island surface and cabinet joint" loading="lazy" decoding="async" />
             </span>

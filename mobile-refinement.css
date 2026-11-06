@@ -11,7 +11,7 @@
  .site-header .search-toggle { width: 44px; height: 44px; }
  .interior-page .site-header { height: 84px; }
  .interior-page main { padding-top: 84px; }
- .polished-page #mainContent .home-hero.hero { height: 84svh; min-height: 540px; max-height: 760px; }
+ .polished-page #mainContent .home-hero.hero { height: 100vh; height: 100dvh; min-height: 540px; max-height: none; }
  .polished-page #mainContent :is(.collection-hero.hero, .kitchen-cinematic-hero) { height: 64svh; min-height: 440px; max-height: 620px; }
  .polished-page #mainContent .hero-content { left: 22px; right: 22px; bottom: 98px; max-width: 440px; }
  .polished-page #mainContent .hero-content h1 { font-size: clamp(36px, 8.6vw, 54px); line-height: 1.06; margin-bottom: 14px; }

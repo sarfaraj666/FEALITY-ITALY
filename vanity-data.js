@@ -80,6 +80,16 @@ window.FealityVanityDesigns = [
     "srcset": "assets/venity/web/8-480.webp 480w, assets/venity/web/8-960.webp 960w"
   },
   {
+    "id": "14",
+    "name": "Basin and Open Cabinet Storage",
+    "alt": "Basin and Open Cabinet Storage",
+    "width": 1448,
+    "height": 1086,
+    "source": "assets/venity/14.png",
+    "thumbnail": "assets/venity/web/14-960.webp",
+    "srcset": "assets/venity/web/14-480.webp 480w, assets/venity/web/14-960.webp 960w"
+  },
+  {
     "id": "09",
     "name": "Tall Mirror and Asymmetric Storage",
     "alt": "Tall Mirror and Asymmetric Storage",
@@ -128,15 +138,5 @@ window.FealityVanityDesigns = [
     "source": "assets/venity/13.png",
     "thumbnail": "assets/venity/web/13-960.webp",
     "srcset": "assets/venity/web/13-480.webp 480w, assets/venity/web/13-960.webp 960w"
-  },
-  {
-    "id": "14",
-    "name": "Basin and Open Cabinet Storage",
-    "alt": "Basin and Open Cabinet Storage",
-    "width": 1448,
-    "height": 1086,
-    "source": "assets/venity/14.png",
-    "thumbnail": "assets/venity/web/14-960.webp",
-    "srcset": "assets/venity/web/14-480.webp 480w, assets/venity/web/14-960.webp 960w"
   }
 ];
