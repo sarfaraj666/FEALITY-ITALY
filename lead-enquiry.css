@@ -1,0 +1,24 @@
+.lead-dialog { box-sizing:border-box; width:min(40rem,calc(100% - 2rem)); max-height:calc(var(--lead-height,100dvh) - 2rem); margin:auto; padding:clamp(24px,4vw,44px); border:1px solid var(--line); background:var(--paper); color:var(--ink); overflow:auto; overscroll-behavior:contain; scroll-padding:1rem; }
+.lead-dialog::backdrop { background:rgb(20 22 21 / .62); }
+.lead-dialog form { display:grid; gap:18px; }
+.lead-dialog header { position:relative; padding-right:42px; }
+.lead-dialog :is(h2,p) { margin:0; }
+.lead-dialog h2 { font:400 clamp(32px,4vw,48px)/1.05 var(--font-heading); }
+.lead-dialog header p { margin-top:8px; }
+.lead-dialog [data-close] { position:absolute; right:-8px; top:-8px; width:44px; height:44px; border:0; background:transparent; font-size:28px; color:inherit; }
+.lead-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.lead-wide { grid-column:1/-1; }
+.lead-fields label { display:grid; gap:6px; font-size:14px; }
+.lead-fields :is(input,textarea,select) { box-sizing:border-box; width:100%; min-width:0; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:2px; background:#fff; color:var(--ink); font:inherit; font-size:16px; }
+.lead-fields textarea { resize:vertical; }
+.lead-consent { display:flex; gap:10px; align-items:baseline; font-size:14px; line-height:1.5; }
+.lead-consent input { accent-color:var(--ink); }
+.lead-dialog [type=submit] { width:100%; min-height:48px; background:var(--ink); color:var(--paper); border:0; font:inherit; cursor:pointer; }
+.lead-dialog [type=submit]:disabled { opacity:.65; }
+.lead-dialog :focus-visible { outline:2px solid currentColor; outline-offset:2px; }
+.lead-dialog [data-test],.lead-dialog [role=status] { font-size:13px; overflow-wrap:anywhere; }
+.lead-dialog p:empty { display:none; }
+@media(max-width:600px){
+ .lead-dialog { inset:var(--lead-top,0px) 0 auto; margin:0; width:100%; max-width:none; height:var(--lead-height,100dvh); max-height:none; border:0; padding:24px 20px max(24px,env(safe-area-inset-bottom)); }
+ .lead-fields { grid-template-columns:minmax(0,1fr); }
+}

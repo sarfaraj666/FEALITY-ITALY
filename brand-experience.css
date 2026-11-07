@@ -4,7 +4,7 @@
 }
 
 .brand-experience :is(h1, h2, h3) {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: 500;
   line-height: 1.04;
   text-wrap: balance;
@@ -42,7 +42,7 @@
 }
 .brand-hero-copy > p:not(.eyebrow) {
   max-width: 42ch;
-  font: italic clamp(19px, 1.65vw, 26px)/1.32 'Cormorant Garamond', Georgia, serif;
+  font: italic clamp(19px, 1.65vw, 26px)/1.32 var(--font-body);
 }
 .brand-button {
   display: inline-flex;
@@ -69,7 +69,7 @@
 .brand-photo { overflow: hidden; }
 .brand-photo img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
 .brand-card h3 { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 18px; }
-.brand-card h3 span { font: 18px 'Inter', sans-serif; }
+.brand-card h3 span { font: 18px var(--font-ui); }
 .brand-approach p, .brand-enquiry p { max-width: 55ch; margin: 18px 0; }
 .brand-approach ol { margin: 0; padding: 0; list-style: decimal-leading-zero inside; }
 .brand-approach li { padding: 16px 0; border-bottom: 1px solid var(--line); }

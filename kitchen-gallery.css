@@ -8,7 +8,7 @@
 .kitchen-gallery-card { display: block; min-width: 0; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; font: inherit; animation: kitchen-fade .25s ease both; }
 .kitchen-gallery-media { display: block; overflow: hidden; }
 .kitchen-gallery-card img { display: block; width: 100%; height: auto; object-fit: contain; transition: transform .4s ease; }
-.kitchen-gallery-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; font-size: 11px; letter-spacing: .08em; }
+.kitchen-gallery-caption { font-family: var(--font-heading); display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; font-size: 11px; letter-spacing: .08em; }
 .kitchen-gallery-caption span:last-child { font-size: 20px; }
 @media (hover: hover) { .kitchen-gallery-card:hover img { transform: scale(1.025); } }
 .kitchen-lightbox { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 24px 4%; border: 0; background: var(--paper); color: var(--ink); overflow: auto; }
@@ -73,3 +73,40 @@
   .kitchen-page .collection-card:hover img,
   .kitchen-page .kitchen-gallery-card:hover img { transform: none; }
 }
+
+/* Each row follows its tallest photograph; shorter compositions stay whole. */
+.collection-page #mainContent #kitchen-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 44px) clamp(14px, 2vw, 30px);
+  align-items: stretch;
+}
+.collection-page #kitchen-grid .kitchen-gallery-card {
+  display: flex; flex-direction: column; cursor: pointer;
+}
+#mainContent #kitchen-grid .kitchen-gallery-card .kitchen-gallery-media {
+  width: 100%; flex: 1; display: grid; align-items: center;
+  aspect-ratio: auto; overflow: hidden;
+}
+#mainContent #kitchen-grid .kitchen-gallery-card img {
+  width: 100%; height: auto; object-fit: contain; transform: none;
+}
+#kitchen-grid .kitchen-gallery-caption {
+  width: 100%; align-items: baseline; font-size: clamp(14px, 1vw, 17px);
+  letter-spacing: .02em; line-height: 1.4;
+}
+#kitchen-grid button:focus-visible, #kitchen-lightbox button:focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+#kitchen-grid button:active .kitchen-gallery-caption { text-decoration: underline; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  #kitchen-grid .kitchen-gallery-caption span:last-child { transition: transform .2s ease; }
+  #kitchen-grid button:hover .kitchen-gallery-caption span:last-child { transform: translate(2px,-2px); }
+}
+@media (max-width: 900px) {
+  .collection-page #mainContent #kitchen-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 389px) {
+  .collection-page #mainContent #kitchen-grid { grid-template-columns: minmax(0,1fr); }
+}
+#kitchen-lightbox .kitchen-lightbox-stage { grid-template: minmax(0,1fr) / minmax(0,1fr); }
+#kitchen-lightbox #kitchen-full-image { min-width: 0; }

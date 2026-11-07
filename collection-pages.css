@@ -109,7 +109,7 @@
 
 .collection-hero .hero-content h1,
 .home-hero .hero-content h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(48px, 5.2vw, 88px);
   font-weight: 400;
   line-height: 1.02;
@@ -182,7 +182,7 @@
 
 .collection-section h2 {
   margin: 0;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(34px, 3.6vw, 56px);
   font-weight: 400;
   line-height: 1.1;
@@ -382,7 +382,7 @@
 }
 
 .home-collection-card h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(26px, 2.2vw, 34px);
   font-weight: 400;
   line-height: 1.15;
@@ -429,7 +429,7 @@
 }
 
 .home-pathway-grid h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(36px, 3.8vw, 60px);
   font-weight: 400;
   line-height: 1.08;
@@ -465,7 +465,7 @@
   align-items: center;
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-ui);
   font-size: 22px;
   font-weight: 400;
   transition: padding-left .2s ease;
@@ -476,7 +476,7 @@
 }
 
 .search-results a span {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-ui);
   font-size: 10px;
   letter-spacing: .12em;
   font-weight: 600;
@@ -666,7 +666,7 @@
 }
 
 .hero-category {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-ui);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -676,7 +676,7 @@
 }
 
 .hero-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(52px, 5.6vw, 92px);
   font-weight: 400;
   line-height: 0.98;
@@ -686,7 +686,7 @@
 }
 
 .hero-subtitle {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(19px, 2vw, 27px);
   font-weight: 400;
@@ -704,7 +704,7 @@
   border: 1px solid rgba(255, 255, 255, 0.78);
   background: transparent;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-ui);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -787,7 +787,7 @@
 }
 
 .hero-slide-count {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-ui);
   font-size: 11px;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.85);
@@ -826,7 +826,7 @@
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-ui);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -843,7 +843,7 @@
 }
 
 .models-header h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(38px, 4vw, 56px);
   font-weight: 400;
   line-height: 1.08;
@@ -852,7 +852,7 @@
 }
 
 .models-intro {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(16px, 1.35vw, 19px);
   font-weight: 400;
@@ -866,7 +866,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-ui);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -936,7 +936,7 @@
 }
 
 .model-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: 22px;
   font-weight: 500;
   line-height: 1.2;
@@ -955,7 +955,7 @@
 }
 
 .model-subtitle {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 13.5px;
   color: #555550;
@@ -981,7 +981,7 @@
 }
 
 .closer-editorial h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(36px, 3.8vw, 54px);
   font-weight: 400;
   line-height: 1.08;
@@ -990,7 +990,7 @@
 }
 
 .closer-description {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(16px, 1.3vw, 19px);
   font-weight: 400;
@@ -1008,7 +1008,7 @@
   border: 1px solid var(--ink);
   background: transparent;
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-ui);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;

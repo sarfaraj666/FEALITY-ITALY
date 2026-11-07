@@ -17,7 +17,7 @@
   let visible = designs;
   let current = 0;
   let trigger = null;
-  let savedOverflow = '';
+  let savedOverflow = null;
   let request = 0;
   let swipeStart = null;
   let enquiryHandler = null;
@@ -31,11 +31,36 @@
 
   function open(position, button) {
     trigger = button;
-    savedOverflow = document.body.style.overflow;
+    if (savedOverflow === null) savedOverflow = document.body.style.overflow;
     dialog.showModal();
     document.body.style.overflow = 'hidden';
     show(position);
   }
+
+  // One entry point per photograph, with the same lightbox on both layouts.
+  function addEditorialCaption(card, design) {
+    const title = design.name || `Kitchen Design ${design.id}`;
+    const summary = element('span', 'design-summary');
+    summary.hidden = true; // The phone stylesheet reveals this caption.
+    summary.append(element('span', 'design-name', title));
+    const description = design.description || card.querySelector('.collection-subtitle')?.textContent
+      || card.querySelector('img').alt;
+    if (description && description.toLowerCase() !== title.toLowerCase()) {
+      summary.append(element('span', 'design-note', description));
+    }
+    summary.append(element('span', 'design-action', 'Explore Design →'));
+    card.prepend(summary);
+    card.classList.add('editorial-design');
+    // Some desktop detail cards have an existing numbered title as well.
+    const existingTitle = card.querySelector('.kitchen-gallery-caption > span')?.textContent;
+    const label = existingTitle && existingTitle !== title ? `${title} (${existingTitle})` : title;
+    card.setAttribute('aria-label', `Explore Design: ${label}`);
+  }
+
+  document.querySelectorAll('.collection-section button[data-collection-design]').forEach(card => {
+    const design = designs.find(item => item.id === card.dataset.collectionDesign);
+    if (design) addEditorialCaption(card, design);
+  });
 
   // Featured and editorial cards open the complete collection, independently of filters.
   // Delegation also supports cards rendered by the existing Kitchen carousel.
@@ -46,7 +71,7 @@
     const position = designs.findIndex(design => design.id === id);
     if (position < 0) return;
     event.preventDefault();
-    render('All Designs');
+    if (visible.length !== designs.length) render('All Designs');
     open(position, button);
   });
 
@@ -58,12 +83,11 @@
       const button = element('button', 'kitchen-gallery-card');
       button.type = 'button';
       const title = design.name || `Kitchen Design ${design.id}`;
-      button.setAttribute('aria-label', `View ${title}`);
       button.setAttribute('aria-haspopup', 'dialog');
       const media = element('span', 'kitchen-gallery-media');
       const img = element('img');
       Object.assign(img, { src: design.thumbnail, srcset: design.srcset,
-        sizes: '(max-width: 600px) 88vw, (max-width: 900px) 43vw, 29vw',
+        sizes: 'auto, (max-width: 768px) 90vw, (max-width: 900px) 45vw, 30vw',
         width: design.width, height: design.height, alt: design.alt, loading: 'lazy', decoding: 'async' });
       media.append(img);
       const caption = element('span', 'kitchen-gallery-caption');
@@ -72,12 +96,18 @@
       arrow.setAttribute('aria-hidden', 'true');
       caption.append(arrow);
       button.append(media, caption);
-      button.addEventListener('click', () => open(position, button));
+      addEditorialCaption(button, design);
+      button.dataset.galleryPosition = position;
       fragment.append(button);
     });
     grid.replaceChildren(fragment);
     get('kitchen-count').textContent = `${visible.length} ${visible.length === 1 ? 'design' : 'designs'}`;
   }
+
+  grid.addEventListener('click', event => {
+    const card = event.target.closest('[data-gallery-position]');
+    if (card) open(Number(card.dataset.galleryPosition), card);
+  });
 
   async function show(position) {
     current = (position + visible.length) % visible.length;
@@ -101,6 +131,7 @@
       fullImage.width = design.width;
       fullImage.height = design.height;
       status.textContent = '';
+      dialog.setAttribute('aria-labelledby', 'kitchen-lightbox-title kitchen-design-name');
       fullImage.classList.remove('is-loading');
     } catch {
       if (token === request && dialog.open) status.textContent = 'This image could not be loaded. Please try another image.';
@@ -119,9 +150,12 @@
   get('kitchen-previous').addEventListener('click', () => show(current - 1));
   get('kitchen-next').addEventListener('click', () => show(current + 1));
   dialog.addEventListener('close', () => {
+    // A queued close event may arrive after the viewer has reopened.
+    if (dialog.open) return;
     ++request;
     swipeStart = null;
     document.body.style.overflow = savedOverflow;
+    savedOverflow = null;
     trigger?.focus({ preventScroll: true });
   });
   // Native modal dialog supplies background inertness and Escape-to-close.

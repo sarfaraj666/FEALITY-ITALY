@@ -1,0 +1,124 @@
+/* Loaded through a max-width media query on the seven interior pages. */
+#mainContent :is(.collection-section, .brand-section, article) {
+  --type-section: clamp(23px, 6vw, 28px);
+  --type-subsection: clamp(18px, 4.8vw, 21px);
+  --editorial-gap: clamp(32px, 7vw, 44px);
+}
+
+.collection-page #mainContent .collection-section {
+  padding-inline: clamp(18px, 5vw, 38px);
+}
+
+.collection-page #mainContent :is(#kitchen-grid, .models-grid, .closer-grid, .collection-detail-grid, .collection-featured-grid) {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: var(--editorial-gap);
+}
+
+.collection-page #mainContent .collection-section .editorial-design {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  border: 0;
+  text-align: left;
+  color: var(--ink);
+}
+
+.editorial-design .design-summary {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.design-summary .design-name {
+  font: 400 clamp(25px, 6.5vw, 30px)/1.2 var(--font-heading);
+  text-wrap: balance;
+}
+
+.design-summary .design-note {
+  max-width: 54ch;
+  font: 400 15px/1.55 var(--font-body);
+}
+
+.design-summary .design-action {
+  margin-top: 3px;
+  font: 500 14px/1.5 var(--font-ui);
+  text-decoration: underline;
+  text-underline-offset: .28em;
+}
+
+#mainContent .editorial-design > :is(.model-info, .kitchen-gallery-caption, .collection-subtitle) {
+  display: none;
+}
+
+.collection-page #mainContent .collection-section .editorial-design:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.collection-page #mainContent :is(#kitchen-grid, .collection-section) .editorial-design :is(.model-media, .closer-media, .kitchen-gallery-media) {
+  display: block;
+  flex: none;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  margin: 0;
+}
+
+.collection-page #mainContent :is(#kitchen-grid, .collection-section) .editorial-design img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: none;
+}
+
+#mainContent.brand-experience .brand-section {
+  --gutter: clamp(18px, 5vw, 38px);
+  --section-space: var(--editorial-gap);
+}
+
+.brand-section :is(.brand-principles, .brand-intro, .brand-cards),
+.brand-section.brand-approach {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.brand-section .brand-principles > div + div {
+  border-inline-start: 0;
+  border-top: 1px solid var(--line);
+  padding: 16px 0 0;
+}
+
+.brand-section .brand-intro { gap: 10px; margin-bottom: 24px; }
+.brand-section .brand-intro p { margin: 0; }
+.brand-section .brand-cards { gap: var(--editorial-gap); }
+.brand-section .brand-card { display: flex; flex-direction: column; gap: 8px; }
+.brand-section .brand-card :is(h3, p) { margin: 0; }
+body.interior-page #mainContent.brand-experience .brand-section .brand-card h3 { font-size: var(--type-subsection); }
+.brand-section .brand-photo { order: 1; margin-top: 6px; }
+.brand-section .brand-photo img { display: block; aspect-ratio: auto 16 / 9; object-fit: contain; }
+
+.review-guide article {
+  padding: 20px clamp(18px, 5vw, 38px) var(--editorial-gap);
+}
+
+.review-guide article section { margin-block-start: 26px; }
+.review-guide article h2 { margin-block-end: 10px; }
+.review-guide article p { margin-block: 8px 14px; }
+.review-guide article .journey { margin-block: 4px 16px; padding-inline-start: 2.5em; }
+.review-guide .journey li { padding: 0 0 20px 14px; }
+.review-guide .journey li:last-child { padding-bottom: 0; }
+.review-guide .journey li::marker { font-family: var(--font-ui); font-weight: 500; }
+.review-guide .journey p { margin-bottom: 0; }
+.review-guide article summary {
+  min-height: 44px;
+  padding-block: 13px;
+  font: 500 15px/1.45 var(--font-ui);
+}
+.review-guide article summary:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.review-guide details[open] > p { margin: 0 0 16px; }
+.review-guide #faq-filter { margin: 0 0 20px; }
+.review-guide .policy-note { margin-top: 0; }

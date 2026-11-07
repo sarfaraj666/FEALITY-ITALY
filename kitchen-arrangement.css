@@ -18,3 +18,47 @@
 }
 #mainContent #featured-kitchen .models-grid { align-items: start; }
 #mainContent #featured-kitchen .model-subtitle { line-height: 1.6; }
+
+/* Phone catalogue: each design has its own photograph and caption. */
+@media (max-width: 600px) {
+  .kitchen-page #mainContent #featured-kitchen .models-grid,
+  .kitchen-page #mainContent #kitchen-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  #mainContent #featured-kitchen .model-media {
+    display: block;
+    aspect-ratio: auto;
+    margin-bottom: 12px;
+  }
+
+  #mainContent #featured-kitchen .model-media img {
+    height: auto;
+  }
+
+  #featured-kitchen .model-card,
+  #kitchen-grid .kitchen-gallery-card {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  #mainContent #featured-kitchen .model-title,
+  #mainContent #kitchen-grid .kitchen-gallery-caption > span:first-child {
+    font-family: var(--font-heading);
+    font-size: clamp(24px, 6.5vw, 32px);
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  #mainContent #featured-kitchen .model-subtitle {
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  #featured-kitchen .models-all-link {
+    min-height: 44px;
+    align-items: center;
+  }
+}

@@ -8,10 +8,8 @@
   <meta name="description" content="Discover FEALITY ITALY — Italian-inspired luxury interiors across three core collections: Kitchen, Wardrobes, and Bathroom Vanity." />
   <meta property="og:title" content="FEALITY ITALY — Italian Luxury Interiors" />
   <meta property="og:description" content="Discover FEALITY ITALY — Italian-inspired luxury interiors across three core collections: Kitchen, Wardrobes, and Bathroom Vanity." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/images/Kitchen%20photos/web/1-1920.webp" fetchpriority="high" />
+  <link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles.css?v=8" />
   <link rel="stylesheet" href="menu.css?v=5" />
   <link rel="stylesheet" href="collection-pages.css?v=2" />
@@ -23,11 +21,12 @@
   <link rel="stylesheet" href="page-polish.css?v=1" />
   <link rel="stylesheet" href="mobile-refinement.css?v=2" />
   <link rel="stylesheet" href="home-showcase.css?v=2" />
+  <link rel="stylesheet" href="typography-refinement.css?v=1" />
 </head>
 <body class="polished-page home-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
   <header class="site-header" id="siteHeader">
-    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home" aria-current="page"><picture><source media="(min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
+    <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home" aria-current="page"><picture><source media="(max-width: 600px), (min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
     <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
   <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span></button>
   </header>
@@ -125,30 +124,29 @@
     </section>
   </main>
 
-  <footer>
-    <div class="footer-main">
-      <a href="index.html" class="footer-logo" aria-label="FEALITY ITALY — Home"><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></a>
-      <div class="footer-columns">
-        <div>
-          <p>EXPLORE</p>
-          <a href="kitchen.html">Kitchen</a>
-          <a href="wardrobes.html">Wardrobes</a>
-          <a href="vanity.html">Vanity</a>
-          <a href="about.html">About Us</a>
-          <a href="how-it-works.html">How It Works</a>
-        </div>
-        <div>
-          <p>INFORMATION</p>
-          <a href="faqs.html">FAQs</a>
-          <a href="terms-policies.html">Terms &amp; Policies</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 FEALITY ITALY. All Rights Reserved.</span>
-      <a href="#top">BACK TO TOP ↑</a>
+  <footer class="site-footer" id="site-footer" aria-label="FEALITY ITALY">
+    <div class="site-footer-inner">
+      <h2>Talk to us</h2>
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="kitchen.html">Kitchen</a></li>
+          <li><a href="wardrobes.html">Wardrobes</a></li>
+          <li><a href="vanity.html">Vanity</a></li>
+        </ul>
+        <ul>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+        </ul>
+        <ul>
+          <li><a href="terms-policies.html">Terms &amp; Policies</a></li>
+        </ul>
+        <ul>
+          <li><a href="#top">Back to Top <span aria-hidden="true">↑</span></a></li>
+        </ul>
+      </nav>
+      <small>© 2026 <a href="index.html">FEALITY ITALY</a>. All Rights Reserved.</small>
     </div>
   </footer>
 </body>
 </html>
-  <link rel="stylesheet" href="typography-refinement.css?v=1" />
