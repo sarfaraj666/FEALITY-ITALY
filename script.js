@@ -70,9 +70,9 @@ viewport.addEventListener('click', event => {
 }, true);
 
 const heroSlides = [
-  {name:'Kitchen Design 01',title:'Kitchen',image:'assets/images/Kitchen%20photos/web/1-1920.webp'},
-  {name:'Kitchen Design 03',title:'Kitchen',image:'assets/images/Kitchen%20photos/web/3-1920.webp'},
-  {name:'Kitchen Design 04',title:'Kitchen',image:'assets/images/Kitchen%20photos/web/4-1920.webp'}
+  {name:'Kitchen Design 01',title:'Kitchen',image:'assets/images/kitchen-photos/web/1-1920.webp'},
+  {name:'Kitchen Design 03',title:'Kitchen',image:'assets/images/kitchen-photos/web/3-1920.webp'},
+  {name:'Kitchen Design 04',title:'Kitchen',image:'assets/images/kitchen-photos/web/4-1920.webp'}
 ];
 const hero = document.querySelector('.hero');
 const heroBackground = document.querySelector('.hero-background');

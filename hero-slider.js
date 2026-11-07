@@ -10,9 +10,9 @@
     width, height, alt
   });
   const kitchen = [
-    photo('assets/images/Kitchen%20photos', 1, 1916, 821, 'Kitchen island with wide landscape windows'),
-    photo('assets/images/Kitchen%20photos', 3, 1932, 814, 'Pale kitchen island beside panoramic windows'),
-    photo('assets/images/Kitchen%20photos', 4, 1930, 815, 'Veined island and wood kitchen cabinetry')
+    photo('assets/images/kitchen-photos', 1, 1916, 821, 'Kitchen island with wide landscape windows'),
+    photo('assets/images/kitchen-photos', 3, 1932, 814, 'Pale kitchen island beside panoramic windows'),
+    photo('assets/images/kitchen-photos', 4, 1930, 815, 'Veined island and wood kitchen cabinetry')
   ];
   const wardrobes = [
     photo('assets/wardrobes', 1, 1916, 821, 'Wardrobe with glass doors and open storage'),
@@ -20,9 +20,9 @@
     photo('assets/wardrobes', 3, 1869, 842, 'Wardrobe with pale cabinetry and open compartments')
   ];
   const vanity = [
-    photo('assets/venity', 1, 1916, 821, 'Floating vanity with rectangular mirror'),
-    photo('assets/venity', 2, 1870, 841, 'Wide bathroom vanity and wall mirror'),
-    photo('assets/venity', 3, 1870, 841, 'Floating vanity beside full-height windows')
+    photo('assets/vanity', 1, 1916, 821, 'Floating vanity with rectangular mirror'),
+    photo('assets/vanity', 2, 1870, 841, 'Wide bathroom vanity and wall mirror'),
+    photo('assets/vanity', 3, 1870, 841, 'Floating vanity beside full-height windows')
   ];
   const slides = document.body.classList.contains('home-page') ? [kitchen[0], wardrobes[0], vanity[0]]
     : hero.classList.contains('wardrobe-hero') ? wardrobes

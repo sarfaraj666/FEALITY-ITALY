@@ -8,9 +8,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "White kitchen and dining table overlooking a snowy landscape",
-    "source": "assets/images/Kitchen%20photos/5.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/5-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/5-480.webp 480w, assets/images/Kitchen%20photos/web/5-960.webp 960w"
+    "source": "assets/images/kitchen-photos/5.png",
+    "thumbnail": "assets/images/kitchen-photos/web/5-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/5-480.webp 480w, assets/images/kitchen-photos/web/5-960.webp 960w"
   },
   {
     "id": "09",
@@ -20,9 +20,9 @@ window.FealityKitchenDesigns = [
     "width": 1916,
     "height": 821,
     "alt": "Grey kitchen island and dark cabinetry beside snowy landscape windows",
-    "source": "assets/images/Kitchen%20photos/9.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/9-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/9-480.webp 480w, assets/images/Kitchen%20photos/web/9-960.webp 960w"
+    "source": "assets/images/kitchen-photos/9.png",
+    "thumbnail": "assets/images/kitchen-photos/web/9-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/9-480.webp 480w, assets/images/kitchen-photos/web/9-960.webp 960w"
   },
   {
     "id": "04",
@@ -32,9 +32,9 @@ window.FealityKitchenDesigns = [
     "width": 1930,
     "height": 815,
     "alt": "Veined stone island against warm wood kitchen cabinetry",
-    "source": "assets/images/Kitchen%20photos/4.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/4-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/4-480.webp 480w, assets/images/Kitchen%20photos/web/4-960.webp 960w"
+    "source": "assets/images/kitchen-photos/4.png",
+    "thumbnail": "assets/images/kitchen-photos/web/4-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/4-480.webp 480w, assets/images/kitchen-photos/web/4-960.webp 960w"
   },
   {
     "id": "01",
@@ -44,9 +44,9 @@ window.FealityKitchenDesigns = [
     "width": 1916,
     "height": 821,
     "alt": "Warm wood kitchen with a pale island and wide landscape windows",
-    "source": "assets/images/Kitchen%20photos/1.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/1-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/1-480.webp 480w, assets/images/Kitchen%20photos/web/1-960.webp 960w"
+    "source": "assets/images/kitchen-photos/1.png",
+    "thumbnail": "assets/images/kitchen-photos/web/1-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/1-480.webp 480w, assets/images/kitchen-photos/web/1-960.webp 960w"
   },
   {
     "id": "02",
@@ -56,9 +56,9 @@ window.FealityKitchenDesigns = [
     "width": 1931,
     "height": 814,
     "alt": "Light kitchen island with suspended extractor and garden-facing glazing",
-    "source": "assets/images/Kitchen%20photos/2.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/2-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/2-480.webp 480w, assets/images/Kitchen%20photos/web/2-960.webp 960w"
+    "source": "assets/images/kitchen-photos/2.png",
+    "thumbnail": "assets/images/kitchen-photos/web/2-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/2-480.webp 480w, assets/images/kitchen-photos/web/2-960.webp 960w"
   },
   {
     "id": "03",
@@ -68,9 +68,9 @@ window.FealityKitchenDesigns = [
     "width": 1932,
     "height": 814,
     "alt": "Pale kitchen island beneath a dark ceiling beside panoramic windows",
-    "source": "assets/images/Kitchen%20photos/3.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/3-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/3-480.webp 480w, assets/images/Kitchen%20photos/web/3-960.webp 960w"
+    "source": "assets/images/kitchen-photos/3.png",
+    "thumbnail": "assets/images/kitchen-photos/web/3-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/3-480.webp 480w, assets/images/kitchen-photos/web/3-960.webp 960w"
   },
   {
     "id": "06",
@@ -80,9 +80,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Wood kitchen island beneath a dark extractor with grey cabinetry",
-    "source": "assets/images/Kitchen%20photos/6.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/6-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/6-480.webp 480w, assets/images/Kitchen%20photos/web/6-960.webp 960w"
+    "source": "assets/images/kitchen-photos/6.png",
+    "thumbnail": "assets/images/kitchen-photos/web/6-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/6-480.webp 480w, assets/images/kitchen-photos/web/6-960.webp 960w"
   },
   {
     "id": "07",
@@ -92,9 +92,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Rose-toned kitchen island and matching cabinetry",
-    "source": "assets/images/Kitchen%20photos/7.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/7-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/7-480.webp 480w, assets/images/Kitchen%20photos/web/7-960.webp 960w"
+    "source": "assets/images/kitchen-photos/7.png",
+    "thumbnail": "assets/images/kitchen-photos/web/7-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/7-480.webp 480w, assets/images/kitchen-photos/web/7-960.webp 960w"
   },
   {
     "id": "08",
@@ -104,9 +104,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Green framed kitchen cabinetry with pale worktops",
-    "source": "assets/images/Kitchen%20photos/8.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/8-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/8-480.webp 480w, assets/images/Kitchen%20photos/web/8-960.webp 960w"
+    "source": "assets/images/kitchen-photos/8.png",
+    "thumbnail": "assets/images/kitchen-photos/web/8-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/8-480.webp 480w, assets/images/kitchen-photos/web/8-960.webp 960w"
   },
   {
     "id": "10",
@@ -116,9 +116,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Wood lower kitchen cabinets with white upper cabinets and illuminated shelves",
-    "source": "assets/images/Kitchen%20photos/10.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/10-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/10-480.webp 480w, assets/images/Kitchen%20photos/web/10-960.webp 960w"
+    "source": "assets/images/kitchen-photos/10.png",
+    "thumbnail": "assets/images/kitchen-photos/web/10-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/10-480.webp 480w, assets/images/kitchen-photos/web/10-960.webp 960w"
   },
   {
     "id": "11",
@@ -128,9 +128,9 @@ window.FealityKitchenDesigns = [
     "width": 1931,
     "height": 814,
     "alt": "Pale corner kitchen with open shelving and warm integrated lighting",
-    "source": "assets/images/Kitchen%20photos/11.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/11-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/11-480.webp 480w, assets/images/Kitchen%20photos/web/11-960.webp 960w"
+    "source": "assets/images/kitchen-photos/11.png",
+    "thumbnail": "assets/images/kitchen-photos/web/11-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/11-480.webp 480w, assets/images/kitchen-photos/web/11-960.webp 960w"
   },
   {
     "id": "12",
@@ -140,9 +140,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Muted rose kitchen island with stools and open shelving",
-    "source": "assets/images/Kitchen%20photos/12.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/12-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/12-480.webp 480w, assets/images/Kitchen%20photos/web/12-960.webp 960w"
+    "source": "assets/images/kitchen-photos/12.png",
+    "thumbnail": "assets/images/kitchen-photos/web/12-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/12-480.webp 480w, assets/images/kitchen-photos/web/12-960.webp 960w"
   },
   {
     "id": "13",
@@ -152,9 +152,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Light corner kitchen with dark appliances and a window-side worktop",
-    "source": "assets/images/Kitchen%20photos/13.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/13-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/13-480.webp 480w, assets/images/Kitchen%20photos/web/13-960.webp 960w"
+    "source": "assets/images/kitchen-photos/13.png",
+    "thumbnail": "assets/images/kitchen-photos/web/13-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/13-480.webp 480w, assets/images/kitchen-photos/web/13-960.webp 960w"
   },
   {
     "id": "14",
@@ -164,9 +164,9 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Grey kitchen island with pale cabinetry and tall garden windows",
-    "source": "assets/images/Kitchen%20photos/14.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/14-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/14-480.webp 480w, assets/images/Kitchen%20photos/web/14-960.webp 960w"
+    "source": "assets/images/kitchen-photos/14.png",
+    "thumbnail": "assets/images/kitchen-photos/web/14-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/14-480.webp 480w, assets/images/kitchen-photos/web/14-960.webp 960w"
   },
   {
     "id": "15",
@@ -176,8 +176,8 @@ window.FealityKitchenDesigns = [
     "width": 1672,
     "height": 941,
     "alt": "Dark linear kitchen with illuminated wood shelving",
-    "source": "assets/images/Kitchen%20photos/15.png",
-    "thumbnail": "assets/images/Kitchen%20photos/web/15-960.webp",
-    "srcset": "assets/images/Kitchen%20photos/web/15-480.webp 480w, assets/images/Kitchen%20photos/web/15-960.webp 960w"
+    "source": "assets/images/kitchen-photos/15.png",
+    "thumbnail": "assets/images/kitchen-photos/web/15-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/15-480.webp 480w, assets/images/kitchen-photos/web/15-960.webp 960w"
   }
 ];

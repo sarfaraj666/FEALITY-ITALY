@@ -20,7 +20,7 @@
 .review-guide .guide-intro {
   padding: clamp(120px, 17vh, 170px) max(22px, calc((100% - 744px) / 2)) 40px;
   color: white;
-  background: linear-gradient(90deg, rgb(20 21 21 / .9), rgb(20 21 21 / .7)), url("assets/images/Kitchen%20photos/web/4-960.webp") center 48% / cover;
+  background: linear-gradient(90deg, rgb(20 21 21 / .9), rgb(20 21 21 / .7)), url("assets/images/kitchen-photos/web/4-960.webp") center 48% / cover;
 }
 .review-guide .guide-intro .eyebrow { color: inherit; }
 .review-guide article { padding-top: 16px; }

@@ -4,10 +4,9 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 
 const columns = [
-  [['About Us', 'about.html'], ['Kitchen', 'kitchen.html'], ['Wardrobes', 'wardrobes.html'], ['Vanity', 'vanity.html']],
-  [['FAQs', 'faqs.html'], ['How It Works', 'how-it-works.html']],
-  [['Terms &amp; Policies', 'terms-policies.html']],
-  [['Back to Top <span aria-hidden="true">↑</span>', '#top']]
+  [['Home', 'index.html'], ['Exclusive Kitchen', 'kitchen.html'], ['Wardrobes', 'wardrobes.html'], ['Vanity', 'vanity.html']],
+  [['About Us', 'about.html'], ['How It Works', 'how-it-works.html']],
+  [['FAQs', 'faqs.html'], ['Terms &amp; Policies', 'terms-policies.html']]
 ];
 
 function renderFooter(page) {
@@ -18,19 +17,18 @@ function renderFooter(page) {
     });
     return ['        <ul>', ...items, '        </ul>'].join('\n');
   });
-  const years = page === 'kitchen.html' ? '2010–2026' : '2026';
   return `<footer class="site-footer" id="site-footer" aria-label="FEALITY ITALY">
     <div class="site-footer-inner">
-      <h2>Talk to us</h2>
+      <h2>Talk to Us <a href="tel:+919522251777">9522251777</a></h2>
       <nav aria-label="Footer navigation">
 ${groups.join('\n')}
       </nav>
-      <small>© ${years} <a href="index.html">FEALITY ITALY</a>. All Rights Reserved.</small>
+      <div class="footer-colophon"><small>© 2026 FEALITY ITALY. All Rights Reserved.</small></div>
     </div>
   </footer>`;
 }
 
-for (const page of ['index.html', ...columns.flat().map(link => link[1]).filter(href => href.endsWith('.html'))]) {
+for (const page of columns.flat().map(([, href]) => href)) {
   const file = path.join(root, page);
   const html = fs.readFileSync(file, 'utf8');
   const footer = /<footer\b[^>]*>[\s\S]*?<\/footer>/g;
