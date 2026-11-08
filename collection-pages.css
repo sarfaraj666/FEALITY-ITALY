@@ -1208,3 +1208,75 @@
 @media (max-width: 600px) {
   .collection-page .kitchen-cinematic-hero .hero-bottom-bar { bottom: 0; }
 }
+
+.collection-page #kitchen-filters { min-height: 48px; align-content: center; }
+.collection-page #kitchen-grid { min-height: clamp(280px, 46vw, 760px); }
+.collection-page #kitchen-count { min-height: 1.4em; }
+.collection-page .collection-specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 40px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.collection-page .collection-specs li {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 104px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.collection-page .collection-specs li span {
+  color: #686860;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.collection-page .collection-specs li strong {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.collection-page .collection-explore .section-header { margin-bottom: 20px; }
+.collection-page .collection-explore-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+.collection-page .collection-explore-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+}
+.collection-page .collection-explore-links a span { font-size: 20px; }
+.collection-page .collection-explore-links a:focus-visible,
+.collection-page .collection-explore-links a:hover { text-decoration: underline; text-underline-offset: .24em; }
+.inquiry-btn {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border: 1px solid #252525;
+  background: #252525;
+  color: #f5f4f0;
+  font: inherit;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.inquiry-btn:hover { border-color: #444; background: #444; }
+.inquiry-btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+@media (max-width: 700px) {
+  .collection-page .collection-specs { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .collection-page .collection-specs li { min-height: 0; gap: 8px; }
+  .collection-page .collection-explore-links { grid-template-columns: minmax(0, 1fr); }
+}

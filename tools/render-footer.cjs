@@ -26,9 +26,12 @@ function renderFooter(page) {
     });
     return ['        <ul>', ...items, '        </ul>'].join('\n');
   });
-  const icons = profiles.filter(([, url]) => url).map(([name, url, shape]) =>
-    `<a href="${url}" aria-label="FEALITY ITALY on ${name}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${shape}</svg></a>`
-  );
+  const icons = profiles.map(([name, url, shape]) => {
+    const svg = `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${shape}</svg>`;
+    return url
+      ? `<a href="${url}" aria-label="FEALITY ITALY on ${name}">${svg}</a>`
+      : `<span role="img" aria-label="${name}, profile link unavailable" title="${name} — profile link unavailable">${svg}</span>`;
+  });
   const social = icons.length ? `<div class="footer-social"><strong>Follow Us</strong><div>${icons.join('')}</div></div>` : '';
   return `<footer class="site-footer" id="site-footer" aria-label="FEALITY ITALY">
     <div class="site-footer-inner">

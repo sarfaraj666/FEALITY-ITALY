@@ -58,3 +58,28 @@
 .kitchen-faq summary:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 .kitchen-faq details p { color: #ddd; max-width: 70ch; margin: 0 0 20px; line-height: 1.6; }
 .kitchen-faq details a { color: inherit; text-decoration: underline; }
+
+.kitchen-contact {
+  padding: clamp(40px, 6vw, 96px) clamp(20px, 10vw, 180px);
+  background: #282828;
+  color: #eee;
+  font-family: var(--font-ui);
+}
+.kitchen-contact h2 { margin: 0; font: 500 clamp(22px, 2.2vw, 32px)/1.25 var(--font-heading); }
+.kitchen-contact p { margin: 10px 0; }
+.kitchen-contact a { color: inherit; text-decoration: underline; }
+.kitchen-contact fieldset {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+  border: 0; min-width: 0; padding: 0; margin: 24px 0 12px;
+}
+.kitchen-contact label { display: grid; gap: 5px; font-size: 13px; }
+.kitchen-contact :is(input:not([type="checkbox"]), select, button) {
+  box-sizing: border-box; width: 100%; min-height: 42px; padding: 8px 12px;
+  border: 1px solid #757575; border-radius: 3px; background: #505050; color: #eee; font: inherit;
+}
+.kitchen-contact input::placeholder { color: #ddd; }
+.kitchen-contact .contact-consent { display: flex; align-items: center; gap: 8px; }
+.kitchen-contact button:disabled { background: #ddd; color: #333; cursor: not-allowed; }
+@media (max-width: 600px) {
+  .kitchen-contact fieldset { grid-template-columns: 1fr; }
+}

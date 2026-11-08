@@ -95,11 +95,19 @@
 }
 
 @media (max-width: 768px) {
-  .home-page .home-showcase-grid { grid-template-columns: minmax(0, 1fr); }
-  .home-page .home-showcase-panel { height: 70vh; height: 70svh; }
-  .home-page .home-showcase-label { padding-bottom: 32px; }
-  .home-page .home-showcase-label h3 { font-size: clamp(32px, 7vw, 44px); }
-  .home-page .home-showcase-explore { opacity: 1; }
+  .home-page .home-showcase-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .home-page .home-showcase-panel { height: auto; aspect-ratio: 4 / 5; }
+  .home-page .home-showcase-label {
+    bottom: 9%;
+    padding: 9px 16px;
+    background: rgb(18 18 18 / 52%);
+  }
+  body.home-page.polished-page #mainContent .home-showcase-label h3 {
+    font: 400 13px/1.4 var(--font-ui);
+    letter-spacing: .035em;
+  }
+  .home-page .home-showcase-label h3::after { width: 38px; margin: 5px auto 0; opacity: .45; }
+  .home-page .home-showcase-explore { margin-top: 4px; opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

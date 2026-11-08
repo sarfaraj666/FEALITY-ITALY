@@ -7,7 +7,8 @@ window.FealityVanityDesigns = [
     "height": 821,
     "source": "assets/vanity/1.png",
     "thumbnail": "assets/vanity/web/1-960.webp",
-    "srcset": "assets/vanity/web/1-480.webp 480w, assets/vanity/web/1-960.webp 960w"
+    "srcset": "assets/vanity/web/1-480.webp 480w, assets/vanity/web/1-960.webp 960w",
+    "description": "A rectangular mirror sits above a wall-hung cabinet, leaving the floor visible below."
   },
   {
     "id": "02",
@@ -17,7 +18,8 @@ window.FealityVanityDesigns = [
     "height": 841,
     "source": "assets/vanity/2.png",
     "thumbnail": "assets/vanity/web/2-960.webp",
-    "srcset": "assets/vanity/web/2-480.webp 480w, assets/vanity/web/2-960.webp 960w"
+    "srcset": "assets/vanity/web/2-480.webp 480w, assets/vanity/web/2-960.webp 960w",
+    "description": "The broad cabinet and wall mirror emphasise the width of the basin area."
   },
   {
     "id": "03",
@@ -27,7 +29,8 @@ window.FealityVanityDesigns = [
     "height": 841,
     "source": "assets/vanity/3.png",
     "thumbnail": "assets/vanity/web/3-960.webp",
-    "srcset": "assets/vanity/web/3-480.webp 480w, assets/vanity/web/3-960.webp 960w"
+    "srcset": "assets/vanity/web/3-480.webp 480w, assets/vanity/web/3-960.webp 960w",
+    "description": "Window light falls beside the suspended cabinet."
   },
   {
     "id": "04",
@@ -37,7 +40,8 @@ window.FealityVanityDesigns = [
     "height": 941,
     "source": "assets/vanity/4.png",
     "thumbnail": "assets/vanity/web/4-960.webp",
-    "srcset": "assets/vanity/web/4-480.webp 480w, assets/vanity/web/4-960.webp 960w"
+    "srcset": "assets/vanity/web/4-480.webp 480w, assets/vanity/web/4-960.webp 960w",
+    "description": "A halo of light outlines the mirror above a bank of floating drawers."
   },
   {
     "id": "05",
@@ -47,7 +51,8 @@ window.FealityVanityDesigns = [
     "height": 941,
     "source": "assets/vanity/5.png",
     "thumbnail": "assets/vanity/web/5-960.webp",
-    "srcset": "assets/vanity/web/5-480.webp 480w, assets/vanity/web/5-960.webp 960w"
+    "srcset": "assets/vanity/web/5-480.webp 480w, assets/vanity/web/5-960.webp 960w",
+    "description": "The curved mirror contrasts with two straight drawer fronts."
   },
   {
     "id": "06",
@@ -57,7 +62,8 @@ window.FealityVanityDesigns = [
     "height": 941,
     "source": "assets/vanity/6.png",
     "thumbnail": "assets/vanity/web/6-960.webp",
-    "srcset": "assets/vanity/web/6-480.webp 480w, assets/vanity/web/6-960.webp 960w"
+    "srcset": "assets/vanity/web/6-480.webp 480w, assets/vanity/web/6-960.webp 960w",
+    "description": "An irregular mirror softens the outline of the cabinet and its open shelves."
   },
   {
     "id": "07",
@@ -67,7 +73,8 @@ window.FealityVanityDesigns = [
     "height": 941,
     "source": "assets/vanity/7.png",
     "thumbnail": "assets/vanity/web/7-960.webp",
-    "srcset": "assets/vanity/web/7-480.webp 480w, assets/vanity/web/7-960.webp 960w"
+    "srcset": "assets/vanity/web/7-480.webp 480w, assets/vanity/web/7-960.webp 960w",
+    "description": "A round mirror sits above a vanity with storage left open below the basin."
   },
   {
     "id": "08",
@@ -77,7 +84,8 @@ window.FealityVanityDesigns = [
     "height": 941,
     "source": "assets/vanity/8.png",
     "thumbnail": "assets/vanity/web/8-960.webp",
-    "srcset": "assets/vanity/web/8-480.webp 480w, assets/vanity/web/8-960.webp 960w"
+    "srcset": "assets/vanity/web/8-480.webp 480w, assets/vanity/web/8-960.webp 960w",
+    "description": "Small objects sit on display above the wall-hung cabinet."
   },
   {
     "id": "14",
@@ -87,7 +95,8 @@ window.FealityVanityDesigns = [
     "height": 1086,
     "source": "assets/vanity/14.png",
     "thumbnail": "assets/vanity/web/14-960.webp",
-    "srcset": "assets/vanity/web/14-480.webp 480w, assets/vanity/web/14-960.webp 960w"
+    "srcset": "assets/vanity/web/14-480.webp 480w, assets/vanity/web/14-960.webp 960w",
+    "description": "The open doors reveal the shelves tucked beneath the rectangular basin."
   },
   {
     "id": "09",
@@ -97,7 +106,8 @@ window.FealityVanityDesigns = [
     "height": 1402,
     "source": "assets/vanity/9.png",
     "thumbnail": "assets/vanity/web/9-960.webp",
-    "srcset": "assets/vanity/web/9-480.webp 480w, assets/vanity/web/9-960.webp 960w"
+    "srcset": "assets/vanity/web/9-480.webp 480w, assets/vanity/web/9-960.webp 960w",
+    "description": "The tall mirror draws the eye up from the offset storage below."
   },
   {
     "id": "10",
@@ -107,7 +117,8 @@ window.FealityVanityDesigns = [
     "height": 1440,
     "source": "assets/vanity/10.png",
     "thumbnail": "assets/vanity/web/10-960.webp",
-    "srcset": "assets/vanity/web/10-480.webp 480w, assets/vanity/web/10-960.webp 960w"
+    "srcset": "assets/vanity/web/10-480.webp 480w, assets/vanity/web/10-960.webp 960w",
+    "description": "A square mirror frames the wash area, with a shelf beneath for everyday items."
   },
   {
     "id": "11",
@@ -117,7 +128,8 @@ window.FealityVanityDesigns = [
     "height": 1440,
     "source": "assets/vanity/11.png",
     "thumbnail": "assets/vanity/web/11-960.webp",
-    "srcset": "assets/vanity/web/11-480.webp 480w, assets/vanity/web/11-960.webp 960w"
+    "srcset": "assets/vanity/web/11-480.webp 480w, assets/vanity/web/11-960.webp 960w",
+    "description": "A mirrored cabinet above the basin pairs with drawers below."
   },
   {
     "id": "12",
@@ -127,7 +139,8 @@ window.FealityVanityDesigns = [
     "height": 1205,
     "source": "assets/vanity/12.jpg",
     "thumbnail": "assets/vanity/web/12-960.webp",
-    "srcset": "assets/vanity/web/12-480.webp 480w, assets/vanity/web/12-960.webp 909w"
+    "srcset": "assets/vanity/web/12-480.webp 480w, assets/vanity/web/12-960.webp 909w",
+    "description": "Open shelves at one side keep bottles in view beside the cabinet door."
   },
   {
     "id": "13",
@@ -137,6 +150,7 @@ window.FealityVanityDesigns = [
     "height": 1448,
     "source": "assets/vanity/13.png",
     "thumbnail": "assets/vanity/web/13-960.webp",
-    "srcset": "assets/vanity/web/13-480.webp 480w, assets/vanity/web/13-960.webp 960w"
+    "srcset": "assets/vanity/web/13-480.webp 480w, assets/vanity/web/13-960.webp 960w",
+    "description": "A round mirror hangs above a compact basin and two drawer fronts."
   }
 ];

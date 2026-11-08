@@ -178,14 +178,21 @@
   // Native modal dialog supplies background inertness and Escape-to-close.
   dialog.addEventListener('keydown', event => {
     if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      dialog.close();
+      return;
+    }
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
       event.stopPropagation();
       show(current + (event.key === 'ArrowRight' ? 1 : -1));
     }
     if (event.key === 'Tab') {
-      const buttons = [...dialog.querySelectorAll('button:not(:disabled)')];
-      const first = buttons[0], last = buttons[buttons.length - 1];
+      const focusable = [...dialog.querySelectorAll('button:not(:disabled), a[href], input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex="-1"])')]
+        .filter(node => !node.hidden);
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (!first) return;
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
@@ -216,12 +223,11 @@
   window[galleryHook] = Object.freeze({
     setEnquiryHandler(handler) {
       enquiryHandler = typeof handler === 'function' ? handler : null;
-      enquiry.disabled = !enquiryHandler;
-      get('kitchen-enquiry-note').hidden = !!enquiryHandler;
     }
   });
-  enquiry.addEventListener('click', () => {
+  enquiry.addEventListener('click', event => {
     if (!enquiryHandler) return;
+    event.preventDefault();
     const handler = enquiryHandler, design = { ...visible[current] };
     dialog.addEventListener('close', () => handler(design), { once: true });
     dialog.close();
