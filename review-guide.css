@@ -25,7 +25,36 @@
 .review-guide .guide-intro .eyebrow { color: inherit; }
 .review-guide article { padding-top: 16px; }
 @media (max-width: 768px) { .review-guide .guide-intro { padding: 44px 22px 28px; } }
-#faq-filter { margin-block: 24px; }
-#faq-filter label { display: block; margin-bottom: 8px; font-weight: 500; }
-#faq-query { width: 100%; padding: 12px; border: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; }
-#faq-status { margin-block: 8px; font-size: 14px; }
+
+.kitchen-faq {
+  padding: clamp(40px, 5vw, 80px) clamp(20px, 10vw, 180px);
+  background: #252525;
+  color: #eee;
+  font-family: var(--font-ui);
+}
+.kitchen-faq h2 { margin: 0 0 14px; color: inherit; font: 600 clamp(19px, 2vw, 25px)/1.3 var(--font-ui); }
+.kitchen-faq details { border-bottom: 1px solid #777; }
+.kitchen-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-block: clamp(15px, 1.7vw, 26px);
+  font-size: clamp(14px, 1.25vw, 18px);
+  line-height: 1.5;
+  cursor: pointer;
+  list-style: none;
+}
+.kitchen-faq summary::-webkit-details-marker { display: none; }
+.kitchen-faq summary::after {
+  content: "";
+  flex: 0 0 7px;
+  height: 7px;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+.kitchen-faq details[open] summary::after { transform: rotate(225deg); }
+.kitchen-faq summary:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.kitchen-faq details p { color: #ddd; max-width: 70ch; margin: 0 0 20px; line-height: 1.6; }
+.kitchen-faq details a { color: inherit; text-decoration: underline; }

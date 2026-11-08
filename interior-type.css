@@ -1,0 +1,40 @@
+/* This face exposes the light axis only on the seven interior pages. */
+@font-face {
+  font-family: 'Montserrat Editorial';
+  src: url('assets/fonts/montserrat-latin-wght-normal.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+}
+#mainContent {
+  --editorial-font: 'Montserrat Editorial', Montserrat, sans-serif;
+}
+#mainContent :is(.collection-section, .brand-section, .guide-intro, article, .hero-content, .brand-hero-copy) {
+  --font-heading: var(--editorial-font);
+}
+#mainContent :is(.hero-content, .brand-hero-copy, .guide-intro, .collection-section, .brand-section, article) :is(h1,h2,h3) {
+  font-family: var(--editorial-font);
+  font-weight: 300;
+  letter-spacing: -.015em;
+}
+#mainContent :is(.model-title, .kitchen-gallery-caption > span:first-child, .design-name) {
+  font-family: var(--editorial-font);
+  font-weight: 300;
+  letter-spacing: -.015em;
+}
+#mainContent .design-name { font-size: var(--type-card-title); line-height: 1.15; }
+#mainContent .design-emphasis { font-weight: 600; font-size: inherit; }
+#mainContent .editorial-design :is(.design-note, .model-subtitle, .collection-subtitle) {
+  font: 400 var(--type-body)/1.5 var(--editorial-font);
+  letter-spacing: .005em;
+}
+#mainContent .design-action {
+  font: 400 12px/1.5 var(--editorial-font);
+  letter-spacing: .01em;
+  text-decoration-thickness: 1px;
+}
+#mainContent :is(.brand-section, article) p {
+  font-family: var(--editorial-font);
+  font-weight: 400;
+}
+#mainContent.review-guide summary { font-size: 14px; font-family: var(--editorial-font); font-weight: 500; }

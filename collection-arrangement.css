@@ -31,3 +31,9 @@
 /* Featured landscape frames get definite bounds without relying on grid sizing. */
 #mainContent :is(#featured-wardrobes, #featured-vanity) .kitchen-gallery-media { position: relative; }
 #mainContent :is(#featured-wardrobes, #featured-vanity) .kitchen-gallery-media img { position: absolute; inset: 0; min-height: 0; }
+
+/* Detail previews outside the complete catalogue. */
+.vanity-page #mainContent #vanity-details .kitchen-gallery-media img {
+  max-height: min(64svh, 620px);
+  object-fit: contain;
+}

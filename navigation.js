@@ -112,7 +112,7 @@
       { name: 'Full Vanity Gallery (14 Designs)', category: 'GALLERY', url: 'vanity.html#kitchen-gallery' },
       { name: 'About FEALITY ITALY', category: 'INFORMATION', url: 'about.html' },
       { name: 'How It Works & Process', category: 'INFORMATION', url: 'how-it-works.html' },
-      { name: 'Frequently Asked Questions', category: 'INFORMATION', url: 'faqs.html' },
+      { name: 'Frequently Asked Questions', category: 'INFORMATION', url: 'kitchen.html#faqs' },
       { name: 'Terms & Policies', category: 'INFORMATION', url: 'terms-policies.html' }
     ];
 

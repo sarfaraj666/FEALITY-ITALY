@@ -110,3 +110,100 @@
 }
 #kitchen-lightbox .kitchen-lightbox-stage { grid-template: minmax(0,1fr) / minmax(0,1fr); }
 #kitchen-lightbox #kitchen-full-image { min-width: 0; }
+
+/* Complete collection catalogues: one photograph per design. */
+body.collection-page #mainContent #kitchen-gallery {
+  --catalogue-gutter: clamp(20px, 6vw, 100px);
+  padding-inline: 0;
+  color: #f5f4f0;
+  background: #252525;
+}
+#kitchen-gallery :is(.section-header,.kitchen-gallery-toolbar) {
+  margin-inline: var(--catalogue-gutter);
+}
+.collection-page #kitchen-gallery :is(h2,.eyebrow,.collection-section-note,#kitchen-filters button) { color: inherit; }
+.collection-page #kitchen-gallery .section-header { border-top: 0; padding-top: 32px; }
+.collection-page #kitchen-gallery .kitchen-gallery-toolbar { border-color: #606060; }
+.collection-page #mainContent #kitchen-gallery #kitchen-grid {
+  grid-template-columns: minmax(0,1fr);
+  gap: clamp(32px, 5vw, 72px);
+}
+.collection-page #kitchen-gallery #kitchen-grid .editorial-design {
+  position: relative;
+  isolation: isolate;
+  color: inherit;
+  border: 0;
+  padding: 0;
+}
+.collection-page #kitchen-gallery #kitchen-grid .design-summary {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  text-align: left;
+}
+.collection-page #kitchen-gallery #kitchen-grid .kitchen-gallery-caption { display: none; }
+.collection-page #kitchen-gallery #kitchen-grid .kitchen-gallery-media {
+  display: block;
+  flex: none;
+  width: 100%;
+  aspect-ratio: auto;
+  background: transparent;
+}
+.collection-page #kitchen-gallery #kitchen-grid img { display: block; width: 100%; height: auto; }
+.collection-page #kitchen-gallery .design-action { text-decoration: underline; text-underline-offset: .28em; }
+@media (min-width: 769px) {
+  .collection-page #mainContent #kitchen-gallery #kitchen-grid { gap: 4px; }
+  .collection-page #kitchen-gallery #kitchen-grid .editorial-design { display: grid; }
+  .collection-page #kitchen-gallery #kitchen-grid :is(.design-summary,.kitchen-gallery-media) { grid-area: 1 / 1; }
+  .collection-page #kitchen-gallery #kitchen-grid .editorial-design::before {
+    content: '';
+    grid-area: 1 / 1;
+    z-index: 1;
+    background: linear-gradient(90deg, rgb(0 0 0 / .83), rgb(0 0 0 / .64) 34%, transparent 75%);
+    pointer-events: none;
+  }
+  .collection-page #kitchen-gallery #kitchen-grid .design-summary {
+    z-index: 2;
+    align-self: center;
+    margin: 24px var(--catalogue-gutter);
+    max-width: 35ch;
+  }
+  .collection-page #kitchen-gallery #kitchen-grid .design-name { font-size: var(--type-card-title); }
+  .collection-page #kitchen-gallery #kitchen-grid button:focus-visible { outline-offset: -4px; }
+}
+@media (max-width: 768px) {
+  .collection-page #mainContent #kitchen-gallery #kitchen-grid { padding-inline: var(--catalogue-gutter); }
+}
+/* Narrow photographs keep the product whole; wide room views retain their banner. */
+.collection-page #kitchen-gallery #kitchen-grid .catalogue-inset img {
+  max-height: min(64svh, 620px);
+  object-fit: contain;
+  object-position: center;
+}
+@media (min-width: 769px) {
+  .wardrobe-page #kitchen-gallery #kitchen-grid .catalogue-inset {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: center;
+    gap: clamp(24px, 4vw, 72px);
+    padding: clamp(24px, 3vw, 48px) var(--catalogue-gutter);
+  }
+  .wardrobe-page #kitchen-gallery #kitchen-grid .catalogue-inset::before { content: none; }
+  .wardrobe-page #kitchen-gallery #kitchen-grid .catalogue-inset .design-summary {
+    grid-area: 1 / 1;
+    margin: 0;
+  }
+  .wardrobe-page #kitchen-gallery #kitchen-grid .catalogue-inset .kitchen-gallery-media { grid-area: 1 / 2; }
+}
+
+@media (min-width: 769px) {
+  .vanity-page #kitchen-gallery #kitchen-grid .catalogue-inset .kitchen-gallery-media {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .vanity-page #kitchen-gallery #kitchen-grid .catalogue-inset img {
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center 55%;
+  }
+}

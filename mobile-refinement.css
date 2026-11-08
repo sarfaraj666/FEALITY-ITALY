@@ -34,11 +34,6 @@
  .polished-page #mainContent .home-collection-card h3 { font-size: 30px; }
  .polished-page #mainContent .home-editorial { gap: 24px; }
  #menuPanel { padding-top: max(14px,env(safe-area-inset-top)); }
- #menuPanel .menu-brand { width: clamp(140px,19dvh,180px); }
- #menuPanel .menu-content { width: min(100%,440px); }
- #menuPanel .menu-introduction { font-size: 30px; margin-bottom: 20px; }
- #menuPanel .main-menu a { font-size: 25px; min-height: 48px; padding-block: 8px; }
- #menuPanel .menu-secondary a { font-size: 16px; min-height: 44px; padding-inline: 14px; }
  #menuPanel::after { min-height: 100px; flex-basis: 16dvh; }
  .interior-page .page-intro { padding: 40px 22px 56px; }
  .interior-page .page-intro h1 { font-size: 42px; line-height: 1.1; }

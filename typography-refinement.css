@@ -1,10 +1,10 @@
 :root {
-  --type-hero: clamp(24px, 1.9vw, 28px);
-  --type-section: clamp(25px, 2vw, 30px);
-  --type-subsection: clamp(18px, 1.45vw, 22px);
-  --type-body: 14.5px;
-  --type-card-title: 17px;
-  --type-action: 13px;
+  --type-hero: 15px;
+  --type-section: 15px;
+  --type-subsection: 14px;
+  --type-body: 12px;
+  --type-card-title: 15px;
+  --type-action: 12px;
   --type-label: 11px;
 }
 
@@ -61,14 +61,14 @@ body.interior-page #mainContent p:not(.eyebrow) {
 }
 
 #mainContent :is(.collection-hero-description, .hero-subtitle, .brand-hero-copy > p:not(.eyebrow), .guide-intro > p:not(.eyebrow)) {
-  font-size: 14px;
+  font-size: var(--type-body);
   line-height: 1.5;
 }
 
 body.polished-page #mainContent p:is(.collection-hero-description, .hero-subtitle):not(.eyebrow),
 body.interior-page #mainContent.brand-experience .brand-hero-copy > p:not(.eyebrow),
 body.interior-page #mainContent.review-guide .guide-intro > p:not(.eyebrow) {
-  font-size: 14px;
+  font-size: var(--type-body);
   line-height: 1.5;
 }
 
@@ -107,7 +107,7 @@ body.kitchen-page #mainContent #kitchen-grid .kitchen-gallery-caption > span:fir
 }
 
 body.polished-page #mainContent .kitchen-lightbox-copy h3 {
-  font-size: 18px;
+  font-size: var(--type-card-title);
   line-height: 1.35;
 }
 
@@ -143,12 +143,12 @@ body.polished-page #mainContent .kitchen-lightbox-copy h3 {
 
 @media (max-width: 768px) {
   :root {
-    --type-hero: clamp(24px, 7vw, 30px);
-    --type-section: clamp(22px, 6.2vw, 26px);
-    --type-subsection: clamp(18px, 5vw, 20px);
-    --type-body: 15px;
-    --type-card-title: 16px;
-    --type-action: 14px;
+    --type-hero: 15px;
+    --type-section: 15px;
+    --type-subsection: 14px;
+    --type-body: 12px;
+    --type-card-title: 15px;
+    --type-action: 12px;
   }
 
   body.polished-page #mainContent :is(h1, .hero-title),
@@ -165,7 +165,7 @@ body.polished-page #mainContent .kitchen-lightbox-copy h3 {
     gap: 28px;
     padding: 10px 18px;
     border: 1px solid currentColor;
-    font-size: 14px;
+    font-size: var(--type-body);
   }
 
   .home-page #mainContent .home-hero .hero-cta-arrow::before {
@@ -173,25 +173,25 @@ body.polished-page #mainContent .kitchen-lightbox-copy h3 {
   }
 
   #mainContent :is(.collection-hero-description, .hero-subtitle, .brand-hero-copy > p:not(.eyebrow), .guide-intro > p:not(.eyebrow)) {
-    font-size: 15px;
+    font-size: var(--type-body);
     line-height: 1.5;
   }
 
   body.polished-page #mainContent p:is(.collection-hero-description, .hero-subtitle):not(.eyebrow),
   body.interior-page #mainContent.brand-experience .brand-hero-copy > p:not(.eyebrow),
   body.interior-page #mainContent.review-guide .guide-intro > p:not(.eyebrow) {
-    font-size: 15px;
+    font-size: var(--type-body);
   }
 
   #mainContent :is(.collection-featured .kitchen-gallery-caption, .model-title, .home-collection-card h3, .brand-card h3) {
-    font-size: 16px;
+    font-size: var(--type-card-title);
   }
 
   body.kitchen-page #mainContent #featured-kitchen .model-title,
   body.kitchen-page #mainContent #kitchen-grid .kitchen-gallery-caption > span:first-child,
   body.polished-page #mainContent .kitchen-lightbox-copy h3,
   body.interior-page #mainContent.brand-experience .brand-card h3 {
-    font-size: 16px;
+    font-size: var(--type-card-title);
   }
 
   #mainContent #kitchen-filters button {
@@ -199,3 +199,10 @@ body.polished-page #mainContent .kitchen-lightbox-copy h3 {
   }
 
 }
+
+/* Secondary content sections use the same sizes as the main collections. */
+body.polished-page #mainContent :is(.related-collections, .intro-grid, .statement-content, .showroom-copy, .journal, .section-header) h2 {
+  font-size: var(--type-section);
+}
+body.polished-page #mainContent .related-title { font-size: var(--type-card-title); }
+#mainContent :is(.journey, .brand-approach) li { font-size: var(--type-body); }

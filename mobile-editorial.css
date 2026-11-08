@@ -1,7 +1,5 @@
 /* Loaded through a max-width media query on the seven interior pages. */
 #mainContent :is(.collection-section, .brand-section, article) {
-  --type-section: clamp(23px, 6vw, 28px);
-  --type-subsection: clamp(18px, 4.8vw, 21px);
   --editorial-gap: clamp(32px, 7vw, 44px);
 }
 
@@ -120,5 +118,4 @@ body.interior-page #mainContent.brand-experience .brand-section .brand-card h3 {
 }
 .review-guide article summary:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 .review-guide details[open] > p { margin: 0 0 16px; }
-.review-guide #faq-filter { margin: 0 0 20px; }
 .review-guide .policy-note { margin-top: 0; }

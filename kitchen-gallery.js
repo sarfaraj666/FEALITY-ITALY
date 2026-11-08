@@ -42,7 +42,20 @@
     const title = design.name || `Kitchen Design ${design.id}`;
     const summary = element('span', 'design-summary');
     summary.hidden = true; // The phone stylesheet reveals this caption.
-    summary.append(element('span', 'design-name', title));
+    const heading = element('span', 'design-name', title);
+    summary.append(heading);
+    const desktopHeading = card.querySelector('.model-title, .kitchen-gallery-caption > span:first-child');
+    for (const node of [heading, desktopHeading].filter(Boolean)) {
+      const text = node.textContent;
+      // Separate the model from its category or the two features in a descriptive title.
+      const feature = text.match(/^(.+? (?:and|with) )(.+)$/);
+      const numbered = text.match(/^(.+? )(Design \d+)$/);
+      const pair = feature || numbered;
+      if (pair) node.replaceChildren(pair[1], element('span', 'design-emphasis', pair[2]));
+      else if (!wardrobeDesigns && !vanityDesigns && design.name) {
+        node.append(' ', element('span', 'design-emphasis', 'Kitchen'));
+      }
+    }
     const description = design.description || card.querySelector('.collection-subtitle')?.textContent
       || card.querySelector('img').alt;
     if (description && description.toLowerCase() !== title.toLowerCase()) {
@@ -53,7 +66,8 @@
     card.classList.add('editorial-design');
     // Some desktop detail cards have an existing numbered title as well.
     const existingTitle = card.querySelector('.kitchen-gallery-caption > span')?.textContent;
-    const label = existingTitle && existingTitle !== title ? `${title} (${existingTitle})` : title;
+    const label = existingTitle && existingTitle !== heading.textContent
+      ? `${heading.textContent} (${existingTitle})` : heading.textContent;
     card.setAttribute('aria-label', `Explore Design: ${label}`);
   }
 
@@ -82,13 +96,16 @@
     visible.forEach((design, position) => {
       const button = element('button', 'kitchen-gallery-card');
       button.type = 'button';
+      // Narrow compositions include vertical cabinetry and close-up storage details.
+      if (design.width / design.height < 1.6) button.classList.add('catalogue-inset');
       const title = design.name || `Kitchen Design ${design.id}`;
       button.setAttribute('aria-haspopup', 'dialog');
       const media = element('span', 'kitchen-gallery-media');
       const img = element('img');
       Object.assign(img, { src: design.thumbnail, srcset: design.srcset,
-        sizes: 'auto, (max-width: 768px) 90vw, (max-width: 900px) 45vw, 30vw',
+        sizes: 'auto, (max-width: 768px) 88vw, 100vw',
         width: design.width, height: design.height, alt: design.alt, loading: 'lazy', decoding: 'async' });
+      if (design.width > 960) img.srcset += `, ${design.source} ${design.width}w`;
       media.append(img);
       const caption = element('span', 'kitchen-gallery-caption');
       caption.append(element('span', '', title));
