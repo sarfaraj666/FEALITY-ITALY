@@ -1430,3 +1430,21 @@ p {
   .site-header .menu-toggle { grid-column: 4; grid-row: 1; width: 44px; height: 44px; align-items: center; }
   .site-header .language-button { display: none; }
 }
+
+@media (max-width: 768px) {
+  #searchPanel { padding: max(12px, env(safe-area-inset-top)) 6% 24px; }
+  #searchPanel > button { min-height: 44px; font-size: 10px; }
+  #searchPanel label { margin-top: 18px; font-size: 10px; letter-spacing: .1em; }
+  #searchPanel .search-line { align-items: center; gap: 8px; margin-top: 6px; }
+  #searchPanel .search-line input { padding: 10px 0; min-height: 44px; font-size: 16px; }
+  #searchPanel .search-line span { font-size: 18px; }
+  #searchPanel .search-results { margin-top: 12px; }
+  #searchPanel .search-results a {
+    display: grid; grid-template-columns: minmax(0, 1fr) 6.5em;
+    align-items: center; gap: 12px; min-height: 44px; padding: 8px 0;
+    font: 400 13px/1.4 var(--font-ui); overflow-wrap: anywhere;
+  }
+  #searchPanel .search-results a span {
+    float: none; font-size: 10px; line-height: 1.35; letter-spacing: .04em; text-align: right;
+  }
+}

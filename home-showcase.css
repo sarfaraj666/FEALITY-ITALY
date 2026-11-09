@@ -71,6 +71,7 @@
   line-height: 1.6;
   letter-spacing: .12em;
   text-transform: uppercase;
+  opacity: 0;
   transition: opacity 250ms ease;
 }
 
@@ -84,15 +85,15 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .home-page .home-showcase-explore { opacity: 0; }
   .home-page .home-showcase-panel:hover > img,
   .home-page .home-showcase-panel:focus-visible > img {
     transform: scale(1.035);
     filter: brightness(1.04);
   }
-  .home-page .home-showcase-panel:hover .home-showcase-explore,
-  .home-page .home-showcase-panel:focus-visible .home-showcase-explore { opacity: 1; }
+  .home-page .home-showcase-panel:hover .home-showcase-explore { opacity: 1; }
 }
+
+.home-page .home-showcase-panel:focus-visible .home-showcase-explore { opacity: 1; }
 
 @media (max-width: 768px) {
   .home-page .home-showcase-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }

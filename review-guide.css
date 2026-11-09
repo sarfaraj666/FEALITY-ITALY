@@ -60,26 +60,44 @@
 .kitchen-faq details a { color: inherit; text-decoration: underline; }
 
 .kitchen-contact {
-  padding: clamp(40px, 6vw, 96px) clamp(20px, 10vw, 180px);
+  padding: clamp(18px,2.5vw,36px) clamp(14px,4vw,36px);
   background: #282828;
-  color: #eee;
-  font-family: var(--font-ui);
+  color: #f2f0ec;
+  font: 400 12px/1.45 var(--font-ui);
 }
-.kitchen-contact h2 { margin: 0; font: 500 clamp(22px, 2.2vw, 32px)/1.25 var(--font-heading); }
-.kitchen-contact p { margin: 10px 0; }
-.kitchen-contact a { color: inherit; text-decoration: underline; }
-.kitchen-contact fieldset {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
-  border: 0; min-width: 0; padding: 0; margin: 24px 0 12px;
+.kitchen-contact .contact-form-shell { max-width: 440px; margin: auto; }
+@media (min-width: 768px) {
+  .kitchen-contact { padding: 24px 9.5%; }
+  .kitchen-contact .contact-form-shell { max-width: none; }
+  .kitchen-contact .contact-form-shell h2 { font: 400 20px/1.25 var(--font-ui); }
+  .kitchen-contact .contact-form-shell .contact-form { gap: 9px 16px; margin-top: 14px; }
+  .kitchen-contact .contact-field label { font-size: 11px; font-weight: 500; }
+  .kitchen-contact .contact-field :is(input:not([type=checkbox]), select) { height: 34px; padding: 5px 10px; font-size: 12px; }
+  .kitchen-contact .contact-form .contact-consent { font-size: 11px; }
+  .kitchen-contact .contact-form button { min-height: 34px; padding: 5px 12px; font-size: 12px; }
 }
-.kitchen-contact label { display: grid; gap: 5px; font-size: 13px; }
-.kitchen-contact :is(input:not([type="checkbox"]), select, button) {
-  box-sizing: border-box; width: 100%; min-height: 42px; padding: 8px 12px;
-  border: 1px solid #757575; border-radius: 3px; background: #505050; color: #eee; font: inherit;
+.kitchen-contact h2 { margin: 0; font: 500 clamp(18px,2.1vw,24px)/1.15 var(--font-heading); }
+.kitchen-contact p { margin: 5px 0; }
+.kitchen-contact a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.kitchen-contact .contact-form { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 12px; margin: 15px 0 10px; }
+.kitchen-contact .contact-field { display: grid; gap: 4px; }
+.kitchen-contact label { font-size: 11px; font-weight: 600; }
+.kitchen-contact :is(input:not([type=checkbox]),select) {
+  box-sizing: border-box; width: 100%; min-width: 0; height: 36px; padding: 7px 10px;
+  border: 1px solid #777; border-radius: 3px; background: #383838; color: #fafafa; font: inherit; font-size: 13px; color-scheme: dark;
 }
-.kitchen-contact input::placeholder { color: #ddd; }
-.kitchen-contact .contact-consent { display: flex; align-items: center; gap: 8px; }
-.kitchen-contact button:disabled { background: #ddd; color: #333; cursor: not-allowed; }
-@media (max-width: 600px) {
-  .kitchen-contact fieldset { grid-template-columns: 1fr; }
+.kitchen-contact input::placeholder { color: #c4c2bf; }
+.kitchen-contact .contact-consent { display: flex; gap: 8px; align-items: center; font-size: 12px; }
+.kitchen-contact input[type=checkbox] { width: 14px; height: 14px; flex: none; accent-color: #ddd; }
+.kitchen-contact button { min-height: 38px; padding: 8px 16px; border: 0; border-radius: 3px; background: #f3f1ec; color: #222; font: 600 14px/1.4 var(--font-ui); cursor: pointer; }
+.kitchen-contact button span { margin-left: 6px; }
+.kitchen-contact button:enabled:hover { background: #ddd9d2; }
+.kitchen-contact button:disabled { opacity: .6; cursor: not-allowed; }
+.kitchen-contact button[aria-busy=true] { cursor: progress; }
+.kitchen-contact :focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+@media (prefers-reduced-motion:no-preference) {
+  .kitchen-contact button { transition: background-color .15s ease; }
+}
+@media (max-width:767px) {
+  .kitchen-contact .contact-form { grid-template-columns: minmax(0,1fr); gap: 8px; }
 }

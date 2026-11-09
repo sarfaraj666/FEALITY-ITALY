@@ -2,7 +2,6 @@
 .home-page .home-hero.hero {
   height: 100svh;
   min-height: 520px;
-  cursor: crosshair;
   touch-action: pan-y pinch-zoom;
 }
 .home-page .home-hero.is-dragging { user-select: none; }
