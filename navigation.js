@@ -113,7 +113,7 @@
       { name: 'Full Vanity Gallery (14 Designs)', category: 'GALLERY', url: 'vanity.html#kitchen-gallery' },
       { name: 'About FEALITY ITALY', category: 'INFORMATION', url: 'about.html' },
       { name: 'How It Works & Process', category: 'INFORMATION', url: 'how-it-works.html' },
-      { name: 'Frequently Asked Questions', category: 'INFORMATION', url: 'kitchen.html#faqs' },
+      { name: 'FAQs - Frequently Asked Questions', category: 'INFORMATION', url: 'faqs.html' },
       { name: 'Terms & Policies', category: 'INFORMATION', url: 'terms-policies.html' }
     ];
 
@@ -170,16 +170,6 @@
     window.addEventListener('scroll', updateProgress, { passive: true });
     window.addEventListener('resize', updateProgress, { passive: true });
     updateProgress();
-  }
-
-  // 7. Newsletter demo submission
-  const newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', event => {
-      event.preventDefault();
-      const formMessage = document.getElementById('formMessage');
-      if (formMessage) formMessage.textContent = 'Demo only. No subscription was sent.';
-    });
   }
 
   // 8. GOAL A: Smooth, Restrained Navigation Transitions

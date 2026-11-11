@@ -86,3 +86,18 @@
   }
 }
 #menuPanel .menu-secondary[aria-label="Studio partnership"] > a { font-weight: 600; }
+
+@media (min-width: 901px) {
+  #menuPanel .menu-brand { width: 176px; }
+  #menuPanel .menu-content { width: min(100%, 720px); }
+  #menuPanel .menu-introduction {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: .25em;
+    font-size: clamp(30px, 2.8vw, 40px);
+    margin-bottom: 20px;
+  }
+  #menuPanel .main-menu a { font-size: 22px; min-height: 44px; }
+  #menuPanel .menu-secondary a { font-size: 16px; }
+}

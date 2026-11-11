@@ -181,10 +181,6 @@ document.getElementById('siteSearch').addEventListener('input', event => {
   results.innerHTML = links.length ? links.join('') : '<p>No matching collections or elements found.</p>';
   results.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(search, false)));
 });
-document.getElementById('newsletterForm').addEventListener('submit', event => {
-  event.preventDefault();
-  document.getElementById('formMessage').textContent = 'Demo only. No subscription was sent.';
-});
 document.getElementById('languageButton').addEventListener('click', () => alert('This demo currently supports English only.'));
 
 
@@ -192,7 +188,7 @@ document.getElementById('languageButton').addEventListener('click', () => alert(
 (() => {
   const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
   const progress=document.getElementById('scrollProgress');
-  const targets=document.querySelectorAll('.intro-grid, .section-header, .collection-card, .statement-content, .elements-intro, .element-card, .showroom-copy, .journal-grid article, .newsletter h2, .newsletter form, .footer-main');
+  const targets=document.querySelectorAll('.intro-grid, .section-header, .collection-card, .statement-content, .elements-intro, .element-card, .showroom-copy, .journal-grid article, .footer-main');
   if ('IntersectionObserver' in window && !reducedMotion.matches) {
     document.documentElement.classList.add('js-scroll');
     targets.forEach((el,i)=>{

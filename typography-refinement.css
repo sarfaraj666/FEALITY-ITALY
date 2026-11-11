@@ -21,7 +21,7 @@ body.polished-page #mainContent .hero-content h1 {
   font-size: var(--type-hero);
 }
 
-body.polished-page #mainContent :is(.collection-section, .home-editorial, .home-pathway, .newsletter) h2 {
+body.polished-page #mainContent :is(.collection-section, .home-editorial, .home-pathway) h2 {
   font-size: var(--type-section);
   line-height: 1.22;
 }
@@ -54,7 +54,7 @@ body.interior-page #mainContent.review-guide .journey h2 {
   line-height: 1.3;
 }
 
-body.polished-page #mainContent p:not(.eyebrow):not(.newsletter-demo-note),
+body.polished-page #mainContent p:not(.eyebrow),
 body.interior-page #mainContent p:not(.eyebrow) {
   font-size: var(--type-body);
   line-height: 1.6;
