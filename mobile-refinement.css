@@ -58,7 +58,7 @@
   .site-header { padding-inline: 12px; }
   .site-header .wordmark,
   .site-header.scrolled .wordmark {
-    width: clamp(100px, 27.5vw, 138px);
-    height: var(--mobile-navbar-height);
+    width: min(156px, 52vw);
+    height: 66px;
   }
 }
