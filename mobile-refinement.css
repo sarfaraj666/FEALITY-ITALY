@@ -54,11 +54,13 @@
 }
 
 @media (max-width: 600px) {
-  :root { --mobile-navbar-height: 68px; }
+  :root { --mobile-navbar-height: clamp(50px, 13.5vw, 68px); }
   .site-header { padding-inline: 12px; }
+  .site-header,
+  .site-header.scrolled { padding-inline-start: clamp(18px, 5.4vw, 27px); }
   .site-header .wordmark,
   .site-header.scrolled .wordmark {
-    width: min(156px, 52vw);
-    height: 66px;
+    width: clamp(96px, 27.6vw, 138px);
+    height: var(--mobile-navbar-height);
   }
 }
