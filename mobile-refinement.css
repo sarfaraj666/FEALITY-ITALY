@@ -7,6 +7,7 @@
  .site-header, .site-header.scrolled { height: var(--mobile-navbar-height); padding-inline: 20px; }
  .site-header .wordmark { position: static; transform: none; width: 140px; height: var(--mobile-navbar-height); order: 0; margin-right: auto; }
  .site-header .menu-toggle { order: 2; width: 44px; height: 44px; margin-left: 8px; align-items: center; }
+ .site-header .menu-toggle span { display: block; flex: 0 0 1px; width: 24px; }
  .site-header .header-right { order: 1; gap: 0; }
  .site-header .primary-nav, .site-header .language-button { display: none; }
  .site-header .search-toggle { width: 44px; height: 44px; }

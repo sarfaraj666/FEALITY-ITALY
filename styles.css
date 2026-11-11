@@ -126,7 +126,7 @@ p {
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   z-index: 20;
   left: 0;
   right: 0;

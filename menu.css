@@ -85,3 +85,4 @@
     background-position: 85% 55%;
   }
 }
+#menuPanel .menu-secondary[aria-label="Studio partnership"] > a { font-weight: 600; }

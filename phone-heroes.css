@@ -1,0 +1,69 @@
+/* Loaded only on phone-width viewports. */
+.polished-page #mainContent .hero.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: clamp(220px, 70vw, 380px) auto auto;
+  align-content: start;
+  height: auto;
+  min-height: 0;
+  padding: var(--mobile-navbar-height) 0 8px;
+  background: #252525;
+}
+#mainContent #top.home-hero :is(img.hero-background, .hero-scrim) {
+  grid-area: 1 / 1;
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 100%;
+}
+#mainContent #top.home-hero img.hero-background {
+  object-fit: cover;
+  object-position: center;
+  animation: none;
+  transform: none;
+}
+#mainContent #top.home-hero .hero-scrim { background: transparent; }
+.polished-page #mainContent #top.home-hero .hero-content {
+  grid-row: 2;
+  position: relative;
+  inset: auto;
+  margin: 20px 5vw 0;
+}
+#mainContent #top.home-hero .collection-hero-controls {
+  grid-row: 3;
+  position: relative;
+  inset: auto;
+  margin: 4px 5vw 0;
+}
+.collection-page #mainContent .hero.kitchen-cinematic-hero {
+  height: clamp(440px, 74svh, 640px);
+}
+.polished-page #mainContent .hero#top .hero-content {
+  inset-inline: clamp(18px, 5vw, 30px);
+  bottom: max(62px, calc(52px + env(safe-area-inset-bottom)));
+  max-width: 34rem;
+}
+#mainContent #top:is(.hero, .brand-hero) h1 {
+  margin: 8px 0 12px;
+}
+#mainContent #top :is(.hero-subtitle, .collection-hero-description, .brand-hero-copy > p:not(.eyebrow)) {
+  max-width: 33ch;
+  margin: 0 0 16px;
+}
+#mainContent #top :is(.hero-cta, .hero-cta-btn, .brand-button) {
+  min-height: 44px;
+}
+#mainContent .brand-hero#top {
+  min-height: clamp(420px, 69svh, 580px);
+  padding-inline: 5vw;
+  padding-bottom: 28px;
+}
+#mainContent .guide-intro#top {
+  padding: 32px 5vw 24px;
+}
+#mainContent .guide-intro#top h1 {
+  margin: 8px 0 12px;
+}
+#mainContent .guide-intro#top > p:not(.eyebrow) {
+  max-width: 40ch;
+}
