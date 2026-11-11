@@ -23,44 +23,113 @@
   <meta property="og:url" content="https://sarfaraj666.github.io/FEALITY-ITALY/own-a-feality-studio.html" />
   <meta property="og:title" content="Own a FEALITY Studio | FEALITY ITALY" />
   <meta property="og:description" content="Explore the FEALITY ITALY studio partnership opportunity and request a callback for your own design-led interior business." />
-  <meta property="og:image" content="https://sarfaraj666.github.io/FEALITY-ITALY/assets/images/kitchen-photos/web/4-1920.webp" />
+  <meta property="og:image" content="https://sarfaraj666.github.io/FEALITY-ITALY/assets/Own/WhatsApp%20Image%202026-11-06%20at%205.14.49%20PM.jpeg" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sarfaraj666.github.io/FEALITY-ITALY/"}, {"@type": "ListItem", "position": 2, "name": "Own a FEALITY Studio", "item": "https://sarfaraj666.github.io/FEALITY-ITALY/own-a-feality-studio.html"}]}</script>
   <style>
     .studio-page { --studio-card: #f6f3ee; --studio-line: rgba(35, 35, 31, .18); }
     .studio-page main { background: #f0efe9; }
-    .studio-hero { display: grid; gap: 24px; padding: clamp(32px, 5vw, 64px) 6% 0; }
-    .studio-kicker { margin: 0; font: 600 10px/1.4 var(--font-ui); letter-spacing: .18em; text-transform: uppercase; color: #66615c; }
-    .studio-title { margin: 0; font: 400 clamp(42px, 7vw, 94px)/0.96 var(--font-heading); letter-spacing: -.05em; }
-    .studio-hero p { max-width: 60ch; margin: 0; font-size: clamp(15px, 1.7vw, 18px); line-height: 1.75; color: #4e4d48; }
-    .studio-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
-    .metric-card { background: var(--studio-card); border: 1px solid var(--studio-line); padding: 22px 20px; }
-    .metric-card strong { display: block; font: 400 clamp(28px, 4vw, 42px)/1 var(--font-heading); margin-bottom: 10px; }
-    .metric-card span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #5f5d59; }
-    .studio-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(24px, 3vw, 42px); padding: 42px 6% 18px; }
-    .studio-panel { background: #f4f1ec; border: 1px solid var(--studio-line); padding: clamp(22px, 3vw, 36px); }
-    .studio-panel h2 { margin: 0 0 16px; font: 400 clamp(26px, 3vw, 42px)/1.1 var(--font-heading); }
-    .studio-panel ul { margin: 0; padding-left: 20px; color: #41403d; line-height: 1.75; }
+    .studio-page .site-header { background: #f0efe9; color: #1e211f; }
+    .studio-page .review-guide .studio-hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; min-height: min(820px, 88svh); margin: 0; padding: 0; overflow: hidden; color: #f8f7f3; background: #171918; }
+    .studio-hero-media { position: absolute; inset: 0; overflow: hidden; background: #282520; }
+    .studio-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 56%; }
+    .studio-hero-media::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgb(9 10 10 / .72), rgb(9 10 10 / .46) 54%, rgb(9 10 10 / .58)), linear-gradient(0deg, rgb(9 10 10 / .32), transparent 50%); }
+    .studio-hero-copy { position: relative; z-index: 1; display: grid; width: 100%; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); grid-template-rows: auto auto auto auto; align-content: center; gap: 0 6vw; padding: clamp(34px, 6vw, 88px); }
+    .studio-kicker { margin: 0 0 22px; color: #c3c6be; font: 500 11px/1.4 var(--font-ui); letter-spacing: .16em; text-transform: uppercase; }
+    body.interior-page #mainContent.review-guide .studio-kicker { grid-column: 1; grid-row: 1; }
+    body.interior-page #mainContent.review-guide .studio-title { grid-column: 1; grid-row: 2; max-width: 14ch; margin: 0 0 20px; font: 400 clamp(40px, 5.2vw, 72px)/1.06 var(--font-ui); letter-spacing: 0; }
+    .studio-hero-copy > p:not(.studio-kicker) { grid-column: 1; grid-row: 3; max-width: 48ch; margin: 0; color: #d7d8d3; font: 400 clamp(14px, 1.2vw, 17px)/1.75 var(--font-ui); }
+    .studio-cta { grid-column: 1; grid-row: 4; justify-self: start; display: inline-flex; min-height: 48px; align-items: center; gap: 24px; margin-top: 24px; padding: 10px 0; border-bottom: 1px solid rgb(255 255 255 / .65); color: #fff; font: 500 12px/1.4 var(--font-ui); letter-spacing: .08em; text-decoration: none !important; text-transform: uppercase; }
+    .studio-cta span { font-size: 18px; }
+    .studio-metrics { display: grid; grid-column: 2; grid-row: 2 / span 3; align-self: center; width: 100%; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 0; padding: 0; border: 0; }
+    .metric-card { display: grid; min-width: 0; grid-template-columns: minmax(110px, .7fr) 1fr; align-items: center; gap: 18px; padding: 20px 0; border: 0; border-top: 1px solid rgb(255 255 255 / .34); background: transparent; }
+    .metric-card:first-child { padding-left: 0; border-top: 1px solid rgb(255 255 255 / .34); }
+    .metric-card strong { display: block; margin-bottom: 8px; font: 400 clamp(17px, 1.8vw, 23px)/1.2 var(--font-ui); }
+    .metric-card span { color: #c3c6be; font: 500 9px/1.5 var(--font-ui); letter-spacing: .1em; text-transform: uppercase; }
+    .studio-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 18px; padding: clamp(42px, 6vw, 76px) 6% 24px; }
+    .studio-panel { padding: clamp(22px, 3vw, 36px); border: 1px solid var(--studio-line); background: #f4f1ec; }
+    .studio-panel h2 { margin: 0 0 16px; font: 500 clamp(20px, 2.2vw, 28px)/1.2 var(--font-ui); }
+    .studio-panel ul { margin: 0; padding-left: 20px; color: #41403d; font: 400 14px/1.75 var(--font-ui); }
     .studio-panel li + li { margin-top: 8px; }
-    .studio-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding: 28px 6% 10px; }
-    .step-card { background: #faf7f3; border: 1px solid var(--studio-line); padding: 20px 18px; }
-    .step-card span { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--studio-line); font: 600 13px var(--font-ui); margin-bottom: 18px; }
-    .step-card h3 { margin: 0 0 10px; font: 500 21px/1.2 var(--font-heading); }
-    .step-card p { margin: 0; color: #4c4b46; line-height: 1.7; }
-    .studio-form-wrap { padding: 20px 6% 70px; }
-    .studio-form { display: grid; gap: 16px; max-width: 760px; padding: clamp(22px, 3vw, 34px); background: #f7f5f1; border: 1px solid var(--studio-line); }
-    .studio-form h2 { margin: 0 0 4px; font: 400 clamp(25px, 3vw, 36px)/1.2 var(--font-heading); }
-    .studio-form p { margin: 0; color: #4d4a44; }
-    .studio-draft { display: grid; gap: 16px; margin-top: 10px; }
-    .studio-draft label { display: grid; gap: 6px; font: 500 13px/1.4 var(--font-ui); }
-    .studio-draft :is(input, select, textarea) { box-sizing: border-box; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #8a857f; background: transparent; color: inherit; font: 400 16px/1.45 var(--font-ui); }
-    .studio-draft textarea { min-height: 120px; resize: vertical; }
-    .studio-draft button { justify-self: start; min-height: 46px; padding: 10px 22px; border: 0; background: #252525; color: white; font: 500 14px/1.4 var(--font-ui); cursor: pointer; }
+    .studio-section-heading { padding: 38px 6% 0; }
+    .studio-section-heading .studio-kicker { margin-bottom: 10px; color: #66615c; }
+    .studio-section-heading h2 { max-width: 24ch; margin: 0; font: 400 clamp(24px, 3vw, 38px)/1.2 var(--font-ui); }
+    .studio-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding: 20px 6% 56px; }
+    .step-card { padding: 20px 18px; border: 1px solid var(--studio-line); background: #faf7f3; }
+    .step-card span { display: inline-block; margin-bottom: 18px; color: #61645d; font: 500 12px/1 var(--font-ui); }
+    .step-card h3 { margin: 0 0 10px; font: 500 16px/1.3 var(--font-ui); }
+    .step-card p { margin: 0; color: #4c4b46; font: 400 13px/1.7 var(--font-ui); }
+    .studio-form-wrap { padding: 54px 6% 70px; background: #202321; color: #f3f2ee; }
+    .studio-form { display: grid; max-width: 1120px; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 10px 48px; margin: 0 auto; padding: 0; border: 0; background: transparent; }
+    .studio-form h2 { grid-column: 1; margin: 0; font: 400 clamp(25px, 3vw, 38px)/1.2 var(--font-ui); }
+    .studio-form > p { grid-column: 1; margin: 0; color: #c7cac5; font: 400 14px/1.7 var(--font-ui); }
+    .studio-draft { display: grid; grid-column: 2; grid-row: 1 / span 2; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; margin: 0; }
+    .studio-draft label { display: grid; gap: 6px; font: 500 12px/1.4 var(--font-ui); }
+    .studio-draft :is(input, select, textarea) { box-sizing: border-box; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #676b66; background: #2b2e2c; color: #f8f7f3; font: 400 14px/1.45 var(--font-ui); }
+    .studio-draft textarea { min-height: 96px; resize: vertical; }
+    .studio-draft label:has(textarea), .studio-draft button { grid-column: 1 / -1; }
+    .studio-draft button { justify-self: start; min-height: 46px; padding: 10px 22px; border: 0; background: #f3f2ee; color: #202321; font: 500 12px/1.4 var(--font-ui); cursor: pointer; }
     @media (max-width: 768px) {
-      .studio-metrics, .studio-grid, .studio-steps { grid-template-columns: 1fr; }
-      .studio-form { padding: 18px 16px; }
-      .studio-hero { padding-top: 26px; }
-      .studio-title { font-size: clamp(42px, 17vw, 66px); }
-      .studio-form-wrap { padding-bottom: 52px; }
+      .studio-page .review-guide .studio-hero { min-height: max(680px, calc(100svh - 68px)); grid-template-columns: minmax(0, 1fr); grid-template-rows: 1fr; }
+      .studio-hero-media { position: absolute; inset: 0; }
+      .studio-hero-media::after { background: linear-gradient(180deg, rgb(15 16 15 / .64), rgb(15 16 15 / .24) 56%, rgb(15 16 15 / .82)); }
+      .studio-hero-copy { display: flex; position: relative; z-index: 1; grid-column: 1; grid-row: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 38px 22px 24px; }
+      .studio-hero-copy .studio-kicker, .studio-hero-copy .studio-title, .studio-hero-copy > p:not(.studio-kicker), .studio-cta { grid-column: auto; grid-row: auto; }
+      body.interior-page #mainContent.review-guide .studio-title { max-width: 12ch; font-size: clamp(36px, 10.5vw, 58px); }
+      .studio-hero-copy > p:not(.studio-kicker) { max-width: 38ch; font-size: 14px; }
+      .studio-metrics { display: grid; grid-column: auto; grid-row: auto; width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: auto; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / .34); }
+      .metric-card { display: block; padding: 0 9px; border-top: 0; border-left: 1px solid rgb(255 255 255 / .28); }
+      .metric-card:first-child { padding-left: 0; border-top: 0; border-left: 0; }
+      .metric-card strong { font-size: 16px; }
+      .metric-card span { font-size: 8px; }
+      .studio-grid, .studio-steps { grid-template-columns: minmax(0, 1fr); padding-inline: 22px; }
+      .studio-section-heading { padding-inline: 22px; }
+      .studio-form-wrap { padding: 42px 22px 52px; }
+      .studio-form { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+      .studio-form h2, .studio-form > p, .studio-draft { grid-column: 1; grid-row: auto; }
+      .studio-draft { grid-template-columns: minmax(0, 1fr); margin-top: 14px; }
+      .studio-draft label:has(textarea), .studio-draft button { grid-column: 1; }
+    }
+    @media (min-width: 901px) {
+      .studio-page .review-guide {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .studio-page .review-guide .studio-hero,
+      .studio-form-wrap { grid-area: 1 / 1; }
+      .studio-page .review-guide .studio-hero { min-height: clamp(680px, 86svh, 880px); }
+      .studio-hero-media {
+        background: linear-gradient(90deg, #171918e8, #171918a8),
+          url("assets/Own/WhatsApp%20Image%202026-11-06%20at%205.14.49%20PM.jpeg") center / cover;
+      }
+      .studio-hero-media img { object-fit: contain; object-position: right center; }
+      .studio-hero-media::after {
+        background: linear-gradient(90deg, #0d0e10bd 0%, #0d0e10a6 56%, #0d0e1033 88%);
+      }
+      .studio-hero-copy {
+        display: block;
+        width: min(32%, 560px);
+        margin-left: 36%;
+        padding: clamp(52px, 7vh, 90px) 0;
+      }
+      body.interior-page #mainContent.review-guide .studio-title {
+        font-size: clamp(34px, 3vw, 54px);
+      }
+      .studio-metrics { margin-top: 20px; }
+      .studio-metrics .metric-card { padding: 10px 0; }
+      .studio-form-wrap {
+        position: relative;
+        align-self: center;
+        width: 30%;
+        margin: 32px 0 32px 2%;
+        padding: clamp(22px, 2.4vw, 44px);
+        background: rgb(18 19 19 / 84%);
+      }
+      .studio-form, .studio-draft { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .studio-form > * { grid-area: auto; }
+      .studio-draft { margin-top: 8px; }
+      .studio-draft :is(input, select) { min-height: 36px; padding-block: 6px; }
+      .studio-draft textarea { min-height: 64px; }
+      .studio-draft button { width: 100%; }
     }
   </style>
 </head>
@@ -87,32 +156,36 @@
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <main id="mainContent" class="review-guide">
-    <div class="guide-intro studio-hero" id="top">
-      <p class="studio-kicker">FEALITY ITALY</p>
-      <h1 class="studio-title">Own a FEALITY Studio</h1>
-      <p>Bring FEALITY ITALY’s Italian-inspired design language to a market that values function, precision and elevated everyday living. Build a studio around thoughtful interiors, premium material stories and a service experience that keeps homeowners confident at every stage.</p>
+    <section class="guide-intro studio-hero" id="top" aria-labelledby="studio-title">
+      <div class="studio-hero-copy">
+        <p class="studio-kicker">FEALITY ITALY · STUDIO PARTNERSHIP</p>
+        <h1 class="studio-title" id="studio-title">A distinctive studio. A considered way to grow.</h1>
+        <p>Bring FEALITY ITALY’s design-led kitchens, wardrobes, vanities and balcony solutions to your market. Explore a studio partnership built around considered products, material quality and a thoughtful customer experience.</p>
+        <a class="studio-cta" href="#studio-form-title">Explore the opportunity <span aria-hidden="true">→</span></a>
       <div class="studio-metrics" aria-label="Studio opportunity overview">
         <div class="metric-card">
+          <strong>04</strong>
+          <span>Interior collections</span>
+        </div>
+        <div class="metric-card">
           <strong>304</strong>
-          <span>Premium stainless steel</span>
+          <span>Stainless steel</span>
         </div>
         <div class="metric-card">
-          <strong>3</strong>
-          <span>Signature collections</span>
-        </div>
-        <div class="metric-card">
-          <strong>1:1</strong>
-          <span>Design guidance</span>
+          <strong>Since 2010</strong>
+          <span>Design-led interiors</span>
         </div>
       </div>
-    </div>
+      </div>
+      <div class="studio-hero-media"><img src="assets/Own/WhatsApp%20Image%202026-11-06%20at%205.14.49%20PM.jpeg" width="768" height="1536" alt="A man stands in a glass-walled interior overlooking a city at sunset" fetchpriority="high" /></div>
+    </section>
 
     <div class="studio-grid">
       <section class="studio-panel" aria-labelledby="partner-why">
         <h2 id="partner-why">Why partner with FEALITY ITALY</h2>
-        <ul>
-          <li>Italian-inspired design language with a clear and contemporary aesthetic.</li>
-          <li>Distinct collections for kitchens, wardrobes and bathrooms built around utility and longevity.</li>
+          <ul>
+            <li>Italian-inspired design language with a clear and contemporary aesthetic.</li>
+            <li>Distinct kitchen, wardrobe, vanity and balcony collections built around utility and longevity.</li>
           <li>Material-led product narratives that help clients understand quality quickly.</li>
           <li>Strong visual merchandising potential for a customer-facing sales experience.</li>
         </ul>
@@ -129,6 +202,10 @@
       </section>
     </div>
 
+    <div class="studio-section-heading">
+      <p class="studio-kicker">THE NEXT STEPS</p>
+      <h2>Start with a conversation about your market and vision.</h2>
+    </div>
     <div class="studio-steps" aria-label="Partnership steps">
       <article class="step-card">
         <span>01</span>
@@ -148,7 +225,7 @@
     </div>
 
     <div class="studio-form-wrap">
-      <form class="studio-form" action="https://wa.me/919522251777" method="get" aria-labelledby="studio-form-title">
+      <form class="studio-form" id="studio-enquiry" action="https://wa.me/919522251777" method="get" aria-labelledby="studio-form-title">
         <h2 id="studio-form-title">Request a callback</h2>
         <p>Share your details and we’ll reach out to talk about opening a FEALITY Studio.</p>
         <div class="studio-draft">
