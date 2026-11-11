@@ -101,6 +101,7 @@
       { name: 'Kitchen', category: 'COLLECTION', url: 'kitchen.html' },
       { name: 'Wardrobes', category: 'COLLECTION', url: 'wardrobes.html' },
       { name: 'Bathroom Vanity', category: 'COLLECTION', url: 'vanity.html' },
+      { name: 'Balcony', category: 'COLLECTION', url: 'balcony.html' },
       { name: 'Kitchen Island & Stone Worktops', category: 'KITCHEN ELEMENT', url: 'kitchen.html#kitchen-gallery' },
       { name: 'Cabinet Fronts & Illuminated Shelving', category: 'KITCHEN ELEMENT', url: 'kitchen.html#kitchen-gallery' },
       { name: 'Full Kitchen Gallery (15 Designs)', category: 'GALLERY', url: 'kitchen.html#kitchen-gallery' },

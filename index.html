@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="menu.css?v=5" />
   <link rel="stylesheet" href="collection-pages.css?v=2" />
   <script src="navigation.js?v=7" defer></script>
+  <script src="design-search.js?v=3" defer></script>
   <link rel="stylesheet" href="collection-motion.css?v=2" />
   <script src="collection-motion.js?v=2" defer></script>
   <link rel="stylesheet" href="hero-slider.css?v=3" />
@@ -36,14 +37,14 @@
   <a class="skip-link" href="#mainContent">Skip to content</a>
   <header class="site-header" id="siteHeader">
     <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home" aria-current="page"><picture><source media="(max-width: 600px), (min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
-    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="about.html">Balcony</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
+    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="balcony.html">Balcony</a><a href="how-it-works.html">How It Works</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
   <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
 
   <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1" inert>
     <div class="menu-top"><img class="menu-brand" src="assets/images/feality-italy-logo-menu.png" alt="FEALITY ITALY" width="464" height="211" /><button id="menuClose" aria-label="Close navigation" type="button"><span aria-hidden="true"></span></button></div>
     <div class="menu-content"><p class="menu-tagline">ITALIAN LUXURY INTERIORS</p><h2 id="menuTitle" class="menu-introduction"><span>Designed <em>for Living</em></span><span>Crafted <em>with Purpose</em></span></h2>
-    <nav class="main-menu" aria-label="Main navigation"><a href="kitchen.html">Kitchen<span class="menu-arrow" aria-hidden="true">→</span></a><a href="wardrobes.html">Wardrobes<span class="menu-arrow" aria-hidden="true">→</span></a><a href="vanity.html">Vanity<span class="menu-arrow" aria-hidden="true">→</span></a><a href="about.html">Balcony<span class="menu-arrow" aria-hidden="true">→</span></a><a href="contact.html">Contact Us<span class="menu-arrow" aria-hidden="true">→</span></a><a href="terms-policies.html">Terms &amp; Policies<span class="menu-arrow" aria-hidden="true">→</span></a></nav><nav class="menu-secondary" aria-label="Studio partnership"><a href="tel:+919522251777" aria-label="Own a FEALITY Studio - call FEALITY ITALY">Own a FEALITY Studio</a></nav></div>
+    <nav class="main-menu" aria-label="Main navigation"><a href="kitchen.html">Kitchen<span class="menu-arrow" aria-hidden="true">→</span></a><a href="wardrobes.html">Wardrobes<span class="menu-arrow" aria-hidden="true">→</span></a><a href="vanity.html">Vanity<span class="menu-arrow" aria-hidden="true">→</span></a><a href="balcony.html">Balcony<span class="menu-arrow" aria-hidden="true">→</span></a><a href="contact.html">Contact Us<span class="menu-arrow" aria-hidden="true">→</span></a><a href="terms-policies.html">Terms &amp; Policies<span class="menu-arrow" aria-hidden="true">→</span></a></nav><nav class="menu-secondary" aria-label="Studio partnership"><a href="tel:+919522251777" aria-label="Own a FEALITY Studio - call FEALITY ITALY">Own a FEALITY Studio</a></nav></div>
   </div>
 
   <div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-labelledby="searchTitle" aria-hidden="true" tabindex="-1" inert>
@@ -68,7 +69,7 @@
     </section>
 
     <section class="home-showcase" id="collections" aria-labelledby="collections-title">
-      <h2 class="sr-only" id="collections-title">Three Expressions of Living</h2>
+      <h2 class="sr-only" id="collections-title">Our Collections</h2>
       <div class="home-showcase-grid">
         <a class="home-showcase-panel home-showcase-panel--kitchen" href="kitchen.html" aria-label="Explore Kitchen collection">
           <img src="assets/images/kitchen-photos/web/15-960.webp" srcset="assets/images/kitchen-photos/web/15-480.webp 480w, assets/images/kitchen-photos/web/15-960.webp 960w, assets/images/kitchen-photos/web/15-1600.webp 1600w" sizes="(max-width: 768px) max(100vw, 124svh), max(33.33vw, 139svh)" width="1672" height="941" alt="Compact kitchen with dark lower cabinets, open shelves and a window beside the worktop" loading="lazy" decoding="async" />
@@ -88,6 +89,13 @@
           <img src="assets/vanity/web/9-960.webp" srcset="assets/vanity/web/9-480.webp 480w, assets/vanity/web/9-960.webp 960w" sizes="(max-width: 768px) max(100vw, 56svh), max(33.33vw, 63svh)" width="1122" height="1402" alt="Wall-hung vanity with asymmetric drawers, ribbed cabinet and a tall illuminated mirror" loading="lazy" decoding="async" />
           <div class="home-showcase-label">
             <h3>Vanity</h3>
+            <span class="home-showcase-explore">Explore Collection <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="home-showcase-panel home-showcase-panel--balcony" href="balcony.html" aria-label="Explore Balcony collection">
+          <img src="assets/Balcony/web/1-960.webp" srcset="assets/Balcony/web/1-480.webp 480w, assets/Balcony/web/1-960.webp 960w" sizes="(max-width: 768px) 100vw, 25vw" width="1672" height="941" alt="Sage-green balcony cabinetry" loading="lazy" decoding="async" />
+          <div class="home-showcase-label">
+            <h3>Balcony</h3>
             <span class="home-showcase-explore">Explore Collection <span aria-hidden="true">→</span></span>
           </div>
         </a>
@@ -136,6 +144,7 @@
   <footer class="site-footer" id="site-footer" aria-label="FEALITY ITALY">
     <div class="site-footer-inner">
       <h2>Talk to Us <a href="tel:+919522251777">9522251777</a></h2>
+      <p class="footer-warranty">Every FEALITY ITALY product comes with a lifetime warranty.</p>
       <nav aria-label="Footer navigation">
         <ul>
           <li><a href="kitchen.html">Kitchen</a></li>

@@ -25,6 +25,8 @@
 .kitchen-lightbox-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
 .kitchen-lightbox-copy:has([hidden]):not(:has(:not([hidden]))) { display: none; }
 .kitchen-lightbox-copy { max-width: 440px; }
+.balcony-page .kitchen-lightbox-copy { max-height: 25dvh; overflow-y: auto; }
+.balcony-page #kitchen-description { white-space: pre-line; }
 .kitchen-lightbox-copy h3 { margin: 0 0 8px; font-size: 18px; font-weight: 400; }
 .kitchen-lightbox-copy p { margin: 0; font-size: 13px; line-height: 1.6; }
 .kitchen-lightbox-controls { display: flex; align-items: center; gap: 18px; }
@@ -207,3 +209,6 @@ body.collection-page #mainContent #kitchen-gallery {
     object-position: center 55%;
   }
 }
+
+/* Reserve room for the fixed header above the Balcony collection. */
+.balcony-page #mainContent { padding-top: clamp(72px, 8vw, 112px); background: #252525; }

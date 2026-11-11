@@ -4,7 +4,8 @@
   // The existing gallery hooks are shared by all three collection pages.
   const wardrobeDesigns = window.FealityWardrobeDesigns;
   const vanityDesigns = window.FealityVanityDesigns;
-  const designs = vanityDesigns || wardrobeDesigns || window.FealityKitchenDesigns;
+  const balconyDesigns = window.FealityBalconyDesigns;
+  const designs = balconyDesigns || vanityDesigns || wardrobeDesigns || window.FealityKitchenDesigns;
 
   const get = id => document.getElementById(id);
   const grid = get('kitchen-grid');
@@ -52,7 +53,7 @@
       const numbered = text.match(/^(.+? )(Design \d+)$/);
       const pair = feature || numbered;
       if (pair) node.replaceChildren(pair[1], element('span', 'design-emphasis', pair[2]));
-      else if (!wardrobeDesigns && !vanityDesigns && design.name) {
+      else if (!balconyDesigns && !wardrobeDesigns && !vanityDesigns && design.name) {
         node.append(' ', element('span', 'design-emphasis', 'Kitchen'));
       }
     }
@@ -131,7 +132,8 @@
     const design = visible[current];
     const token = ++request;
     get('kitchen-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(visible.length).padStart(2, '0')}`;
-    for (const [id, value] of [['kitchen-design-name', design.name || `Kitchen Design ${design.id}`], ['kitchen-description', design.description]]) {
+    const description = [design.description, design.details].filter(Boolean).join('\n\n');
+    for (const [id, value] of [['kitchen-design-name', design.name || `Kitchen Design ${design.id}`], ['kitchen-description', description]]) {
       get(id).textContent = value || '';
       get(id).hidden = !value;
     }
@@ -219,7 +221,7 @@
   // Future shared modal integration:
   // FealityKitchenGallery.setEnquiryHandler(design => sharedEnquiry.open(design));
   // The handler receives the chosen design after this viewer closes and restores focus.
-  const galleryHook = vanityDesigns ? 'FealityVanityGallery' : wardrobeDesigns ? 'FealityWardrobeGallery' : 'FealityKitchenGallery';
+  const galleryHook = balconyDesigns ? "FealityBalconyGallery" : vanityDesigns ? 'FealityVanityGallery' : wardrobeDesigns ? 'FealityWardrobeGallery' : 'FealityKitchenGallery';
   window[galleryHook] = Object.freeze({
     setEnquiryHandler(handler) {
       enquiryHandler = typeof handler === 'function' ? handler : null;

@@ -1,0 +1,86 @@
+window.FealityBalconyDesigns = [
+  {
+    "id": "01",
+    "name": "VERDE ARMONIA",
+    "alt": "Verde Armonia balcony cabinet",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/Balcony/1.png",
+    "thumbnail": "assets/Balcony/web/1-960.webp",
+    "srcset": "assets/Balcony/web/1-480.webp 480w, assets/Balcony/web/1-960.webp 960w",
+    "description": "A refined expression of contemporary Italian design, Verde Armonia transforms everyday balcony spaces into elegant, functional retreats. A harmonious blend of muted sage tones, thoughtful storage and warm illumination creates an atmosphere of understated luxury.",
+    "details": "SOPHISTICATED MATTE FINISH\nPremium sage-green surfaces with a refined matte texture, complemented by subtle detailing and warm integrated lighting.\n\nINTELLIGENT SPACE DESIGN\nSeamlessly integrated storage, elegant glass-front cabinetry and carefully considered organisation bring beauty and practicality into perfect harmony."
+  },
+  {
+    "id": "02",
+    "name": "LINEA LAVANDERIA",
+    "alt": "Linea Lavanderia balcony cabinet",
+    "width": 1671,
+    "height": 941,
+    "source": "assets/Balcony/2.png",
+    "thumbnail": "assets/Balcony/web/2-960.webp",
+    "srcset": "assets/Balcony/web/2-480.webp 480w, assets/Balcony/web/2-960.webp 960w",
+    "description": "A contemporary expression of Italian design, Linea Lavanderia combines sleek cabinetry, intelligent storage and elegant illuminated shelving to create a refined, functional laundry space.",
+    "details": "MATTE ITALIAN FINISH\nSophisticated grey surfaces with a smooth, understated finish.\n\nSMART UTILITY DESIGN\nIntegrated laundry appliances, concealed storage and illuminated open shelving."
+  },
+  {
+    "id": "03",
+    "name": "NERO ELEGANZA - LAUNDRY CABINET",
+    "alt": "Nero Eleganza laundry cabinet with dark charcoal finish and illuminated display niches",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/Balcony/3.png",
+    "thumbnail": "assets/Balcony/web/3-960.webp",
+    "srcset": "assets/Balcony/web/3-480.webp 480w, assets/Balcony/web/3-960.webp 960w",
+    "description": "A sophisticated fusion of Italian aesthetics and modern utility, designed to bring refined elegance and effortless organisation to everyday living.",
+    "details": "REFINED MATTE FINISH\nDeep charcoal surfaces with elegant contrasting accents.\n\nPRECISION SPACE DESIGN\nIntegrated laundry appliances, smart storage and illuminated display niches."
+  },
+  {
+    "id": "04",
+    "name": "LUCE SERENA - BALCONY CABINET",
+    "alt": "Luce Serena beige balcony cabinet with integrated laundry appliances and illuminated shelving",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/Balcony/4.png",
+    "thumbnail": "assets/Balcony/web/4-960.webp",
+    "srcset": "assets/Balcony/web/4-480.webp 480w, assets/Balcony/web/4-960.webp 960w",
+    "description": "A seamless expression of contemporary Italian design, Luce Serena brings together refined beige cabinetry, elegant glass detailing and intelligent storage to create a sophisticated, functional living space.",
+    "details": "ELEGANT MATTE FINISH\nSoft beige surfaces complemented by refined textures and sleek detailing.\n\nINTELLIGENT STORAGE DESIGN\nIntegrated laundry appliances, illuminated shelving and thoughtfully organised storage."
+  },
+  {
+    "id": "05",
+    "name": "ROSSO ELEGANZA",
+    "alt": "Rosso Eleganza balcony cabinet",
+    "width": 1671,
+    "height": 941,
+    "source": "assets/Balcony/5.png",
+    "thumbnail": "assets/Balcony/web/5-960.webp",
+    "srcset": "assets/Balcony/web/5-480.webp 480w, assets/Balcony/web/5-960.webp 960w",
+    "description": "A sophisticated blend of Italian design and modern functionality, Rosso Eleganza combines sleek grey cabinetry, rich burgundy accents and versatile storage to create a beautifully organised living space.",
+    "details": "REFINED MATTE FINISH\nElegant grey surfaces complemented by distinctive burgundy detailing.\n\nINTEGRATED STORAGE DESIGN\nSeamless laundry appliances, illuminated display niches and dedicated wardrobe space.\n\nFEALITY ITALY\nWe Care For You."
+  },
+  {
+    "id": "06",
+    "name": "AZZURRO SERENO",
+    "alt": "Azzurro Sereno balcony cabinet",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/Balcony/6.png",
+    "thumbnail": "assets/Balcony/web/6-960.webp",
+    "srcset": "assets/Balcony/web/6-480.webp 480w, assets/Balcony/web/6-960.webp 960w",
+    "description": "A refined expression of Italian minimalism, Azzurro Sereno combines elegant ivory cabinetry, sophisticated blue accents and intelligent storage to transform everyday utility into a luxurious living experience.",
+    "details": "ELEGANT MATTE FINISH\nSmooth ivory surfaces complemented by contemporary blue detailing.\n\nSMART STORAGE SOLUTIONS\nIntegrated laundry space, illuminated display shelving and seamless concealed storage."
+  },
+  {
+    "id": "07",
+    "name": "VERDE SERENIT\u00c0",
+    "alt": "Sage-green balcony cabinetry with illuminated display niches",
+    "width": 1671,
+    "height": 941,
+    "source": "assets/Balcony/7.png",
+    "thumbnail": "assets/Balcony/web/7-960.webp",
+    "srcset": "assets/Balcony/web/7-480.webp 480w, assets/Balcony/web/7-960.webp 960w",
+    "description": "A beautiful harmony of Italian minimalism and modern functionality, Verde Serenit\u00e0 blends soothing sage-green cabinetry, refined open shelving and intelligent storage to create an elegant everyday retreat.",
+    "details": "NATURAL MATTE FINISH\nSoft sage-green surfaces with a smooth, understated contemporary appeal.\n\nINTELLIGENT SPACE DESIGN\nIntegrated laundry appliances, concealed storage and illuminated display niches."
+  }
+];

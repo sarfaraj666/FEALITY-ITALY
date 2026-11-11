@@ -79,6 +79,9 @@
   list-style: none;
 }
 .kitchen-assurance li { display: flex; align-items: baseline; gap: 10px; }
+.kitchen-assurance .kitchen-warranty { align-items: center; }
+.kitchen-assurance .kitchen-warranty::before { display: none; }
+.kitchen-warranty img { width: clamp(72px, 9vw, 96px); height: auto; flex: none; mix-blend-mode: multiply; }
 .kitchen-assurance li::before { content: ""; flex: 0 0 9px; height: 5px; border: solid currentColor; border-width: 0 0 1px 1px; transform: translateY(-3px) rotate(-45deg); }
 .kitchen-assurance a { display: inline-block; padding: 10px 16px; border: 1px solid currentColor; }
 
