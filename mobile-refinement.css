@@ -54,7 +54,11 @@
 }
 
 @media (max-width: 600px) {
-  :root { --mobile-navbar-height: 56px; }
+  :root { --mobile-navbar-height: 68px; }
   .site-header { padding-inline: 12px; }
-  .site-header .wordmark { width: 116px; height: 50px; }
+  .site-header .wordmark,
+  .site-header.scrolled .wordmark {
+    width: clamp(100px, 27.5vw, 138px);
+    height: var(--mobile-navbar-height);
+  }
 }
