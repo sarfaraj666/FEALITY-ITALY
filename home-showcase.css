@@ -57,6 +57,10 @@
   line-height: 1.15;
 }
 
+.home-page .home-showcase-panel:is(.home-showcase-panel--kitchen, .home-showcase-panel--wardrobes, .home-showcase-panel--vanity) .home-showcase-label h3 {
+  font-weight: 600;
+}
+
 .home-page .home-showcase-label h3::after {
   content: "";
   display: block;
@@ -110,6 +114,9 @@
   body.home-page.polished-page #mainContent .home-showcase-label h3 {
     font: 400 13px/1.4 var(--font-ui);
     letter-spacing: .035em;
+  }
+  body.home-page.polished-page #mainContent .home-showcase-panel:is(.home-showcase-panel--kitchen, .home-showcase-panel--wardrobes, .home-showcase-panel--vanity) .home-showcase-label h3 {
+    font-weight: 600;
   }
   .home-page .home-showcase-label h3::after { width: 38px; margin: 5px auto 0; opacity: .45; }
   .home-page .home-showcase-explore { margin-top: 4px; opacity: 1; }

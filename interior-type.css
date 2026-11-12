@@ -38,3 +38,17 @@
   font-weight: 400;
 }
 #mainContent.review-guide summary { font-size: 14px; font-family: var(--editorial-font); font-weight: 500; }
+
+/* Highlight ONLY Kitchen, Wardrobes, Vanity prominent collection headings */
+#homeTitle,
+body:is(.kitchen-page, .wardrobe-page, .vanity-page) .hero-title,
+body.interior-page #mainContent.brand-experience .brand-cards :is(#card-kitchen, #card-wardrobes, #card-vanity),
+body.home-page #mainContent .home-showcase-panel:is(.home-showcase-panel--kitchen, .home-showcase-panel--wardrobes, .home-showcase-panel--vanity) .home-showcase-label h3 {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  body.home-page.polished-page #mainContent .home-showcase-panel:is(.home-showcase-panel--kitchen, .home-showcase-panel--wardrobes, .home-showcase-panel--vanity) .home-showcase-label h3 {
+    font-weight: 600;
+  }
+}

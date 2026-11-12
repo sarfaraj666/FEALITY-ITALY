@@ -685,6 +685,10 @@
   margin: 0 0 22px 0;
 }
 
+body:is(.kitchen-page, .wardrobe-page, .vanity-page) .hero-title {
+  font-weight: 600;
+}
+
 .hero-subtitle {
   font-family: var(--font-body);
   font-style: italic;
