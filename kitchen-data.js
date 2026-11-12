@@ -1,16 +1,16 @@
 // Approved local kitchen photographs; edit verified metadata here.
 window.FealityKitchenDesigns = [
   {
-    "id": "05",
+    "id": "07",
     "category": null,
     "name": "CURVIERA",
-    "description": "White kitchen and dining table overlooking a snowy landscape.",
+    "description": "Rose-toned kitchen island and matching cabinetry.",
     "width": 1672,
     "height": 941,
-    "alt": "White kitchen and dining table overlooking a snowy landscape",
-    "source": "assets/images/kitchen-photos/5.png",
-    "thumbnail": "assets/images/kitchen-photos/web/5-960.webp",
-    "srcset": "assets/images/kitchen-photos/web/5-480.webp 480w, assets/images/kitchen-photos/web/5-960.webp 960w"
+    "alt": "Rose-toned kitchen island and matching cabinetry",
+    "source": "assets/images/kitchen-photos/1.png",
+    "thumbnail": "assets/images/kitchen-photos/web/7-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/7-480.webp 480w, assets/images/kitchen-photos/web/7-960.webp 960w"
   },
   {
     "id": "09",
@@ -20,7 +20,7 @@ window.FealityKitchenDesigns = [
     "width": 1916,
     "height": 821,
     "alt": "Grey kitchen island and dark cabinetry beside snowy landscape windows",
-    "source": "assets/images/kitchen-photos/9.png",
+    "source": "assets/images/kitchen-photos/2.png",
     "thumbnail": "assets/images/kitchen-photos/web/9-960.webp",
     "srcset": "assets/images/kitchen-photos/web/9-480.webp 480w, assets/images/kitchen-photos/web/9-960.webp 960w"
   },
@@ -32,74 +32,62 @@ window.FealityKitchenDesigns = [
     "width": 1930,
     "height": 815,
     "alt": "Veined stone island against warm wood kitchen cabinetry",
-    "source": "assets/images/kitchen-photos/4.png",
+    "source": "assets/images/kitchen-photos/3.png",
     "thumbnail": "assets/images/kitchen-photos/web/4-960.webp",
     "srcset": "assets/images/kitchen-photos/web/4-480.webp 480w, assets/images/kitchen-photos/web/4-960.webp 960w"
   },
   {
+    "id": "16",
+    "category": null,
+    "name": "VERO",
+    "description": "Sage-green cabinetry with a pale island and a dining table by the window.",
+    "alt": "Sage-green cabinetry with a pale island and a dining table by the window",
+    "thumbnail": "assets/images/kitchen-photos/web/green-frame-island-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/green-frame-island-480.webp 480w, assets/images/kitchen-photos/web/green-frame-island-960.webp 960w",
+    "source": "assets/images/kitchen-photos/4.png",
+    "width": 1672,
+    "height": 941
+  },
+  {
     "id": "01",
     "category": null,
-    "name": "Window Island",
+    "name": "ESSENZA",
     "description": "Warm wood kitchen with a pale island and wide landscape windows.",
     "width": 1916,
     "height": 821,
     "alt": "Warm wood kitchen with a pale island and wide landscape windows",
-    "source": "assets/images/kitchen-photos/1.png",
+    "source": "assets/images/kitchen-photos/5.png",
     "thumbnail": "assets/images/kitchen-photos/web/1-960.webp",
     "srcset": "assets/images/kitchen-photos/web/1-480.webp 480w, assets/images/kitchen-photos/web/1-960.webp 960w"
   },
   {
     "id": "02",
     "category": null,
-    "name": "Garden Canopy",
+    "name": "LINEA",
     "description": "Light kitchen island with suspended extractor and garden-facing glazing.",
     "width": 1931,
     "height": 814,
     "alt": "Light kitchen island with suspended extractor and garden-facing glazing",
-    "source": "assets/images/kitchen-photos/2.png",
+    "source": "assets/images/kitchen-photos/6.png",
     "thumbnail": "assets/images/kitchen-photos/web/2-960.webp",
     "srcset": "assets/images/kitchen-photos/web/2-480.webp 480w, assets/images/kitchen-photos/web/2-960.webp 960w"
   },
   {
-    "id": "03",
-    "category": null,
-    "name": "Panorama Island",
-    "description": "Pale kitchen island beneath a dark ceiling beside panoramic windows.",
-    "width": 1932,
-    "height": 814,
-    "alt": "Pale kitchen island beneath a dark ceiling beside panoramic windows",
-    "source": "assets/images/kitchen-photos/3.png",
-    "thumbnail": "assets/images/kitchen-photos/web/3-960.webp",
-    "srcset": "assets/images/kitchen-photos/web/3-480.webp 480w, assets/images/kitchen-photos/web/3-960.webp 960w"
-  },
-  {
     "id": "06",
     "category": null,
-    "name": "Island in Grey",
+    "name": "NEXO",
     "description": "Wood kitchen island beneath a dark extractor with grey cabinetry.",
     "width": 1672,
     "height": 941,
     "alt": "Wood kitchen island beneath a dark extractor with grey cabinetry",
-    "source": "assets/images/kitchen-photos/6.png",
+    "source": "assets/images/kitchen-photos/7.png",
     "thumbnail": "assets/images/kitchen-photos/web/6-960.webp",
     "srcset": "assets/images/kitchen-photos/web/6-480.webp 480w, assets/images/kitchen-photos/web/6-960.webp 960w"
   },
   {
-    "id": "07",
-    "category": null,
-    "name": "Rose Cabinetry",
-    "description": "Rose-toned kitchen island and matching cabinetry.",
-    "width": 1672,
-    "height": 941,
-    "alt": "Rose-toned kitchen island and matching cabinetry",
-    "source": "assets/images/kitchen-photos/7.png",
-    "thumbnail": "assets/images/kitchen-photos/web/7-960.webp",
-    "srcset": "assets/images/kitchen-photos/web/7-480.webp 480w, assets/images/kitchen-photos/web/7-960.webp 960w"
-  },
-  {
     "id": "08",
     "category": null,
-    "name": "Green Frame",
+    "name": "SABBIA CALDA",
     "description": "Green framed kitchen cabinetry with pale worktops.",
     "width": 1672,
     "height": 941,
@@ -109,9 +97,21 @@ window.FealityKitchenDesigns = [
     "srcset": "assets/images/kitchen-photos/web/8-480.webp 480w, assets/images/kitchen-photos/web/8-960.webp 960w"
   },
   {
+    "id": "05",
+    "category": null,
+    "name": "TAGLIO NERO",
+    "description": "White kitchen and dining table overlooking a snowy landscape.",
+    "width": 1672,
+    "height": 941,
+    "alt": "White kitchen and dining table overlooking a snowy landscape",
+    "source": "assets/images/kitchen-photos/9.png",
+    "thumbnail": "assets/images/kitchen-photos/web/5-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/5-480.webp 480w, assets/images/kitchen-photos/web/5-960.webp 960w"
+  },
+  {
     "id": "10",
     "category": null,
-    "name": "Two-Tone Shelves",
+    "name": "ROVERE CHIARO",
     "description": "Wood lower kitchen cabinets with white upper cabinets and illuminated shelves.",
     "width": 1672,
     "height": 941,
@@ -123,7 +123,7 @@ window.FealityKitchenDesigns = [
   {
     "id": "11",
     "category": null,
-    "name": "Illuminated Corner",
+    "name": "TRAMA BIANCA",
     "description": "Pale corner kitchen with open shelving and warm integrated lighting.",
     "width": 1931,
     "height": 814,
@@ -135,7 +135,7 @@ window.FealityKitchenDesigns = [
   {
     "id": "12",
     "category": null,
-    "name": "Rose Breakfast Island",
+    "name": "MELANZANA",
     "description": "Muted rose kitchen island with stools and open shelving.",
     "width": 1672,
     "height": 941,
@@ -147,7 +147,7 @@ window.FealityKitchenDesigns = [
   {
     "id": "13",
     "category": null,
-    "name": "Window Counter",
+    "name": "TORTORA CALDA",
     "description": "Light corner kitchen with dark appliances and a window-side worktop.",
     "width": 1672,
     "height": 941,
@@ -159,7 +159,7 @@ window.FealityKitchenDesigns = [
   {
     "id": "14",
     "category": null,
-    "name": "Garden Island",
+    "name": "LINEA PURA",
     "description": "Grey kitchen island with pale cabinetry and tall garden windows.",
     "width": 1672,
     "height": 941,
@@ -171,7 +171,7 @@ window.FealityKitchenDesigns = [
   {
     "id": "15",
     "category": null,
-    "name": "Linear Shelving",
+    "name": "ARDESIA",
     "description": "Dark linear kitchen with illuminated wood shelving.",
     "width": 1672,
     "height": 941,
@@ -179,5 +179,17 @@ window.FealityKitchenDesigns = [
     "source": "assets/images/kitchen-photos/15.png",
     "thumbnail": "assets/images/kitchen-photos/web/15-960.webp",
     "srcset": "assets/images/kitchen-photos/web/15-480.webp 480w, assets/images/kitchen-photos/web/15-960.webp 960w"
+  },
+  {
+    "id": "03",
+    "category": null,
+    "name": "SABBIA CALDA",
+    "description": "Pale kitchen island beneath a dark ceiling beside panoramic windows.",
+    "width": 1932,
+    "height": 814,
+    "alt": "Pale kitchen island beneath a dark ceiling beside panoramic windows",
+    "source": "assets/images/kitchen-photos/16.png",
+    "thumbnail": "assets/images/kitchen-photos/web/3-960.webp",
+    "srcset": "assets/images/kitchen-photos/web/3-480.webp 480w, assets/images/kitchen-photos/web/3-960.webp 960w"
   }
 ];
