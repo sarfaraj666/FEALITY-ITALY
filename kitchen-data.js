@@ -183,7 +183,7 @@ window.FealityKitchenDesigns = [
   {
     "id": "03",
     "category": null,
-    "name": "SABBIA CALDA",
+    "name": "LAGO SERENO",
     "description": "Pale kitchen island beneath a dark ceiling beside panoramic windows.",
     "width": 1932,
     "height": 814,
