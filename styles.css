@@ -1053,10 +1053,7 @@ p {
 
   .interior-page .site-header {
     position: fixed;
-    height: 76px;
-    background: #efeee9;
-    color: var(--ink);
-    border-bottom: 1px solid #dedcd6
+    height: 76px
   }
 
   .interior-page main {

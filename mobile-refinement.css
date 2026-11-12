@@ -13,6 +13,8 @@
  .site-header .search-toggle { width: 44px; height: 44px; }
  .interior-page .site-header { height: var(--mobile-navbar-height); }
  .interior-page main { padding-top: var(--mobile-navbar-height); }
+ .interior-page main:is(.review-guide, .brand-experience) { padding-top: 0; }
+ .interior-page main.review-guide .guide-intro { padding-top: calc(var(--mobile-navbar-height) + 32px); }
  .polished-page #mainContent .home-hero.hero { height: 100vh; height: 100dvh; min-height: 540px; max-height: none; }
  .polished-page #mainContent :is(.collection-hero.hero, .kitchen-cinematic-hero) { height: 64svh; min-height: 440px; max-height: 620px; }
  .polished-page #mainContent .hero-content { left: 22px; right: 22px; bottom: 98px; max-width: 440px; }
