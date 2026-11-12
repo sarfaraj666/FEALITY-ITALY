@@ -155,3 +155,15 @@
   .home-page .home-showcase-explore { transition: none; }
   .home-page .home-showcase-panel:is(:hover, :focus-visible) > img { transform: none; }
 }
+.home-page > .home-warranty-badge {
+  position: fixed;
+  z-index: 2;
+  right: clamp(14px, 3.5vw, 64px);
+  bottom: clamp(44px, 6.5vh, 78px);
+  width: clamp(58px, 8vw, 136px);
+  height: auto;
+  pointer-events: none;
+  clip-path: polygon(9.6% 20.2%, 24% 15.5%, 39% 10%, 53% 3.6%, 65% 5.6%, 80% 9.8%, 92.4% 14.4%, 92.3% 40%, 91.6% 50.6%, 95% 51.3%, 97% 53%, 97% 77%, 95.5% 78.7%, 84% 79.6%, 77% 85.6%, 66% 92%, 53% 97.6%, 40% 92%, 29% 85.2%, 12% 88.7%, 7% 88.4%, 2.9% 64%, 3.4% 62.3%, 7% 60%, 13.7% 58.2%, 11.5% 48%, 10% 36%);
+}
+.home-page:has(.home-hero .hero-cta:not([href="kitchen.html"])) > .home-warranty-badge { display: none; }
+
