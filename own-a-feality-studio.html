@@ -418,6 +418,106 @@
       .studio-grid, .studio-steps { grid-template-columns: minmax(0, 1fr); padding-inline: 22px; }
       .studio-section-heading { padding-inline: 22px; }
     }
+
+    /* Studio Global Luxury Banner (assets/Own/2.png) */
+    .studio-page .review-guide .studio-global-banner,
+    .review-guide section.studio-global-banner,
+    .studio-global-banner {
+      position: relative;
+      isolation: isolate;
+      min-height: clamp(520px, 75vh, 760px);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      padding: clamp(60px, 8vh, 100px) clamp(24px, 7vw, 120px);
+      background: #0f1011;
+      color: #ffffff;
+      overflow: hidden;
+    }
+    .global-banner-media, .global-banner-media::after {
+      position: absolute;
+      inset: 0;
+    }
+    .global-banner-media {
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
+    .global-banner-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      display: block;
+    }
+    .global-banner-media::after {
+      content: "";
+      background: linear-gradient(90deg, rgba(8, 9, 10, 0.88) 0%, rgba(8, 9, 10, 0.68) 42%, rgba(8, 9, 10, 0.2) 75%, transparent 100%);
+    }
+    .global-banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 580px;
+    }
+    .global-banner-title {
+      margin: 0 0 20px;
+      font: 300 clamp(30px, 3.2vw, 48px)/1.22 var(--font-ui);
+      letter-spacing: -0.015em;
+      color: #ffffff;
+    }
+    .global-banner-sub {
+      margin: 0 0 32px;
+      font: 300 clamp(15px, 1.2vw, 19px)/1.6 var(--font-ui);
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 44ch;
+    }
+    .global-banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #c9a96e;
+      color: #ffffff;
+      font: 400 clamp(13px, 1vw, 15px)/1.4 var(--font-ui);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .global-banner-cta:hover {
+      color: #c9a96e;
+      border-color: #ffffff;
+    }
+    .global-banner-cta .cta-arrow {
+      color: #c9a96e;
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+    .global-banner-cta:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .studio-global-banner {
+        min-height: 520px;
+        padding: 60px 24px;
+        align-items: flex-end;
+      }
+      .global-banner-media img {
+        object-position: 70% center;
+      }
+      .global-banner-media::after {
+        background: linear-gradient(180deg, rgba(8, 9, 10, 0.45) 0%, rgba(8, 9, 10, 0.75) 45%, rgba(8, 9, 10, 0.95) 85%);
+      }
+      .global-banner-title {
+        font-size: clamp(24px, 6vw, 32px);
+        line-height: 1.25;
+        margin-bottom: 14px;
+      }
+      .global-banner-sub {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+    }
   </style>
 </head>
 <body class="interior-page studio-page">
@@ -542,6 +642,26 @@
           <label class="studio-consent"><input type="checkbox" required /> <span>I accept the <a href="terms-policies.html" target="_blank" rel="noopener noreferrer">terms and privacy policy</a>.</span></label>
           <button type="submit">Send</button>
         </form>
+      </div>
+    </section>
+
+    <!-- Global Luxury Living Section (assets/Own/2.png) -->
+    <section class="studio-global-banner" aria-labelledby="global-banner-title">
+      <div class="global-banner-media">
+        <picture>
+          <img src="assets/Own/2.png" alt="FEALITY ITALY - Expand The Language Of Luxury Living" width="1673" height="940" loading="lazy" />
+        </picture>
+      </div>
+      <div class="global-banner-content">
+        <h2 id="global-banner-title" class="global-banner-title">
+          Expand The Language<br />Of Luxury Living, Globally.
+        </h2>
+        <p class="global-banner-sub">
+          Join our expanding network with an investment starting from ₹1 Cr+
+        </p>
+        <a class="global-banner-cta" href="#top">
+          Partner with FEALITY ITALY Today <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </section>
 

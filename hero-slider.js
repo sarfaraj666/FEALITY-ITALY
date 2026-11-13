@@ -24,14 +24,23 @@
     photo('assets/vanity', 2, 1870, 841, 'Wide bathroom vanity and wall mirror'),
     photo('assets/vanity', 3, 1870, 841, 'Floating vanity beside full-height windows')
   ];
-  const slides = document.body.classList.contains('home-page') ? [kitchen[0], wardrobes[0], vanity[0]]
+  const balcony = [
+    {
+      src: 'assets/balcony/web/2-960.webp',
+      srcset: 'assets/balcony/web/2-480.webp 480w, assets/balcony/web/2-960.webp 960w, assets/balcony/2.png 1671w',
+      width: 1671, height: 941,
+      alt: 'Balcony collection with architectural outdoor storage cabinetry'
+    }
+  ];
+  const slides = document.body.classList.contains('home-page') ? [kitchen[0], wardrobes[0], vanity[0], balcony[0]]
     : hero.classList.contains('wardrobe-hero') ? wardrobes
     : hero.classList.contains('vanity-hero') ? vanity : kitchen;
   // Home copy travels with the corresponding collection photograph.
   const homeContent = [
     { title: 'Kitchen', description: 'Considered spaces for cooking, gathering and everyday living.', label: 'Explore Kitchen', href: 'kitchen.html' },
     { title: 'Wardrobes', description: 'A considered place for clothing, accessories and the everyday.', label: 'Explore Wardrobes', href: 'wardrobes.html' },
-    { title: 'Vanity', description: 'Quiet forms, thoughtful storage and space for daily rituals.', label: 'Explore Vanity', href: 'vanity.html' }
+    { title: 'Vanity', description: 'Quiet forms, thoughtful storage and space for daily rituals.', label: 'Explore Vanity', href: 'vanity.html' },
+    { title: 'Balcony', description: 'Thoughtfully designed cabinetry for elevated outdoor living.', label: 'Explore Balcony', href: 'balcony.html' }
   ];
   function updateHomeContent(index) {
     if (!dragMode) return;
@@ -103,9 +112,9 @@
       current = nextIndex;
       updateHomeContent(current);
       const counter = controls.querySelector('.collection-hero-counter');
-      if (counter) counter.textContent = `${String(current + 1).padStart(2, '0')} / 03`;
+      if (counter) counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
       controls.querySelectorAll('[data-hero-index]').forEach((button, i) => button.setAttribute('aria-pressed', String(i === current)));
-      if (manual) status.textContent = `Photo ${current + 1} of 3: ${slide.alt}`;
+      if (manual) status.textContent = `Photo ${current + 1} of ${slides.length}: ${slide.alt}`;
       setTimeout(() => previousImage.remove(), reducedMotion.matches ? 0 : 700);
     } catch {
       if (token !== generation) return;
@@ -126,7 +135,7 @@
     const instruction = document.createElement('span');
     instruction.id = 'hero-swipe-instructions';
     instruction.className = 'sr-only';
-    instruction.textContent = 'Drag or swipe left and right to explore the three photos. You can also use the left and right arrow keys or photo buttons.';
+    instruction.textContent = `Drag or swipe left and right to explore the ${slides.length} photos. You can also use the left and right arrow keys or photo buttons.`;
     hero.append(instruction);
     hero.setAttribute('aria-describedby', instruction.id);
     let start = null;
