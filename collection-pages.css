@@ -645,6 +645,17 @@
   object-position: center;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .kitchen-cinematic-hero .hero-slide-img {
+    transition: transform 7s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: scale(1);
+    will-change: transform;
+  }
+  .kitchen-cinematic-hero .hero-slide.active .hero-slide-img {
+    transform: scale(1.035);
+  }
+}
+
 .kitchen-cinematic-hero .hero-scrim {
   position: absolute;
   inset: 0;

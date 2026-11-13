@@ -10,11 +10,12 @@
   <meta property="og:title" content="Balcony Cabinet Collection | FEALITY ITALY" />
   <meta property="og:description" content="Explore balcony cabinets and laundry storage designs from FEALITY ITALY." />
   <meta property="og:image" content="https://sarfaraj666.github.io/FEALITY-ITALY/assets/Balcony/web/1-960.webp" />
+  <link rel="preload" as="image" href="assets/Balcony/Hero Section 1.png" fetchpriority="high" />
   <link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles.css?v=9" />
   <link rel="stylesheet" href="menu.css?v=5" />
   <link rel="stylesheet" href="kitchen-gallery.css?v=6" />
-  <link rel="stylesheet" href="collection-pages.css?v=2" />
+  <link rel="stylesheet" href="collection-pages.css?v=3" />
   <script src="balcony-data.js" defer></script>
   <script src="kitchen-gallery.js?v=13" defer></script>
   <script src="navigation.js?v=7" defer></script>
@@ -58,21 +59,50 @@
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <main id="mainContent">
-    <h1 class="sr-only">Balcony</h1>
+    <section class="hero kitchen-cinematic-hero" id="top" aria-label="Balcony Hero Showcase" tabindex="0">
+      <div class="hero-slides" id="heroSlides" aria-live="off">
+        <div class="hero-slide active" data-slide-index="0">
+          <img class="hero-slide-img" src="assets/Balcony/Hero Section 1.png" width="1916" height="821" alt="FEALITY ITALY Balcony Cabinet Collection — Hero Section 1" fetchpriority="high" />
+        </div>
+        <div class="hero-slide" data-slide-index="1">
+          <img class="hero-slide-img" src="assets/Balcony/Hero Section 2.png" width="1832" height="858" alt="FEALITY ITALY Balcony Outdoor Storage — Hero Section 2" loading="lazy" decoding="async" />
+        </div>
+        <div class="hero-slide" data-slide-index="2">
+          <img class="hero-slide-img" src="assets/Balcony/Hero Section 3.png" width="1832" height="858" alt="FEALITY ITALY Architectural Balcony Cabinets — Hero Section 3" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-category">ITALIAN LUXURY INTERIORS</p>
+        <h1 class="hero-title" id="pageTitle">Balcony</h1>
+        <p class="hero-subtitle">Elevated Outdoor Living</p>
+        <a class="hero-cta-btn" href="#kitchen-gallery">EXPLORE THE COLLECTION <span class="cta-arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="hero-bottom-bar">
+        <div class="hero-slide-indicators" id="heroIndicators" role="tablist" aria-label="Choose featured balcony slide">
+          <button type="button" class="hero-dot active" data-slide="0" aria-label="Show Balcony Slide 1" aria-selected="true" role="tab"></button>
+          <button type="button" class="hero-dot" data-slide="1" aria-label="Show Balcony Slide 2" aria-selected="false" role="tab"></button>
+          <button type="button" class="hero-dot" data-slide="2" aria-label="Show Balcony Slide 3" aria-selected="false" role="tab"></button>
+        </div>
+      </div>
+    </section>
     <section class="section-spacing collection-section collection-full-gallery" id="kitchen-gallery" aria-labelledby="balcony-gallery-title">
       <div class="section-header">
         <div>
           <p class="eyebrow">THE COMPLETE COLLECTION</p>
           <h2 id="balcony-gallery-title">Explore Every Design</h2>
         </div>
-        <p class="collection-section-note">7 photographs. Every perspective.</p>
+        <p class="collection-section-note">9 photographs. Every perspective.</p>
       </div>
       <div class="kitchen-gallery-toolbar">
         <div id="kitchen-filters" role="group" aria-label="Filter balcony designs"></div>
         <p id="kitchen-count" role="status" aria-live="polite" aria-atomic="true"></p>
       </div>
       <div class="kitchen-gallery-grid" id="kitchen-grid"></div>
-      <noscript><p>Enable JavaScript to explore all 7 photographs and the full-screen viewer.</p></noscript>
+      <noscript><p>Enable JavaScript to explore all 9 photographs and the full-screen viewer.</p></noscript>
     </section>
 
     <dialog class="kitchen-lightbox" id="kitchen-lightbox" aria-labelledby="kitchen-lightbox-title">

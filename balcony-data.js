@@ -73,14 +73,38 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "07",
-    "name": "VERDE SERENIT\u00c0",
+    "name": "VERDE SERENITÀ",
     "alt": "Sage-green balcony cabinetry with illuminated display niches",
     "width": 1671,
     "height": 941,
     "source": "assets/Balcony/7.png",
     "thumbnail": "assets/Balcony/web/7-960.webp",
     "srcset": "assets/Balcony/web/7-480.webp 480w, assets/Balcony/web/7-960.webp 960w",
-    "description": "A beautiful harmony of Italian minimalism and modern functionality, Verde Serenit\u00e0 blends soothing sage-green cabinetry, refined open shelving and intelligent storage to create an elegant everyday retreat.",
+    "description": "A beautiful harmony of Italian minimalism and modern functionality, Verde Serenità blends soothing sage-green cabinetry, refined open shelving and intelligent storage to create an elegant everyday retreat.",
     "details": "NATURAL MATTE FINISH\nSoft sage-green surfaces with a smooth, understated contemporary appeal.\n\nINTELLIGENT SPACE DESIGN\nIntegrated laundry appliances, concealed storage and illuminated display niches."
+  },
+  {
+    "id": "08",
+    "name": "AZZURRO ELEGANTE - BALCONY CABINET",
+    "alt": "Azzurro Elegante balcony cabinet with ivory cabinetry, blue accents and integrated laundry appliances",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/Balcony/8.png",
+    "thumbnail": "assets/Balcony/8.png",
+    "srcset": "assets/Balcony/8.png 1672w",
+    "description": "A sophisticated blend of Italian minimalism and modern utility, Azzurro Elegante pairs refined ivory cabinetry with striking blue accents and seamless storage to create a beautifully balanced living space.",
+    "details": "REFINED MATTE FINISH\nSmooth ivory surfaces complemented by elegant blue detailing.\n\nCONTEMPORARY STORAGE\nIntegrated laundry appliances, illuminated display shelving and concealed storage."
+  },
+  {
+    "id": "09",
+    "name": "BLU NOTTE PRESTIGE - BALCONY CABINET",
+    "alt": "Blu Notte Prestige balcony cabinet with double-stacked appliances, deep navy-blue illuminated shelving and ivory cabinetry",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/Balcony/9.png",
+    "thumbnail": "assets/Balcony/9.png",
+    "srcset": "assets/Balcony/9.png 1672w",
+    "description": "A refined interpretation of Italian luxury, Blu Notte Prestige combines elegant ivory cabinetry, deep navy-blue shelving and intelligent storage to transform everyday laundry spaces into sophisticated interiors.",
+    "details": "EXQUISITE MATTE FINISH\nSmooth ivory surfaces enhanced by rich navy-blue accents.\n\nADVANCED SPACE DESIGN\nIntegrated double-stacked appliances, illuminated display shelves and seamless concealed storage."
   }
 ];
