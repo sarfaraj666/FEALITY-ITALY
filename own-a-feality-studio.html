@@ -434,6 +434,18 @@
       color: #ffffff;
       overflow: hidden;
     }
+    @media (min-width: 769px) {
+      .studio-page .review-guide .studio-global-banner,
+      .review-guide section.studio-global-banner,
+      .studio-global-banner {
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 0 clamp(48px, 8vw, 140px);
+        box-sizing: border-box;
+      }
+    }
     .global-banner-media, .global-banner-media::after {
       position: absolute;
       inset: 0;
@@ -497,25 +509,102 @@
     }
 
     @media (max-width: 768px) {
+      .studio-page .review-guide .studio-global-banner,
+      .review-guide section.studio-global-banner,
       .studio-global-banner {
-        min-height: 520px;
-        padding: 60px 24px;
-        align-items: flex-end;
+        position: relative;
+        min-height: 100svh;
+        padding: 0 24px clamp(72px, 11vh, 104px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background: #000000;
+        box-sizing: border-box;
+        overflow: hidden;
       }
-      .global-banner-media img {
-        object-position: 70% center;
+
+      .studio-global-banner .global-banner-media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 52%;
+        min-height: 290px;
+        max-height: 420px;
+        z-index: 0;
       }
-      .global-banner-media::after {
-        background: linear-gradient(180deg, rgba(8, 9, 10, 0.45) 0%, rgba(8, 9, 10, 0.75) 45%, rgba(8, 9, 10, 0.95) 85%);
+
+      .studio-global-banner .global-banner-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 92% 15%;
+        display: block;
       }
-      .global-banner-title {
-        font-size: clamp(24px, 6vw, 32px);
-        line-height: 1.25;
-        margin-bottom: 14px;
+
+      .studio-global-banner .global-banner-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.08) 40%,
+          rgba(0, 0, 0, 0.55) 70%,
+          rgba(0, 0, 0, 0.92) 88%,
+          #000000 100%
+        );
       }
-      .global-banner-sub {
-        font-size: 15px;
-        margin-bottom: 24px;
+
+      .studio-global-banner .global-banner-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 360px;
+        margin: 0;
+        padding: 0;
+      }
+
+      body.interior-page #mainContent.review-guide .studio-global-banner .global-banner-title {
+        font-family: var(--font-ui), "Montserrat", sans-serif !important;
+        font-weight: 300 !important;
+        font-size: clamp(21px, 5.8vw, 25px) !important;
+        line-height: 1.28 !important;
+        letter-spacing: -0.01em !important;
+        margin: 0 0 16px !important;
+        color: #ffffff !important;
+      }
+
+      body.interior-page #mainContent.review-guide .studio-global-banner .global-banner-sub {
+        font-family: var(--font-ui), "Montserrat", sans-serif !important;
+        font-weight: 300 !important;
+        font-size: clamp(12.5px, 3.4vw, 14px) !important;
+        line-height: 1.55 !important;
+        color: rgba(255, 255, 255, 0.78) !important;
+        margin: 0 0 24px !important;
+        max-width: 33ch !important;
+      }
+
+      body.interior-page #mainContent.review-guide .studio-global-banner .global-banner-cta {
+        display: inline-block !important;
+        font-family: var(--font-ui), "Montserrat", sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 13.5px !important;
+        letter-spacing: 0.02em !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        padding-bottom: 4px !important;
+        border-bottom: 1.5px solid #c9a96e !important;
+        outline: none !important;
+      }
+
+      body.interior-page #mainContent.review-guide .studio-global-banner .global-banner-cta:hover {
+        color: #c9a96e !important;
+      }
+
+      .studio-global-banner .global-banner-cta .cta-arrow {
+        display: none !important;
       }
     }
   </style>
