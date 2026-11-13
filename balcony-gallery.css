@@ -113,12 +113,10 @@
 .balcony-side-caption > span:first-child {
   display: block;
   font-weight: 300;
-  color: rgba(245, 244, 240, 0.82);
 }
 
 .balcony-side-caption .balcony-emphasis {
   font-weight: 600;
-  color: #ffffff;
   margin-left: 2px;
 }
 
