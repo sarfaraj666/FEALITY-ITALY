@@ -34,6 +34,7 @@
   <script defer src="lead-enquiry.js"></script>
   <link rel="stylesheet" href="typography-refinement.css?v=2" />
   <link rel="stylesheet" href="interior-type.css" />
+  <link rel="stylesheet" href="balcony-gallery.css?v=1" />
 </head>
 <body class="polished-page balcony-page collection-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -89,6 +90,41 @@
         </div>
       </div>
     </section>
+        <!-- Balcony Side-by-Side Photo Gallery (01 to 06) -->
+    <section class="section-spacing collection-section balcony-side-gallery" id="balcony-side-gallery" aria-labelledby="balcony-side-title">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">BALCONY COLLECTION</p>
+          <h2 id="balcony-side-title">Architectural Perspectives</h2>
+        </div>
+      </div>
+      <div class="balcony-side-grid">
+        <button type="button" class="balcony-side-card" data-balcony-side="0" aria-label="Explore Design: ROVERE AMBRA">
+          <span class="balcony-side-media"><img src="assets/Balcony/01.png" alt="Rovere Ambra balcony cabinet" width="1254" height="1254" loading="lazy" decoding="async" /></span>
+          <span class="balcony-side-caption"><span>ROVERE AMBRA</span><span aria-hidden="true">↗</span></span>
+        </button>
+        <button type="button" class="balcony-side-card" data-balcony-side="1" aria-label="Explore Design: ROVERE LUMINOSA">
+          <span class="balcony-side-media"><img src="assets/Balcony/02.png" alt="Rovere Luminosa balcony cabinet" width="1254" height="1254" loading="lazy" decoding="async" /></span>
+          <span class="balcony-side-caption"><span>ROVERE LUMINOSA</span><span aria-hidden="true">↗</span></span>
+        </button>
+        <button type="button" class="balcony-side-card" data-balcony-side="2" aria-label="Explore Design: BIANCO MARMO">
+          <span class="balcony-side-media"><img src="assets/Balcony/03.png" alt="Bianco Marmo balcony cabinet" width="1254" height="1254" loading="lazy" decoding="async" /></span>
+          <span class="balcony-side-caption"><span>BIANCO MARMO</span><span aria-hidden="true">↗</span></span>
+        </button>
+        <button type="button" class="balcony-side-card" data-balcony-side="3" aria-label="Explore Design: PIETRA NERA">
+          <span class="balcony-side-media"><img src="assets/Balcony/04.png" alt="Pietra Nera balcony cabinet" width="1254" height="1254" loading="lazy" decoding="async" /></span>
+          <span class="balcony-side-caption"><span>PIETRA NERA</span><span aria-hidden="true">↗</span></span>
+        </button>
+        <button type="button" class="balcony-side-card" data-balcony-side="4" aria-label="Explore Design: MARMO GRIGIO">
+          <span class="balcony-side-media"><img src="assets/Balcony/05.png" alt="Marmo Grigio balcony cabinet" width="1254" height="1254" loading="lazy" decoding="async" /></span>
+          <span class="balcony-side-caption"><span>MARMO GRIGIO</span><span aria-hidden="true">↗</span></span>
+        </button>
+        <button type="button" class="balcony-side-card" data-balcony-side="5" aria-label="Explore Design: NOCE NOBILE">
+          <span class="balcony-side-media"><img src="assets/Balcony/06.png" alt="Noce Nobile balcony cabinet" width="1254" height="1254" loading="lazy" decoding="async" /></span>
+          <span class="balcony-side-caption"><span>NOCE NOBILE</span><span aria-hidden="true">↗</span></span>
+        </button>
+      </div>
+    </section>
     <section class="section-spacing collection-section collection-full-gallery" id="kitchen-gallery" aria-labelledby="balcony-gallery-title">
       <div class="section-header">
         <div>
@@ -138,5 +174,32 @@
       </nav>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.balcony-side-card').forEach((card, idx) => {
+        card.addEventListener('click', () => {
+          const sideDesigns = window.FealityBalconySideDesigns;
+          if (!sideDesigns || !sideDesigns[idx]) return;
+          const design = sideDesigns[idx];
+          const dialog = document.getElementById('kitchen-lightbox');
+          const fullImage = document.getElementById('kitchen-full-image');
+          const nameEl = document.getElementById('kitchen-design-name');
+          const descEl = document.getElementById('kitchen-description');
+          const counterEl = document.getElementById('kitchen-counter');
+          if (!dialog || !fullImage) return;
+          fullImage.src = design.source;
+          fullImage.alt = design.alt || design.name;
+          if (nameEl) { nameEl.textContent = design.name; nameEl.hidden = false; }
+          const descText = [design.description, design.details].filter(Boolean).join('\n\n');
+          if (descEl) { descEl.textContent = descText; descEl.hidden = !descText; }
+          if (counterEl) { counterEl.textContent = `${String(idx + 1).padStart(2, '0')} / ${String(sideDesigns.length).padStart(2, '0')}`; }
+          dialog.showModal();
+          document.body.style.overflow = 'hidden';
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>

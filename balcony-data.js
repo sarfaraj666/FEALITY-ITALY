@@ -108,3 +108,60 @@ window.FealityBalconyDesigns = [
     "details": "EXQUISITE MATTE FINISH\nSmooth ivory surfaces enhanced by rich navy-blue accents.\n\nADVANCED SPACE DESIGN\nIntegrated double-stacked appliances, illuminated display shelves and seamless concealed storage."
   }
 ];
+
+window.FealityBalconySideDesigns = [
+{
+    "id": "01",
+    "name": "ROVERE AMBRA",
+    "subtitle": "BALCONY CABINET",
+    "alt": "Rovere Ambra balcony cabinet",
+    "source": "assets/Balcony/01.png",
+    "description": "A refined blend of Italian craftsmanship and contemporary design, Rovere Ambra combines natural wood textures, elegant cabinetry and warm illuminated niches for a sophisticated utility space.",
+    "details": "NATURAL WOOD FINISH\nElegant wood-grain surfaces with refined detailing.\n\nSMART STORAGE DESIGN\nIntegrated laundry appliances, concealed cabinets and illuminated open shelving."
+  },
+  {
+    "id": "02",
+    "name": "ROVERE LUMINOSA",
+    "subtitle": "BALCONY CABINET",
+    "alt": "Rovere Luminosa balcony cabinet",
+    "source": "assets/Balcony/02.png",
+    "description": "A sophisticated blend of Italian elegance and modern functionality, Rovere Luminosa features refined wood-grain cabinetry, a contemporary vanity and seamlessly integrated laundry appliances.",
+    "details": "NATURAL WOOD FINISH\nElegant ash-wood textures with a refined matte appearance.\n\nILLUMINATED STORAGE\nIntegrated appliances, a circular vanity mirror and beautifully lit display niches."
+  },
+  {
+    "id": "03",
+    "name": "BIANCO MARMO",
+    "subtitle": "BALCONY CABINET",
+    "alt": "Bianco Marmo balcony cabinet",
+    "source": "assets/Balcony/03.png",
+    "description": "A statement of contemporary Italian elegance, Bianco Marmo combines striking marble textures, refined charcoal accents and sleek cabinetry to create a luxurious and functional utility space.",
+    "details": "EXQUISITE MARBLE FINISH\nWhite marble-inspired surfaces with distinctive natural veining.\n\nMODERN STORAGE DESIGN\nIntegrated laundry appliances, ribbed glass shutters and concealed storage with elegant open shelving."
+  },
+  {
+    "id": "04",
+    "name": "PIETRA NERA",
+    "subtitle": "BALCONY CABINET",
+    "alt": "Pietra Nera balcony cabinet",
+    "source": "assets/Balcony/04.png",
+    "description": "A bold expression of Italian contemporary design, Pietra Nera combines textured charcoal cabinetry, elegant marble surfaces and rich walnut detailing to create a refined and functional laundry space.",
+    "details": "TEXTURED STONE FINISH\nSophisticated charcoal surfaces paired with natural marble textures.\n\nINTEGRATED LAUNDRY DESIGN\nDual washing stations, concealed storage and elegant open shelving."
+  },
+  {
+    "id": "05",
+    "name": "MARMO GRIGIO",
+    "subtitle": "BALCONY CABINET",
+    "alt": "Marmo Grigio balcony cabinet",
+    "source": "assets/Balcony/05.png",
+    "description": "An exquisite expression of Italian contemporary design, Marmo Grigio blends elegant stone textures, refined grey cabinetry and delicate golden accents to create a sophisticated and functional balcony space.",
+    "details": "LUXURIOUS MARBLE FINISH\nElegant grey stone textures complemented by subtle gold detailing.\n\nINTEGRATED STORAGE DESIGN\nSeamless laundry integration, concealed cabinetry and refined open shelving."
+  },
+  {
+    "id": "06",
+    "name": "NOCE NOBILE",
+    "subtitle": "BALCONY CABINET",
+    "alt": "Noce Nobile balcony cabinet",
+    "source": "assets/Balcony/06.png",
+    "description": "A timeless expression of Italian sophistication, Noce Nobile blends warm beige cabinetry, rich walnut accents and refined stone textures to create an elegant and functional utility space.",
+    "details": "REFINED WOOD FINISH\nNatural walnut detailing paired with smooth matte beige surfaces.\n\nINTELLIGENT STORAGE\nIntegrated laundry appliances, concealed cabinets and thoughtfully illuminated display niches."
+  }
+];
