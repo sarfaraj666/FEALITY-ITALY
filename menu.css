@@ -1,5 +1,6 @@
 /* Full-screen navigation only; the closed site header is intentionally untouched. */
 #menuPanel {
+  --menu-link-size: 17px;
   background: var(--paper); color: var(--ink); height: 100vh; height: 100dvh;
   padding: max(12px, env(safe-area-inset-top)) 6% max(40px, env(safe-area-inset-bottom));
   overflow-y: auto; overscroll-behavior: contain; transform: none;
@@ -19,7 +20,7 @@
 #menuPanel .menu-introduction span { display: block; }
 #menuPanel .menu-introduction em { font-weight: inherit; }
 #menuPanel .main-menu { margin: 0; }
-#menuPanel .main-menu a { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 32px; padding: 3px 4px; border-bottom: 1px solid var(--line); color: inherit; font: 400 17px/1.25 var(--font-ui); letter-spacing: -.02em; }
+#menuPanel .main-menu a { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 32px; padding: 3px 4px; border-bottom: 1px solid var(--line); color: inherit; font: 400 var(--menu-link-size)/1.25 var(--font-ui); letter-spacing: -.02em; }
 #menuPanel .main-menu a:last-child { border-bottom: 0; }
 #menuPanel .menu-arrow { flex-shrink: 0; font: 300 17px/1 var(--font-ui); transition: transform .2s ease; }
 #menuPanel .main-menu a:hover .menu-arrow { transform: translateX(5px); }
@@ -39,13 +40,13 @@
 #menuPanel.open .menu-secondary { animation-delay: .25s; }
 @keyframes menu-reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 600px) {
-  #menuPanel { padding: max(12px, env(safe-area-inset-top)) 7% 0; }
+  #menuPanel { --menu-link-size: 15px; padding: max(12px, env(safe-area-inset-top)) 7% 0; }
   #menuPanel .menu-content { width: min(100%, 270px); }
   #menuPanel .menu-brand { width: 96px; }
   #menuPanel #menuClose { top: max(12px, env(safe-area-inset-top)); right: 12px; }
   #menuPanel .menu-tagline { gap: 12px; font-size: 9px; letter-spacing: .2em; margin-bottom: 12px; }
   #menuPanel .menu-introduction { font-size: 19px; margin-bottom: 10px; }
-  #menuPanel .main-menu a { font-size: 15px; min-height: 32px; padding: 3px 2px; }
+  #menuPanel .main-menu a { min-height: 32px; padding: 3px 2px; }
   #menuPanel .menu-arrow { font-size: 16px; }
   #menuPanel .menu-secondary { margin-top: 6px; padding-top: 4px; }
   #menuPanel .menu-secondary a { font-size: 12px; letter-spacing: .06em; padding: 0 12px; }
@@ -85,9 +86,10 @@
     background-position: 85% 55%;
   }
 }
-#menuPanel .menu-secondary[aria-label="Studio partnership"] > a { font-weight: 600; }
+#menuPanel .menu-secondary[aria-label="Studio partnership"] > a { font: 500 var(--menu-link-size)/1.25 var(--font-ui); letter-spacing: -.02em; }
 
 @media (min-width: 901px) {
+  #menuPanel { --menu-link-size: 22px; }
   #menuPanel .menu-brand { width: 176px; }
   #menuPanel .menu-content { width: min(100%, 720px); }
   #menuPanel .menu-introduction {
@@ -98,6 +100,6 @@
     font-size: clamp(30px, 2.8vw, 40px);
     margin-bottom: 20px;
   }
-  #menuPanel .main-menu a { font-size: 22px; min-height: 44px; }
+  #menuPanel .main-menu a { min-height: 44px; }
   #menuPanel .menu-secondary a { font-size: 16px; }
 }

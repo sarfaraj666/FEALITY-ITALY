@@ -140,7 +140,8 @@
       fragment.append(button);
     });
     grid.replaceChildren(fragment);
-    get('kitchen-count').textContent = `${visible.length} ${visible.length === 1 ? 'design' : 'designs'}`;
+    const countEl = get('kitchen-count');
+    if (countEl) countEl.textContent = `${visible.length} ${visible.length === 1 ? 'design' : 'designs'}`;
   }
 
   grid.addEventListener('click', event => {

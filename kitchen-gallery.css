@@ -117,6 +117,7 @@
 body.collection-page #mainContent #kitchen-gallery {
   --catalogue-gutter: clamp(20px, 6vw, 100px);
   padding-inline: 0;
+  padding-top: clamp(24px, 3vw, 42px) !important;
   color: #f5f4f0;
   background: #252525;
 }
@@ -124,8 +125,19 @@ body.collection-page #mainContent #kitchen-gallery {
   margin-inline: var(--catalogue-gutter);
 }
 .collection-page #kitchen-gallery :is(h2,.eyebrow,.collection-section-note,#kitchen-filters button) { color: inherit; }
-.collection-page #kitchen-gallery .section-header { border-top: 0; padding-top: 32px; }
-.collection-page #kitchen-gallery .kitchen-gallery-toolbar { border-color: #606060; }
+.collection-page #kitchen-gallery .section-header {
+  border-top: 0;
+  padding-top: 0 !important;
+  margin-bottom: clamp(12px, 1.6vw, 20px) !important;
+}
+.collection-page #kitchen-gallery .kitchen-gallery-toolbar {
+  border-color: #606060;
+  margin-bottom: clamp(18px, 2.2vw, 28px);
+}
+.collection-page #kitchen-gallery #kitchen-filters button {
+  min-height: 38px;
+  padding-block: 8px;
+}
 .collection-page #mainContent #kitchen-gallery #kitchen-grid {
   grid-template-columns: minmax(0,1fr);
   gap: clamp(32px, 5vw, 72px);
