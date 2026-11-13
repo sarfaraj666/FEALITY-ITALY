@@ -52,7 +52,28 @@
       const feature = text.match(/^(.+? (?:and|with) )(.+)$/);
       const numbered = text.match(/^(.+? )(Design \d+)$/);
       const pair = feature || numbered;
+      const wardrobe = wardrobeDesigns && text.match(/^(.+?)\s+(?:Wardrobe|WARDROBE)$/i);
+      const vanity = vanityDesigns && text.match(/^(.+?)\s+(?:Vanity|VANITY)$/i);
+      const balcony = balconyDesigns && text.match(/^(.+?)\s*(?:-\s*)?(?:Balcony|BALCONY)$/i);
       if (pair) node.replaceChildren(pair[1], element('span', 'design-emphasis', pair[2]));
+      else if (wardrobe) {
+        node.replaceChildren(wardrobe[1], ' ', element('span', 'design-emphasis wardrobe-emphasis', 'Wardrobe'));
+      }
+      else if (vanity) {
+        node.replaceChildren(vanity[1], ' ', element('span', 'design-emphasis vanity-emphasis', 'Vanity'));
+      }
+      else if (balcony) {
+        node.replaceChildren(balcony[1], ' ', element('span', 'design-emphasis balcony-emphasis', 'Balcony'));
+      }
+      else if (wardrobeDesigns && design.name) {
+        node.append(' ', element('span', 'design-emphasis wardrobe-emphasis', 'Wardrobe'));
+      }
+      else if (vanityDesigns && design.name) {
+        node.append(' ', element('span', 'design-emphasis vanity-emphasis', 'Vanity'));
+      }
+      else if (balconyDesigns && design.name) {
+        node.append(' ', element('span', 'design-emphasis balcony-emphasis', 'Balcony'));
+      }
       else if (!balconyDesigns && !wardrobeDesigns && !vanityDesigns && design.name) {
         node.append(' ', element('span', 'design-emphasis', 'Kitchen'));
       }
@@ -133,9 +154,34 @@
     const token = ++request;
     get('kitchen-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(visible.length).padStart(2, '0')}`;
     const description = [design.description, design.details].filter(Boolean).join('\n\n');
-    for (const [id, value] of [['kitchen-design-name', design.name || `Kitchen Design ${design.id}`], ['kitchen-description', description]]) {
-      get(id).textContent = value || '';
-      get(id).hidden = !value;
+    const descEl = get('kitchen-description');
+    if (descEl) {
+      descEl.textContent = description || '';
+      descEl.hidden = !description;
+    }
+    const nameEl = get('kitchen-design-name');
+    if (nameEl) {
+      const fallback = balconyDesigns ? `Balcony Design ${design.id}` : wardrobeDesigns ? `Wardrobe Design ${design.id}` : vanityDesigns ? `Vanity Design ${design.id}` : `Kitchen Design ${design.id}`;
+      const rawName = design.name || fallback;
+      const wardrobeMatch = wardrobeDesigns && rawName.match(/^(.+?)\s+(?:Wardrobe|WARDROBE)$/i);
+      const vanityMatch = vanityDesigns && rawName.match(/^(.+?)\s+(?:Vanity|VANITY)$/i);
+      const balconyMatch = balconyDesigns && rawName.match(/^(.+?)\s*(?:-\s*)?(?:Balcony|BALCONY)$/i);
+      if (wardrobeMatch) {
+        nameEl.replaceChildren(wardrobeMatch[1], ' ', element('span', 'design-emphasis wardrobe-emphasis', 'Wardrobe'));
+        nameEl.hidden = false;
+      } else if (vanityMatch) {
+        nameEl.replaceChildren(vanityMatch[1], ' ', element('span', 'design-emphasis vanity-emphasis', 'Vanity'));
+        nameEl.hidden = false;
+      } else if (balconyMatch) {
+        nameEl.replaceChildren(balconyMatch[1], ' ', element('span', 'design-emphasis balcony-emphasis', 'Balcony'));
+        nameEl.hidden = false;
+      } else if (!balconyDesigns && !wardrobeDesigns && !vanityDesigns && design.name) {
+        nameEl.replaceChildren(design.name, ' ', element('span', 'design-emphasis', 'Kitchen'));
+        nameEl.hidden = false;
+      } else {
+        nameEl.textContent = rawName;
+        nameEl.hidden = !rawName;
+      }
     }
     get('kitchen-previous').disabled = get('kitchen-next').disabled = visible.length < 2;
     fullImage.classList.add('is-loading');

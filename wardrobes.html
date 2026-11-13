@@ -36,6 +36,7 @@
   <script defer src="lead-enquiry.js"></script>
   <link rel="stylesheet" href="typography-refinement.css?v=2" />
   <link rel="stylesheet" href="interior-type.css" />
+  <link rel="stylesheet" href="review-guide.css" />
 </head>
 <body class="polished-page wardrobe-page collection-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -118,6 +119,54 @@
       </div>
     </dialog>
 
+    <section class="kitchen-contact" id="kitchen-enquiry-section" aria-labelledby="contact-heading">
+      <div class="contact-form-shell">
+        <h2 id="contact-heading">Let's Design Your Space</h2>
+        <p>Share your requirements with us.</p>
+        <p>Get in Touch <a href="tel:+919522251777">9522251777</a></p>
+        <form class="contact-form" action="#" method="post">
+          <div class="contact-field">
+            <label for="contact-name">Full name *</label>
+          <input id="contact-name" name="fullName" type="text" autocomplete="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-email">Email address</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="Enter your email address">
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-phone">Phone number *</label>
+          <input id="contact-phone" name="phone" type="tel" autocomplete="tel" placeholder="Enter your phone number" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-city">City *</label>
+          <input id="contact-city" name="city" type="text" autocomplete="address-level2" placeholder="Enter your city" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-interest">Interested in</label>
+          <select id="contact-interest" name="interest">
+            <option>Kitchen</option><option>Wardrobes</option><option>Bathroom Vanity</option>
+          </select>
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-budget">Estimated budget (optional)</label>
+          <input id="contact-budget" name="budget" type="text" placeholder="Enter a budget range">
+          </div>
+
+          <label class="contact-consent" for="contact-consent">
+            <input id="contact-consent" type="checkbox" required>
+            I accept the terms of use and privacy policy.
+          </label>
+
+          <button type="submit">Submit Enquiry <span aria-hidden="true">→</span></button>
+        </form>
+        <a href="terms-policies.html">Read Terms &amp; Policies</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" id="site-footer" aria-label="FEALITY ITALY">

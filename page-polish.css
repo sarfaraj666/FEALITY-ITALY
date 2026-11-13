@@ -23,9 +23,9 @@
 .polished-page #mainContent .home-editorial img { display: block; width: 100%; height: auto; }
 @media (min-width: 901px) {
   .home-page #mainContent .home-editorial {
-    grid-template-columns: minmax(0, 2.1fr) minmax(240px, 1fr);
-    padding-inline-start: 3vw;
-    column-gap: clamp(24px, 3vw, 48px);
+    grid-template-columns: minmax(0, 2.6fr) minmax(260px, 1fr);
+    padding-inline: clamp(20px, 3.5vw, 60px);
+    column-gap: clamp(32px, 4vw, 64px);
   }
 }
 .polished-page #mainContent :is(.home-editorial, .related-collections) h2 { font: 400 clamp(34px, 3.8vw, 58px)/1.08 var(--font-heading); letter-spacing: -.02em; margin: 16px 0 24px; }

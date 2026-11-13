@@ -1,7 +1,7 @@
 window.FealityBalconyDesigns = [
   {
     "id": "01",
-    "name": "VERDE ARMONIA",
+    "name": "VERDE ARMONIA Balcony",
     "alt": "Verde Armonia balcony cabinet",
     "width": 1672,
     "height": 941,
@@ -13,7 +13,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "02",
-    "name": "LINEA LAVANDERIA",
+    "name": "LINEA LAVANDERIA Balcony",
     "alt": "Linea Lavanderia balcony cabinet",
     "width": 1671,
     "height": 941,
@@ -25,7 +25,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "03",
-    "name": "NERO ELEGANZA - LAUNDRY CABINET",
+    "name": "NERO ELEGANZA Balcony",
     "alt": "Nero Eleganza laundry cabinet with dark charcoal finish and illuminated display niches",
     "width": 1672,
     "height": 941,
@@ -37,7 +37,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "04",
-    "name": "LUCE SERENA - BALCONY CABINET",
+    "name": "LUCE SERENA Balcony",
     "alt": "Luce Serena beige balcony cabinet with integrated laundry appliances and illuminated shelving",
     "width": 1672,
     "height": 941,
@@ -49,7 +49,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "05",
-    "name": "ROSSO ELEGANZA",
+    "name": "ROSSO ELEGANZA Balcony",
     "alt": "Rosso Eleganza balcony cabinet",
     "width": 1671,
     "height": 941,
@@ -61,7 +61,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "06",
-    "name": "AZZURRO SERENO",
+    "name": "AZZURRO SERENO Balcony",
     "alt": "Azzurro Sereno balcony cabinet",
     "width": 1672,
     "height": 941,
@@ -73,7 +73,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "07",
-    "name": "VERDE SERENITÀ",
+    "name": "VERDE SERENITÀ Balcony",
     "alt": "Sage-green balcony cabinetry with illuminated display niches",
     "width": 1671,
     "height": 941,
@@ -85,7 +85,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "08",
-    "name": "AZZURRO ELEGANTE - BALCONY CABINET",
+    "name": "AZZURRO ELEGANTE Balcony",
     "alt": "Azzurro Elegante balcony cabinet with ivory cabinetry, blue accents and integrated laundry appliances",
     "width": 1672,
     "height": 941,
@@ -97,7 +97,7 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "09",
-    "name": "BLU NOTTE PRESTIGE - BALCONY CABINET",
+    "name": "BLU NOTTE PRESTIGE Balcony",
     "alt": "Blu Notte Prestige balcony cabinet with double-stacked appliances, deep navy-blue illuminated shelving and ivory cabinetry",
     "width": 1672,
     "height": 941,
@@ -112,7 +112,7 @@ window.FealityBalconyDesigns = [
 window.FealityBalconySideDesigns = [
 {
     "id": "01",
-    "name": "ROVERE AMBRA",
+    "name": "ROVERE AMBRA Balcony",
     "subtitle": "BALCONY CABINET",
     "alt": "Rovere Ambra balcony cabinet",
     "source": "assets/Balcony/01.png",
@@ -121,7 +121,7 @@ window.FealityBalconySideDesigns = [
   },
   {
     "id": "02",
-    "name": "ROVERE LUMINOSA",
+    "name": "ROVERE LUMINOSA Balcony",
     "subtitle": "BALCONY CABINET",
     "alt": "Rovere Luminosa balcony cabinet",
     "source": "assets/Balcony/02.png",
@@ -130,7 +130,7 @@ window.FealityBalconySideDesigns = [
   },
   {
     "id": "03",
-    "name": "BIANCO MARMO",
+    "name": "BIANCO MARMO Balcony",
     "subtitle": "BALCONY CABINET",
     "alt": "Bianco Marmo balcony cabinet",
     "source": "assets/Balcony/03.png",
@@ -139,7 +139,7 @@ window.FealityBalconySideDesigns = [
   },
   {
     "id": "04",
-    "name": "PIETRA NERA",
+    "name": "PIETRA NERA Balcony",
     "subtitle": "BALCONY CABINET",
     "alt": "Pietra Nera balcony cabinet",
     "source": "assets/Balcony/04.png",
@@ -148,7 +148,7 @@ window.FealityBalconySideDesigns = [
   },
   {
     "id": "05",
-    "name": "MARMO GRIGIO",
+    "name": "MARMO GRIGIO Balcony",
     "subtitle": "BALCONY CABINET",
     "alt": "Marmo Grigio balcony cabinet",
     "source": "assets/Balcony/05.png",
@@ -157,7 +157,7 @@ window.FealityBalconySideDesigns = [
   },
   {
     "id": "06",
-    "name": "NOCE NOBILE",
+    "name": "NOCE NOBILE Balcony",
     "subtitle": "BALCONY CABINET",
     "alt": "Noce Nobile balcony cabinet",
     "source": "assets/Balcony/06.png",

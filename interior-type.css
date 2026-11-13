@@ -24,6 +24,38 @@
 }
 #mainContent .design-name { font-size: var(--type-card-title); line-height: 1.15; }
 #mainContent .design-emphasis { font-weight: 600; font-size: inherit; }
+
+/* Collection title styling: model name light, category name darker and emphasized */
+:is(.wardrobe-page, .vanity-page, .balcony-page) #mainContent :is(.design-name, .kitchen-gallery-caption > span:first-child) {
+  color: #55554f;
+}
+:is(.wardrobe-page, .vanity-page, .balcony-page) #mainContent :is(.design-emphasis, .wardrobe-emphasis, .vanity-emphasis, .balcony-emphasis) {
+  font-weight: 600;
+  color: #0a0a0a;
+}
+@media (min-width: 769px) {
+  :is(.wardrobe-page, .vanity-page, .balcony-page) #mainContent #kitchen-gallery #kitchen-grid .editorial-design .design-name {
+    color: rgba(245, 244, 240, 0.82);
+  }
+  :is(.wardrobe-page, .vanity-page, .balcony-page) #mainContent #kitchen-gallery #kitchen-grid .editorial-design :is(.design-emphasis, .wardrobe-emphasis, .vanity-emphasis, .balcony-emphasis) {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .balcony-page #mainContent #kitchen-gallery #kitchen-grid .kitchen-gallery-caption > span:first-child {
+    color: rgba(245, 244, 240, 0.82);
+  }
+  .balcony-page #mainContent #kitchen-gallery #kitchen-grid .kitchen-gallery-caption :is(.design-emphasis, .balcony-emphasis) {
+    color: #ffffff;
+    font-weight: 600;
+  }
+}
+#kitchen-lightbox .kitchen-lightbox-copy h3 {
+  color: #55554f;
+}
+#kitchen-lightbox .kitchen-lightbox-copy h3 :is(.design-emphasis, .wardrobe-emphasis, .vanity-emphasis, .balcony-emphasis) {
+  font-weight: 600;
+  color: #0a0a0a;
+}
 #mainContent .editorial-design :is(.design-note, .model-subtitle, .collection-subtitle) {
   font: 400 var(--type-body)/1.5 var(--editorial-font);
   letter-spacing: .005em;

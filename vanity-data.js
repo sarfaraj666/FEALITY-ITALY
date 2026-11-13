@@ -1,7 +1,7 @@
 window.FealityVanityDesigns = [
   {
     "id": "01",
-    "name": "Salvia Rigata",
+    "name": "Salvia Rigata Vanity",
     "alt": "Floating Vanity with Rectangular Mirror",
     "width": 1916,
     "height": 821,
@@ -12,7 +12,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "02",
-    "name": "Rovere e Pietra",
+    "name": "Rovere e Pietra Vanity",
     "alt": "Wide Vanity and Wall Mirror",
     "width": 1870,
     "height": 841,
@@ -23,7 +23,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "03",
-    "name": "Nebbia e Marmo",
+    "name": "Nebbia e Marmo Vanity",
     "alt": "Window-Side Floating Vanity",
     "width": 1870,
     "height": 841,
@@ -34,7 +34,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "04",
-    "name": "Onda Grigia",
+    "name": "Onda Grigia Vanity",
     "alt": "Floating Drawers and Backlit Mirror",
     "width": 1672,
     "height": 941,
@@ -45,7 +45,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "05",
-    "name": "Nuvola di Luce",
+    "name": "Nuvola di Luce Vanity",
     "alt": "Cloud Mirror and Double Drawers",
     "width": 1672,
     "height": 941,
@@ -56,7 +56,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "06",
-    "name": "Curva Grigia",
+    "name": "Curva Grigia Vanity",
     "alt": "Organic Mirror and Open Shelving",
     "width": 1672,
     "height": 941,
@@ -67,7 +67,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "07",
-    "name": "Luna Tagliata",
+    "name": "Luna Tagliata Vanity",
     "alt": "Round Mirror and Open Compartments",
     "width": 1672,
     "height": 941,
@@ -78,7 +78,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "08",
-    "name": "Avorio e Blu",
+    "name": "Avorio e Blu Vanity",
     "alt": "Floating Cabinet and Display Shelves",
     "width": 1672,
     "height": 941,
@@ -89,7 +89,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "14",
-    "name": "Trama Bicolore",
+    "name": "Trama Bicolore Vanity",
     "alt": "Basin and Open Cabinet Storage",
     "width": 1448,
     "height": 1086,
@@ -100,7 +100,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "09",
-    "name": "Profilo Sospeso",
+    "name": "Profilo Sospeso Vanity",
     "alt": "Tall Mirror and Asymmetric Storage",
     "width": 1122,
     "height": 1402,
@@ -111,7 +111,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "10",
-    "name": "Luce Pura",
+    "name": "Luce Pura Vanity",
     "alt": "Square Mirror and Lower Shelf",
     "width": 1092,
     "height": 1440,
@@ -122,7 +122,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "11",
-    "name": "Mosaico Nero",
+    "name": "Mosaico Nero Vanity",
     "alt": "Mirror Cabinet and Drawer Storage",
     "width": 1092,
     "height": 1440,
@@ -133,7 +133,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "12",
-    "name": "Avorio Rigato",
+    "name": "Avorio Rigato Vanity",
     "alt": "Wall Cabinet with Display Shelves",
     "width": 909,
     "height": 1205,
@@ -144,7 +144,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "13",
-    "name": "Bianco Curvo",
+    "name": "Bianco Curvo Vanity",
     "alt": "Round Mirror and Compact Basin",
     "width": 1086,
     "height": 1448,

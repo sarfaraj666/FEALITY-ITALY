@@ -1,7 +1,7 @@
 window.FealityWardrobeDesigns = [
   {
     "id": "01",
-    "name": "Sartoria Milano",
+    "name": "Sartoria Milano Wardrobe",
     "alt": "Open wardrobe with slatted screens framing hanging rails and storage drawers",
     "width": 1916,
     "height": 821,
@@ -12,7 +12,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "02",
-    "name": "Atelier Roma",
+    "name": "Atelier Roma Wardrobe",
     "alt": "Wood-toned wardrobe compartments with shelves and long hanging rails",
     "width": 1916,
     "height": 821,
@@ -23,7 +23,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "03",
-    "name": "Avorio e Caffè",
+    "name": "Avorio e Caffè Wardrobe",
     "alt": "White wardrobe surrounds an open dressing area",
     "width": 1869,
     "height": 842,
@@ -34,7 +34,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "04",
-    "name": "Blu Notte",
+    "name": "Blu Notte Wardrobe",
     "alt": "Glass-front compartments with dark blue drawers",
     "width": 1672,
     "height": 941,
@@ -45,7 +45,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "05",
-    "name": "Salotto Privato",
+    "name": "Salotto Privato Wardrobe",
     "alt": "Pale fitted wardrobes with a central hanging section",
     "width": 1672,
     "height": 941,
@@ -56,7 +56,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "06",
-    "name": "Trama Obliqua",
+    "name": "Trama Obliqua Wardrobe",
     "alt": "Glass wardrobe doors beside a recessed seat",
     "width": 1672,
     "height": 941,
@@ -67,7 +67,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "07",
-    "name": "Notte Profonda",
+    "name": "Notte Profonda Wardrobe",
     "alt": "Dark blue cabinetry with open hanging compartments",
     "width": 1672,
     "height": 941,
@@ -78,7 +78,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "08",
-    "name": "Galleria Chiara",
+    "name": "Galleria Chiara Wardrobe",
     "alt": "Front view of hanging rails and drawers on either side of tall doors",
     "width": 1672,
     "height": 941,
@@ -89,7 +89,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "09",
-    "name": "Vetro e Luce",
+    "name": "Vetro e Luce Wardrobe",
     "alt": "Tall glass-front wardrobe beside a dressing area",
     "width": 1122,
     "height": 1402,
@@ -100,7 +100,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "10",
-    "name": "Vetro Cannettato",
+    "name": "Vetro Cannettato Wardrobe",
     "alt": "Glass wardrobe and upholstered seat beside full-height windows",
     "width": 1122,
     "height": 1402,
@@ -111,7 +111,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "11",
-    "name": "Vetro Ambrato",
+    "name": "Vetro Ambrato Wardrobe",
     "alt": "Illuminated wood-toned wardrobe with dark-framed doors",
     "width": 1092,
     "height": 1440,
@@ -122,7 +122,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "12",
-    "name": "Cuoio e Ferro",
+    "name": "Cuoio e Ferro Wardrobe",
     "alt": "Close view of an open drawer below a hanging section",
     "width": 1092,
     "height": 1440,
@@ -133,7 +133,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "13",
-    "name": "Scrigno di Luce",
+    "name": "Scrigno di Luce Wardrobe",
     "alt": "Divided accessory drawer seen from above",
     "width": 1122,
     "height": 1402,
@@ -144,7 +144,7 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "14",
-    "name": "Portagioie Tortora",
+    "name": "Portagioie Tortora Wardrobe",
     "alt": "Pull-out tray with separate watch and accessory compartments",
     "width": 1555,
     "height": 1011,
