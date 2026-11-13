@@ -50,7 +50,7 @@
       .studio-mobile-hero { display: none !important; }
 
       .studio-page .review-guide .studio-hero {
-        padding: clamp(100px, 14vh, 150px) clamp(24px, 5vw, 80px) clamp(50px, 8vh, 80px);
+        padding: clamp(100px, 14vh, 150px) clamp(24px, 2.5vw, 40px) clamp(50px, 8vh, 80px) clamp(24px, 5vw, 80px);
         display: flex;
         align-items: center;
         background: #0f1011;
@@ -61,12 +61,12 @@
       }
       .studio-desktop-hero {
         width: 100%;
-        max-width: 1380px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(340px, 470px);
-        gap: clamp(36px, 5vw, 84px);
+        max-width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        gap: clamp(32px, 4vw, 80px);
         z-index: 1;
       }
       .studio-desktop-hero .studio-hero-copy {
@@ -129,6 +129,9 @@
 
       /* Desktop Glassmorphic Form */
       .studio-desktop-enquiry {
+        width: clamp(360px, 29vw, 460px);
+        flex-shrink: 0;
+        margin-left: auto;
         background: rgba(16, 18, 20, 0.72);
         backdrop-filter: blur(28px);
         -webkit-backdrop-filter: blur(28px);
