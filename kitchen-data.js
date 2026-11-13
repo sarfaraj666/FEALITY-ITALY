@@ -179,17 +179,5 @@ window.FealityKitchenDesigns = [
     "source": "assets/images/kitchen-photos/15.png",
     "thumbnail": "assets/images/kitchen-photos/web/15-960.webp",
     "srcset": "assets/images/kitchen-photos/web/15-480.webp 480w, assets/images/kitchen-photos/web/15-960.webp 960w"
-  },
-  {
-    "id": "03",
-    "category": null,
-    "name": "LAGO SERENO",
-    "description": "Pale kitchen island beneath a dark ceiling beside panoramic windows.",
-    "width": 1932,
-    "height": 814,
-    "alt": "Pale kitchen island beneath a dark ceiling beside panoramic windows",
-    "source": "assets/images/kitchen-photos/16.png",
-    "thumbnail": "assets/images/kitchen-photos/web/3-960.webp",
-    "srcset": "assets/images/kitchen-photos/web/3-480.webp 480w, assets/images/kitchen-photos/web/3-960.webp 960w"
   }
 ];

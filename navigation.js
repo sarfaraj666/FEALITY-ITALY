@@ -104,7 +104,7 @@
       { name: 'Balcony', category: 'COLLECTION', url: 'balcony.html' },
       { name: 'Kitchen Island & Stone Worktops', category: 'KITCHEN ELEMENT', url: 'kitchen.html#kitchen-gallery' },
       { name: 'Cabinet Fronts & Illuminated Shelving', category: 'KITCHEN ELEMENT', url: 'kitchen.html#kitchen-gallery' },
-      { name: 'Full Kitchen Gallery (16 Designs)', category: 'GALLERY', url: 'kitchen.html#kitchen-gallery' },
+      { name: 'Full Kitchen Gallery (15 Designs)', category: 'GALLERY', url: 'kitchen.html#kitchen-gallery' },
       { name: 'Wardrobe Glass Doors & Divided Drawers', category: 'WARDROBE ELEMENT', url: 'wardrobes.html#kitchen-gallery' },
       { name: 'Pull-Out Storage & Accessory Trays', category: 'WARDROBE ELEMENT', url: 'wardrobes.html#kitchen-gallery' },
       { name: 'Full Wardrobes Gallery (14 Designs)', category: 'GALLERY', url: 'wardrobes.html#kitchen-gallery' },

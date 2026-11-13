@@ -100,7 +100,7 @@ window.FealityVanityDesigns = [
   },
   {
     "id": "09",
-    "name": "Trama Bicolore",
+    "name": "Profilo Sospeso",
     "alt": "Tall Mirror and Asymmetric Storage",
     "width": 1122,
     "height": 1402,
