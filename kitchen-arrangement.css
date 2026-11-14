@@ -19,6 +19,33 @@
 #mainContent #featured-kitchen .models-grid { align-items: start; }
 #mainContent #featured-kitchen .model-subtitle { line-height: 1.6; }
 
+/* Let gallery banners follow each photograph's natural proportions. */
+.kitchen-page #mainContent #kitchen-gallery .kitchen-gallery-media {
+  display: block;
+  aspect-ratio: auto;
+}
+.kitchen-page #mainContent #kitchen-gallery .kitchen-gallery-media img {
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  .kitchen-page #mainContent #kitchen-gallery #kitchen-grid {
+    row-gap: 0;
+  }
+  .kitchen-page #mainContent #kitchen-gallery #kitchen-grid .editorial-design {
+    align-content: start;
+    margin-block: 0;
+  }
+  .kitchen-page #mainContent #kitchen-gallery #kitchen-grid .kitchen-gallery-media {
+    aspect-ratio: auto;
+    display: block;
+    align-self: start;
+  }
+  .kitchen-page #mainContent #kitchen-gallery {
+    padding-bottom: 0;
+  }
+}
+
 /* Phone catalogue: each design has its own photograph and caption. */
 @media (max-width: 600px) {
   .kitchen-page #mainContent #featured-kitchen .models-grid,

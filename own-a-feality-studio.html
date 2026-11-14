@@ -391,19 +391,137 @@
     .studio-section-heading h2 { max-width: 24ch; margin: 0; font: 400 clamp(24px, 3vw, 38px)/1.2 var(--font-ui); }
     .studio-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding: 20px 6% 56px; }
     .step-card { padding: 20px 18px; border-top: 1px solid var(--studio-line); }
-    .review-guide section.studio-introduction {
+    /* Studio Partnership Benefits Section - Premium Architecture */
+    .studio-page .review-guide section.studio-partner-benefits,
+    .review-guide section.studio-partner-benefits,
+    .studio-partner-benefits {
+      position: relative;
       margin: 0;
-      padding: clamp(40px, 6vw, 88px) 6%;
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-      align-items: center;
-      gap: clamp(24px, 5vw, 80px);
-      background: #252525;
-      color: #f3f2ee;
+      padding: clamp(68px, 8vw, 110px) clamp(24px, 6vw, 88px);
+      background: radial-gradient(ellipse 90% 60% at 50% 0%, #1e2024 0%, #0d0e10 100%);
+      color: #ffffff;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
     }
-    .studio-introduction img { width: 100%; height: auto; display: block; }
-    .studio-introduction p { max-width: 44ch; }
-    .studio-introduction a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; }
+    .benefits-container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+    .benefits-header {
+      margin-bottom: clamp(44px, 5.5vw, 68px);
+      text-align: left;
+    }
+    .benefits-kicker {
+      margin: 0 0 14px;
+      font: 600 11px/1.4 var(--font-ui);
+      letter-spacing: 0.22em;
+      color: #C0C0C0;
+      text-transform: uppercase;
+    }
+    body.interior-page #mainContent.review-guide .benefits-heading {
+      margin: 0 0 14px;
+      font: 300 clamp(28px, 3.2vw, 44px)/1.2 var(--font-ui), "Montserrat", sans-serif !important;
+      letter-spacing: -0.015em;
+      color: #ffffff;
+    }
+    .benefits-highlight {
+      color: #C0C0C0;
+      font-weight: 500;
+    }
+    .benefits-desc {
+      margin: 0;
+      font: 400 clamp(13px, 1.05vw, 15px)/1.65 var(--font-ui);
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 54ch;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(20px, 2vw, 28px);
+    }
+    .benefit-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      padding: clamp(28px, 3.2vw, 40px) 18px clamp(24px, 2.8vw, 32px);
+      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+    .benefit-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(192, 192, 192, 0.35);
+      background: rgba(255, 255, 255, 0.045);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+    }
+    .benefit-icon {
+      width: 68px;
+      height: 68px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 65%, transparent 100%);
+      transition: transform 0.3s ease;
+    }
+    .benefit-item:hover .benefit-icon {
+      transform: scale(1.08);
+    }
+    .benefit-icon svg {
+      width: 44px;
+      height: 44px;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+    }
+    .benefit-label {
+      font: 500 clamp(13.5px, 1.05vw, 15.5px)/1.45 var(--font-ui), "Montserrat", sans-serif;
+      color: #ffffff;
+      letter-spacing: 0.01em;
+      max-width: 19ch;
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) and (min-width: 601px) {
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .studio-page .review-guide section.studio-partner-benefits,
+      .review-guide section.studio-partner-benefits,
+      .studio-partner-benefits {
+        padding: 52px 20px;
+      }
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .benefit-item {
+        padding: 24px 12px 20px;
+      }
+      .benefit-icon {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 14px;
+      }
+      .benefit-icon svg {
+        width: 34px;
+        height: 34px;
+      }
+      .benefit-label {
+        font-size: 12.5px;
+        line-height: 1.35;
+      }
+    }
     .studio-contact-link { display: inline-flex; margin-top: 12px; align-items: center; min-height: 44px; }
     .step-card span { display: inline-block; margin-bottom: 18px; color: #61645d; font: 500 12px/1 var(--font-ui); }
     .step-card h3 { margin: 0 0 10px; font: 500 16px/1.3 var(--font-ui); }
@@ -417,9 +535,58 @@
     .studio-page #partner-why { scroll-margin-top: 110px; }
 
     @media (max-width: 768px) {
-      .review-guide section.studio-introduction { grid-template-columns: 1fr; padding-inline: 22px; }
       .studio-grid, .studio-steps { grid-template-columns: minmax(0, 1fr); padding-inline: 22px; }
       .studio-section-heading { padding-inline: 22px; }
+    }
+
+    .studio-kitchen-feature {
+      position: relative;
+      display: grid;
+      isolation: isolate;
+      margin: 0;
+      background: #191a19;
+    }
+    .studio-kitchen-feature::after {
+      content: "";
+      grid-area: 1 / 1;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.46) 50%, rgba(0, 0, 0, 0.12));
+      pointer-events: none;
+    }
+    .studio-kitchen-about {
+      grid-area: 1 / 1;
+      z-index: 2;
+      align-self: center;
+      padding: 48px clamp(24px, 5vw, 80px);
+      text-align: left;
+      color: #fff;
+    }
+    .studio-kitchen-about h2 {
+      margin: 0 0 28px;
+      font: 400 20px/1.3 var(--font-ui);
+      letter-spacing: 0.04em;
+    }
+    .studio-kitchen-about p {
+      max-width: 350px;
+      margin: 0;
+      font: 400 14px/1.75 var(--font-ui);
+      color: #f0f0ee;
+    }
+    .studio-page .studio-kitchen-image {
+      display: block;
+      grid-area: 1 / 1;
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .studio-kitchen-about {
+        align-self: end;
+        padding: 40px 7% 24px;
+      }
+      .studio-page .studio-kitchen-image { object-position: 60% center; }
     }
 
     /* Studio Global Luxury Banner (assets/Own/2.png) */
@@ -737,6 +904,14 @@
       </div>
     </section>
 
+    <div class="studio-kitchen-feature">
+      <img class="studio-kitchen-image" src="assets/images/kitchen-photos/6.png" alt="Contemporary beige kitchen with a central island, breakfast seating and illuminated shelving" width="1931" height="814" loading="lazy" />
+      <div class="studio-kitchen-about">
+        <h2>About Us</h2>
+        <p>FEALITY ITALY brings Italian-inspired design to everyday living, with stainless steel kitchens, elegant wardrobes, refined vanities and thoughtful balcony solutions. Our collections bring together considered materials, practical storage and timeless aesthetics.</p>
+      </div>
+    </div>
+
     <!-- Global Luxury Living Section (assets/Own/2.png) -->
     <section class="studio-global-banner" aria-labelledby="global-banner-title">
       <div class="global-banner-media">
@@ -757,12 +932,138 @@
       </div>
     </section>
 
-    <section class="studio-introduction" aria-labelledby="studio-opportunity">
-      <img src="assets/images/kitchen-photos/web/3-960.webp" alt="FEALITY kitchen with a stone island facing the lake" width="960" height="404" loading="lazy" />
-      <div>
-        <h2 id="studio-opportunity" style="scroll-margin-top: 110px">Bring Italian design to your city.</h2>
-        <p>A FEALITY studio gives customers a place to explore a stainless steel kitchen in person, compare cabinet finishes and plan storage around their home.</p>
-        <a href="kitchen.html">Explore the kitchen collection ↗</a>
+    <!-- Studio Partnership Benefits Section - Premium Architecture -->
+    <section class="studio-partner-benefits" id="partner-benefits" aria-labelledby="partner-benefits-title">
+      <!-- Shared Platinum Silver Gradient Definition -->
+      <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="platGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="40%" stop-color="#D6D9DE" />
+            <stop offset="100%" stop-color="#9AA0A6" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="benefits-container">
+        <div class="benefits-header">
+          <p class="benefits-kicker">FEALITY ITALY · PARTNERSHIP ECOSYSTEM</p>
+          <h2 id="partner-benefits-title" class="benefits-heading">
+            Why Partner With <span class="benefits-highlight">FEALITY ITALY?</span>
+          </h2>
+          <p class="benefits-desc">A scalable framework built around Italian design integrity, technical precision, and dedicated market support.</p>
+        </div>
+
+        <div class="benefits-grid" role="list">
+          <!-- 1. Design-Led Collections -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="6" y="30" width="6" height="12" rx="1.5" fill="url(#platGrad)" opacity="0.65" />
+                <rect x="16" y="22" width="6" height="20" rx="1.5" fill="url(#platGrad)" opacity="0.85" />
+                <rect x="26" y="14" width="6" height="28" rx="1.5" fill="url(#platGrad)" />
+                <path d="M8 24L19 13L28 18L39 7" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M33 7H39V13" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="39" cy="7" r="2.5" fill="#FFFFFF" />
+              </svg>
+            </div>
+            <p class="benefit-label">Design-Led<br />Collections</p>
+          </div>
+
+          <!-- 2. Curated Interior Solutions -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 6L40 14L24 22L8 14L24 6Z" fill="url(#platGrad)" opacity="0.9" />
+                <path d="M8 21L24 29L40 21" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 29L24 37L40 29" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 37L24 45L40 37" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="benefit-label">Curated Interior<br />Solutions</p>
+          </div>
+
+          <!-- 3. Product Presentation Guidance -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="6" y="7" width="36" height="25" rx="3" stroke="url(#platGrad)" stroke-width="2.5" />
+                <rect x="10" y="11" width="28" height="17" rx="1.5" fill="url(#platGrad)" opacity="0.2" />
+                <path d="M18 20L22 24L30 16" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M24 32V41" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M14 41H34" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <p class="benefit-label">Product Presentation<br />Guidance</p>
+          </div>
+
+          <!-- 4. Studio Planning Support -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M6 18L24 6L42 18V42H6V18Z" stroke="url(#platGrad)" stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M18 42V26H30V42" fill="url(#platGrad)" opacity="0.4" stroke="url(#platGrad)" stroke-width="2.5" />
+                <path d="M13 18H35" stroke="url(#platGrad)" stroke-width="2" stroke-linecap="round" />
+                <circle cx="24" cy="18" r="3" fill="#FFFFFF" />
+              </svg>
+            </div>
+            <p class="benefit-label">Studio Planning<br />Support</p>
+          </div>
+
+          <!-- 5. Material & Finish Guidance -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 6C14.06 6 6 14.06 6 24C6 33.94 13.5 42 22 42C23.66 42 25 40.66 25 39C25 38.2 24.68 37.48 24.16 36.94C23.64 36.42 23.32 35.7 23.32 34.9C23.32 33.24 24.66 31.9 26.32 31.9H29.5C36.4 31.9 42 26.3 42 19.4C42 12 33.94 6 24 6Z" stroke="url(#platGrad)" stroke-width="2.5" fill="url(#platGrad)" fill-opacity="0.14" />
+                <circle cx="15" cy="17" r="3" fill="url(#platGrad)" />
+                <circle cx="24" cy="13" r="3" fill="url(#platGrad)" />
+                <circle cx="33" cy="17" r="3" fill="url(#platGrad)" />
+                <circle cx="34" cy="25" r="3" fill="url(#platGrad)" />
+              </svg>
+            </div>
+            <p class="benefit-label">Material &amp; Finish<br />Guidance</p>
+          </div>
+
+          <!-- 6. Project Consultation -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M40 22C40 31.94 31.94 38 22 38C19 38 16.14 37.3 13.6 36.04L6 38.5L8.74 31.54C7.02 28.84 6 25.56 6 22C6 12.06 14.06 6 24 6C33.94 6 40 12.06 40 22Z" stroke="url(#platGrad)" stroke-width="2.5" stroke-linejoin="round" fill="url(#platGrad)" fill-opacity="0.14" />
+                <circle cx="16" cy="22" r="2.5" fill="url(#platGrad)" />
+                <circle cx="24" cy="22" r="2.5" fill="url(#platGrad)" />
+                <circle cx="32" cy="22" r="2.5" fill="url(#platGrad)" />
+              </svg>
+            </div>
+            <p class="benefit-label">Project<br />Consultation</p>
+          </div>
+
+          <!-- 7. Sales Coordination -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M12 28L18 22L28 32L22 38C20 40 16.5 40 14.5 38L10 33.5C8 31.5 8 28 10 26L12 28Z" fill="url(#platGrad)" opacity="0.45" />
+                <path d="M22 18L30 10C32 8 35.5 8 37.5 10L40 12.5C42 14.5 42 18 40 20L32 28" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M18 22L24 16L32 24L26 30" stroke="url(#platGrad)" stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M6 34L14 26" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M34 14L42 22" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <p class="benefit-label">Sales<br />Coordination</p>
+          </div>
+
+          <!-- 8. Partnership Enquiries -->
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="6" y="10" width="36" height="28" rx="3" stroke="url(#platGrad)" stroke-width="2.5" fill="url(#platGrad)" fill-opacity="0.14" />
+                <path d="M6 14L24 27L42 14" stroke="url(#platGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="24" cy="27" r="5" fill="#141517" stroke="url(#platGrad)" stroke-width="2" />
+                <circle cx="24" cy="27" r="2" fill="#FFFFFF" />
+              </svg>
+            </div>
+            <p class="benefit-label">Partnership<br />Enquiries</p>
+          </div>
+        </div>
       </div>
     </section>
     <div class="studio-grid">
