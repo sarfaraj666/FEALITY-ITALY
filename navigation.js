@@ -15,6 +15,12 @@
 
   if (searchPanel) searchPanel.inert = true;
   let lastFocusedElement = null;
+  const backdrop = document.createElement('div');
+  backdrop.className = 'menu-backdrop';
+  backdrop.setAttribute('aria-hidden', 'true');
+  document.body.append(backdrop);
+  backdrop.addEventListener('click', () => setPanelState(menuPanel, false));
+  const backgroundState = new Map();
 
   function setPanelState(panel, isOpen) {
     if (!panel) return;
@@ -23,6 +29,17 @@
     panel.setAttribute('aria-hidden', String(!isOpen));
     const anyOpen = (menuPanel && menuPanel.classList.contains('open')) || (searchPanel && searchPanel.classList.contains('open'));
     document.body.style.overflow = anyOpen ? 'hidden' : '';
+    backdrop.classList.toggle('open', !!menuPanel?.classList.contains('open'));
+    for (const element of document.body.children) {
+      if ([menuPanel, searchPanel, backdrop].includes(element) || ['SCRIPT', 'STYLE', 'LINK'].includes(element.tagName)) continue;
+      if (anyOpen) {
+        if (!backgroundState.has(element)) backgroundState.set(element, element.inert);
+        element.inert = true;
+      } else if (backgroundState.has(element)) {
+        element.inert = backgroundState.get(element);
+        backgroundState.delete(element);
+      }
+    }
 
     if (panel === menuPanel && menuToggle) {
       menuToggle.setAttribute('aria-expanded', String(isOpen));
@@ -98,6 +115,7 @@
   // 3. Search indexing across collections and editorial pages
   if (siteSearch && searchResults) {
     const searchableItems = [
+      { name: 'Contact Us — Product Enquiry', category: 'CONTACT', url: 'contact.html' },
       { name: 'Kitchen', category: 'COLLECTION', url: 'kitchen.html' },
       { name: 'Wardrobes', category: 'COLLECTION', url: 'wardrobes.html' },
       { name: 'Bathroom Vanity', category: 'COLLECTION', url: 'vanity.html' },
@@ -112,8 +130,7 @@
       { name: 'Wall Cabinets & Stainless Steel Basins', category: 'VANITY ELEMENT', url: 'vanity.html#kitchen-gallery' },
       { name: 'Full Vanity Gallery (14 Designs)', category: 'GALLERY', url: 'vanity.html#kitchen-gallery' },
       { name: 'About FEALITY ITALY', category: 'INFORMATION', url: 'about.html' },
-      { name: 'How It Works & Process', category: 'INFORMATION', url: 'how-it-works.html' },
-      { name: 'FAQs - Frequently Asked Questions', category: 'INFORMATION', url: 'faqs.html' },
+        { name: 'FAQs - Frequently Asked Questions', category: 'INFORMATION', url: 'faqs.html' },
       { name: 'Terms & Policies', category: 'INFORMATION', url: 'terms-policies.html' }
     ];
 

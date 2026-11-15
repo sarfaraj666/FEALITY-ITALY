@@ -41,12 +41,19 @@
       .contact-draft button { justify-self: start; }
     }
   </style>
+  <link rel="stylesheet" href="client-refinements.css?v=1" />
+  <script src="kitchen-data.js" defer></script>
+  <script src="wardrobe-data.js" defer></script>
+  <script src="vanity-data.js" defer></script>
+  <script src="balcony-data.js" defer></script>
+  <script src="enquiry-config.js" defer></script>
+  <script src="customer-enquiry.js" defer></script>
 </head>
 <body class="interior-page">
   <a class="skip-link" href="#mainContent">Skip to content</a>
   <header class="site-header" id="siteHeader">
     <a class="wordmark" href="index.html" aria-label="FEALITY ITALY — Home"><picture><source media="(max-width: 600px), (min-width: 901px)" srcset="assets/images/feality-italy-logo-navbar.png" /><img src="assets/images/feality-italy-logo.png" alt="FEALITY ITALY" /></picture></a>
-    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="balcony.html">Balcony</a><a href="about.html">About Us</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
+    <div class="header-right"><nav class="primary-nav" aria-label="Main navigation"><a href="kitchen.html">Kitchen</a><a href="wardrobes.html">Wardrobes</a><a href="vanity.html">Vanity</a><a href="balcony.html">Balcony</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav><button class="icon-button search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="language-button" id="languageButton" aria-label="Language English">ENG</button></div>
   <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="menuPanel" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
   <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true" tabindex="-1" inert>
@@ -69,31 +76,21 @@
       <a class="guide-link" href="tel:+919522251777">Call +91 95222 51777</a>
     </div>
     <article class="contact-section" aria-labelledby="message-title">
-      <h2 id="message-title">Send a WhatsApp enquiry</h2>
-      <form class="contact-draft" action="https://wa.me/919522251777" method="get">
-        <label>Your name
-          <input id="contact-name" type="text" autocomplete="name" required>
-        </label>
-        <label>Collection
-          <select id="contact-collection" required>
-            <option value="">Select a collection</option>
-            <option>Kitchen</option><option>Wardrobes</option><option>Vanity</option><option>General enquiry</option>
-          </select>
-        </label>
-        <label class="message-field">Your message
-          <textarea name="text" rows="3" required placeholder="Tell us about your space"></textarea>
-        </label>
-        <button type="submit">Continue to WhatsApp &#8599;</button>
-        <p>You can review and send your message in WhatsApp.</p>
+      <h2 id="message-title">Send an enquiry</h2>
+      <form class="contact-draft" data-customer-enquiry>
+        <label>Full name *<input name="name" autocomplete="name" maxlength="100" required></label>
+        <label>Phone number *<input name="phone" type="tel" autocomplete="tel" maxlength="25" required></label>
+        <label>Email address<input name="email" type="email" autocomplete="email" maxlength="160"></label>
+        <label>City / region *<input name="city" autocomplete="address-level2" maxlength="100" required></label>
+        <label>Collection *<select name="collection" required><option>Kitchen</option><option>Wardrobes</option><option>Vanity</option><option>Balcony</option><option>General enquiry</option><option>Studio partnership</option></select></label>
+        <label>Product / design<select name="designId"><option value="">Help me choose</option></select></label>
+        <p class="enquiry-product" data-product-details></p>
+        <label class="message-field">Your message<textarea name="message" rows="4" maxlength="2000" placeholder="Tell us about your space"></textarea></label>
+        <label class="enquiry-consent"><input name="consent" type="checkbox" required><span>I agree to the <a href="terms-policies.html">terms and privacy policy</a> and to be contacted about this enquiry.</span></label>
+        <button type="submit">Send enquiry →</button>
+        <p>Your enquiry includes the collection and design selected above.</p>
+        <noscript>Please call <a href="tel:+919522251777">9522251777</a> or email <a href="mailto:sksarfarajali824@gmail.com">sksarfarajali824@gmail.com</a>.</noscript>
       </form>
-      <script>
-        document.querySelector('.contact-draft').addEventListener('formdata', event => {
-          const name = document.getElementById('contact-name').value.trim();
-          const collection = document.getElementById('contact-collection').value;
-          const message = event.formData.get('text').trim();
-          event.formData.set('text', [name, collection, message].join('\n\n'));
-        });
-      </script>
     </article>
   </main>
   <footer class="site-footer" id="site-footer" aria-label="FEALITY ITALY">
@@ -108,12 +105,12 @@
         </ul>
         <ul>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="contact.html" aria-current="page">Contact Us</a></li>
         </ul>
         <ul>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="terms-policies.html">Terms &amp; Policies</a></li>
-        </ul><div class="footer-social"><strong>Follow Us</strong><div><span role="img" aria-label="Facebook, profile link unavailable" title="Facebook — profile link unavailable"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 21v-8h3l.5-4H14V7c0-1 .5-2 2-2h2V2h-3c-3 0-5 2-5 5v2H7v4h3v8z"/></svg></span><span role="img" aria-label="Instagram, profile link unavailable" title="Instagram — profile link unavailable"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7"/></svg></span><span role="img" aria-label="LinkedIn, profile link unavailable" title="LinkedIn — profile link unavailable"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v8m0-12v1m4 11v-8m0 4c0-5 6-5 6 0v4"/></svg></span><span role="img" aria-label="Pinterest, profile link unavailable" title="Pinterest — profile link unavailable"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="m9 20 3-12m-3 6c-4-7 6-12 8-5 1 5-3 8-6 5"/></svg></span><span role="img" aria-label="YouTube, profile link unavailable" title="YouTube — profile link unavailable"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></span></div></div>
+        </ul><div class="footer-social"><strong>Follow Us</strong><div><a href="https://www.instagram.com/fealityitaly/" target="_blank" rel="noopener noreferrer" aria-label="FEALITY ITALY on Instagram (opens in a new tab)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7"/></svg></a></div></div>
       </nav>
     </div>
   </footer>
