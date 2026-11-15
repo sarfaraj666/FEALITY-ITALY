@@ -99,10 +99,19 @@
   });
 
   // Featured and editorial cards open the complete collection, independently of filters.
-  // Delegation also supports cards rendered by the existing Kitchen carousel.
+  // Delegation also supports cards rendered by the existing Kitchen carousel and Balcony side cards.
   document.addEventListener('click', event => {
-    const button = event.target.closest('[data-collection-design], [data-vanity-design]');
+    const button = event.target.closest('[data-collection-design], [data-vanity-design], [data-balcony-side]');
     if (!button || event.defaultPrevented) return;
+    if (button.dataset.balconySide !== undefined) {
+      event.preventDefault();
+      const pos = Number(button.dataset.balconySide);
+      if (pos >= 0 && pos < designs.length) {
+        if (visible.length !== designs.length) render('All Designs');
+        open(pos, button);
+      }
+      return;
+    }
     const id = button.dataset.collectionDesign || button.dataset.vanityDesign;
     const position = designs.findIndex(design => design.id === id);
     if (position < 0) return;
@@ -272,6 +281,9 @@
   window[galleryHook] = Object.freeze({
     setEnquiryHandler(handler) {
       enquiryHandler = typeof handler === 'function' ? handler : null;
+      if (enquiry) enquiry.disabled = !enquiryHandler;
+      const note = get('kitchen-enquiry-note');
+      if (note) note.hidden = !!enquiryHandler;
     }
   });
   enquiry.addEventListener('click', event => {

@@ -4,9 +4,9 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 
 const columns = [
-  [['Kitchen', 'kitchen.html'], ['Wardrobes', 'wardrobes.html'], ['Vanity', 'vanity.html']],
-  [['About Us', 'about.html'], ['How It Works', 'how-it-works.html']],
-  [['FAQs', 'kitchen.html#faqs'], ['Terms &amp; Policies', 'terms-policies.html']]
+  [['Kitchen', 'kitchen.html'], ['Wardrobes', 'wardrobes.html'], ['Vanity', 'vanity.html'], ['Balcony', 'balcony.html']],
+  [['About Us', 'about.html'], ['Contact Us', 'contact.html']],
+  [['FAQs', 'faqs.html'], ['Terms &amp; Policies', 'terms-policies.html']]
 ];
 
 // Set a URL only after the business has approved the profile.

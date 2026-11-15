@@ -348,7 +348,13 @@ p {
   outline: none;
   font-family: var(--font-ui);
   font-size: clamp(24px, 4vw, 55px);
-  padding: 15px 0
+  padding: 15px 0;
+}
+
+.search-line input::-webkit-search-cancel-button,
+.search-line input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .search-line span {

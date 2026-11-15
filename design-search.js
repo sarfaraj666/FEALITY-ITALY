@@ -3,12 +3,11 @@
   const input = document.getElementById('siteSearch');
   const results = document.getElementById('searchResults');
   if (!input || !results) return;
-  const balcony = ['Balcony', 'balcony', 'balcony-data.js', 'FealityBalconyDesigns'];
-  const collections = document.body.classList.contains('home-page') ? [balcony] : [
+  const collections = [
     ['Kitchen', 'kitchen', 'kitchen-data.js', 'FealityKitchenDesigns'],
     ['Wardrobes', 'wardrobes', 'wardrobe-data.js', 'FealityWardrobeDesigns'],
     ['Vanity', 'vanity', 'vanity-data.js', 'FealityVanityDesigns'],
-    balcony
+    ['Balcony', 'balcony', 'balcony-data.js', 'FealityBalconyDesigns']
   ];
   let loading;
   // A catalogue result enters a modal, so only this departure opts out of

@@ -77,7 +77,19 @@
       busy = true; button.disabled = true; status.textContent = 'Sending your enquiry…';
       const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), 45000);
       try {
-        const response = await fetch(config.endpoint, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit', redirect: 'follow' });
+        let response;
+        try {
+          response = await fetch(config.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit' });
+        } catch (fetchErr) {
+          if (config.fallbackEndpoint && config.fallbackEndpoint !== config.endpoint) {
+            response = await fetch(config.fallbackEndpoint, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit', redirect: 'follow' });
+          } else {
+            throw fetchErr;
+          }
+        }
+        if (!response.ok && config.fallbackEndpoint && config.fallbackEndpoint !== config.endpoint) {
+          response = await fetch(config.fallbackEndpoint, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit', redirect: 'follow' });
+        }
         const result = await response.json();
         if (!response.ok || result.saved !== true || !/^FE-[a-f0-9-]{36}$/.test(result.id)) throw new Error('Unconfirmed');
         status.textContent = `Thank you. Your enquiry has been received. Reference: ${result.id}`;

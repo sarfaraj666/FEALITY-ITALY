@@ -1,6 +1,23 @@
-// Public endpoint only. Never put API tokens or passwords in website code.
-window.FealityEnquiryConfig = Object.freeze({
-  endpoint: 'https://script.google.com/macros/s/AKfycbwzZiAxlETON2wRUjxlLG5T2yx7WQxqRSnMyaeb-mzX8hjXJnPqqA4x8HYruBlLSmey/exec',
-  email: 'sksarfarajali824@gmail.com',
-  whatsapp: '919832722644'
-});
+// Public configuration for FEALITY ITALY client-side forms.
+(() => {
+  'use strict';
+  window.FealityEnquiryConfig = {
+    endpoint: '/api/enquiry',
+    email: 'info@fealityitaly.com',
+    whatsapp: '919832722644'
+  };
+
+  // Safely retrieve runtime public contact configurations from the server
+  if (typeof fetch === 'function') {
+    fetch('/api/config')
+      .then(res => (res.ok ? res.json() : null))
+      .then(cfg => {
+        if (cfg && typeof cfg === 'object') {
+          if (cfg.whatsapp) window.FealityEnquiryConfig.whatsapp = cfg.whatsapp;
+          if (cfg.email) window.FealityEnquiryConfig.email = cfg.email;
+          if (cfg.phone) window.FealityEnquiryConfig.phone = cfg.phone;
+        }
+      })
+      .catch(() => {});
+  }
+})();

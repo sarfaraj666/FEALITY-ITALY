@@ -26,8 +26,8 @@
   ];
   const balcony = [
     {
-      src: 'assets/balcony/web/2-960.webp',
-      srcset: 'assets/balcony/web/2-480.webp 480w, assets/balcony/web/2-960.webp 960w, assets/balcony/2.png 1671w',
+      src: 'assets/Balcony/web/2-960.webp',
+      srcset: 'assets/Balcony/web/2-480.webp 480w, assets/Balcony/web/2-960.webp 960w, assets/Balcony/2.png 1671w',
       width: 1671, height: 941,
       alt: 'Balcony collection with architectural outdoor storage cabinetry'
     }

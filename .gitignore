@@ -1,0 +1,25 @@
+# Environment & sensitive credentials (NEVER commit these)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.cert
+*.crt
+
+# Customer database & private lead records
+data/
+*.db
+*.sqlite
+
+# Dependencies & logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

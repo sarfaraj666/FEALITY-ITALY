@@ -173,7 +173,10 @@
   const langButton = document.getElementById('languageButton');
   if (langButton) {
     langButton.addEventListener('click', () => {
-      alert('This demo currently supports English only.');
+      const originalText = langButton.textContent;
+      langButton.textContent = 'ENGLISH';
+      langButton.setAttribute('title', 'English is the active language');
+      setTimeout(() => { langButton.textContent = originalText; }, 1800);
     });
   }
 
