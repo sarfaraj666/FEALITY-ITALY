@@ -34,6 +34,23 @@ FEALITY ITALY delivers an editorial design experience for luxury interiors. The 
 ## What Has Been Done (Changelog & Milestones)
 
 ### 1. UI & Frontend Bug Fixes
+* **Removal of Diagonal Arrow Glyphs (`↗`)**:
+  * Removed obsolete unicode arrows across all 20 HTML pages, search result lists, gallery cards, and mobile menus for a clean, editorial look.
+* **Luxury Glassmorphism Matte Finish on Quick Search**:
+  * Styled `.search-panel` with satin translucent backdrop blur (`blur(28px) saturate(180%)`), subtle gradient borders, frosted input underlines, and matte result item states.
+* **Unified Lightbox Navigation for Balcony Perspective Designs**:
+  * Integrated perspective side designs (`FealityBalconySideDesigns`) with `kitchen-gallery.js` so clicking cards opens the exact design with its bespoke details, counter, Next/Previous controls, and enquiry handler, eliminating conflicting inline scripts.
+* **Search Indexing & Title Fallback Corrections**:
+  * Fixed design search fallback in `design-search.js` from hardcoded `'Kitchen Design '` to dynamic `label + ' Design ' + design.id`.
+  * Indexed Balcony elements, galleries, and perspective side cards in both `navigation.js` and `design-search.js`.
+* **BFCache Restoration Cleanup**:
+  * Added `searchPanel` reset in `pageshow` listener in `navigation.js` to ensure the modal panel cleanly dismisses when navigating with browser back/forward buttons.
+* **Outdated Copy & Developer Scaffolding Replacement**:
+  * Updated `about.html` line 114 to point clients directly to the Contact & Enquiry page and phone concierge.
+  * Replaced developer draft scaffolding on `terms-policies.html` with formal, production-grade policies on custom showcases, privacy, quotations, and lifetime warranties.
+* **Script Cleanup & Dead Test Harness Removal**:
+  * Removed duplicate enquiry scripts from `own-a-feality-studio.html`.
+  * Removed inactive test harness links (`lead-enquiry.js` and `lead-enquiry.css`) from collection pages.
 * **Missing Balcony Navigation in Footer**:
   * Added the missing "Balcony" collection link across all 10 HTML pages (`about.html`, `balcony.html`, `contact.html`, `faqs.html`, `index.html`, `kitchen.html`, `own-a-feality-studio.html`, `terms-policies.html`, `vanity.html`, `wardrobes.html`).
   * Updated the templating utility in `tools/render-footer.cjs`.
