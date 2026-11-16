@@ -250,8 +250,7 @@ p {
   width: 21px
 }
 
-.menu-panel,
-.search-panel {
+.menu-panel {
   position: fixed;
   inset: 0;
   z-index: 40;
@@ -259,12 +258,33 @@ p {
   padding: 40px 6%;
   transform: translateY(-103%);
   transition: transform .6s cubic-bezier(.76, 0, .24, 1);
-  overflow: auto
+  overflow: auto;
+}
+
+.search-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(246, 244, 239, 0.78);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+  padding: 40px 6%;
+  transform: translateY(-103%);
+  transition: transform .5s cubic-bezier(.16, 1, 0.3, 1), opacity .3s ease;
+  overflow: auto;
+}
+
+@supports not (backdrop-filter: blur(20px)) {
+  .search-panel {
+    background: #edece7;
+  }
 }
 
 .menu-panel.open,
 .search-panel.open {
-  transform: translateY(0)
+  transform: translateY(0);
 }
 
 .menu-top,
@@ -321,23 +341,65 @@ p {
 
 .search-panel {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
-.search-panel>button {
-  align-self: flex-end
+.search-panel > button {
+  align-self: flex-end;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(.16, 1, 0.3, 1);
+}
+
+.search-panel > button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
 }
 
 .search-panel label {
-  font-size: 12px;
-  letter-spacing: .15em;
-  margin-top: 20vh
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #52504b;
+  margin-top: clamp(28px, 6vh, 60px);
 }
 
 .search-line {
   display: flex;
-  border-bottom: 1px solid var(--ink);
-  margin-top: 30px
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  padding: 4px 20px;
+  margin-top: 18px;
+  max-width: 720px;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.95), 0 8px 24px -4px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(.16, 1, 0.3, 1);
+}
+
+.search-line:focus-within {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(201, 169, 110, 0.8);
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.95), 0 12px 28px -4px rgba(0, 0, 0, 0.08);
 }
 
 .search-line input {
@@ -347,8 +409,16 @@ p {
   border: none;
   outline: none;
   font-family: var(--font-ui);
-  font-size: clamp(24px, 4vw, 55px);
-  padding: 15px 0;
+  font-size: clamp(20px, 3vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  padding: 10px 0;
+}
+
+.search-line input::placeholder {
+  color: #8c8a83;
+  font-weight: 300;
 }
 
 .search-line input::-webkit-search-cancel-button,
@@ -357,27 +427,56 @@ p {
   appearance: none;
 }
 
-.search-line span {
-  font-size: 30px
-}
-
 .search-results {
   display: flex;
   flex-direction: column;
-  max-width: 650px;
-  margin-top: 25px
+  max-width: 720px;
+  margin-top: 20px;
+  gap: 8px;
 }
 
 .search-results a {
-  padding: 12px;
-  border-bottom: 1px solid var(--line)
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s cubic-bezier(.16, 1, 0.3, 1);
+}
+
+.search-results a:hover,
+.search-results a:focus-visible {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(201, 169, 110, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .search-results a span {
-  float: right;
   font-size: 10px;
+  font-weight: 600;
   letter-spacing: .08em;
-  color: #777770
+  text-transform: uppercase;
+  color: #777670;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.search-results a:hover span {
+  background: rgba(201, 169, 110, 0.15);
+  color: #5c4d32;
 }
 
 .hero {
@@ -1410,20 +1509,47 @@ p {
 }
 
 @media (max-width: 768px) {
-  #searchPanel { padding: max(12px, env(safe-area-inset-top)) 6% 24px; }
-  #searchPanel > button { min-height: 44px; font-size: 10px; }
-  #searchPanel label { margin-top: 18px; font-size: 10px; letter-spacing: .1em; }
-  #searchPanel .search-line { align-items: center; gap: 8px; margin-top: 6px; }
-  #searchPanel .search-line input { padding: 10px 0; min-height: 44px; font-size: 16px; }
-  #searchPanel .search-line span { font-size: 18px; }
-  #searchPanel .search-results { margin-top: 12px; }
+  #searchPanel {
+    padding: max(16px, env(safe-area-inset-top)) 6% 28px;
+  }
+  #searchPanel > button {
+    min-height: 38px;
+    padding: 6px 14px;
+    font-size: 10px;
+  }
+  #searchPanel label {
+    margin-top: 16px;
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+  #searchPanel .search-line {
+    padding: 4px 14px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  #searchPanel .search-line input {
+    padding: 8px 0;
+    min-height: 40px;
+    font-size: 17px;
+  }
+  #searchPanel .search-results {
+    margin-top: 12px;
+    gap: 6px;
+  }
   #searchPanel .search-results a {
-    display: grid; grid-template-columns: minmax(0, 1fr) 6.5em;
-    align-items: center; gap: 12px; min-height: 44px; padding: 8px 0;
-    font: 400 13px/1.4 var(--font-ui); overflow-wrap: anywhere;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 10px 14px;
+    font: 400 13px/1.4 var(--font-ui);
+    overflow-wrap: anywhere;
   }
   #searchPanel .search-results a span {
-    float: none; font-size: 10px; line-height: 1.35; letter-spacing: .04em; text-align: right;
+    font-size: 9px;
+    padding: 2px 6px;
+    text-align: right;
   }
 }
 
