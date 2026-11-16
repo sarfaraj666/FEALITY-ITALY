@@ -91,7 +91,7 @@
           response = await fetch(config.fallbackEndpoint, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit', redirect: 'follow' });
         }
         const result = await response.json();
-        if (!response.ok || result.saved !== true || !/^FE-[a-f0-9-]{36}$/.test(result.id)) throw new Error('Unconfirmed');
+        if (!response.ok || result.saved !== true || !/^FE-[a-f0-9-]{32,36}$/.test(result.id)) throw new Error('Unconfirmed');
         status.textContent = `Thank you. Your enquiry has been received. Reference: ${result.id}`;
         // Keep this ID for repeated clicks with unchanged details. A genuine edit
         // generates a new ID above; a lost response can safely be retried.

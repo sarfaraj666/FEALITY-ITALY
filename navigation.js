@@ -120,6 +120,8 @@
       { name: 'Wardrobes', category: 'COLLECTION', url: 'wardrobes.html' },
       { name: 'Bathroom Vanity', category: 'COLLECTION', url: 'vanity.html' },
       { name: 'Balcony', category: 'COLLECTION', url: 'balcony.html' },
+      { name: 'Weatherproof Balcony Cabinetry & Laundry Units', category: 'BALCONY ELEMENT', url: 'balcony.html#balcony-side-gallery' },
+      { name: 'Full Balcony Gallery (6 Designs)', category: 'GALLERY', url: 'balcony.html#kitchen-gallery' },
       { name: 'Kitchen Island & Stone Worktops', category: 'KITCHEN ELEMENT', url: 'kitchen.html#kitchen-gallery' },
       { name: 'Cabinet Fronts & Illuminated Shelving', category: 'KITCHEN ELEMENT', url: 'kitchen.html#kitchen-gallery' },
       { name: 'Full Kitchen Gallery (15 Designs)', category: 'GALLERY', url: 'kitchen.html#kitchen-gallery' },
@@ -227,6 +229,7 @@
   // bfcache back/forward instant recovery
   window.addEventListener('pageshow', () => {
     if (menuPanel && menuPanel.classList.contains('open')) setPanelState(menuPanel, false);
+    if (searchPanel && searchPanel.classList.contains('open')) setPanelState(searchPanel, false);
     document.body.classList.remove('is-page-transitioning');
   });
 

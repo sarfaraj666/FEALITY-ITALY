@@ -7,7 +7,8 @@
     ['Kitchen', 'kitchen', 'kitchen-data.js', 'FealityKitchenDesigns'],
     ['Wardrobes', 'wardrobes', 'wardrobe-data.js', 'FealityWardrobeDesigns'],
     ['Vanity', 'vanity', 'vanity-data.js', 'FealityVanityDesigns'],
-    ['Balcony', 'balcony', 'balcony-data.js', 'FealityBalconyDesigns']
+    ['Balcony', 'balcony', 'balcony-data.js', 'FealityBalconyDesigns'],
+    ['Balcony', 'balcony', 'balcony-data.js', 'FealityBalconySideDesigns', 'sideDesign']
   ];
   let loading;
   // A catalogue result enters a modal, so only this departure opts out of
@@ -43,13 +44,15 @@
     await catalog();
     if (version !== revision) return;
     const fragment = document.createDocumentFragment();
-    for (const [label, route, , key] of collections) {
+    for (const [label, route, , key, paramKey] of collections) {
       for (const design of window[key] || []) {
-        const title = design.name || ('Kitchen Design ' + design.id);
-        if (!(label + ' Design ' + design.id + ' ' + title + ' ' + design.alt).toLowerCase().includes(query)) continue;
+        const title = design.name || (label + ' Design ' + design.id);
+        if (!(label + ' Design ' + design.id + ' ' + title + ' ' + (design.alt || '')).toLowerCase().includes(query)) continue;
         const link = document.createElement('a');
         link.dataset.designResult = '';
-        link.href = route + '.html?design=' + encodeURIComponent(design.id) + '#kitchen-gallery';
+        const param = paramKey || 'design';
+        const hash = paramKey ? '#balcony-side-gallery' : '#kitchen-gallery';
+        link.href = route + '.html?' + param + '=' + encodeURIComponent(design.id) + hash;
         link.append(title);
         const category = document.createElement('span');
         category.textContent = label;

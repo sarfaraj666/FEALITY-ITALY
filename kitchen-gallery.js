@@ -16,6 +16,7 @@
   const status = get('kitchen-image-status');
   const enquiry = get('kitchen-enquire');
   let visible = designs;
+  let activeList = designs;
   let current = 0;
   let trigger = null;
   let savedOverflow = null;
@@ -30,7 +31,8 @@
     return node;
   }
 
-  function open(position, button) {
+  function open(position, button, list) {
+    if (list) activeList = list;
     trigger = button;
     if (savedOverflow === null) savedOverflow = document.body.style.overflow;
     dialog.showModal();
@@ -106,9 +108,9 @@
     if (button.dataset.balconySide !== undefined) {
       event.preventDefault();
       const pos = Number(button.dataset.balconySide);
-      if (pos >= 0 && pos < designs.length) {
-        if (visible.length !== designs.length) render('All Designs');
-        open(pos, button);
+      const sideList = window.FealityBalconySideDesigns || [];
+      if (pos >= 0 && pos < sideList.length) {
+        open(pos, button, sideList);
       }
       return;
     }
@@ -122,6 +124,7 @@
 
   function render(category) {
     visible = designs.filter(design => category === 'All Designs' || design.category === category);
+    activeList = visible;
     filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.textContent === category)));
     const fragment = document.createDocumentFragment();
     visible.forEach((design, position) => {
@@ -156,10 +159,10 @@
   });
 
   async function show(position) {
-    current = (position + visible.length) % visible.length;
-    const design = visible[current];
+    current = (position + activeList.length) % activeList.length;
+    const design = activeList[current];
     const token = ++request;
-    get('kitchen-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(visible.length).padStart(2, '0')}`;
+    get('kitchen-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(activeList.length).padStart(2, '0')}`;
     const description = [design.description, design.details].filter(Boolean).join('\n\n');
     const descEl = get('kitchen-description');
     if (descEl) {
@@ -190,7 +193,7 @@
         nameEl.hidden = !rawName;
       }
     }
-    get('kitchen-previous').disabled = get('kitchen-next').disabled = visible.length < 2;
+    get('kitchen-previous').disabled = get('kitchen-next').disabled = activeList.length < 2;
     fullImage.classList.add('is-loading');
     status.textContent = 'Loading image…';
     const image = new Image();
@@ -199,9 +202,9 @@
       await image.decode();
       if (token !== request || !dialog.open) return;
       fullImage.src = design.source;
-      fullImage.alt = design.alt;
-      fullImage.width = design.width;
-      fullImage.height = design.height;
+      fullImage.alt = design.alt || design.name || '';
+      if (design.width) fullImage.width = design.width; else fullImage.removeAttribute('width');
+      if (design.height) fullImage.height = design.height; else fullImage.removeAttribute('height');
       status.textContent = '';
       dialog.setAttribute('aria-labelledby', 'kitchen-lightbox-title kitchen-design-name');
       fullImage.classList.remove('is-loading');
@@ -286,12 +289,21 @@
   enquiry.addEventListener('click', event => {
     if (!enquiryHandler) return;
     event.preventDefault();
-    const handler = enquiryHandler, design = { ...visible[current] };
+    const handler = enquiryHandler, design = { ...activeList[current] };
     dialog.addEventListener('close', () => handler(design), { once: true });
     dialog.close();
   });
   render('All Designs');
   const requestedId = new URLSearchParams(location.search).get('design');
-  const requestedIndex = designs.findIndex(design => design.id === requestedId);
-  if (requestedIndex >= 0) open(requestedIndex, grid.children[requestedIndex]);
+  const requestedSideId = new URLSearchParams(location.search).get('sideDesign');
+  if (requestedSideId && window.FealityBalconySideDesigns) {
+    const sideIdx = window.FealityBalconySideDesigns.findIndex(d => d.id === requestedSideId);
+    if (sideIdx >= 0) {
+      const card = document.querySelector(`[data-balcony-side="${sideIdx}"]`);
+      open(sideIdx, card, window.FealityBalconySideDesigns);
+    }
+  } else if (requestedId) {
+    const requestedIndex = designs.findIndex(design => design.id === requestedId);
+    if (requestedIndex >= 0) open(requestedIndex, grid.children[requestedIndex]);
+  }
 })();

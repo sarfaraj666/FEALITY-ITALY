@@ -29,9 +29,7 @@
   <meta property="og:url" content="https://sarfaraj666.github.io/FEALITY-ITALY/balcony.html" />
   <script src="design-search.js?v=2" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sarfaraj666.github.io/FEALITY-ITALY/"}, {"@type": "ListItem", "position": 2, "name": "Balcony", "item": "https://sarfaraj666.github.io/FEALITY-ITALY/balcony.html"}]}</script>
-  <link rel="stylesheet" href="lead-enquiry.css" />
   <link rel="stylesheet" href="mobile-editorial.css" media="(max-width: 768px)" />
-  <script defer src="lead-enquiry.js"></script>
   <link rel="stylesheet" href="typography-refinement.css?v=2" />
   <link rel="stylesheet" href="interior-type.css" />
   <link rel="stylesheet" href="balcony-gallery.css?v=1" />
@@ -225,41 +223,6 @@
       </nav>
     </div>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.balcony-side-card').forEach((card, idx) => {
-        card.addEventListener('click', () => {
-          const sideDesigns = window.FealityBalconySideDesigns;
-          if (!sideDesigns || !sideDesigns[idx]) return;
-          const design = sideDesigns[idx];
-          const dialog = document.getElementById('kitchen-lightbox');
-          const fullImage = document.getElementById('kitchen-full-image');
-          const nameEl = document.getElementById('kitchen-design-name');
-          const descEl = document.getElementById('kitchen-description');
-          const counterEl = document.getElementById('kitchen-counter');
-          if (!dialog || !fullImage) return;
-          fullImage.src = design.source;
-          fullImage.alt = design.alt || design.name;
-          if (nameEl) {
-            const rawName = design.name || '';
-            const match = rawName.match(/^(.+?)\s*(?:-\s*)?(?:Balcony|BALCONY)$/i);
-            const baseName = match ? match[1] : rawName;
-            const span = document.createElement('span');
-            span.className = 'design-emphasis balcony-emphasis';
-            span.textContent = 'Balcony';
-            nameEl.replaceChildren(baseName, ' ', span);
-            nameEl.hidden = false;
-          }
-          const descText = [design.description, design.details].filter(Boolean).join('\n\n');
-          if (descEl) { descEl.textContent = descText; descEl.hidden = !descText; }
-          if (counterEl) { counterEl.textContent = `${String(idx + 1).padStart(2, '0')} / ${String(sideDesigns.length).padStart(2, '0')}`; }
-          dialog.showModal();
-          document.body.style.overflow = 'hidden';
-        });
-      });
-    });
-  </script>
 
   <a class="floating-whatsapp" href="https://wa.me/919832722644?text=Hello%20FEALITY%20ITALY%2C%20I%20would%20like%20to%20know%20more%20about%20your%20interior%20designs." target="_blank" rel="noopener noreferrer" aria-label="Chat with FEALITY ITALY on WhatsApp (opens in a new tab)">
     <img src="assets/images/whatsapp-contact.svg" alt="" width="27" height="27" />
