@@ -52,7 +52,7 @@
         link.href = route + '.html?design=' + encodeURIComponent(design.id) + '#kitchen-gallery';
         link.append(title);
         const category = document.createElement('span');
-        category.textContent = label + ' ↗';
+        category.textContent = label;
         link.append(category);
         fragment.append(link);
       }

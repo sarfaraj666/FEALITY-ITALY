@@ -148,7 +148,7 @@
 
       if (matches.length > 0) {
         searchResults.innerHTML = matches.map(item =>
-          `<a href="${item.url}">${item.name} <span>${item.category} ↗</span></a>`
+          `<a href="${item.url}">${item.name} <span>${item.category}</span></a>`
         ).join('');
         searchResults.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => setPanelState(searchPanel, false));

@@ -140,9 +140,6 @@
       media.append(img);
       const caption = element('span', 'kitchen-gallery-caption');
       caption.append(element('span', '', title));
-      const arrow = element('span', '', '↗');
-      arrow.setAttribute('aria-hidden', 'true');
-      caption.append(arrow);
       button.append(media, caption);
       addEditorialCaption(button, design);
       button.dataset.galleryPosition = position;

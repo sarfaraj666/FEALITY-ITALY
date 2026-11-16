@@ -81,9 +81,7 @@
       media.append(img, element('span', 'card-number', String(design.id).padStart(2, '0')));
       const info = element('span', 'card-info');
       info.append(element('span', 'card-meta', design.style), element('h3', '', design.name), element('span', 'card-description', design.palette));
-      const arrow = element('span', 'card-arrow', '↗');
-      arrow.setAttribute('aria-hidden', 'true');
-      card.append(media, info, arrow);
+      card.append(media, info);
       fragment.append(card);
     });
     collectionGrid.replaceChildren(fragment);
@@ -205,9 +203,7 @@
         image.height = 56;
         const text = element('span', 'search-result-copy');
         text.append(element('strong', '', design.name), element('small', '', design.style));
-        const arrow = element('span', '', '↗');
-        arrow.setAttribute('aria-hidden', 'true');
-        button.append(image, text, arrow);
+        button.append(image, text);
         fragment.append(button);
       });
     }

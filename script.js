@@ -8,7 +8,7 @@ const desktopPrevious = document.getElementById('prevSlide');
 const desktopNext = document.getElementById('nextSlide');
 const mobilePrevious = document.getElementById('mobilePrev');
 const mobileNext = document.getElementById('mobileNext');
-track.innerHTML = items.map((item, position) => `<article class="collection-card"><a href="#kitchen-gallery" data-collection-design="${item.id}" aria-haspopup="dialog" aria-label="View ${item.name}"><div class="card-image"><img src="${item.image}" srcset="${item.srcset}" sizes="(max-width:600px) 86vw, (max-width:900px) 43vw, 22vw" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async"></div><div class="collection-caption"><h3>${item.name}</h3><span aria-hidden="true">↗</span></div><span class="collection-subtitle">Explore the design</span></a></article>`).join('');
+track.innerHTML = items.map((item, position) => `<article class="collection-card"><a href="#kitchen-gallery" data-collection-design="${item.id}" aria-haspopup="dialog" aria-label="View ${item.name}"><div class="card-image"><img src="${item.image}" srcset="${item.srcset}" sizes="(max-width:600px) 86vw, (max-width:900px) 43vw, 22vw" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async"></div><div class="collection-caption"><h3>${item.name}</h3></div><span class="collection-subtitle">Explore the design</span></a></article>`).join('');
 let index = 0;
 let pageStarts = [];
 function visibleCount() {
@@ -175,8 +175,8 @@ document.getElementById('siteSearch').addEventListener('input', event => {
   const matchedItems = items.filter(item => item.name.toLowerCase().includes(query));
   const matchedCategories = categories.filter(category => category.toLowerCase().includes(query));
   const links = [
-    ...matchedItems.map(item => `<a href="#collection">${item.name} <span>COLLECTION ↗</span></a>`),
-    ...matchedCategories.map(category => `<a href="#elements">${category} <span>ELEMENT ↗</span></a>`)
+    ...matchedItems.map(item => `<a href="#collection">${item.name} <span>COLLECTION</span></a>`),
+    ...matchedCategories.map(category => `<a href="#elements">${category} <span>ELEMENT</span></a>`)
   ];
   results.innerHTML = links.length ? links.join('') : '<p>No matching collections or elements found.</p>';
   results.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(search, false)));

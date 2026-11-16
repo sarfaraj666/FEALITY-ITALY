@@ -241,8 +241,8 @@
   letter-spacing: .02em;
 }
 
-.collection-section .kitchen-gallery-caption > span:last-child,
-.collection-page .collection-section .kitchen-gallery-caption > span:last-child {
+.collection-section .kitchen-gallery-caption > span:last-child:not(:first-child),
+.collection-page .collection-section .kitchen-gallery-caption > span:last-child:not(:first-child) {
   flex-shrink: 0;
   font-size: 18px;
   line-height: 1;

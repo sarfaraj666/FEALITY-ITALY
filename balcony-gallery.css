@@ -120,7 +120,7 @@
   margin-left: 2px;
 }
 
-.balcony-side-caption span:last-child {
+.balcony-side-caption > span:last-child:not(:first-child) {
   display: inline-block;
   font-size: 18px;
   line-height: 1;
@@ -130,7 +130,7 @@
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .balcony-side-card:hover .balcony-side-caption span:last-child {
+  .balcony-side-card:hover .balcony-side-caption > span:last-child:not(:first-child) {
     transform: translate(2px, -2px);
   }
 }

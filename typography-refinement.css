@@ -82,7 +82,7 @@ body.interior-page #mainContent.review-guide .guide-intro > p:not(.eyebrow) {
 }
 
 .home-page #mainContent .home-hero .hero-cta-arrow::before {
-  content: "↗";
+  content: none;
 }
 
 body.polished-page #mainContent :is(.collection-section .kitchen-gallery-caption, .collection-featured .kitchen-gallery-caption, .model-title, .home-collection-card h3, .collection-caption h3) {
