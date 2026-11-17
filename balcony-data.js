@@ -109,18 +109,6 @@ window.FealityBalconyDesigns = [
   },
   {
     "id": "10",
-    "name": "LINE ARIA Balcony Cabinet",
-    "alt": "Line Aria balcony cabinet with slate blue cabinetry, illuminated display shelves and personal vanity",
-    "width": 1774,
-    "height": 887,
-    "source": "assets/Balcony/10.png",
-    "thumbnail": "assets/Balcony/web/10-960.webp",
-    "srcset": "assets/Balcony/web/10-480.webp 480w, assets/Balcony/web/10-960.webp 960w",
-    "description": "A luxurious slate-blue cabinetry suite integrating illuminated display shelving, transparent glass-front wardrobes, and a dedicated personal vanity station.",
-    "details": "TIMELESS ITALIAN BLUE\nSophisticated slate-blue finish paired with warm brass accents and ambient backlighting.\n\nCOMPREHENSIVE DRESSING SUITE\nIntegrated vanity table with upholstered seating, organized shelving and illuminated glass display wardrobes."
-  },
-  {
-    "id": "11",
     "name": "NATURA Balcony Cabinet",
     "alt": "Natura balcony cabinet in warm oak with illuminated amber display niche and integrated laundry",
     "width": 1774,
@@ -132,7 +120,7 @@ window.FealityBalconyDesigns = [
     "details": "NATURAL OAK GRAIN\nRich wood textures elevated by an illuminated warm-amber display alcove.\n\nOPEN-AIR UTILITY\nDedicated laundry appliance space, undermount sink, and concealed overhead storage overlooking a coastal vista."
   },
   {
-    "id": "12",
+    "id": "11",
     "name": "VISTA SERENA Balcony",
     "alt": "Vista Serena balcony with charcoal cabinetry, illuminated wood shelving, a sink and an integrated laundry space overlooking wooded hills",
     "width": 1832,

@@ -176,6 +176,12 @@ const CATALOGUE = {
       "name": "Portagioie Tortora Wardrobe",
       "description": "Pull-out tray with separate watch and accessory compartments.",
       "source": "assets/wardrobes/14.png"
+    },
+    {
+      "id": "15",
+      "name": "Line Aria Wardrobe",
+      "description": "A luxurious slate-blue cabinetry suite integrating illuminated display shelving, transparent glass-front wardrobes, and a dedicated personal vanity station.",
+      "source": "assets/wardrobes/15.png"
     }
   ],
   "Vanity": [
@@ -333,18 +339,12 @@ const CATALOGUE = {
     },
     {
       "id": "10",
-      "name": "LINE ARIA Balcony Cabinet",
-      "description": "A luxurious slate-blue cabinetry suite integrating illuminated display shelving, transparent glass-front wardrobes, and a dedicated personal vanity station.",
-      "source": "assets/Balcony/10.png"
-    },
-    {
-      "id": "11",
       "name": "NATURA Balcony Cabinet",
       "description": "Warm oak cabinetry features an illuminated amber display niche, under-counter washing machine and prep sink against an open coastal panorama.",
       "source": "assets/Balcony/11.png"
     },
     {
-      "id": "12",
+      "id": "11",
       "name": "VISTA SERENA Balcony",
       "description": "Charcoal cabinetry and warm wood accents frame a thoughtfully organised balcony utility space. Illuminated shelves, a practical sink and a dedicated laundry bay bring everyday essentials together against a serene hillside outlook.",
       "source": "assets/Balcony/Hero Section 3.png"

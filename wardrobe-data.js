@@ -152,5 +152,16 @@ window.FealityWardrobeDesigns = [
     "thumbnail": "assets/wardrobes/web/14-960.webp",
     "srcset": "assets/wardrobes/web/14-480.webp 480w, assets/wardrobes/web/14-960.webp 960w",
     "description": "Pull-out tray with separate watch and accessory compartments."
+  },
+  {
+    "id": "15",
+    "name": "Line Aria Wardrobe",
+    "alt": "Slate blue luxury dressing suite with illuminated display shelves, glass wardrobes and personal vanity",
+    "width": 1774,
+    "height": 887,
+    "source": "assets/wardrobes/15.png",
+    "thumbnail": "assets/wardrobes/web/15-960.webp",
+    "srcset": "assets/wardrobes/web/15-480.webp 480w, assets/wardrobes/web/15-960.webp 960w",
+    "description": "A luxurious slate-blue cabinetry suite integrating illuminated display shelving, transparent glass-front wardrobes, and a dedicated personal vanity station."
   }
 ];
