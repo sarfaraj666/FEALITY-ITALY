@@ -24,10 +24,10 @@ Official web platform for **FEALITY ITALY**, showcasing modular Italian kitchens
 
 FEALITY ITALY delivers an editorial design experience for luxury interiors. The platform features:
 * **Frontend**: Responsive, modern semantic HTML5, CSS3 with luxury typography and micro-interactions, vanilla ES6+ client scripts.
-* **Backend**: Node.js HTTP server (`server.js`) with native environment variable loading (`.env`).
-* **Database**: MySQL 8.0 (`feality_italy` database with `enquiries` table), compatible with phpMyAdmin, paired with an automatic zero-loss SQLite local backup store (`data/enquiries.db`).
-* **Admin Management**: Dedicated, password-protected administrative dashboard (`admin.html`) with live KPI metrics, search/filtering, modal customer inspection, lead status management, and instant CSV/Excel export.
-* **Security**: Rate limiting, brute-force lockout, honeypot bot trap, timing-safe authentication, strict static file sandboxing, and security HTTP headers.
+* **Production Backend (Zero-VPS / 100% Free Forever)**: Live Google Apps Script webhook directly logging customer leads into a private, secure Google Spreadsheet with instant email notifications to `sksarfarajali824@gmail.com`. Zero monthly hosting costs, zero VPS management, and instant 1-click Excel/CSV download from Google Sheets web or mobile apps.
+* **Local Development Backend (Optional)**: Node.js server (`server.js`) with MySQL 8.0 (`feality_italy` database with `enquiries` table) and local SQLite dual-write backup store for offline testing.
+* **Admin Management**: Direct live access via Google Sheets (mobile and desktop) with full filtering, sorting, status tracking, and 1-click Excel download, plus the local dashboard (`admin.html`).
+* **Security**: Rate limiting, honeypot bot trap, timing-safe authentication, strict static file sandboxing, and formula injection protection.
 
 ---
 

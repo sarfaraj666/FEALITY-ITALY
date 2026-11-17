@@ -79,7 +79,7 @@
       try {
         let response;
         try {
-          response = await fetch(config.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit' });
+          response = await fetch(config.endpoint, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit', redirect: 'follow' });
         } catch (fetchErr) {
           if (config.fallbackEndpoint && config.fallbackEndpoint !== config.endpoint) {
             response = await fetch(config.fallbackEndpoint, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ ...payload, requestId }), signal: controller.signal, credentials: 'omit', redirect: 'follow' });
