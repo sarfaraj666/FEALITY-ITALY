@@ -8,8 +8,6 @@
     Vanity: ['FealityVanityDesigns', 'FealityVanityGallery'],
     Balcony: ['FealityBalconyDesigns', 'FealityBalconyGallery']
   };
-  // Leave the existing isolated gateway test harness in control on its own port.
-  if (location.hostname === '127.0.0.1' && location.port === '8184') return;
   for (const [collection, [, hook]] of Object.entries(collections)) {
     window[hook]?.setEnquiryHandler(design => {
       location.href = `contact.html?${new URLSearchParams({ collection, design: design.id })}`;

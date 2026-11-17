@@ -6,7 +6,6 @@
 
   const cfg = Object.freeze({
     endpoint: GOOGLE_SCRIPT_ENDPOINT,
-    fallbackEndpoint: '/api/enquiry',
     email: 'sksarfarajali824@gmail.com',
     phone: '9522251777',
     whatsapp: '919832722644',
