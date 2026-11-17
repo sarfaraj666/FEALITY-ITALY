@@ -29,3 +29,255 @@
 .contact-draft .enquiry-consent input { width: 18px; min-height: 18px; flex-shrink: 0; }
 .enquiry-trap { display: none !important; }
 .contact-draft select option { color: #252525; background: #f3f1ec; }
+
+/* ==========================================================================
+   Desktop Hover & Tactile Click Micro-Interactions
+   Active on pointer/hover devices only, keeping mobile touch smooth & clean.
+   ========================================================================== */
+@media (min-width: 769px) and (hover: hover) {
+  /* 1. Header Search & Menu Toggle Buttons */
+  #siteHeader .search-toggle {
+    transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+    cursor: pointer;
+  }
+  #siteHeader .search-toggle svg {
+    transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  #siteHeader .search-toggle:hover svg {
+    transform: scale(1.16) rotate(-3deg);
+  }
+  #siteHeader .search-toggle:active {
+    transform: scale(0.9);
+    transition-duration: 0.08s;
+  }
+
+  #siteHeader .menu-toggle {
+    transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+  }
+  #siteHeader .menu-toggle span {
+    transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  #siteHeader .menu-toggle:hover {
+    transform: scale(1.08);
+  }
+  #siteHeader .menu-toggle:hover span:first-child {
+    transform: translateX(2px);
+  }
+  #siteHeader .menu-toggle:hover span:last-child {
+    transform: translateX(-2px);
+  }
+  #siteHeader .menu-toggle:active {
+    transform: scale(0.9);
+    transition-duration: 0.08s;
+  }
+
+  /* 2. Primary Navigation Links */
+  .site-header .primary-nav a {
+    position: relative;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, color 0.2s ease;
+  }
+  .site-header .primary-nav a:hover {
+    transform: translateY(-2px);
+    opacity: 0.75;
+  }
+  .site-header .primary-nav a:active {
+    transform: translateY(0) scale(0.96);
+    transition-duration: 0.08s;
+  }
+
+  /* 3. Search Panel Interactive Controls & Clicks */
+  #searchClose,
+  .search-panel > button {
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+  }
+  #searchClose:hover,
+  .search-panel > button:hover {
+    transform: translateY(-1px) scale(1.05);
+    color: #2563eb;
+    opacity: 1;
+  }
+  #searchClose:active,
+  .search-panel > button:active {
+    transform: translateY(0) scale(0.92);
+    transition-duration: 0.08s;
+  }
+
+  .search-results a {
+    transition: padding-left 0.25s cubic-bezier(0.16, 1, 0.3, 1), padding-right 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+  }
+  .search-results a span {
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  }
+  .search-results a:hover {
+    padding-left: 14px;
+    padding-right: 14px;
+    background-color: rgba(0, 0, 0, 0.035);
+    border-radius: 4px;
+  }
+  .search-results a:hover span {
+    transform: translateX(-4px);
+    color: var(--ink);
+  }
+  .search-results a:active {
+    transform: scale(0.99) translateX(8px);
+    background-color: rgba(0, 0, 0, 0.06);
+    transition-duration: 0.08s;
+  }
+
+  /* 4. Menu Panel Close & Drawer Interactions */
+  #menuPanel #menuClose {
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+    cursor: pointer;
+  }
+  #menuPanel #menuClose:hover {
+    transform: rotate(90deg) scale(1.12);
+    opacity: 0.85;
+  }
+  #menuPanel #menuClose:active {
+    transform: rotate(90deg) scale(0.92);
+    transition-duration: 0.08s;
+  }
+  .main-menu a {
+    transition: padding-left 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  }
+  .main-menu a:hover {
+    padding-left: 20px;
+  }
+  .main-menu a:active {
+    transform: scale(0.99);
+    transition-duration: 0.08s;
+  }
+
+  /* 5. Gallery Filters & Lightbox Buttons */
+  #kitchen-filters button,
+  .kitchen-filters button {
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  #kitchen-filters button:hover,
+  .kitchen-filters button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+  #kitchen-filters button:active,
+  .kitchen-filters button:active {
+    transform: translateY(0) scale(0.96);
+    transition-duration: 0.08s;
+  }
+
+  .kitchen-lightbox button {
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  #kitchen-close:hover {
+    transform: rotate(90deg) scale(1.08);
+  }
+  #kitchen-close:active {
+    transform: scale(0.92);
+    transition-duration: 0.08s;
+  }
+  #kitchen-previous:hover:not(:disabled),
+  #kitchen-next:hover:not(:disabled) {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  #kitchen-previous:active:not(:disabled),
+  #kitchen-next:active:not(:disabled) {
+    transform: scale(0.92);
+    transition-duration: 0.08s;
+  }
+  #kitchen-enquire:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  #kitchen-enquire:active:not(:disabled) {
+    transform: translateY(0) scale(0.96);
+    transition-duration: 0.08s;
+  }
+
+  /* 6. General Primary CTA Buttons & Links */
+  .hero-cta-btn,
+  .closer-btn,
+  .inquiry-btn,
+  .hero-controls button,
+  .slider-controls button,
+  .btn-primary,
+  .btn-outline,
+  .button-primary {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+  }
+  .hero-cta-btn:hover,
+  .closer-btn:hover,
+  .inquiry-btn:hover,
+  .hero-controls button:hover,
+  .slider-controls button:hover,
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  .hero-cta-btn:active,
+  .closer-btn:active,
+  .inquiry-btn:active,
+  .hero-controls button:active,
+  .slider-controls button:active,
+  .btn-primary:active,
+  .btn-outline:active,
+  .button-primary:active {
+    transform: translateY(0) scale(0.97);
+    transition-duration: 0.08s;
+  }
+
+  .text-link {
+    transition: gap 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease, opacity 0.2s ease;
+  }
+  .text-link:hover {
+    transform: translateX(4px);
+  }
+  .text-link:active {
+    transform: translateX(2px) scale(0.98);
+  }
+
+  /* 7. WhatsApp Floating Button */
+  .floating-whatsapp {
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease, box-shadow 0.28s ease;
+  }
+  .floating-whatsapp:hover {
+    transform: translateY(-4px) scale(1.08);
+    filter: brightness(1.06);
+    box-shadow: 0 10px 26px rgba(37, 211, 102, 0.38);
+  }
+  .floating-whatsapp:active {
+    transform: translateY(-1px) scale(0.94);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    transition-duration: 0.08s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #siteHeader .search-toggle,
+  #siteHeader .search-toggle svg,
+  #siteHeader .menu-toggle,
+  #siteHeader .menu-toggle span,
+  .site-header .primary-nav a,
+  #searchClose,
+  .search-panel > button,
+  .search-results a,
+  .search-results a span,
+  #menuPanel #menuClose,
+  .main-menu a,
+  #kitchen-filters button,
+  .kitchen-lightbox button,
+  .hero-cta-btn,
+  .closer-btn,
+  .inquiry-btn,
+  .floating-whatsapp {
+    transition: none !important;
+    transform: none !important;
+  }
+}
