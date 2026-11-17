@@ -152,5 +152,27 @@ window.FealityVanityDesigns = [
     "thumbnail": "assets/vanity/web/13-960.webp",
     "srcset": "assets/vanity/web/13-480.webp 480w, assets/vanity/web/13-960.webp 960w",
     "description": "A round mirror hangs above a compact basin and two drawer fronts."
+  },
+  {
+    "id": "15",
+    "name": "Salvia Vanity",
+    "alt": "Double Floating Vanity with Emerald Green Marble & Sunburst Mirrors",
+    "width": 1254,
+    "height": 1254,
+    "source": "assets/vanity/15.png",
+    "thumbnail": "assets/vanity/web/15-960.webp",
+    "srcset": "assets/vanity/web/15-480.webp 480w, assets/vanity/web/15-960.webp 960w",
+    "description": "Dual undermount basins set in rich emerald marble, paired with fluted sage cabinetry and twin sunburst backlit mirrors."
+  },
+  {
+    "id": "16",
+    "name": "Armonia Vanity",
+    "alt": "Curved Shaker Vanity with Calacatta Countertop & Brass Accents",
+    "width": 1254,
+    "height": 1254,
+    "source": "assets/vanity/16.png",
+    "thumbnail": "assets/vanity/web/16-960.webp",
+    "srcset": "assets/vanity/web/16-480.webp 480w, assets/vanity/web/16-960.webp 960w",
+    "description": "Soft cashmere cabinetry with curved corners and classic shaker profiles, topped with warm veined marble and polished brass fixtures."
   }
 ];

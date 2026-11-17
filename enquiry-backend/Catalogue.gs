@@ -262,6 +262,18 @@ const CATALOGUE = {
       "name": "Bianco Curvo Vanity",
       "description": "A round mirror hangs above a compact basin and two drawer fronts.",
       "source": "assets/vanity/13.png"
+    },
+    {
+      "id": "15",
+      "name": "Salvia Vanity",
+      "description": "Dual undermount basins set in rich emerald marble, paired with fluted sage cabinetry and twin sunburst backlit mirrors.",
+      "source": "assets/vanity/15.png"
+    },
+    {
+      "id": "16",
+      "name": "Armonia Vanity",
+      "description": "Soft cashmere cabinetry with curved corners and classic shaker profiles, topped with warm veined marble and polished brass fixtures.",
+      "source": "assets/vanity/16.png"
     }
   ],
   "Balcony": [
@@ -318,6 +330,24 @@ const CATALOGUE = {
       "name": "BLU NOTTE PRESTIGE Balcony",
       "description": "A refined interpretation of Italian luxury, Blu Notte Prestige combines elegant ivory cabinetry, deep navy-blue shelving and intelligent storage to transform everyday laundry spaces into sophisticated interiors.",
       "source": "assets/Balcony/9.png"
+    },
+    {
+      "id": "10",
+      "name": "LINE ARIA Balcony Cabinet",
+      "description": "A luxurious slate-blue cabinetry suite integrating illuminated display shelving, transparent glass-front wardrobes, and a dedicated personal vanity station.",
+      "source": "assets/Balcony/10.png"
+    },
+    {
+      "id": "11",
+      "name": "NATURA Balcony Cabinet",
+      "description": "Warm oak cabinetry features an illuminated amber display niche, under-counter washing machine and prep sink against an open coastal panorama.",
+      "source": "assets/Balcony/11.png"
+    },
+    {
+      "id": "12",
+      "name": "VISTA SERENA Balcony",
+      "description": "Charcoal cabinetry and warm wood accents frame a thoughtfully organised balcony utility space. Illuminated shelves, a practical sink and a dedicated laundry bay bring everyday essentials together against a serene hillside outlook.",
+      "source": "assets/Balcony/Hero Section 3.png"
     }
   ]
 };

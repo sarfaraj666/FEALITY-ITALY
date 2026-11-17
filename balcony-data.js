@@ -106,6 +106,42 @@ window.FealityBalconyDesigns = [
     "srcset": "assets/Balcony/9.png 1672w",
     "description": "A refined interpretation of Italian luxury, Blu Notte Prestige combines elegant ivory cabinetry, deep navy-blue shelving and intelligent storage to transform everyday laundry spaces into sophisticated interiors.",
     "details": "EXQUISITE MATTE FINISH\nSmooth ivory surfaces enhanced by rich navy-blue accents.\n\nADVANCED SPACE DESIGN\nIntegrated double-stacked appliances, illuminated display shelves and seamless concealed storage."
+  },
+  {
+    "id": "10",
+    "name": "LINE ARIA Balcony Cabinet",
+    "alt": "Line Aria balcony cabinet with slate blue cabinetry, illuminated display shelves and personal vanity",
+    "width": 1774,
+    "height": 887,
+    "source": "assets/Balcony/10.png",
+    "thumbnail": "assets/Balcony/web/10-960.webp",
+    "srcset": "assets/Balcony/web/10-480.webp 480w, assets/Balcony/web/10-960.webp 960w",
+    "description": "A luxurious slate-blue cabinetry suite integrating illuminated display shelving, transparent glass-front wardrobes, and a dedicated personal vanity station.",
+    "details": "TIMELESS ITALIAN BLUE\nSophisticated slate-blue finish paired with warm brass accents and ambient backlighting.\n\nCOMPREHENSIVE DRESSING SUITE\nIntegrated vanity table with upholstered seating, organized shelving and illuminated glass display wardrobes."
+  },
+  {
+    "id": "11",
+    "name": "NATURA Balcony Cabinet",
+    "alt": "Natura balcony cabinet in warm oak with illuminated amber display niche and integrated laundry",
+    "width": 1774,
+    "height": 887,
+    "source": "assets/Balcony/11.png",
+    "thumbnail": "assets/Balcony/web/11-960.webp",
+    "srcset": "assets/Balcony/web/11-480.webp 480w, assets/Balcony/web/11-960.webp 960w",
+    "description": "Warm oak cabinetry features an illuminated amber display niche, under-counter washing machine and prep sink against an open coastal panorama.",
+    "details": "NATURAL OAK GRAIN\nRich wood textures elevated by an illuminated warm-amber display alcove.\n\nOPEN-AIR UTILITY\nDedicated laundry appliance space, undermount sink, and concealed overhead storage overlooking a coastal vista."
+  },
+  {
+    "id": "12",
+    "name": "VISTA SERENA Balcony",
+    "alt": "Vista Serena balcony with charcoal cabinetry, illuminated wood shelving, a sink and an integrated laundry space overlooking wooded hills",
+    "width": 1832,
+    "height": 858,
+    "source": "assets/Balcony/Hero Section 3.png",
+    "thumbnail": "assets/Balcony/Hero Section 3.png",
+    "srcset": "assets/Balcony/Hero%20Section%203.png 1832w",
+    "description": "Charcoal cabinetry and warm wood accents frame a thoughtfully organised balcony utility space. Illuminated shelves, a practical sink and a dedicated laundry bay bring everyday essentials together against a serene hillside outlook.",
+    "details": "REFINED CONTRAST\nDeep grey cabinet fronts pair with wood-toned open shelving and soft integrated lighting.\n\nEVERYDAY ORGANISATION\nA sink and worktop, concealed cupboards, open hanging space and a washing-machine bay create a considered layout for daily routines."
   }
 ];
 
