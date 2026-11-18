@@ -45,6 +45,17 @@ window.FealityWardrobeDesigns = [
   },
   {
     "id": "05",
+    "name": "Grigio Selva Wardrobe",
+    "alt": "Matte grey fitted wardrobe suite with vertical handles and illuminated wood shelving headboard",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/wardrobes/ww 4-5.png",
+    "thumbnail": "assets/wardrobes/web/ww4-5-960.webp",
+    "srcset": "assets/wardrobes/web/ww4-5-480.webp 480w, assets/wardrobes/web/ww4-5-960.webp 960w",
+    "description": "Matte grey fitted wardrobe suite with integrated warm-lit wood shelving and expansive forest views."
+  },
+  {
+    "id": "06",
     "name": "Salotto Privato Wardrobe",
     "alt": "Pale fitted wardrobes with a central hanging section",
     "width": 1672,
@@ -55,7 +66,7 @@ window.FealityWardrobeDesigns = [
     "description": "Pale fitted wardrobes with a central hanging section."
   },
   {
-    "id": "06",
+    "id": "07",
     "name": "Trama Obliqua Wardrobe",
     "alt": "Glass wardrobe doors beside a recessed seat",
     "width": 1672,
@@ -66,7 +77,7 @@ window.FealityWardrobeDesigns = [
     "description": "Glass wardrobe doors beside a recessed seat."
   },
   {
-    "id": "07",
+    "id": "08",
     "name": "Notte Profonda Wardrobe",
     "alt": "Dark blue cabinetry with open hanging compartments",
     "width": 1672,
@@ -77,7 +88,18 @@ window.FealityWardrobeDesigns = [
     "description": "Dark blue cabinetry with open hanging compartments."
   },
   {
-    "id": "08",
+    "id": "09",
+    "name": "Lino e Rovere Wardrobe",
+    "alt": "Textured linen-finish wardrobe doors with natural wood insets framing alpine pine forest views",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/wardrobes/ww 7-8.png",
+    "thumbnail": "assets/wardrobes/web/ww7-8-960.webp",
+    "srcset": "assets/wardrobes/web/ww7-8-480.webp 480w, assets/wardrobes/web/ww7-8-960.webp 960w",
+    "description": "Textured linen-finish wardrobe doors with natural wood insets framing serene alpine pine forest views."
+  },
+  {
+    "id": "10",
     "name": "Galleria Chiara Wardrobe",
     "alt": "Front view of hanging rails and drawers on either side of tall doors",
     "width": 1672,
@@ -88,7 +110,7 @@ window.FealityWardrobeDesigns = [
     "description": "Front view of hanging rails and drawers on either side of tall doors."
   },
   {
-    "id": "09",
+    "id": "11",
     "name": "Vetro e Luce Wardrobe",
     "alt": "Tall glass-front wardrobe beside a dressing area",
     "width": 1122,
@@ -99,7 +121,7 @@ window.FealityWardrobeDesigns = [
     "description": "Tall glass-front wardrobe beside a dressing area."
   },
   {
-    "id": "10",
+    "id": "12",
     "name": "Vetro Cannettato Wardrobe",
     "alt": "Glass wardrobe and upholstered seat beside full-height windows",
     "width": 1122,
@@ -110,7 +132,7 @@ window.FealityWardrobeDesigns = [
     "description": "Glass wardrobe and upholstered seat beside full-height windows."
   },
   {
-    "id": "11",
+    "id": "13",
     "name": "Vetro Ambrato Wardrobe",
     "alt": "Illuminated wood-toned wardrobe with dark-framed doors",
     "width": 1092,
@@ -121,7 +143,18 @@ window.FealityWardrobeDesigns = [
     "description": "Illuminated wood-toned wardrobe with dark-framed doors."
   },
   {
-    "id": "12",
+    "id": "14",
+    "name": "Cenere Alpina Wardrobe",
+    "alt": "Minimalist ash-toned fitted wardrobe with dark recessed handles and integrated illuminated architectural shelving",
+    "width": 1672,
+    "height": 941,
+    "source": "assets/wardrobes/ww11-12.png",
+    "thumbnail": "assets/wardrobes/web/ww11-12-960.webp",
+    "srcset": "assets/wardrobes/web/ww11-12-480.webp 480w, assets/wardrobes/web/ww11-12-960.webp 960w",
+    "description": "Minimalist ash-toned fitted wardrobe with dark recessed handles and integrated illuminated architectural shelving."
+  },
+  {
+    "id": "15",
     "name": "Cuoio e Ferro Wardrobe",
     "alt": "Close view of an open drawer below a hanging section",
     "width": 1092,
@@ -132,7 +165,7 @@ window.FealityWardrobeDesigns = [
     "description": "Close view of an open drawer below a hanging section."
   },
   {
-    "id": "13",
+    "id": "16",
     "name": "Scrigno di Luce Wardrobe",
     "alt": "Divided accessory drawer seen from above",
     "width": 1122,
@@ -143,7 +176,7 @@ window.FealityWardrobeDesigns = [
     "description": "Divided accessory drawer seen from above."
   },
   {
-    "id": "14",
+    "id": "17",
     "name": "Portagioie Tortora Wardrobe",
     "alt": "Pull-out tray with separate watch and accessory compartments",
     "width": 1555,
@@ -154,7 +187,7 @@ window.FealityWardrobeDesigns = [
     "description": "Pull-out tray with separate watch and accessory compartments."
   },
   {
-    "id": "15",
+    "id": "18",
     "name": "Line Aria Wardrobe",
     "alt": "Slate blue luxury dressing suite with illuminated display shelves, glass wardrobes and personal vanity",
     "width": 1774,

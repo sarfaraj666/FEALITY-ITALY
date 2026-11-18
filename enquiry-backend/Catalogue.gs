@@ -119,66 +119,84 @@ const CATALOGUE = {
     },
     {
       "id": "05",
+      "name": "Grigio Selva Wardrobe",
+      "description": "Matte grey fitted wardrobe suite with integrated warm-lit wood shelving and expansive forest views.",
+      "source": "assets/wardrobes/ww 4-5.png"
+    },
+    {
+      "id": "06",
       "name": "Salotto Privato Wardrobe",
       "description": "Pale fitted wardrobes with a central hanging section.",
       "source": "assets/wardrobes/5.png"
     },
     {
-      "id": "06",
+      "id": "07",
       "name": "Trama Obliqua Wardrobe",
       "description": "Glass wardrobe doors beside a recessed seat.",
       "source": "assets/wardrobes/6.png"
     },
     {
-      "id": "07",
+      "id": "08",
       "name": "Notte Profonda Wardrobe",
       "description": "Dark blue cabinetry with open hanging compartments.",
       "source": "assets/wardrobes/7.png"
     },
     {
-      "id": "08",
+      "id": "09",
+      "name": "Lino e Rovere Wardrobe",
+      "description": "Textured linen-finish wardrobe doors with natural wood insets framing serene alpine pine forest views.",
+      "source": "assets/wardrobes/ww 7-8.png"
+    },
+    {
+      "id": "10",
       "name": "Galleria Chiara Wardrobe",
       "description": "Front view of hanging rails and drawers on either side of tall doors.",
       "source": "assets/wardrobes/8.png"
     },
     {
-      "id": "09",
+      "id": "11",
       "name": "Vetro e Luce Wardrobe",
       "description": "Tall glass-front wardrobe beside a dressing area.",
       "source": "assets/wardrobes/9.png"
     },
     {
-      "id": "10",
+      "id": "12",
       "name": "Vetro Cannettato Wardrobe",
       "description": "Glass wardrobe and upholstered seat beside full-height windows.",
       "source": "assets/wardrobes/10.png"
     },
     {
-      "id": "11",
+      "id": "13",
       "name": "Vetro Ambrato Wardrobe",
       "description": "Illuminated wood-toned wardrobe with dark-framed doors.",
       "source": "assets/wardrobes/11.png"
     },
     {
-      "id": "12",
+      "id": "14",
+      "name": "Cenere Alpina Wardrobe",
+      "description": "Minimalist ash-toned fitted wardrobe with dark recessed handles and integrated illuminated architectural shelving.",
+      "source": "assets/wardrobes/ww11-12.png"
+    },
+    {
+      "id": "15",
       "name": "Cuoio e Ferro Wardrobe",
       "description": "Close view of an open drawer below a hanging section.",
       "source": "assets/wardrobes/12.png"
     },
     {
-      "id": "13",
+      "id": "16",
       "name": "Scrigno di Luce Wardrobe",
       "description": "Divided accessory drawer seen from above.",
       "source": "assets/wardrobes/13.png"
     },
     {
-      "id": "14",
+      "id": "17",
       "name": "Portagioie Tortora Wardrobe",
       "description": "Pull-out tray with separate watch and accessory compartments.",
       "source": "assets/wardrobes/14.png"
     },
     {
-      "id": "15",
+      "id": "18",
       "name": "Line Aria Wardrobe",
       "description": "A luxurious slate-blue cabinetry suite integrating illuminated display shelving, transparent glass-front wardrobes, and a dedicated personal vanity station.",
       "source": "assets/wardrobes/15.png"
