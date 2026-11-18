@@ -74,7 +74,7 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0, requested = 0, generation = 0, timer;
   let paused = false, hovered = false, inView = true;
-  const slideInterval = dragMode ? 4000 : 6000;
+  const slideInterval = dragMode ? 3000 : 5000;
   hero.classList.add('has-hero-slider');
   hero.setAttribute('aria-roledescription', 'carousel');
   const controls = document.createElement('div');
