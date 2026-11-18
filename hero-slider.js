@@ -53,20 +53,28 @@
   function updateHomeContent(index) {
     if (!dragMode) return;
     const content = homeContent[index];
-    hero.querySelector('#homeTitle').textContent = content.title;
-    hero.querySelector('.collection-hero-description').textContent = content.description;
-    hero.querySelectorAll('.hero-content a').forEach(link => {
-      link.setAttribute('href', content.href);
-      // Preserve the existing decorative arrow and desktop/mobile button styles.
-      link.firstChild.textContent = content.label + ' ';
-    });
+    const contentEl = hero.querySelector('.hero-content');
+    if (contentEl) {
+      contentEl.classList.add('is-fading');
+      setTimeout(() => {
+        hero.querySelector('#homeTitle').textContent = content.title;
+        hero.querySelector('.collection-hero-description').textContent = content.description;
+        hero.querySelectorAll('.hero-content a').forEach(link => {
+          link.setAttribute('href', content.href);
+          // Preserve the existing decorative arrow and desktop/mobile button styles.
+          link.firstChild.textContent = content.label + ' ';
+        });
+        contentEl.classList.remove('is-fading');
+      }, 200);
+    }
   }
   updateHomeContent(0);
   let image = hero.querySelector('img.hero-background');
   if (!image) return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0, requested = 0, generation = 0, timer;
-  let paused = dragMode, hovered = false, inView = true;
+  let paused = false, hovered = false, inView = true;
+  const slideInterval = dragMode ? 4000 : 6000;
   hero.classList.add('has-hero-slider');
   hero.setAttribute('aria-roledescription', 'carousel');
   const controls = document.createElement('div');
@@ -83,8 +91,8 @@
   const pauseButton = controls.querySelector('[data-hero-action="pause"]');
   function schedule() {
     clearTimeout(timer);
-    if (!dragMode && !paused && !hovered && inView && !document.hidden && !reducedMotion.matches) {
-      timer = setTimeout(() => show(current + 1, false), 6000);
+    if (!paused && !hovered && inView && !document.hidden && !reducedMotion.matches) {
+      timer = setTimeout(() => show(current + 1, false), slideInterval);
     }
   }
   function updatePause() {
@@ -99,7 +107,12 @@
     clearTimeout(timer);
     requested = (index + slides.length) % slides.length;
     const nextIndex = requested, token = ++generation, slide = slides[nextIndex];
-    if (manual) { paused = true; updatePause(); }
+    if (manual) {
+      if (!dragMode && pauseButton) {
+        paused = true;
+        updatePause();
+      }
+    }
     if (nextIndex === current) { schedule(); return; }
     const nextImage = new Image();
     nextImage.className = 'hero-background hero-slide-image';
@@ -112,10 +125,12 @@
       if (token !== generation) return;
       const previousImage = image;
       nextImage.style.opacity = '0';
+      nextImage.style.transform = 'scale(1.04)';
       hero.insertBefore(nextImage, previousImage.nextSibling);
-      // Commit the initial opacity before starting the crossfade.
+      // Commit the initial opacity and scale before starting the crossfade.
       void nextImage.offsetWidth;
       nextImage.style.opacity = '1';
+      nextImage.style.transform = 'scale(1)';
       previousImage.style.opacity = '0';
       previousImage.setAttribute('aria-hidden', 'true');
       image = nextImage;
@@ -125,7 +140,7 @@
       if (counter) counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
       controls.querySelectorAll('[data-hero-index]').forEach((button, i) => button.setAttribute('aria-pressed', String(i === current)));
       if (manual) status.textContent = `Photo ${current + 1} of ${slides.length}: ${slide.alt}`;
-      setTimeout(() => previousImage.remove(), reducedMotion.matches ? 0 : 700);
+      setTimeout(() => previousImage.remove(), reducedMotion.matches ? 0 : 850);
     } catch {
       if (token !== generation) return;
       requested = current;
@@ -247,11 +262,15 @@
   hero.addEventListener('focusin', event => {
     // Focusing Pause must not flip its state before its click is handled.
     if (event.target === pauseButton) { clearTimeout(timer); return; }
-    paused = true;
-    updatePause();
+    if (!dragMode) {
+      paused = true;
+      updatePause();
+    }
   });
-  hero.addEventListener('mouseenter', () => { hovered = true; schedule(); });
-  hero.addEventListener('mouseleave', () => { hovered = false; schedule(); });
+  if (window.matchMedia('(hover: hover)').matches) {
+    hero.addEventListener('mouseenter', () => { hovered = true; schedule(); });
+    hero.addEventListener('mouseleave', () => { hovered = false; schedule(); });
+  }
   document.addEventListener('visibilitychange', schedule);
   reducedMotion.addEventListener('change', updatePause);
   if ('IntersectionObserver' in window) {
