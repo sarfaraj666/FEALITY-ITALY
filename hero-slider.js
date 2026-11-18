@@ -35,6 +35,14 @@
   const slides = document.body.classList.contains('home-page') ? [kitchen[0], wardrobes[0], vanity[0], balcony[0]]
     : hero.classList.contains('wardrobe-hero') ? wardrobes
     : hero.classList.contains('vanity-hero') ? vanity : kitchen;
+
+  // Preload all slides so transitions are instantaneous on swipe/click
+  slides.forEach(slide => {
+    const pre = new Image();
+    pre.sizes = '(max-width: 600px) 1400px, 100vw';
+    pre.srcset = slide.srcset;
+    pre.src = slide.src;
+  });
   // Home copy travels with the corresponding collection photograph.
   const homeContent = [
     { title: 'Kitchen', description: 'Considered spaces for cooking, gathering and everyday living.', label: 'Explore Kitchen', href: 'kitchen.html' },
@@ -98,7 +106,9 @@
     Object.assign(nextImage, { sizes: '(max-width: 600px) 1400px, 100vw', srcset: slide.srcset, src: slide.src,
       width: slide.width, height: slide.height, alt: slide.alt, decoding: 'async' });
     try {
-      await nextImage.decode();
+      if ('decode' in nextImage) {
+        await nextImage.decode().catch(() => {});
+      }
       if (token !== generation) return;
       const previousImage = image;
       nextImage.style.opacity = '0';
@@ -138,28 +148,94 @@
     instruction.textContent = `Drag or swipe left and right to explore the ${slides.length} photos. You can also use the left and right arrow keys or photo buttons.`;
     hero.append(instruction);
     hero.setAttribute('aria-describedby', instruction.id);
-    let start = null;
+
     hero.addEventListener('dragstart', event => { if (event.target.tagName === 'IMG') event.preventDefault(); });
-    hero.addEventListener('pointerdown', event => {
-      if (!event.isPrimary || event.button !== 0 || event.target.closest('a, button, input')) return;
-      start = { id: event.pointerId, x: event.clientX, y: event.clientY };
-      hero.setPointerCapture(event.pointerId);
-      hero.classList.add('is-dragging');
-      if (event.pointerType === 'mouse') event.preventDefault();
-    });
-    hero.addEventListener('pointerup', event => {
-      if (!start || event.pointerId !== start.id) return;
-      const dx = event.clientX - start.x, dy = event.clientY - start.y;
-      start = null;
-      hero.classList.remove('is-dragging');
-      if (hero.hasPointerCapture(event.pointerId)) hero.releasePointerCapture(event.pointerId);
-      if (Math.abs(dx) >= 50 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+
+    // Touch event handling for mobile devices
+    let touchStartX = null, touchStartY = null, touchStartTime = 0, isHorizontalSwipe = null;
+
+    hero.addEventListener('touchstart', event => {
+      if (event.touches.length !== 1 || event.target.closest('a, button, input')) {
+        touchStartX = null;
+        return;
+      }
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+      touchStartTime = Date.now();
+      isHorizontalSwipe = null;
+    }, { passive: true });
+
+    hero.addEventListener('touchmove', event => {
+      if (touchStartX === null || event.touches.length !== 1) return;
+      const currentX = event.touches[0].clientX;
+      const currentY = event.touches[0].clientY;
+      const dx = currentX - touchStartX;
+      const dy = currentY - touchStartY;
+
+      if (isHorizontalSwipe === null) {
+        if (Math.abs(dx) > 7 || Math.abs(dy) > 7) {
+          isHorizontalSwipe = Math.abs(dx) >= Math.abs(dy);
+        }
+      }
+
+      // If user is swiping horizontally, lock vertical scroll so gesture is never interrupted
+      if (isHorizontalSwipe === true) {
+        if (event.cancelable) event.preventDefault();
+      }
+    }, { passive: false });
+
+    hero.addEventListener('touchend', event => {
+      if (touchStartX === null) return;
+      const endX = event.changedTouches[0].clientX;
+      const endY = event.changedTouches[0].clientY;
+      const dx = endX - touchStartX;
+      const dy = endY - touchStartY;
+      const elapsed = Date.now() - touchStartTime;
+      const wasHorizontal = isHorizontalSwipe === true || Math.abs(dx) > Math.abs(dy);
+
+      touchStartX = null;
+      touchStartY = null;
+      isHorizontalSwipe = null;
+
+      // Sensitive & responsive threshold: 35px or quick flick (20px in < 350ms)
+      if (wasHorizontal && (Math.abs(dx) >= 35 || (Math.abs(dx) >= 20 && elapsed < 350))) {
         show(requested + (dx < 0 ? 1 : -1));
       }
+    }, { passive: true });
+
+    hero.addEventListener('touchcancel', () => {
+      touchStartX = null;
+      touchStartY = null;
+      isHorizontalSwipe = null;
+    }, { passive: true });
+
+    // Mouse drag support for desktop
+    let mouseStartX = null, mouseStartY = null, mouseStartTime = 0;
+
+    hero.addEventListener('mousedown', event => {
+      if (event.button !== 0 || event.target.closest('a, button, input')) return;
+      mouseStartX = event.clientX;
+      mouseStartY = event.clientY;
+      mouseStartTime = Date.now();
+      hero.classList.add('is-dragging');
     });
-    for (const type of ['pointercancel', 'lostpointercapture']) {
-      hero.addEventListener(type, () => { start = null; hero.classList.remove('is-dragging'); });
-    }
+
+    window.addEventListener('mouseup', event => {
+      if (mouseStartX === null) return;
+      const dx = event.clientX - mouseStartX;
+      const dy = event.clientY - mouseStartY;
+      const elapsed = Date.now() - mouseStartTime;
+
+      mouseStartX = null;
+      mouseStartY = null;
+      hero.classList.remove('is-dragging');
+
+      if (Math.abs(dx) >= 40 || (Math.abs(dx) >= 25 && elapsed < 350)) {
+        if (Math.abs(dx) > Math.abs(dy)) {
+          show(requested + (dx < 0 ? 1 : -1));
+        }
+      }
+    });
   }
   hero.addEventListener('keydown', event => {
     if (event.altKey || event.ctrlKey || event.metaKey) return;

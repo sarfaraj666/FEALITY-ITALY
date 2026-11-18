@@ -325,25 +325,90 @@
       });
     });
 
-    // Horizontal gestures leave vertical page scrolling and links available.
-    let swipe = null;
-    hero.style.touchAction = 'pan-y pinch-zoom';
+    // Responsive horizontal gestures with vertical page scrolling intact
     hero.addEventListener('dragstart', event => { if (event.target.tagName === 'IMG') event.preventDefault(); });
-    hero.addEventListener('pointerdown', event => {
-      if (!event.isPrimary) { swipe = null; return; }
+
+    let touchStartX = null, touchStartY = null, touchStartTime = 0, isHorizontalSwipe = null;
+
+    hero.addEventListener('touchstart', event => {
+      if (event.touches.length !== 1 || event.target.closest('a, button, input')) {
+        touchStartX = null;
+        return;
+      }
+      stopAuto();
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+      touchStartTime = Date.now();
+      isHorizontalSwipe = null;
+    }, { passive: true });
+
+    hero.addEventListener('touchmove', event => {
+      if (touchStartX === null || event.touches.length !== 1) return;
+      const dx = event.touches[0].clientX - touchStartX;
+      const dy = event.touches[0].clientY - touchStartY;
+
+      if (isHorizontalSwipe === null) {
+        if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
+          isHorizontalSwipe = Math.abs(dx) >= Math.abs(dy);
+        }
+      }
+
+      if (isHorizontalSwipe === true && event.cancelable) {
+        event.preventDefault();
+      }
+    }, { passive: false });
+
+    hero.addEventListener('touchend', event => {
+      if (touchStartX === null) return;
+      const dx = event.changedTouches[0].clientX - touchStartX;
+      const dy = event.changedTouches[0].clientY - touchStartY;
+      const elapsed = Date.now() - touchStartTime;
+      const wasHorizontal = isHorizontalSwipe === true || Math.abs(dx) > Math.abs(dy);
+
+      touchStartX = null;
+      touchStartY = null;
+      isHorizontalSwipe = null;
+
+      if (wasHorizontal && (Math.abs(dx) >= 35 || (Math.abs(dx) >= 20 && elapsed < 350))) {
+        showSlide(current + (dx < 0 ? 1 : -1));
+      }
+      startAuto();
+    }, { passive: true });
+
+    hero.addEventListener('touchcancel', () => {
+      touchStartX = null;
+      touchStartY = null;
+      isHorizontalSwipe = null;
+      startAuto();
+    }, { passive: true });
+
+    // Mouse drag support for desktop
+    let mouseStartX = null, mouseStartY = null, mouseStartTime = 0;
+
+    hero.addEventListener('mousedown', event => {
       if (event.button !== 0 || event.target.closest('a, button, input')) return;
       stopAuto();
-      swipe = { id: event.pointerId, x: event.clientX, y: event.clientY };
-      hero.setPointerCapture(event.pointerId);
+      mouseStartX = event.clientX;
+      mouseStartY = event.clientY;
+      mouseStartTime = Date.now();
     });
-    hero.addEventListener('pointerup', event => {
-      if (!swipe || swipe.id !== event.pointerId) return;
-      const dx = event.clientX - swipe.x, dy = event.clientY - swipe.y;
-      swipe = null;
-      if (hero.hasPointerCapture(event.pointerId)) hero.releasePointerCapture(event.pointerId);
-      if (Math.abs(dx) >= 50 && Math.abs(dx) > Math.abs(dy) * 1.5) showSlide(current + (dx < 0 ? 1 : -1));
+
+    window.addEventListener('mouseup', event => {
+      if (mouseStartX === null) return;
+      const dx = event.clientX - mouseStartX;
+      const dy = event.clientY - mouseStartY;
+      const elapsed = Date.now() - mouseStartTime;
+
+      mouseStartX = null;
+      mouseStartY = null;
+
+      if (Math.abs(dx) >= 40 || (Math.abs(dx) >= 25 && elapsed < 350)) {
+        if (Math.abs(dx) > Math.abs(dy)) {
+          showSlide(current + (dx < 0 ? 1 : -1));
+        }
+      }
+      startAuto();
     });
-    for (const type of ['pointercancel', 'lostpointercapture']) hero.addEventListener(type, () => { swipe = null; });
 
     // Keyboard navigation on the hero section
     hero.addEventListener('keydown', function(e) {
