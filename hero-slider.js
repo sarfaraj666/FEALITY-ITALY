@@ -10,7 +10,7 @@
     width, height, alt
   });
   const kitchen = [
-    photo('assets/images/kitchen-photos', 1, 1916, 821, 'Kitchen island with wide landscape windows'),
+    photo('assets/images/kitchen-photos', 5, 1672, 941, 'TAGLIO NERO Italian luxury kitchen overlooking snowy landscape'),
     photo('assets/images/kitchen-photos', 3, 1932, 814, 'Pale kitchen island beside panoramic windows'),
     photo('assets/images/kitchen-photos', 4, 1930, 815, 'Veined island and wood kitchen cabinetry')
   ];
