@@ -420,7 +420,7 @@
 .home-pathway {
   position: relative;
   border-top: 1px solid var(--line);
-  background: linear-gradient(rgba(250, 249, 246, 0.86), rgba(250, 249, 246, 0.90)), url('assets/images/kitchen-photos/web/3-1920.webp') center / cover no-repeat;
+  background: linear-gradient(rgba(250, 249, 246, 0.84), rgba(250, 249, 246, 0.88)), url('assets/images/about-pathway-bg.webp') center / cover no-repeat;
 }
 
 .home-pathway-grid {
