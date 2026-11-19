@@ -420,7 +420,7 @@
 .home-pathway {
   position: relative;
   border-top: 1px solid var(--line);
-  background: linear-gradient(rgba(250, 249, 246, 0.84), rgba(250, 249, 246, 0.88)), url('assets/images/about-pathway-bg.webp') center / cover no-repeat;
+  background: linear-gradient(rgba(250, 249, 246, 0.48), rgba(250, 249, 246, 0.58)), url('assets/images/about-pathway-bg.webp') center / cover no-repeat;
 }
 
 .home-pathway-grid {
@@ -441,9 +441,9 @@
 
 .home-pathway-content p {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
-  color: #383834;
+  color: #22221f;
   margin: 0 0 32px;
   max-width: 540px;
 }
