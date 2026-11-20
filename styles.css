@@ -430,7 +430,8 @@ p {
   background-image: url('assets/images/kitchen-photos/web/1-1920.webp');
   background-size: cover;
   background-position: center;
-  animation: revealZoom 1.7s ease both
+  animation: revealZoom 1.7s ease both;
+  will-change: transform, opacity;
 }
 
 .hero-scrim {

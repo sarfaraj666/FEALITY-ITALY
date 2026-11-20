@@ -27,7 +27,7 @@
   const balcony = [
     {
       src: 'assets/Balcony/web/2-960.webp',
-      srcset: 'assets/Balcony/web/2-480.webp 480w, assets/Balcony/web/2-960.webp 960w, assets/Balcony/2.png 1671w',
+      srcset: 'assets/Balcony/web/2-480.webp 480w, assets/Balcony/web/2-960.webp 960w, assets/Balcony/web/2-1600.webp 1600w',
       width: 1671, height: 941,
       alt: 'Balcony collection with architectural outdoor storage cabinetry'
     }
@@ -36,13 +36,20 @@
     : hero.classList.contains('wardrobe-hero') ? wardrobes
     : hero.classList.contains('vanity-hero') ? vanity : kitchen;
 
-  // Preload all slides so transitions are instantaneous on swipe/click
-  slides.forEach(slide => {
-    const pre = new Image();
-    pre.sizes = '(max-width: 600px) 1400px, 100vw';
-    pre.srcset = slide.srcset;
-    pre.src = slide.src;
-  });
+  // Defer preloading secondary slides until after page load so it never competes with initial LCP
+  const preloadSecondarySlides = () => {
+    slides.slice(1).forEach(slide => {
+      const pre = new Image();
+      pre.sizes = '100vw';
+      pre.srcset = slide.srcset;
+      pre.src = slide.src;
+    });
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(preloadSecondarySlides, { timeout: 3000 });
+  } else {
+    window.addEventListener('load', () => setTimeout(preloadSecondarySlides, 1500));
+  }
   // Home copy travels with the corresponding collection photograph.
   const homeContent = [
     { title: 'Kitchen', description: 'Considered spaces for cooking, gathering and everyday living.', label: 'Explore Kitchen', href: 'kitchen.html' },

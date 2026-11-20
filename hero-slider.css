@@ -71,3 +71,9 @@
 }
 
 .has-hero-slider { touch-action: pan-y pinch-zoom; }
+
+.hero-background,
+.has-hero-slider img.hero-background,
+.hero-content {
+  will-change: transform, opacity;
+}
