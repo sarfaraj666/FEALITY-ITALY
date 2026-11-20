@@ -166,7 +166,7 @@ body.collection-page #mainContent #kitchen-gallery {
 .collection-page #kitchen-gallery #kitchen-grid img { display: block; width: 100%; height: auto; }
 .collection-page #kitchen-gallery .design-action { text-decoration: underline; text-underline-offset: .28em; }
 @media (min-width: 769px) {
-  .collection-page #mainContent #kitchen-gallery #kitchen-grid { gap: 4px; }
+  .collection-page #mainContent #kitchen-gallery #kitchen-grid { gap: clamp(8px, 0.8vw, 12px); }
   .collection-page #kitchen-gallery #kitchen-grid .editorial-design { display: grid; }
   .collection-page #kitchen-gallery #kitchen-grid :is(.design-summary,.kitchen-gallery-media) { grid-area: 1 / 1; }
   .collection-page #kitchen-gallery #kitchen-grid .editorial-design::before {

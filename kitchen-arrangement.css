@@ -30,7 +30,7 @@
 
 @media (min-width: 769px) {
   .kitchen-page #mainContent #kitchen-gallery #kitchen-grid {
-    row-gap: 0;
+    row-gap: clamp(8px, 0.8vw, 12px);
   }
   .kitchen-page #mainContent #kitchen-gallery #kitchen-grid .editorial-design {
     align-content: start;
