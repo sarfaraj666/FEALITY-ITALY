@@ -127,12 +127,13 @@
       nextImage.style.opacity = '0';
       nextImage.style.transform = 'scale(1.04)';
       hero.insertBefore(nextImage, previousImage.nextSibling);
-      // Commit the initial opacity and scale before starting the crossfade.
-      void nextImage.offsetWidth;
-      nextImage.style.opacity = '1';
-      nextImage.style.transform = 'scale(1)';
-      previousImage.style.opacity = '0';
-      previousImage.setAttribute('aria-hidden', 'true');
+      requestAnimationFrame(() => {
+        if (token !== generation) return;
+        nextImage.style.opacity = '1';
+        nextImage.style.transform = 'scale(1)';
+        previousImage.style.opacity = '0';
+        previousImage.setAttribute('aria-hidden', 'true');
+      });
       image = nextImage;
       current = nextIndex;
       updateHomeContent(current);

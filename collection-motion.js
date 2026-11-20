@@ -15,11 +15,17 @@
 
   function register() {
     if (reducedMotion.matches) return;
-    main.querySelectorAll(selector).forEach((node, index) => {
-      if (seen.has(node)) return;
-      seen.add(node);
-      // Above-the-fold and hash-linked content is available immediately.
-      if (node.getBoundingClientRect().top < window.innerHeight) return;
+    const nodes = main.querySelectorAll(selector);
+    const windowH = window.innerHeight;
+    const toObserve = [];
+    nodes.forEach(node => {
+      if (!seen.has(node)) {
+        seen.add(node);
+        toObserve.push({ node, top: node.getBoundingClientRect().top });
+      }
+    });
+    toObserve.forEach(({ node, top }, index) => {
+      if (top < windowH) return;
       node.style.setProperty('--collection-motion-delay', `${(index % 4) * 50}ms`);
       node.classList.add('collection-motion', 'is-pending');
       observer.observe(node);
@@ -58,6 +64,7 @@
     hero.style.setProperty('--hero-scroll-offset', `${distance.toFixed(2)}px`);
   }
   function queueHero() {
+    if (!desktop.matches || reducedMotion.matches) return;
     if (!frame) frame = requestAnimationFrame(paintHero);
   }
   window.addEventListener('scroll', queueHero, { passive: true });
