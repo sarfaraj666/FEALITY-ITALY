@@ -452,10 +452,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: clamp(48px, 6vw, 84px) clamp(24px, 3.5vw, 44px);
+  padding: clamp(24px, 3.5vw, 44px) clamp(24px, 3.5vw, 44px) clamp(64px, 8vw, 110px);
   box-sizing: border-box;
   margin-left: auto;
   margin-right: clamp(20px, 4vw, 64px);
+  transform: translateY(clamp(-36px, -4.5vh, -60px));
 }
 
 .home-pathway-panel .eyebrow,
