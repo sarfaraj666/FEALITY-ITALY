@@ -779,6 +779,27 @@
         display: none !important;
       }
     }
+
+    /* Executive Studio Partnership Meeting Section */
+    .studio-boardroom-banner {
+      position: relative;
+      display: block;
+      width: 100%;
+      margin: clamp(16px, 2vw, 32px) 0 clamp(24px, 3.5vw, 48px);
+      overflow: hidden;
+      background: #111214;
+    }
+    .studio-boardroom-banner picture {
+      display: block;
+      width: 100%;
+    }
+    .studio-boardroom-banner img {
+      display: block;
+      width: 100%;
+      height: clamp(280px, 42vw, 560px);
+      object-fit: cover;
+      object-position: center;
+    }
   </style>
   <link rel="stylesheet" href="client-refinements.css?v=3" />
 </head>
@@ -1090,6 +1111,14 @@
         </ul>
       </section>
     </div>
+
+    <!-- Executive Studio Partnership Meeting Section -->
+    <section class="studio-boardroom-banner" aria-label="FEALITY ITALY Leadership and Partnership">
+      <picture>
+        <source srcset="assets/Own/4.webp" type="image/webp" />
+        <img src="assets/Own/4.jpeg" alt="FEALITY ITALY Studio Partnership Meeting" width="1200" height="600" loading="lazy" />
+      </picture>
+    </section>
 
     <div class="studio-section-heading">
       <p class="studio-kicker">THE NEXT STEPS</p>
