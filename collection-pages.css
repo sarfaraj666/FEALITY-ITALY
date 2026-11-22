@@ -424,7 +424,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: clamp(80px, 10vw, 140px);
-  background: url('assets/images/about-pathway-bg.webp') center 42% / cover no-repeat;
+  background: url('assets/Home/colosseum-sunset-desktop.webp') center center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -701,6 +701,10 @@
   .home-page .home-collections-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px 22px;
+  }
+  .home-pathway {
+    background-image: url('assets/Home/colosseum-mobile.webp');
+    background-position: center center;
   }
   .home-pathway-grid {
     grid-template-columns: 1fr;
