@@ -507,8 +507,8 @@
 
 .home-assurance-container {
   display: grid;
-  grid-template-columns: minmax(260px, clamp(300px, 26vw, 380px)) minmax(0, 1fr);
-  gap: clamp(32px, 4.5vw, 64px);
+  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+  gap: clamp(44px, 6vw, 90px);
   align-items: center;
   background: transparent;
   border: none;
@@ -523,16 +523,16 @@
 .home-assurance-badge-col {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .home-assurance-shield {
   display: block;
   width: 100%;
-  max-width: clamp(280px, 25vw, 360px);
+  max-width: clamp(160px, 15vw, 210px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
