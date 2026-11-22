@@ -6,11 +6,18 @@
 }
 #siteHeader .search-toggle svg { stroke-width: 1.9; }
 #siteHeader .search-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-.menu-backdrop { display: none !important; }
+.menu-backdrop { display: none; }
 @media (min-width: 901px) {
   .studio-page .studio-hero-media::after {
     background: linear-gradient(90deg, rgb(10 11 13 / .76), rgb(10 11 13 / .48) 45%, rgb(10 11 13 / .10) 72%, transparent);
   }
+  .menu-backdrop.open { display: block; position: fixed; inset: 0; z-index: 39; background: rgb(0 0 0 / .4); cursor: pointer; }
+  #menuPanel { left: auto; right: 0; width: min(460px, 90vw); padding: 24px 36px 0; --menu-gutter: 36px; --menu-link-size: 19px; }
+  #menuPanel .menu-brand { width: 140px; }
+  #menuPanel .menu-content { width: 100%; margin-top: 16px; }
+  #menuPanel .menu-introduction { display: block; font-size: 28px; margin-bottom: 20px; }
+  #menuPanel #menuClose { top: 12px; right: 12px; }
+  #menuPanel .menu-tagline { gap: 12px; letter-spacing: .16em; }
   .collection-page #kitchen-gallery #kitchen-grid .editorial-design::before {
     background: linear-gradient(90deg, rgb(0 0 0 / .66), rgb(0 0 0 / .40) 34%, transparent 70%);
   }
