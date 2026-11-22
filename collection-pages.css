@@ -507,17 +507,18 @@
 
 .home-assurance-container {
   display: grid;
-  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
-  gap: clamp(64px, 11vw, 180px);
+  grid-template-columns: minmax(220px, clamp(240px, 19vw, 290px)) minmax(0, 1fr);
+  gap: clamp(36px, 4.5vw, 68px);
   align-items: center;
   background: transparent;
   border: none;
   border-radius: 0;
   padding: clamp(8px, 1.5vw, 16px) 0;
   box-shadow: none;
-  max-width: 1280px;
+  width: 100%;
+  max-width: 100%;
   margin-left: 0;
-  margin-right: auto;
+  margin-right: 0;
 }
 
 .home-assurance-badge-col {
@@ -529,15 +530,20 @@
 .home-assurance-shield {
   display: block;
   width: 100%;
-  max-width: clamp(160px, 15vw, 210px);
+  max-width: clamp(210px, 18vw, 260px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.14));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .home-assurance-container:hover .home-assurance-shield {
   transform: translateY(-4px) scale(1.02);
+}
+
+.home-assurance-text-col {
+  width: 100%;
+  max-width: 100%;
 }
 
 .home-assurance-text-col .eyebrow {
@@ -565,7 +571,7 @@
   line-height: 1.8;
   color: #333330;
   margin: 0 0 22px;
-  max-width: 660px;
+  max-width: 100%;
   text-align: left;
 }
 
@@ -577,6 +583,7 @@
   flex-direction: column;
   gap: 12px;
   text-align: left;
+  max-width: 100%;
 }
 
 .home-assurance-points li {
