@@ -922,13 +922,13 @@ p {
   width: 100%;
   height: clamp(120px, 32vw, 160px);
   object-fit: cover;
-  object-position: center 64%;
+  object-position: center 60%;
 }
 @media (min-width: 601px) {
-  .home-lake-photo { height: clamp(150px, 22vw, 200px); }
+  .home-lake-photo { height: clamp(120px, 15vw, 160px); }
 }
 @media (min-width: 1024px) {
-  .home-lake-photo { height: clamp(180px, 16vw, 230px); }
+  .home-lake-photo { height: clamp(120px, 10vw, 160px); }
 }
 
 .site-footer {
