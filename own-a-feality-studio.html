@@ -865,26 +865,38 @@
 
     @media (max-width: 768px) {
       .studio-boardroom-banner {
+        display: flex;
+        flex-direction: column;
         min-height: auto;
-      }
-      .studio-boardroom-banner .boardroom-media img {
-        object-position: 70% top;
+        background: #0c0d0f;
       }
       .studio-boardroom-banner::after {
-        background: linear-gradient(
-          to bottom,
-          rgba(8, 9, 11, 0.92) 0%,
-          rgba(8, 9, 11, 0.88) 50%,
-          rgba(8, 9, 11, 0.95) 100%
-        );
+        display: none;
+      }
+      .studio-boardroom-banner .boardroom-media {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .studio-boardroom-banner .boardroom-media picture,
+      .studio-boardroom-banner .boardroom-media img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1200 / 600;
+        object-fit: cover;
+        object-position: center;
+        display: block;
       }
       .studio-boardroom-banner .boardroom-content {
-        padding: 50px 24px 44px;
+        width: 100%;
         max-width: 100%;
+        padding: 34px 22px 38px;
+        background: #0c0d0f;
+        box-sizing: border-box;
       }
       .studio-boardroom-banner .boardroom-title {
-        font-size: 26px;
-        margin-bottom: 20px;
+        font-size: 24px;
+        margin-bottom: 18px;
       }
       .studio-boardroom-banner .boardroom-body p {
         font-size: 13.5px;
