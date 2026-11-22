@@ -925,10 +925,16 @@ p {
   object-position: center 60%;
 }
 @media (min-width: 601px) {
-  .home-lake-photo { height: clamp(120px, 15vw, 160px); }
+  .home-lake-photo {
+    height: clamp(240px, 28vw, 340px);
+    object-position: center 54%;
+  }
 }
 @media (min-width: 1024px) {
-  .home-lake-photo { height: clamp(120px, 10vw, 160px); }
+  .home-lake-photo {
+    height: clamp(340px, 29vw, 460px);
+    object-position: center 54%;
+  }
 }
 
 .site-footer {
