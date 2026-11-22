@@ -8,10 +8,30 @@
     Vanity: ['FealityVanityDesigns', 'FealityVanityGallery'],
     Balcony: ['FealityBalconyDesigns', 'FealityBalconyGallery']
   };
-  for (const [collection, [, hook]] of Object.entries(collections)) {
-    window[hook]?.setEnquiryHandler(design => {
-      location.href = `contact.html?${new URLSearchParams({ collection, design: design.id })}`;
+  const collectionPages = {
+    Kitchen: 'kitchen.html', Wardrobes: 'wardrobes.html', Vanity: 'vanity.html', Balcony: 'balcony.html'
+  };
+  function openPageEnquiry(collection, design) {
+    const form = document.querySelector('[data-customer-enquiry], .contact-form');
+    const collectionSelect = form?.querySelector('[name="collection"], [name="interest"]');
+    const designSelect = form?.querySelector('[name="designId"]');
+    if (!form || !collectionSelect || !designSelect) {
+      location.href = `${collectionPages[collection]}?${new URLSearchParams({ collection, design: design.id })}#kitchen-enquiry-section`;
+      return;
+    }
+    collectionSelect.value = collection;
+    collectionSelect.dispatchEvent(new Event('change', { bubbles: true }));
+    designSelect.value = design.id;
+    designSelect.dispatchEvent(new Event('change', { bubbles: true }));
+    const query = new URLSearchParams({ collection, design: design.id });
+    history.replaceState(null, '', `${location.pathname}?${query}#kitchen-enquiry-section`);
+    document.getElementById('kitchen-enquiry-section')?.scrollIntoView({
+      behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'
     });
+    setTimeout(() => form.querySelector('input:not([type="hidden"])')?.focus({ preventScroll: true }), 450);
+  }
+  for (const [collection, [, hook]] of Object.entries(collections)) {
+    window[hook]?.setEnquiryHandler(design => openPageEnquiry(collection, design));
   }
   document.querySelectorAll('[data-customer-enquiry], .contact-form, .studio-enquiry').forEach(form => {
     const status = document.createElement('p');
@@ -55,7 +75,7 @@
       const value = name => form.querySelector(`[name="${name}"]`)?.value.trim() || '';
       const payload = {
         name: value('name') || value('fullName'), phone: value('phone'), email: value('email'), city: value('city'),
-        collection: collectionSelect?.value || 'Studio partnership', designId: value('designId'),
+        collection: form.dataset.enquiryCollection || collectionSelect?.value || 'Studio partnership', designId: value('designId'),
         message: value('message'), budget: value('budget'), consent: !!form.querySelector('input[type="checkbox"]:checked'),
         website: value('website'), page: location.pathname.split('/').pop() || 'index.html'
       };
