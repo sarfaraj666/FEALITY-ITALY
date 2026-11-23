@@ -936,7 +936,8 @@ p {
 .home-footer-art img { display: block; width: 100%; height: auto; margin-inline: auto; }
 .home-footer-art--mobile { display: none; }
 @media (max-width: 600px) {
-  .home-footer-art--mobile { display: block; }
+  .home-footer-art--mobile { display: block; background: #fff; padding-block: 10px; }
+  .home-footer-art--mobile img { width: 100%; max-width: 100%; height: auto; margin: 0; object-fit: contain; }
   .home-footer-art--desktop { display: none; }
   .home-page #mainContent .home-pathway { margin-bottom: 0; }
 }
