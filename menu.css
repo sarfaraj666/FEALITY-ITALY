@@ -53,6 +53,14 @@
 #menuPanel.open .main-menu a:nth-child(5) { animation-delay: .22s; }
 #menuPanel.open .menu-secondary { animation-delay: .25s; }
 @keyframes menu-reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 768px) {
+  #menuPanel {
+    width: 100vw;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
 @media (max-width: 600px) {
   #menuPanel { --menu-link-size: 15px; padding: max(12px, env(safe-area-inset-top)) 7% 0; }
   #menuPanel .menu-content { width: min(100%, 270px); }
