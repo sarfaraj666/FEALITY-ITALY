@@ -24,6 +24,12 @@
   .collection-page #kitchen-gallery #kitchen-grid .design-summary { text-shadow: 0 1px 3px rgb(0 0 0 / .65); }
 }
 .enquiry-status { grid-column: 1 / -1; font-size: 14px; line-height: 1.5; }
+.enquiry-status:empty { display: none; }
+.enquiry-status[data-state] { padding: 14px 16px; border: 1px solid currentColor; border-radius: 4px; }
+.enquiry-status[data-state="success"] { background: rgba(110, 170, 130, .14); }
+.enquiry-status[data-state="sending"]::before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 10px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; vertical-align: -2px; animation: enquiry-spin .8s linear infinite; }
+@keyframes enquiry-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .enquiry-status[data-state="sending"]::before { animation: none; } }
 .enquiry-product { grid-column: 1 / -1; margin: 0; }
 .contact-draft .enquiry-consent { display: flex; align-items: flex-start; gap: 10px; grid-column: 1 / -1; }
 .contact-draft .enquiry-consent input { width: 18px; min-height: 18px; flex-shrink: 0; }

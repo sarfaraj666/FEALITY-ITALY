@@ -907,8 +907,68 @@ p {
   padding-bottom: 7px
 }
 
+.feality-welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: radial-gradient(ellipse at center, #303232 0%, #171919 65%, #101212 100%);
+  color: #f3f2ee;
+  text-align: center;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+.feality-welcome img { width: clamp(140px, 15vw, 190px); height: auto; margin-bottom: 42px; }
+.feality-welcome p { margin: 0 0 16px; font: 400 12px/1.5 var(--font-ui); letter-spacing: .35em; }
+.feality-welcome h2 { margin: 0; color: inherit; font: 400 clamp(28px, 5vw, 64px)/1.2 var(--font-ui); letter-spacing: .14em; }
+.feality-welcome-line { width: 72px; height: 1px; background: #b9bdb7; margin: 30px 0 22px; transform-origin: center; animation: feality-welcome-reveal 1.5s ease both; }
+.feality-welcome small { font: 400 10px/1.7 var(--font-ui); letter-spacing: .24em; color: #bfc2bd; }
+.feality-welcome.is-leaving { opacity: 0; visibility: hidden; pointer-events: none; }
+@keyframes feality-welcome-reveal { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .feality-welcome { transition: none; } .feality-welcome-line { animation: none; } }
 .home-lake-transition {
   position: relative;
+}
+.home-cypress-transition {
+  position: relative;
+}
+.home-cypress-copy {
+  position: absolute;
+  top: 10%;
+  right: 6%;
+  width: 42%;
+  max-width: 560px;
+  color: #252525;
+}
+.home-cypress-copy h2 {
+  font-family: var(--font-ui);
+  font-size: clamp(24px, 2vw, 30px);
+  letter-spacing: .08em;
+  margin: 0 0 20px;
+}
+.home-cypress-copy p {
+  font-size: clamp(20px, 1.6vw, 24px);
+  line-height: 1.65;
+  margin: 0 0 18px;
+}
+@media (max-width: 600px) {
+  .home-cypress-transition { background: #ecebe5; }
+  .home-cypress-copy {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    max-width: none;
+    padding: 24px 6%;
+  }
+}
+.home-cypress-photo {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .home-lake-transition::after {
   content: "";
@@ -944,6 +1004,8 @@ p {
   font: 400 13px/1.4 var(--font-ui);
 }
 .site-footer-inner { max-width: 1080px; margin-inline: auto; }
+.home-page .site-footer--landscape { padding: 0 0 12px; }
+.home-page .site-footer--landscape .site-footer-inner { width: 88%; padding-top: 24px; }
 .site-footer h2 {
   display: flex;
   align-items: baseline;

@@ -67,6 +67,9 @@
 .home-page .home-showcase-panel--balcony {
   background-color: #252525;
 }
+.home-page .home-showcase-panel--balcony > img {
+  object-position: 66% center;
+}
 
 .home-page .home-showcase-label {
   position: absolute;

@@ -1,6 +1,30 @@
 (() => {
   'use strict';
 
+  // A brief welcome on the first page of each browsing session.
+  let showWelcome = true;
+  try { showWelcome = !sessionStorage.getItem('feality-welcomed'); } catch (_) {}
+  if (showWelcome) {
+    const welcome = document.createElement('div');
+    welcome.className = 'feality-welcome';
+    welcome.setAttribute('aria-hidden', 'true');
+    welcome.innerHTML = '<img src="assets/images/feality-italy-logo-navbar.png" alt="" width="190" /><p>WELCOME TO</p><h2>FEALITY ITALY</h2><span class="feality-welcome-line"></span><small>ITALIAN LUXURY INTERIORS</small>';
+    document.body.append(welcome);
+    try { sessionStorage.setItem('feality-welcomed', '1'); } catch (_) {}
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let dismissed = false;
+    const dismiss = () => {
+      if (dismissed) return;
+      dismissed = true;
+      welcome.classList.add('is-leaving');
+      setTimeout(() => welcome.remove(), reducedMotion ? 0 : 650);
+    };
+    // Never delay keyboard access or leave visitors behind a loading screen.
+    document.addEventListener('keydown', dismiss, { once: true });
+    welcome.addEventListener('click', dismiss, { once: true });
+    setTimeout(dismiss, reducedMotion ? 700 : 1800);
+  }
+
   // 1. Mobile Menu Panel
   const menuPanel = document.getElementById('menuPanel');
   const menuToggle = document.getElementById('menuToggle');

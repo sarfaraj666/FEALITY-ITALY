@@ -38,6 +38,7 @@
     status.className = 'enquiry-status';
     status.setAttribute('role', 'status');
     status.setAttribute('aria-live', 'polite');
+    status.tabIndex = -1;
     form.append(status);
     const trap = document.createElement('input');
     trap.name = 'website'; trap.tabIndex = -1; trap.autocomplete = 'off';
@@ -92,6 +93,10 @@
       if (lastPayload && signature !== lastPayload) requestId = crypto.randomUUID();
       lastPayload = signature;
       const button = form.querySelector('[type="submit"]');
+      const buttonContent = button.innerHTML;
+      status.dataset.state = 'sending';
+      form.setAttribute('aria-busy', 'true');
+      button.textContent = 'Sending…';
       busy = true; button.disabled = true; status.textContent = 'Sending your enquiry…';
       const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), 45000);
       try {
@@ -110,12 +115,17 @@
         }
         const result = await response.json();
         if (!response.ok || result.saved !== true || !/^FE-[a-f0-9-]{32,36}$/.test(result.id)) throw new Error('Unconfirmed');
-        status.textContent = `Thank you. Your enquiry has been received. Reference: ${result.id}`;
+        status.dataset.state = 'success';
+        status.textContent = '✓ Thank you! Your enquiry has been received successfully. Our team will contact you soon.';
+        status.focus({ preventScroll: true });
+        status.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
         // Keep this ID for repeated clicks with unchanged details. A genuine edit
         // generates a new ID above; a lost response can safely be retried.
       } catch (_) {
+        status.dataset.state = 'error';
         status.textContent = 'We could not confirm receipt. Your details are still here; please retry or call 9522251777. Retrying will not create a duplicate enquiry.';
-      } finally { clearTimeout(timeout); busy = false; button.disabled = false; }
+        status.focus({ preventScroll: true });
+      } finally { clearTimeout(timeout); busy = false; button.disabled = false; button.innerHTML = buttonContent; form.removeAttribute('aria-busy'); }
     });
   });
 })();

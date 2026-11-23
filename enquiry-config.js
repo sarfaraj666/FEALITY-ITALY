@@ -8,7 +8,7 @@
     endpoint: GOOGLE_SCRIPT_ENDPOINT,
     email: 'sksarfarajali824@gmail.com',
     phone: '9522251777',
-    whatsapp: '919832722644',
+    whatsapp: '919522251777',
     sheetUrl: SPREADSHEET_URL
   });
 
