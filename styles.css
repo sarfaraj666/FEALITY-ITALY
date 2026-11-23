@@ -936,8 +936,9 @@ p {
 .home-footer-art img { display: block; width: 100%; height: auto; margin-inline: auto; }
 .home-footer-art--mobile { display: none; }
 @media (max-width: 600px) {
-  .home-footer-art--mobile { display: block; background: #fff; padding-block: 10px; }
-  .home-footer-art--mobile img { width: 100%; max-width: 100%; height: auto; margin: 0; object-fit: contain; }
+  .home-footer-art--mobile { display: grid; align-items: center; background: #fff; padding-block: 14px; }
+  .home-footer-art--mobile img { grid-area: 1 / 1; width: 100%; max-width: 100%; height: auto; margin: 0; object-fit: contain; }
+  body.home-page #mainContent .home-footer-mobile-copy { grid-area: 1 / 1; position: relative; width: 74%; box-sizing: border-box; margin: 0 auto; padding: 16px 6px; background: #fff; color: #252525; font: 400 18px/1.6 var(--font-ui); text-align: center; }
   .home-footer-art--desktop { display: none; }
   .home-page #mainContent .home-pathway { margin-bottom: 0; }
 }
