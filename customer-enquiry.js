@@ -2,6 +2,19 @@
   'use strict';
   const config = window.FealityEnquiryConfig;
   if (!config) return;
+  function showSuccessPopup() {
+    document.querySelector('.enquiry-success-dialog')?.remove();
+    const dialog = document.createElement('dialog');
+    dialog.className = 'enquiry-success-dialog';
+    dialog.setAttribute('aria-labelledby', 'enquiry-success-title');
+    dialog.setAttribute('aria-describedby', 'enquiry-success-description');
+    dialog.innerHTML = '<div class="enquiry-success-mark" aria-hidden="true">✓</div><p class="enquiry-success-brand">FEALITY ITALY</p><h2 id="enquiry-success-title">Thank you!</h2><p id="enquiry-success-description">Your enquiry has been received successfully.<br>Our team will contact you soon.</p><button type="button" autofocus>Done</button>';
+    document.body.append(dialog);
+    dialog.querySelector('button').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } });
+    dialog.addEventListener('close', () => dialog.remove(), { once: true });
+    dialog.showModal();
+  }
   const collections = {
     Kitchen: ['FealityKitchenDesigns', 'FealityKitchenGallery'],
     Wardrobes: ['FealityWardrobeDesigns', 'FealityWardrobeGallery'],
@@ -119,6 +132,7 @@
         status.textContent = '✓ Thank you! Your enquiry has been received successfully. Our team will contact you soon.';
         status.focus({ preventScroll: true });
         status.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
+        showSuccessPopup();
         // Keep this ID for repeated clicks with unchanged details. A genuine edit
         // generates a new ID above; a lost response can safely be retried.
       } catch (_) {

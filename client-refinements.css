@@ -25,6 +25,17 @@
 }
 .enquiry-status { grid-column: 1 / -1; font-size: 14px; line-height: 1.5; }
 .enquiry-status:empty { display: none; }
+.enquiry-success-dialog { box-sizing: border-box; width: min(440px, calc(100% - 36px)); max-height: calc(100dvh - 40px); overflow: auto; margin: auto; padding: 36px 26px; border: 1px solid #d3d3ce; border-radius: 12px; background: #f3f2ee; color: #252525; text-align: center; font-family: var(--font-ui); box-shadow: 0 18px 65px #0003; }
+.enquiry-success-dialog::backdrop { background: #101414aa; backdrop-filter: blur(4px); }
+.enquiry-success-dialog[open] { animation: enquiry-popup-in .3s ease-out both; }
+.enquiry-success-mark { display: grid; place-items: center; width: 66px; height: 66px; margin: 0 auto 20px; border: 1px solid #537963; border-radius: 50%; color: #38634b; font-size: 34px; animation: enquiry-popup-in .45s .08s ease-out both; }
+.enquiry-success-brand { font-size: 11px; letter-spacing: .22em; margin: 0 0 12px; }
+.enquiry-success-dialog h2 { font: 500 28px/1.2 var(--font-ui); margin: 0 0 16px; }
+.enquiry-success-dialog #enquiry-success-description { font-size: 15px; line-height: 1.7; margin: 0 0 26px; }
+.enquiry-success-dialog button { background: #252525; color: #fff; border: 0; border-radius: 4px; padding: 12px 36px; min-height: 44px; font: inherit; cursor: pointer; }
+.enquiry-success-dialog button:focus-visible { outline: 2px solid #537963; outline-offset: 4px; }
+@keyframes enquiry-popup-in { from { opacity: 0; transform: translateY(12px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .enquiry-success-dialog[open], .enquiry-success-mark { animation: none; } }
 .enquiry-status[data-state] { padding: 14px 16px; border: 1px solid currentColor; border-radius: 4px; }
 .enquiry-status[data-state="success"] { background: rgba(110, 170, 130, .14); }
 .enquiry-status[data-state="sending"]::before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 10px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; vertical-align: -2px; animation: enquiry-spin .8s linear infinite; }
