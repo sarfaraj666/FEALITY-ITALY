@@ -792,6 +792,12 @@
 }
 
 @media (max-width: 600px) {
+  .home-page #pathway .home-pathway-header .eyebrow,
+  .home-page #pathway .home-pathway-header h2,
+  .home-page #pathway .home-pathway-content > p {
+    color: #fff;
+    text-shadow: 0 1px 5px rgb(0 0 0 / 55%), 0 0 12px rgb(0 0 0 / 35%);
+  }
   /* Mobile 390px Viewport — Cinematic Hero & Transparent Header Integrity */
   .collection-hero.hero,
   .home-hero.hero {
