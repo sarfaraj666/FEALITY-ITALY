@@ -36,6 +36,11 @@
   border-top: 1px solid rgba(0, 0, 0, 0.04);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
+.home-page .home-benefits > h2,
+.home-page .home-benefits > .home-benefits-eyebrow,
+.home-page .home-benefits > .home-benefits-subtitle {
+  width: min(100%, 760px);
+}
 .home-benefits-eyebrow {
   margin: 0 auto 12px;
   font-size: 11px;
@@ -149,6 +154,11 @@
 }
 .home-page #mainContent .home-editorial {
   padding-block: clamp(40px, 4.5vw, 64px);
+}
+@media (min-width: 901px) {
+  .home-page #mainContent .home-editorial {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 .home-page .home-showcase {
   width: 100%;
