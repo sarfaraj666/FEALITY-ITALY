@@ -145,7 +145,7 @@ p {
   position: fixed;
   background: #efeee9;
   color: var(--ink);
-  height: 76px;
+  height: 96px;
   border-bottom: 1px solid #dedcd6
 }
 
@@ -934,6 +934,7 @@ p {
 }
 .home-footer-art { display: block; background: var(--paper); }
 .home-footer-art img { display: block; width: 100%; height: auto; margin-inline: auto; }
+.home-footer-art--desktop img { height: clamp(180px, 11vw, 220px); object-fit: cover; object-position: center; }
 .home-footer-art--mobile { display: none; }
 @media (max-width: 600px) {
   .home-footer-art--mobile { display: grid; align-items: center; background: #fff; padding-block: 14px; }
@@ -995,19 +996,19 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
 .home-lake-photo {
   display: block;
   width: 100%;
-  height: clamp(120px, 32vw, 160px);
+  height: 76px;
   object-fit: cover;
   object-position: center 60%;
 }
 @media (min-width: 601px) {
   .home-lake-photo {
-    height: clamp(240px, 28vw, 340px);
+    height: clamp(140px, 20vw, 220px);
     object-position: center 54%;
   }
 }
 @media (min-width: 1024px) {
   .home-lake-photo {
-    height: clamp(340px, 29vw, 460px);
+    height: clamp(170px, 13vw, 240px);
     object-position: center 54%;
   }
 }
@@ -1428,17 +1429,7 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
 
 /* Scroll experiences: progressive reveal, image depth and reading progress. */
 .scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background: #a8a18f;
-  z-index: 60;
-  transform: scaleX(0);
-  transform-origin: left;
-  pointer-events: none;
-  will-change: transform
+  display: none;
 }
 
 .js-scroll .scroll-reveal {

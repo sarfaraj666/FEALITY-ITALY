@@ -564,7 +564,7 @@
 }
 
 .home-material-assurance {
-  margin: clamp(10px, 1.5vw, 20px) 0 clamp(48px, 6vw, 84px);
+  margin: clamp(10px, 1.5vw, 20px) 0 clamp(12px, 1.5vw, 20px);
   padding: 0 clamp(20px, 3.5vw, 60px);
   width: 100%;
   box-sizing: border-box;
