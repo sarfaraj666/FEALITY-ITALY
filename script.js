@@ -181,6 +181,16 @@ document.getElementById('siteSearch').addEventListener('input', event => {
   results.innerHTML = links.length ? links.join('') : '<p>No matching collections or elements found.</p>';
   results.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(search, false)));
 });
+const siteSearch = document.getElementById('siteSearch');
+function submitSiteSearch() {
+  const firstResult = document.querySelector('#searchResults a');
+  if (firstResult) firstResult.click();
+  else siteSearch.focus();
+}
+document.getElementById('searchSubmit').addEventListener('click', submitSiteSearch);
+siteSearch.addEventListener('keydown', event => {
+  if (event.key === 'Enter') { event.preventDefault(); submitSiteSearch(); }
+});
 document.getElementById('languageButton').addEventListener('click', () => alert('This demo currently supports English only.'));
 
 

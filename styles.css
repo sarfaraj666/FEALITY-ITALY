@@ -411,6 +411,25 @@ p {
   color: #777770;
 }
 
+@media (min-width: 901px) {
+  #searchPanel { align-items: center; padding: 104px 32px 40px; background: rgb(255 255 255 / 72%); backdrop-filter: blur(6px); }
+  #searchPanel > button { position: absolute; top: 30px; right: clamp(40px, 6vw, 112px); color: #4a82e8; }
+  #searchPanel > label { display: none; }
+  #searchPanel .search-shell { display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center; width: min(100%, 790px); min-height: 58px; padding: 0 12px 0 16px; border: 1px solid rgb(80 80 75 / 28%); border-radius: 32px; background: rgb(255 255 255 / 78%); color: #252521; }
+  #searchPanel .search-field-icon { width: 23px; height: 23px; stroke: currentColor; stroke-width: 1.8; }
+  #searchPanel .search-line { align-items: center; margin: 0; border: 0; }
+  #searchPanel .search-line input { height: 48px; padding: 0 12px; color: #252521; font-size: 18px; }
+  #searchPanel .search-line input::placeholder { color: #888780; font-weight: 400; }
+  #searchPanel .search-line button { display: grid; flex: 0 0 52px; place-items: center; width: 52px; height: 48px; border: 0; border-radius: 26px; background: #f0f0ed; color: #252521; cursor: pointer; }
+  #searchPanel .search-line button svg { width: 24px; height: 24px; stroke: currentColor; stroke-width: 1.8; }
+  #searchPanel .search-results { width: min(100%, 790px); max-width: 790px; max-height: min(62vh, 560px); margin-top: 6px; padding: 8px 14px; overflow: auto; border: 1px solid rgb(80 80 75 / 18%); border-top: 0; border-radius: 0 0 18px 18px; background: rgb(255 255 255 / 78%); color: #252521; box-shadow: 0 18px 40px rgb(0 0 0 / 8%); }
+  #searchPanel .search-results:empty { display: none; }
+  #searchPanel .search-results a { min-height: 48px; padding: 10px 12px; border: 0; border-radius: 8px; color: #252521; }
+  #searchPanel .search-results a:hover { padding-left: 18px; background: #f3f3f0; }
+  #searchPanel .search-results a span { color: #8a7040; }
+  #searchPanel .search-results p { margin: 12px; color: #55544e; }
+}
+
 .hero {
   height: 100svh;
   min-height: 650px;
@@ -1584,6 +1603,9 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
     text-align: right;
     white-space: nowrap;
   }
+  #searchPanel .search-shell { display: contents; }
+  #searchPanel .search-field-icon,
+  #searchPanel .search-line button { display: none; }
 }
 
 .floating-whatsapp {
