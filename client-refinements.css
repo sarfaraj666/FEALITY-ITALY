@@ -309,11 +309,15 @@
   font-family: var(--font-ui);
 }
 
-.policy-page .site-header,
+.policy-page .site-header {
+  background: transparent;
+  color: #fff;
+}
+
 .policy-page .site-header.scrolled {
-  background: #242424;
-  color: #f5f4f1;
-  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  background: #fff;
+  color: var(--ink);
+  border-bottom-color: var(--line);
 }
 
 .policy-page #mainContent.review-guide {
@@ -373,10 +377,10 @@
 
 .policy-page .policy-part > h2 {
   margin: 0 0 30px;
-  color: var(--policy-heading);
-  font: 600 20px/1.35 var(--font-ui);
-  letter-spacing: .04em;
-  text-transform: uppercase;
+  color: #fff;
+  font: 700 13px/1.4 var(--font-ui);
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .policy-page .policy-section {
@@ -385,15 +389,15 @@
 
 .policy-page .policy-section h3 {
   margin: 0 0 2px;
-  color: var(--policy-heading);
-  font: 700 16px/1.35 var(--font-ui);
-  text-transform: uppercase;
+  color: #fff;
+  font: 700 13px/1.4 var(--font-ui);
+  text-transform: none;
 }
 
 .policy-page .policy-section h4 {
   margin: 18px 0 3px;
-  color: var(--policy-heading);
-  font: 600 15px/1.4 var(--font-ui);
+  color: #fff;
+  font: 700 13px/1.4 var(--font-ui);
 }
 
 .policy-page .policy-section p,
@@ -425,27 +429,25 @@
 
 @media (max-width: 768px) {
   .policy-page .guide-intro {
-    padding: 52px 22px 24px;
+    padding: 8px 22px 24px;
   }
 
   .policy-page #mainContent.review-guide article.policy-document {
-    padding: 18px 22px 58px;
+    padding: 8px 22px 58px;
     font-size: 14px;
   }
 
   .policy-page .policy-meta {
     grid-template-columns: minmax(0, 1fr);
     gap: 6px;
-    margin-bottom: 34px;
+    margin-bottom: 16px;
   }
 
   .policy-page .policy-part {
-    margin-top: 36px;
-    padding-top: 22px;
+    margin-top: 20px;
+    padding-top: 16px;
   }
 
-  .policy-page .policy-part > h2 { font-size: 17px; }
-  .policy-page .policy-section h3 { font-size: 14px; }
   .policy-page .policy-section p,
-  .policy-page .policy-section li { font-size: 14px; line-height: 1.55; }
+  .policy-page .policy-section li { font-size: 12px; line-height: 1.45; }
 }
