@@ -1073,26 +1073,26 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
 .footer-social :is(a, span) { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 32px; }
 .footer-social svg { width: 18px; height: 18px; }
 .footer-social a:hover { opacity: .8; }
-.site-footer .footer-store-location { display: inline-flex; align-items: center; gap: 8px; width: max-content; max-width: 100%; min-height: 32px; margin-top: 8px; color: inherit; font-size: 12px; white-space: nowrap; }
+.site-footer .footer-store-location { display: inline-flex; align-items: center; gap: 6px; width: max-content; max-width: 100%; min-height: 24px; margin-top: 8px; color: inherit; font-size: 11px; white-space: nowrap; }
 .site-footer .footer-social > .footer-store-location { justify-content: flex-start; width: max-content; height: auto; max-width: 100%; border: 0; border-radius: 0; }
-.footer-social .footer-store-location svg { display: block; width: 25px; height: 25px; flex: 0 0 25px; }
+.footer-social .footer-store-location svg { display: block; width: 18px; height: 18px; flex: 0 0 18px; }
 .footer-social .footer-store-location span { display: inline; width: auto; height: auto; border: 0; border-radius: 0; }
 .footer-store-location:hover svg,
 .footer-social:has(.footer-store-location) > div a:hover svg { transform: translateY(-1px); }
-.site-footer .footer-social:has(.footer-store-location) > div { margin-top: 10px; }
+.site-footer .footer-social:has(.footer-store-location) > div { margin-top: 8px; }
 .site-footer .footer-social:has(.footer-store-location) > div a {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 6px;
   width: max-content;
   max-width: 100%;
   height: auto;
-  min-height: 28px;
+  min-height: 24px;
   border: 0;
   border-radius: 0;
   color: inherit;
-  font-size: 12px;
+  font-size: 11px;
   white-space: nowrap;
 }
 .site-footer .footer-social:has(.footer-store-location) > div a span {
@@ -1104,18 +1104,18 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
 }
 .site-footer .footer-social:has(.footer-store-location) svg {
   display: block;
-  width: 24px;
-  height: 24px;
-  flex: 0 0 24px;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
   padding: 0;
   border: 0;
   border-radius: 0;
   transition: transform .2s ease;
 }
 .site-footer .footer-social > .footer-store-location {
-  gap: 8px;
-  min-height: 28px;
-  margin-top: 6px;
+  gap: 6px;
+  min-height: 24px;
+  margin-top: 4px;
 }
 .site-footer-inner > .footer-catalogue-link {
   display: inline-flex;
@@ -1155,6 +1155,9 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
   .site-footer nav, .site-footer nav:has(.footer-social) { grid-template-columns: 1.15fr 1fr 1.1fr; }
   .site-footer li a { min-height: 24px; }
   .footer-social { grid-column: 1 / -1; }
+  .site-footer .footer-social:has(.footer-store-location) > div a,
+  .site-footer .footer-store-location { font-size: 10px; min-height: 22px; }
+  .site-footer .footer-social:has(.footer-store-location) svg { width: 16px; height: 16px; flex: 0 0 16px; }
   .site-footer .footer-store-location { margin-top: 4px; white-space: normal; }
   .site-footer-inner > .footer-catalogue-link { margin: 6px auto 0 0; min-height: 30px; font-size: 10px; }
 }
