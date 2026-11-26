@@ -2,6 +2,26 @@
   'use strict';
   const config = window.FealityEnquiryConfig;
   if (!config) return;
+  const acceptedEmailTlds = new Set([
+    'com', 'org', 'net', 'edu', 'gov', 'mil', 'int', 'info', 'biz', 'name', 'pro',
+    'aero', 'coop', 'museum', 'travel', 'jobs', 'mobi', 'asia', 'cat', 'tel', 'post',
+    'app', 'dev', 'tech', 'online', 'site', 'store', 'design', 'studio', 'agency',
+    'space', 'shop', 'website', 'live', 'world', 'solutions', 'company', 'business',
+    'group', 'services', 'digital', 'global', 'in', 'co.in', 'org.in', 'net.in',
+    'firm.in', 'gen.in', 'ind.in', 'ac.in', 'edu.in', 'gov.in', 'co.uk', 'org.uk',
+    'net.uk', 'com.au', 'net.au', 'org.au', 'co.nz', 'co.za', 'co.sg'
+  ]);
+  function isPlausibleEmail(value) {
+    if (!value) return true;
+    const parts = value.trim().split('@');
+    if (parts.length !== 2 || !/^[a-z0-9._%+-]+$/i.test(parts[0])) return false;
+    const domain = parts[1].toLowerCase();
+    if (!/^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/.test(domain)) return false;
+    const labels = domain.split('.');
+    const suffix2 = labels.slice(-2).join('.');
+    const tld = labels[labels.length - 1];
+    return acceptedEmailTlds.has(suffix2) || acceptedEmailTlds.has(tld) || /^[a-z]{2}$/.test(tld);
+  }
   function showSuccessPopup() {
     document.querySelector('.enquiry-success-dialog')?.remove();
     const dialog = document.createElement('dialog');
@@ -47,6 +67,15 @@
     window[hook]?.setEnquiryHandler(design => openPageEnquiry(collection, design));
   }
   document.querySelectorAll('[data-customer-enquiry], .contact-form, .studio-enquiry').forEach(form => {
+    const emailInput = form.querySelector('input[type="email"]');
+    if (emailInput) {
+      const validateEmail = () => emailInput.setCustomValidity(
+        isPlausibleEmail(emailInput.value.trim()) ? '' : 'Enter a valid email address with a recognized domain.'
+      );
+      emailInput.addEventListener('input', validateEmail);
+      emailInput.addEventListener('blur', validateEmail);
+      validateEmail();
+    }
     const status = document.createElement('p');
     status.className = 'enquiry-status';
     status.setAttribute('role', 'status');
