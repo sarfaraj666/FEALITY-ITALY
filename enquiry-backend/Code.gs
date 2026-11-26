@@ -1,5 +1,5 @@
 // Bound to the private FEALITY ITALY Customer Enquiries spreadsheet.
-const RECIPIENT = 'sksarfarajali824@gmail.com';
+const RECIPIENT = 'fealityitaly@gmail.com';
 const HEADERS = ['Enquiry ID', 'Received at (India)', 'Name', 'Phone', 'Email', 'City / Region', 'Collection', 'Design ID', 'Design', 'Product details', 'Product image', 'Message', 'Budget', 'Source page', 'Consent', 'Follow-up status', 'Email notification', 'WhatsApp notification', 'Payload fingerprint'];
 
 function setupEnquiries() {

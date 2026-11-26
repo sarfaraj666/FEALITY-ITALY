@@ -4,7 +4,7 @@ All enquiries belong in one private Google spreadsheet. Email is a notification,
 
 - Sheet: https://docs.google.com/spreadsheets/d/1M3_LMnj0-3dtxyK9hlHR8n2yyp3U4vtr3IkZjEhxU4c/edit
 - Bound script: https://script.google.com/u/0/home/projects/15K2XpoQ1_BIzLSeNISFiCrZo7zEOXt12ZNFbqV5__GeoyW9g-FOMWWbE/edit
-- Email notifications: sksarfarajali824@gmail.com
+- Email notifications: fealityitaly@gmail.com
 - Requested WhatsApp recipient: 919522251777. Automatic notifications are NOT configured; a WhatsApp Business API provider and approved notification template are still needed.
 
 ## Current state

@@ -26,6 +26,43 @@
 .review-guide article { padding-top: 16px; }
 @media (max-width: 768px) { .review-guide .guide-intro { padding: 44px 22px 28px; } }
 
+.review-guide article.policy-document {
+  max-width: 980px;
+  padding-top: clamp(32px, 5vw, 64px);
+  font-family: var(--font-ui);
+}
+.policy-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 28px;
+  margin-bottom: clamp(36px, 5vw, 64px);
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 35%);
+}
+.review-guide .policy-meta p { margin: 0; font-size: 13px; line-height: 1.65; }
+.policy-document .policy-part { margin-top: 54px; padding-top: 28px; border-top: 1px solid var(--line); }
+.review-guide .policy-part > h2 { margin-bottom: 28px; font-size: clamp(28px, 3vw, 40px); }
+.policy-document .policy-section { margin-top: 30px; }
+.review-guide .policy-section h3 { margin: 0 0 12px; font: 600 clamp(16px, 1.5vw, 19px)/1.4 var(--font-ui); }
+.review-guide .policy-section h4 { margin: 20px 0 5px; font: 600 15px/1.5 var(--font-ui); }
+.review-guide .policy-section p,
+.review-guide .policy-section li { max-width: 78ch; font-size: 14px; line-height: 1.75; }
+.review-guide .policy-section p { margin: 8px 0 14px; }
+.review-guide .policy-section ul,
+.review-guide .policy-section ol { margin: 8px 0 18px; padding-left: 24px; }
+.review-guide .policy-section li { padding: 2px 0 2px 5px; }
+.review-guide .policy-meta a,
+.review-guide .policy-section a { text-underline-offset: 3px; }
+@media (max-width: 768px) {
+  .review-guide article.policy-document { padding: 28px 22px 56px; }
+  .policy-meta { grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 16px; margin-bottom: 38px; }
+  .policy-document .policy-part { margin-top: 42px; padding-top: 24px; }
+  .policy-document .policy-section { margin-top: 25px; }
+  .review-guide .policy-section p,
+  .review-guide .policy-section li { font-size: 14px; }
+}
+
 .kitchen-faq {
   padding: clamp(40px, 5vw, 80px) clamp(20px, 10vw, 180px);
   background: #252525;
