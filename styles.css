@@ -991,7 +991,7 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
     position: absolute;
     z-index: 1;
     inset: auto 0 0;
-    height: 58px;
+    height: 24px;
     pointer-events: none;
     background: linear-gradient(to bottom, transparent, #252525);
   }
@@ -1001,8 +1001,9 @@ body.home-page #mainContent .home-cypress-copy p:not(.eyebrow) {
     right: auto;
     width: auto;
     max-width: none;
-    padding: 24px 6%;
+    padding: 24px 6% 8px;
   }
+  .home-cypress-copy p:not(.eyebrow):last-child { margin-bottom: 0; }
 }
 .home-cypress-photo {
   display: block;
